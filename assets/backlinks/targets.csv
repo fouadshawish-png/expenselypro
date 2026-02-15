@@ -1,0 +1,31 @@
+name,type,language,url,contact,status,notes
+Arab Finance Blog 01,blog,ar,https://example.com/finance-blog-01,editor@example.com,pending,محتوى ميزانية شهرية
+Arab Finance Blog 02,blog,ar,https://example.com/finance-blog-02,contact@example.com,pending,مقال ضيف محتمل
+Arab Finance Blog 03,blog,ar,https://example.com/finance-blog-03,hello@example.com,pending,طلب ذكر مرجعي
+Arab Finance Blog 04,blog,ar,https://example.com/finance-blog-04,team@example.com,pending,تبادل موارد تعليمية
+Arab Finance Blog 05,blog,ar,https://example.com/finance-blog-05,media@example.com,pending,اقتراح دراسة حالة
+YouTube Finance Channel 01,youtube,ar,https://example.com/youtube-finance-01,channel@example.com,pending,وصف فيديو + مورد
+YouTube Finance Channel 02,youtube,ar,https://example.com/youtube-finance-02,info@example.com,pending,حلقة عن الديون
+YouTube Finance Channel 03,youtube,ar,https://example.com/youtube-finance-03,team@example.com,pending,حلقة عن الميزانية
+YouTube Finance Channel 04,youtube,ar,https://example.com/youtube-finance-04,hello@example.com,pending,محتوى تتبع مصاريف
+YouTube Finance Channel 05,youtube,ar,https://example.com/youtube-finance-05,creator@example.com,pending,طلب إدراج رابط
+Facebook Group 01,community,ar,https://example.com/fb-group-01,admin@example.com,pending,نشر نص تعليمي
+Facebook Group 02,community,ar,https://example.com/fb-group-02,admin@example.com,pending,منشور تجربة أسبوعية
+Facebook Group 03,community,ar,https://example.com/fb-group-03,mod@example.com,pending,سؤال/إجابة مفيدة
+Facebook Group 04,community,ar,https://example.com/fb-group-04,owner@example.com,pending,ملف أدوات مجانية
+Facebook Group 05,community,ar,https://example.com/fb-group-05,contact@example.com,pending,خطة 30 يوم
+Tool Directory 01,directory,en,https://example.com/tools-01,submit@example.com,pending,إدراج أداة الميزانية
+Tool Directory 02,directory,en,https://example.com/tools-02,submit@example.com,pending,إدراج عربي
+Tool Directory 03,directory,en,https://example.com/tools-03,review@example.com,pending,وصف مختصر جاهز
+Tool Directory 04,directory,en,https://example.com/tools-04,team@example.com,pending,تحديث بيانات الأداة
+Tool Directory 05,directory,en,https://example.com/tools-05,hello@example.com,pending,متابعة بعد التقديم
+Forum Community 01,forum,ar,https://example.com/forum-01,mod@example.com,pending,مساهمة غير سبامية
+Forum Community 02,forum,ar,https://example.com/forum-02,mod@example.com,pending,موضوع الميزانية
+Forum Community 03,forum,ar,https://example.com/forum-03,admin@example.com,pending,موضوع سداد الديون
+Forum Community 04,forum,en,https://example.com/forum-04,staff@example.com,pending,ردود تعليمية
+Forum Community 05,forum,en,https://example.com/forum-05,team@example.com,pending,مشاركة موارد
+Podcast Finance 01,podcast,ar,https://example.com/podcast-01,host@example.com,pending,اقتراح مقابلة
+Podcast Finance 02,podcast,ar,https://example.com/podcast-02,host@example.com,pending,حلقة انضباط مالي
+News/Media 01,media,ar,https://example.com/media-01,press@example.com,pending,Pitch لصفحة الصحافة
+News/Media 02,media,ar,https://example.com/media-02,press@example.com,pending,تغطية أداة مجانية
+Guest Post Site 01,guest-post,ar,https://example.com/guest-post-01,editor@example.com,pending,مقال ضيف شهري

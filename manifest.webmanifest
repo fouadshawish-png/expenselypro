@@ -1,0 +1,16 @@
+{
+  "name": "محترف المصاريف",
+  "short_name": "مصاريف",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff7c00",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Fouad Shawish">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b3b2e"/>
+      <stop offset="100%" stop-color="#0f5e45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <circle cx="600" cy="600" r="360" fill="#50C878" fill-opacity="0.22"/>
+  <text x="600" y="675" text-anchor="middle" fill="#E8FFF4" font-family="Arial, sans-serif" font-size="290" font-weight="700">FS</text>
+</svg>
