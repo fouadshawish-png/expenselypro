@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
+      <!-- تحسين CLS: حجز مساحة للصور والشعار -->
+      <style>
+        .logo img { width: 40px; height: 40px; min-width: 40px; min-height: 40px; display: inline-block; }
+        .related-card__thumb img { width: 100%; max-width: 400px; aspect-ratio: 16/9; display: block; }
+        .hero, .hero * { min-height: 320px; }
+      </style>
+      <!-- تحسين SEO: إضافة meta tags مهمة -->
+      <meta name="author" content="فؤاد شاويش">
+      <meta property="og:image" content="/icon.png">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="ar_AR">
+      <meta name="twitter:card" content="summary_large_image">
+      <!-- تحسين الأداء: تلميح للصور المتجاوبة -->
+      <link rel="preload" as="image" href="/icon.png" imagesrcset="/icon.webp 1x, /icon.png 2x" imagesizes="40px">
+
     <script>
       (function() {
         try {
@@ -81,7 +96,6 @@
 <!-- Theme Color -->
 <meta name="theme-color" content="#006A4E">
 <meta name="google-adsense-account" content="ca-pub-2851278293230568">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2851278293230568" crossorigin="anonymous"></script>
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/icon.png">
@@ -129,7 +143,7 @@
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager",
         "https://www.facebook.com/ExpenseManagerApplication",
-        "https://github.com/fouadshawish-png",
+        
         "https://www.expenselypro.com/about/",
         "https://www.expenselypro.com/about-author/"
       ]
@@ -173,7 +187,7 @@
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager",
         "https://www.facebook.com/ExpenseManagerApplication",
-        "https://github.com/fouadshawish-png",
+        
         "https://www.expenselypro.com/about-author/"
       ]
     },
@@ -292,7 +306,10 @@ function closeBanner(){
     <header>
   <div class="container header-row">
     <a class="logo" href="/" aria-label="الصفحة الرئيسية">
-      <img src="/icon.png" alt="شعار التطبيق" width="40" height="40">
+      <picture>
+        <source srcset="/icon.webp" type="image/webp">
+        <img src="/icon.webp" width="70" height="70" loading="eager" alt="شعار التطبيق">
+      </picture>
       <span>محترف المصاريف</span>
     </a>
 
@@ -392,7 +409,10 @@ function closeBanner(){
           <article class="related-card">
             
             <a class="related-card__thumb" href="/weekly-financial-review-habit/" aria-label="عادة المراجعة المالية الأسبوعية: 20 دقيقة تمنع مفاجآت نهاية الشهر">
-              <img src="/assets/images/posts/weekly-budget-review-system-cover.jpg" alt="عادة المراجعة المالية الأسبوعية: 20 دقيقة تمنع مفاجآت نهاية الشهر" loading="lazy" width="1200" height="630">
+              <picture>
+                <source srcset="/assets/images/posts/weekly-budget-review-system-cover.webp" type="image/webp">
+                <img src="/assets/images/posts/weekly-budget-review-system-cover.jpg" alt="عادة المراجعة المالية الأسبوعية: 20 دقيقة تمنع مفاجآت نهاية الشهر" loading="lazy" width="400" height="225" style="aspect-ratio:16/9;max-width:100%;">
+              </picture>
             </a>
             
             <div class="related-card__body">
@@ -404,7 +424,10 @@ function closeBanner(){
           <article class="related-card">
             
             <a class="related-card__thumb" href="/spending-triggers-journal-habit/" aria-label="دفتر محفزات الإنفاق: عادة ذكية لكشف أسباب الصرف قبل تكرارها">
-              <img src="/assets/images/posts/where-salary-goes-practical-analysis-cover.jpeg" alt="دفتر محفزات الإنفاق: عادة ذكية لكشف أسباب الصرف قبل تكرارها" loading="lazy" width="1200" height="630">
+              <picture>
+                <source srcset="/assets/images/posts/where-salary-goes-practical-analysis-cover.webp" type="image/webp">
+                <img src="/assets/images/posts/where-salary-goes-practical-analysis-cover.jpeg" alt="دفتر محفزات الإنفاق: عادة ذكية لكشف أسباب الصرف قبل تكرارها" loading="lazy" width="400" height="225" style="aspect-ratio:16/9;max-width:100%;">
+              </picture>
             </a>
             
             <div class="related-card__body">
@@ -416,7 +439,12 @@ function closeBanner(){
           <article class="related-card">
             
             <a class="related-card__thumb" href="/replace-bad-financial-habits-30-days/" aria-label="كيف تغيّر عاداتك المالية السيئة بخطة استبدال سلوكي لمدة 30 يومًا؟">
-              <img src="/assets/images/posts/build-sustainable-personal-financial-system-cover.jpeg" alt="كيف تغيّر عاداتك المالية السيئة بخطة استبدال سلوكي لمدة 30 يومًا؟" loading="lazy" width="1200" height="630">
+              <picture>
+                <source srcset="/assets/images/posts/build-sustainable-personal-financial-system-cover.webp" type="image/webp">
+                <img src="/assets/images/posts/build-sustainable-personal-financial-system-cover.jpeg" alt="كيف تغيّر عاداتك المالية السيئة بخطة استبدال سلوكي لمدة 30 يومًا؟" loading="lazy" width="400" height="225" style="aspect-ratio:16/9;max-width:100%;">
+              </picture>
+  <!-- ملاحظة: يجب توفير صور webp بجانب jpg/png لنفس المسار -->
+            <!-- ملاحظة: لضغط الملفات فعّل gzip/brotli من إعدادات الخادم -->
             </a>
             
             <div class="related-card__body">
@@ -548,7 +576,8 @@ function closeBanner(){
 
     <div class="sticky-download-bar" id="stickyDownloadBar" hidden>
       <p class="sticky-download-bar__text">حوّل هذا الدليل إلى نظام عملي داخل التطبيق</p>
-      <a class="sticky-download-bar__button" id="stickyDownloadButton" data-cta-location="top_bar" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager">تحميل التطبيق</a>
+      <a class="sticky-download-bar__button" id="stickyDownloadButton" data-cta-location="top_bar" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager"
+        onclick="gtag('event', 'click_download', { 'event_category': 'engagement', 'event_label': 'play_store_button' });">تحميل التطبيق</a>
       <button class="sticky-download-bar__close" id="stickyDownloadClose" type="button" aria-label="إغلاق">×</button>
     </div>
 
@@ -1125,4 +1154,12 @@ function closeBanner(){
     });
     </script>
   </body>
+  <script>
+    setTimeout(function(){
+      var s = document.createElement('script');
+      s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2851278293230568";
+      s.async = true;
+      document.head.appendChild(s);
+    }, 2000);
+  </script>
 </html>

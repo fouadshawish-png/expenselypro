@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
+
     <script>
       (function() {
         try {
@@ -84,7 +85,6 @@
 <!-- Theme Color -->
 <meta name="theme-color" content="#006A4E">
 <meta name="google-adsense-account" content="ca-pub-2851278293230568">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2851278293230568" crossorigin="anonymous"></script>
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/icon.png">
@@ -132,7 +132,7 @@
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager",
         "https://www.facebook.com/ExpenseManagerApplication",
-        "https://github.com/fouadshawish-png",
+        
         "https://www.expenselypro.com/about/",
         "https://www.expenselypro.com/about-author/"
       ]
@@ -176,7 +176,7 @@
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager",
         "https://www.facebook.com/ExpenseManagerApplication",
-        "https://github.com/fouadshawish-png",
+        
         "https://www.expenselypro.com/about-author/"
       ]
     },
@@ -356,7 +356,7 @@ function closeBanner(){
     <header>
   <div class="container header-row">
     <a class="logo" href="/" aria-label="الصفحة الرئيسية">
-      <img src="/icon.png" alt="شعار التطبيق" width="40" height="40">
+      <img src="/icon.webp" width="70" height="70" loading="eager" alt="شعار التطبيق">
       <span>محترف المصاريف</span>
     </a>
 
@@ -5664,7 +5664,8 @@ function closeBanner(){
 
     <div class="sticky-download-bar" id="stickyDownloadBar" hidden>
       <p class="sticky-download-bar__text">حوّل هذا الدليل إلى نظام عملي داخل التطبيق</p>
-      <a class="sticky-download-bar__button" id="stickyDownloadButton" data-cta-location="top_bar" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager">تحميل التطبيق</a>
+      <a class="sticky-download-bar__button" id="stickyDownloadButton" data-cta-location="top_bar" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager"
+        onclick="gtag('event', 'click_download', { 'event_category': 'engagement', 'event_label': 'play_store_button' });">تحميل التطبيق</a>
       <button class="sticky-download-bar__close" id="stickyDownloadClose" type="button" aria-label="إغلاق">×</button>
     </div>
 
@@ -6241,4 +6242,12 @@ function closeBanner(){
     });
     </script>
   </body>
+  <script>
+    setTimeout(function(){
+      var s = document.createElement('script');
+      s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2851278293230568";
+      s.async = true;
+      document.head.appendChild(s);
+    }, 2000);
+  </script>
 </html>

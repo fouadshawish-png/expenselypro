@@ -1,3 +1,9 @@
+/* تحسين CLS: حجز مساحة للصور والشعار */
+.logo img { width: 40px; height: 40px; min-width: 40px; min-height: 40px; display: inline-block; }
+.related-card__thumb img { width: 100%; max-width: 400px; aspect-ratio: 16/9; display: block; }
+
+/* تحسين الأداء: صور متجاوبة */
+img[loading="lazy"] { width: 100%; height: auto; aspect-ratio: 16/9; }
 /* =========================
    DESIGN TOKENS
 ========================= */
