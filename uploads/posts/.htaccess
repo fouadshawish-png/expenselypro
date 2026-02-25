@@ -1,0 +1,4 @@
+Options -ExecCGI
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>

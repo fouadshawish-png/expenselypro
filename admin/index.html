@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ExpenselyPro Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">ExpenselyPro</p>
+      <h1 class="page-title">Admin Dashboard</h1>
+      <p class="page-subtitle">Live KPIs, trends, and the latest 8 weekly reports.</p>
+    </div>
+    <div class="user-box">
+      <span id="userEmail" class="user-email">...</span>
+      <button id="logoutBtn" class="btn ghost">Logout</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="status" id="statusMessage" role="status" aria-live="polite"></section>
+
+    <section class="kpis" aria-label="Key performance indicators">
+      <div class="card">
+        <p class="card-label">Total Users</p>
+        <p id="totalUsers" class="card-value">0</p>
+      </div>
+      <div class="card">
+        <p class="card-label">New Users (This Week)</p>
+        <p id="newUsers" class="card-value">0</p>
+      </div>
+      <div class="card">
+        <p class="card-label">Active Users</p>
+        <p id="activeUsers" class="card-value">0</p>
+      </div>
+      <div class="card">
+        <p class="card-label">Total Transactions</p>
+        <p id="totalTransactions" class="card-value">0</p>
+      </div>
+    </section>
+
+    <section class="panel" aria-label="Growth chart">
+      <div class="panel-header">
+        <h2>Weekly Trends</h2>
+        <p class="muted">Tracks new users, active users, and transactions over time.</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="growthChart" aria-label="Growth line chart"></canvas>
+      </div>
+    </section>
+
+    <section class="panel" aria-label="Weekly reports table">
+      <div class="panel-header">
+        <h2>Latest Weekly Reports</h2>
+        <p class="muted">Ordered by created date (latest first), limited to 8 entries.</p>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Week</th>
+              <th>New Users</th>
+              <th>Active Users</th>
+              <th>Transactions</th>
+            </tr>
+          </thead>
+          <tbody id="reportTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="./vendor/firebase/firebase-app-compat.js"></script>
+  <script src="./vendor/firebase/firebase-auth-compat.js"></script>
+  <script src="./vendor/firebase/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBNCQzP6g5HWzyisPBMT722zpMPGR37Zhw",
+      authDomain: "fouado-acf90.firebaseapp.com",
+      projectId: "fouado-acf90",
+      storageBucket: "fouado-acf90.firebasestorage.app",
+      messagingSenderId: "862274807530",
+      appId: "1:862274807530:web:b8a1d17d3aa6f03b1fd993"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="./auth.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

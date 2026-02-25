@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <title>Redirecting...</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0VY0SJE0K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E0VY0SJE0K');
+  </script>
+  <script>
+    window.location.replace("https://www.expenselypro.com/");
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://www.expenselypro.com/en/my-web-project/">
+<link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/my-web-project/">
+<link rel="alternate" hreflang="en" href="https://www.expenselypro.com/en/my-web-project/">
+<link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/">
+<meta name="robots" content="noindex, follow">
+<meta property="og:url" content="https://www.expenselypro.com/en/my-web-project/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:url" content="https://www.expenselypro.com/en/my-web-project/">
+</head>
+<body>
+  <a href="https://www.expenselypro.com/">الانتقال إلى الصفحة الرئيسية</a>
+<script>
+(function() {
+  var path = window.location.pathname || "/";
+  var isEn = path.startsWith("/en/");
+  var arPath = isEn ? path.replace(/^\/en/, "") || "/" : path;
+  var enPath = isEn ? path : "/en" + (path === "/" ? "/" : path);
+  var toAr = document.getElementById("langToAr");
+  var toEn = document.getElementById("langToEn");
+  if (!toAr) {
+    toAr = document.createElement('a');
+    toAr.id = 'langToAr';
+    toAr.textContent = 'AR';
+    toAr.style.position='fixed'; toAr.style.bottom='12px'; toAr.style.right='70px'; toAr.style.padding='6px 10px'; toAr.style.background='#fff'; toAr.style.border='1px solid #ddd'; toAr.style.borderRadius='4px'; toAr.style.fontWeight='600'; toAr.style.zIndex='9999';
+    document.body.appendChild(toAr);
+  }
+  if (!toEn) {
+    toEn = document.createElement('a');
+    toEn.id = 'langToEn';
+    toEn.textContent = 'EN';
+    toEn.style.position='fixed'; toEn.style.bottom='12px'; toEn.style.right='12px'; toEn.style.padding='6px 10px'; toEn.style.background='#fff'; toEn.style.border='1px solid #ddd'; toEn.style.borderRadius='4px'; toEn.style.fontWeight='600'; toEn.style.zIndex='9999';
+    document.body.appendChild(toEn);
+  }
+  toAr.href = arPath;
+  toEn.href = enPath;
+})();
+</script>
+</body>
+</html>
