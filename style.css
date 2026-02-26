@@ -1,3 +1,94 @@
+/* Add to style.css (Option A: scoped to English pages only) */
+html[lang="en"], body.en-page {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: #fafbfc;
+    color: #222;
+}
+
+body.en-page {
+    margin: 0;
+    padding: 0;
+}
+
+main.page {
+    max-width: 900px;
+    margin: 40px auto 40px auto;
+    padding: 24px 16px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.article {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+.article h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.7em;
+    font-weight: 700;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 0.3em;
+}
+
+.article h2 {
+    font-size: 1.4rem;
+    margin-top: 2em;
+    margin-bottom: 0.6em;
+    font-weight: 600;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 0.2em;
+}
+
+.article h3 {
+    font-size: 1.15rem;
+    margin-top: 1.5em;
+    margin-bottom: 0.4em;
+    font-weight: 500;
+}
+
+.article p, .article ul, .article ol, .article blockquote {
+    margin-bottom: 1.2em;
+}
+
+.article ul, .article ol {
+    padding-left: 1.5em;
+}
+
+.article a {
+    color: #1976d2;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.article a:hover {
+    color: #0d47a1;
+}
+
+.article blockquote {
+    border-left: 4px solid #e0e0e0;
+    background: #f7f7f7;
+    padding: 0.7em 1em;
+    margin: 1.2em 0;
+    color: #555;
+}
+
+.article hr {
+    border: none;
+    border-top: 1px solid #ececec;
+    margin: 2em 0;
+}
+
+@media (max-width: 600px) {
+    main.page {
+        padding: 12px 4px;
+        margin: 16px auto;
+    }
+    .article h1 { font-size: 1.4rem; }
+    .article h2 { font-size: 1.1rem; }
+}
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 
 /* تحسين CLS: حجز مساحة للصور والشعار */
@@ -3000,3 +3091,53 @@ body.dark .nav-dropdown__menu a:hover {
     display: none !important;
   }
 }
+.article-layout { max-width: 760px; margin: 0 auto; }
+.article-layout .post,
+.article-layout .post-content,
+.article-layout .page-container { line-height: 1.6; }
+.article-layout p { margin: 12px 0; }
+.article-layout h1 { margin: 0 0 8px; line-height: 1.2; }
+.article-layout h2 { margin: 24px 0 12px; font-size: 1.35rem; }
+.article-layout h3 { margin: 16px 0 8px; font-size: 1.1rem; }
+.article-layout .post__meta { margin-bottom: 20px; color: #555; font-size: 0.95rem; }
+.article-layout .post__meta time { font-weight: 600; }
+.article-layout .post { max-width: 48ch; }
+
+.author-box { display: grid; grid-template-columns: 72px 1fr; gap: 12px; padding: 16px; border: 1px solid #e5e7eb; border-radius: 10px; background: #fafafa; margin: 32px 0 12px; }
+.author-box__avatar { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg,#0ea5e9,#6366f1); }
+.author-box__name { margin: 0 0 4px; font-weight: 700; }
+.author-box__bio { margin: 0 0 8px; color: #444; }
+.author-box__link { font-weight: 600; color: #0f766e; text-decoration: none; }
+.author-box__link:hover { text-decoration: underline; }
+
+.related-posts { margin: 40px auto 32px; padding: 0 0; max-width: 1100px; }
+.related-posts__title { margin: 0 0 16px; font-size: 1.35rem; }
+.related-posts__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.related-card { border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; background: #fff; display: flex; flex-direction: column; height: 100%; }
+.related-card__thumb img { width: 100%; height: 150px; object-fit: cover; display: block; }
+.related-card__body { padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+.related-card__title { margin: 0; font-size: 1.05rem; }
+.related-card__title a { text-decoration: none; color: #111; }
+.related-card__title a:hover { text-decoration: underline; }
+.related-card__desc { margin: 0; color: #444; font-size: 0.95rem; }
+
+/* Lazy images + CLS guard */
+img[loading="lazy"] { height: auto; display: block; }
+.related-card__thumb img { aspect-ratio: 1200 / 630; }
+picture img { width: 100%; height: auto; }
+
+/* EN minimal scope */
+body.en-page img { max-width: 100%; height: auto; }
+body.en-page img[width][height] { object-fit: cover; }
+
+/* EN layout readability */
+body.en-page .page { max-width: 900px; margin: 40px auto; padding: 24px 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+body.en-page .article { max-width: 48ch; margin: 0 auto; line-height: 1.6; }
+body.en-page h1 { margin: 0 0 10px; line-height: 1.2; font-size: 2rem; }
+body.en-page h2 { margin: 24px 0 12px; font-size: 1.35rem; }
+body.en-page h3 { margin: 16px 0 8px; font-size: 1.1rem; }
+body.en-page p { margin: 12px 0; }
+body.en-page ul, body.en-page ol { margin: 12px 0 12px 22px; padding: 0; }
+body.en-page li { margin: 6px 0; }
+body.en-page a { color: #0f766e; text-decoration: none; }
+body.en-page a:hover { text-decoration: underline; }
