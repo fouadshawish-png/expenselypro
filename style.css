@@ -3138,6 +3138,54 @@ html[lang="en"] .last-updated {
   font-size: 0.95rem;
   opacity: 0.75;
 }
+
+/* EN width override */
+html[lang="en"] .page-container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Fix hero click issues */
+html[lang="en"] .hero-saas{
+  position: relative;
+  z-index: 1;
+}
+
+html[lang="en"] .hero-saas *{
+  position: relative;
+  z-index: 2;
+}
+
+html[lang="en"] .hero-saas::before,
+html[lang="en"] .hero-saas::after{
+  pointer-events: none !important;
+}
+
+html[lang="en"] .hero-actions a{
+  pointer-events: auto !important;
+  z-index: 5;
+}
+
+/* Hero checklist bullets */
+html[lang="en"] .hero-card ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0 0;
+}
+
+html[lang="en"] .hero-card li{
+  position: relative;
+  padding-left: 24px;
+  margin: 10px 0;
+}
+
+html[lang="en"] .hero-card li::before{
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  opacity: 0.85;
+}
 /* EN layout readability */
 body.en-page .page { max-width: 900px; margin: 40px auto; padding: 24px 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
 body.en-page .article { max-width: 48ch; margin: 0 auto; line-height: 1.6; }
