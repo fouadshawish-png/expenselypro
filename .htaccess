@@ -1,6 +1,67 @@
 # تعطيل ETag لتحسين الكاش
 FileETag None
 
+# /en/ Arabic-to-English slug redirects (301)
+Redirect 301 /en/خطة-30-يوم-لضبط-المصاريف/ https://www.expenselypro.com/en/30-day-expense-control-plan/
+Redirect 301 /en/حول-الخبير/ https://www.expenselypro.com/en/about-the-expert/
+Redirect 301 /en/أرشيف-المقالات/ https://www.expenselypro.com/en/articles-archive/
+Redirect 301 /en/مقارنة-أفضل-تطبيقات-إدارة-المصاريف-العربية/ https://www.expenselypro.com/en/best-arabic-expense-apps-comparison/
+Redirect 301 /en/أفضل-طريقة-لتنظيم-المصاريف/ https://www.expenselypro.com/en/best-way-to-organize-expenses/
+Redirect 301 /en/أفضل-طريقة-لتتبع-المصاريف-يوميًا/ https://www.expenselypro.com/en/best-way-to-track-daily-expenses/
+Redirect 301 /en/الميزانية-في-المغرب/ https://www.expenselypro.com/en/budget-in-morocco/
+Redirect 301 /en/تنظيم-الميزانية-في-المغرب/ https://www.expenselypro.com/en/budget-planning-morocco/
+Redirect 301 /en/الميزانية/ https://www.expenselypro.com/en/budgeting-basics/
+Redirect 301 /en/حساب-المصاريف-الشهرية/ https://www.expenselypro.com/en/calculate-monthly-expenses/
+Redirect 301 /en/أسئلة-الناس-عن-المصاريف/ https://www.expenselypro.com/en/common-expense-questions/
+Redirect 301 /en/نظام-إدارة-مالية-شخصية-كامل/ https://www.expenselypro.com/en/complete-personal-finance-system/
+Redirect 301 /en/تتبع-المصاريف-اليومية/ https://www.expenselypro.com/en/daily-expense-tracking/
+Redirect 301 /en/الديون/ https://www.expenselypro.com/en/debt-basics/
+Redirect 301 /en/هل-أحتاج-تطبيق-لإدارة-المصاريف/ https://www.expenselypro.com/en/do-i-need-expense-app/
+Redirect 301 /en/تنزيل-تطبيق-إدارة-المصاريف/ https://www.expenselypro.com/en/download-expense-management-app/
+Redirect 301 /en/تحميل-تطبيق-تنظيم-المصاريف/ https://www.expenselypro.com/en/download-expense-organizer-app/
+Redirect 301 /en/المصاريف-في-مصر/ https://www.expenselypro.com/en/egypt-expense-overview/
+Redirect 301 /en/مصاريف-في-مصر/ https://www.expenselypro.com/en/egypt-living-expense-plan/
+Redirect 301 /en/بدائل-إكسل-لإدارة-المصاريف/ https://www.expenselypro.com/en/excel-alternatives-expense-management/
+Redirect 301 /en/دليل-إدارة-المصاريف-والميزانية/ https://www.expenselypro.com/en/expense-and-budget-management-guide/
+Redirect 301 /en/تطبيق-مصاريف-ام-دفتر/ https://www.expenselypro.com/en/expense-app-vs-notebook/
+Redirect 301 /en/إدارة-المصاريف/ https://www.expenselypro.com/en/expense-management/
+Redirect 301 /en/منهج-إدارة-المصاريف/ https://www.expenselypro.com/en/expense-management-methodology/
+Redirect 301 /en/أخطاء-تنظيم-المصاريف/ https://www.expenselypro.com/en/expense-management-mistakes/
+Redirect 301 /en/خريطة-إدارة-المصاريف/ https://www.expenselypro.com/en/expense-management-roadmap/
+Redirect 301 /en/سجل-تحديثات-محترف-المصاريف/ https://www.expenselypro.com/en/expense-manager-changelog/
+Redirect 301 /en/خطة-تطوير-محترف-المصاريف/ https://www.expenselypro.com/en/expense-manager-development-plan/
+Redirect 301 /en/منهج-محترف-المصاريف/ https://www.expenselypro.com/en/expense-manager-methodology/
+Redirect 301 /en/تجارب-استخدام-محترف-المصاريف/ https://www.expenselypro.com/en/expense-manager-user-stories/
+Redirect 301 /en/تنظيم-المصاريف-للمبتدئين/ https://www.expenselypro.com/en/expense-organization-for-beginners/
+Redirect 301 /en/تتبع-المصاريف/ https://www.expenselypro.com/en/expense-tracking/
+Redirect 301 /en/دليل-المصاريف-والميزانية/ https://www.expenselypro.com/en/expenses-and-budget-guide/
+Redirect 301 /en/المصاريف/ https://www.expenselypro.com/en/expenses-overview/
+Redirect 301 /en/اختبر-وضعك-المالي/ https://www.expenselypro.com/en/financial-health-check/
+Redirect 301 /en/خريطة-المعرفة-المالية/ https://www.expenselypro.com/en/financial-knowledge-map/
+Redirect 301 /en/النظام-المالي/ https://www.expenselypro.com/en/financial-system/
+Redirect 301 /en/guides/الميزانية/ https://www.expenselypro.com/en/guides/budgeting/
+Redirect 301 /en/guides/المصاريف/ https://www.expenselypro.com/en/guides/expenses/
+Redirect 301 /en/guides/إدارة-الأموال/ https://www.expenselypro.com/en/guides/money-management/
+Redirect 301 /en/مصطلحات-إدارة-الأموال/ https://www.expenselypro.com/en/money-management-terms/
+Redirect 301 /en/الميزانية-الشهرية-خطوة-بخطوة/ https://www.expenselypro.com/en/monthly-budget-step-by-step/
+Redirect 301 /en/مصروفات-شهرية-في-مصر/ https://www.expenselypro.com/en/monthly-expenses-in-egypt/
+Redirect 301 /en/تنظيم-المصاريف/ https://www.expenselypro.com/en/organize-expenses/
+Redirect 301 /en/تنظيم-المصاريف-في-مصر-والمغرب/ https://www.expenselypro.com/en/organize-expenses-egypt-morocco/
+Redirect 301 /en/تنظيم-المصاريف-في-السعودية/ https://www.expenselypro.com/en/organize-expenses-saudi-arabia/
+Redirect 301 /en/تنظيم-المصاريف-بدون-تطبيق/ https://www.expenselypro.com/en/organize-expenses-without-app/
+Redirect 301 /en/تنظيم-مصاريف-الاسرة/ https://www.expenselypro.com/en/organize-family-expenses/
+Redirect 301 /en/أسئلة-قبل-تحميل-محترف-المصاريف/ https://www.expenselypro.com/en/pre-download-expense-manager-questions/
+Redirect 301 /en/نتائج-حقيقية-من-تنظيم-المصاريف/ https://www.expenselypro.com/en/real-results-organizing-expenses/
+Redirect 301 /en/تقليل-المصاريف-الشهرية/ https://www.expenselypro.com/en/reduce-monthly-expenses-guide/
+Redirect 301 /en/الادخار/ https://www.expenselypro.com/en/saving-money/
+Redirect 301 /en/ابدأ-من-الصفر/ https://www.expenselypro.com/en/start-from-zero/
+Redirect 301 /en/ابدأ-تنظيم-مصاريفك-الآن/ https://www.expenselypro.com/en/start-organizing-expenses-now/
+Redirect 301 /en/من-هو-محترف-المصاريف/ https://www.expenselypro.com/en/who-is-expense-manager/
+Redirect 301 /en/من-هو-فؤاد-شاويش/ https://www.expenselypro.com/en/who-is-fouad-shawish/
+Redirect 301 /en/لماذا-محترف-المصاريف-مختلف/ https://www.expenselypro.com/en/why-expense-manager-different/
+Redirect 301 /en/لماذا-تفشل-تطبيقات-تتبع-المصاريف/ https://www.expenselypro.com/en/why-expense-tracking-apps-fail/
+Redirect 301 /en/لماذا-هذا-الموقع-موثوق/ https://www.expenselypro.com/en/why-this-site-trusted/
+
 <IfModule mod_headers.c>
 Header unset ETag
 </IfModule>
