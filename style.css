@@ -3130,6 +3130,14 @@ picture img { width: 100%; height: auto; }
 body.en-page img { max-width: 100%; height: auto; }
 body.en-page img[width][height] { object-fit: cover; }
 
+/* EN: last updated */
+.en-page .last-updated,
+html[lang="en"] .last-updated {
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
 /* EN layout readability */
 body.en-page .page { max-width: 900px; margin: 40px auto; padding: 24px 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
 body.en-page .article { max-width: 48ch; margin: 0 auto; line-height: 1.6; }

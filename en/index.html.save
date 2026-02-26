@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Expensely Pro | A Structured Weekly Money System</title>
+
+<meta name="description" content="Expensely Pro is a structured weekly money system that combines daily expense tracking, weekly financial reviews, budget control, debt management, and savings growth into one clear workflow.">
+
+<link rel="canonical" href="https://www.expenselypro.com/en/">
+
+<link rel="alternate" hreflang="en" href="https://www.expenselypro.com/en/">
+<link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/">
+<link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Expensely Pro | A Structured Weekly Money System">
+<meta property="og:description" content="Run your money weekly. Stay in control daily.">
+<meta property="og:url" content="https://www.expenselypro.com/en/">
+<meta property="og:image" content="https://www.expenselypro.com/assets/og/home-en.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Expensely Pro | A Structured Weekly Money System">
+<meta name="twitter:description" content="A structured system for expense tracking, budgeting, debt control, and savings growth.">
+<meta name="twitter:image" content="https://www.expenselypro.com/assets/og/home-en.png">
+
+<link rel="stylesheet" href="/style.css">
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A Structured Weekly Money System", "description": "Expensely Pro is a structured weekly money system that combines daily expense tracking, weekly financial reviews, budget control, debt management, and savings growth into one clear workflow.", "author": {"@type": "Person", "name": "Fouad Shawish"}, "datePublished": "2026-02-26", "dateModified": "2026-02-26", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.expenselypro.com/en/"}, "publisher": {"@type": "Organization", "name": "Expensely Pro", "logo": {"@type": "ImageObject", "url": "https://www.expenselypro.com/icon.png"}}}</script>
+
+</head>
+
+<body class="en-page">
+
+<main class="page" id="content">
+<div class="container page-container">
+
+<!-- HERO -->
+<section class="section hero">
+<h1>A Structured Weekly Money System</h1>
+<p class="last-updated"><time datetime="2026-02-26">Last updated: 2026-02-26</time></p>
+<p>
+Most finance apps help you record expenses.  
+Expensely Pro helps you run a system.
+</p>
+<p>
+Log daily. Review weekly. Adjust monthly.  
+Stay in control — consistently.
+</p>
+<p>
+<a class="btn-primary" href="/en/guides/expense-control-system/">Explore the System</a>
+</p>
+</section>
+
+<!-- LEVEL 1: CORE FRAMEWORK -->
+<section class="section">
+<h2>The Financial Control Pyramid</h2>
+<p>
+Financial stability is built in layers. Each layer reinforces the next.
+</p>
+
+<ul>
+<li><strong>Layer 1 – Daily Logging:</strong> Capture every transaction within 24 hours.</li>
+<li><strong>Layer 2 – Weekly Review:</strong> Detect deviations early and correct them.</li>
+<li><strong>Layer 3 – Budget Framework:</strong> Allocate income realistically.</li>
+<li><strong>Layer 4 – Debt & Savings Control:</strong> Strengthen long-term stability.</li>
+<li><strong>Layer 5 – Habit Reinforcement:</strong> Build repeatable financial discipline.</li>
+</ul>
+</section>
+
+<!-- LEVEL 2: CORE GUIDES -->
+<section class="section">
+<h2>Start with the Core Guides</h2>
+
+<div class="grid-2">
+
+<div>
+<h3>Expense Control System</h3>
+<p>A five-layer model that transforms expense tracking into structured control.</p>
+<p><a href="/en/guides/expense-control-system/">Read Guide →</a></p>
+</div>
+
+<div>
+<h3>Weekly Financial Review</h3>
+<p>A 15-minute weekly habit that prevents monthly financial instability.</p>
+<p><a href="/en/guides/weekly-financial-review/">Read Guide →</a></p>
+</div>
+
+<div>
+<h3>Realistic Budget Framework</h3>
+<p>A data-driven approach to building sustainable budgets.</p>
+<p><a href="/en/guides/realistic-budget-framework/">Read Guide →</a></p>
+</div>
+
+<div>
+<h3>Debt Control Strategy</h3>
+<p>Eliminate debt without disrupting financial stability.</p>
+<p><a href="/en/guides/debt-control-strategy/">Read Guide →</a></p>
+</div>
+
+<div>
+<h3>Savings Growth System</h3>
+<p>Turn surplus into structured long-term security.</p>
+<p><a href="/en/guides/savings-growth-system/">Read Guide →</a></p>
+</div>
+
+<div>
+<h3>Financial Habit System</h3>
+<p>Build repeatable routines that sustain financial discipline.</p>
+<p><a href="/en/guides/financial-habit-system/">Read Guide →</a></p>
+</div>
+
+</div>
+</section>
+
+<!-- LEVEL 3: PHILOSOPHY -->
+<section class="section">
+<h2>Why Expensely Pro Is Different</h2>
+
+<ul>
+<li>Not just expense tracking — a full financial workflow</li>
+<li>Weekly rhythm instead of monthly regret</li>
+<li>Data-driven decisions instead of emotional spending</li>
+<li>Structure over restriction</li>
+</ul>
+
+<p>
+Financial control is not about cutting everything.
+It is about creating clarity, rhythm, and consistency.
+</p>
+</section>
+
+<!-- LEVEL 4: WHO IT’S FOR -->
+<section class="section">
+<h2>Who This System Is Built For</h2>
+
+<ul>
+<li>Professionals managing variable income</li>
+<li>Families seeking stability and predictability</li>
+<li>Freelancers balancing irregular cash flow</li>
+<li>Anyone tired of reactive budgeting</li>
+</ul>
+</section>
+
+<!-- CTA -->
+<section class="section">
+<h2>Run Your Money Weekly</h2>
+<p>
+Structure creates stability.  
+Weekly review creates control.  
+Consistency creates freedom.
+</p>
+
+<p>
+<a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager">
+Download Expensely Pro
+</a>
+</p>
+</section>
+
+</div>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Expensely Pro",
+  "url": "https://www.expenselypro.com/en/",
+  "logo": "https://www.expenselypro.com/assets/logo.png"
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Expensely Pro | Personal Financial Operating System</title>
+
+<meta name="description" content="Expensely Pro is a personal financial operating system designed to help you control expenses, build realistic budgets, manage debt, and stabilize your finances through a structured weekly review system.">
+
+<link rel="canonical" href="https://www.expenselypro.com/en/">
+
+<link rel="alternate" hreflang="en" href="https://www.expenselypro.com/en/">
+<link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/">
+<link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Expensely Pro | Personal Financial Operating System">
+<meta property="og:description" content="A structured weekly financial system to control expenses, manage budgets, reduce debt, and build long-term stability.">
+<meta property="og:url" content="https://www.expenselypro.com/en/">
+<meta property="og:image" content="https://www.expenselypro.com/assets/og/expenselypro-en-home.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Expensely Pro | Personal Financial Operating System">
+<meta name="twitter:description" content="Control your money with a structured weekly financial operating system.">
+<meta name="twitter:image" content="https://www.expenselypro.com/assets/og/expenselypro-en-home.png">
+
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<main class="page" id="content">
+  <div class="container page-container">
+
+    <section class="section hero">
+      <h1>Run Your Money With a Weekly Financial Operating System</h1>
+      <p>
+        Expensely Pro is not just an expense tracker.
+        It is a structured financial operating system designed to help you
+        control spending, stabilize budgets, manage debt, and build savings
+        through weekly financial discipline.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>The Core System</h2>
+
+      <h3>Expense Control</h3>
+      <p>
+        Detect spending deviations early and correct them before they
+        destabilize your monthly plan.
+      </p>
+      <p>
+        → <a href="/en/guides/expense-control-system/">Explore the Expense Control System</a>
+      </p>
+
+      <h3>Realistic Budget Framework</h3>
+      <p>
+        Build budgets based on real numbers, not optimism.
+      </p>
+      <p>
+        → <a href="/en/guides/realistic-budget-framework/">Learn the Budget Framework</a>
+      </p>
+
+      <h3>Weekly Financial Review</h3>
+      <p>
+        A 15-minute weekly reset that keeps your money aligned with your goals.
+      </p>
+      <p>
+        → <a href="/en/guides/weekly-financial-review/">See the Weekly Review Model</a>
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>How It Works</h2>
+      <ol>
+        <li>Track daily transactions.</li>
+        <li>Review weekly deviations.</li>
+        <li>Adjust before problems grow.</li>
+        <li>Stabilize monthly results.</li>
+        <li>Repeat consistently.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Start Building Financial Stability</h2>
+      <p>
+        The difference between chaos and control is structure.
+      </p>
+      <p>
+        → <a href="/en/download.html">Do
