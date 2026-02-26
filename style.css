@@ -3186,6 +3186,173 @@ html[lang="en"] .hero-card li::before{
   font-weight: 600;
   opacity: 0.85;
 }
+
+/* EN: make all common containers wider */
+html[lang="en"] .container{
+  max-width: 1280px;
+}
+
+html[lang="en"] .page-container{
+  max-width: 1280px;
+}
+
+/* EN: reduce heavy hero background on article pages */
+html[lang="en"] .hero{
+  text-align: left;
+}
+
+.hero-slim{
+  padding: 40px 0 20px;
+}
+
+.topic-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.topic-card{
+  padding:24px;
+  border-radius:16px;
+  background:#f7f9f8;
+  border:1px solid rgba(0,0,0,0.06);
+}
+
+.topic-card h2{
+  margin-top:0;
+}
+
+.topic-card a{
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ================================
+   EN HUB PACK (Guides + Topics)
+   Applies only to English pages
+================================ */
+
+html[lang="en"] .page-container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Slim hero */
+html[lang="en"] .hero-slim{
+  padding: 56px 0 32px;
+}
+
+html[lang="en"] .hero-slim h1{
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+html[lang="en"] .hero-slim p{
+  font-size: 18px;
+  max-width: 720px;
+  opacity: 0.85;
+}
+
+/* CTA row */
+html[lang="en"] .en-cta-row{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+/* Secondary button */
+html[lang="en"] .btn-secondary{
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: transparent;
+  text-decoration:none;
+  font-weight:600;
+  transition: all .2s ease;
+}
+
+html[lang="en"] .btn-secondary:hover{
+  background:#f3f5f4;
+}
+
+/* Feature grid */
+html[lang="en"] .feature-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:28px;
+  margin-top:24px;
+}
+
+/* Cards */
+html[lang="en"] .feature-card,
+html[lang="en"] .topic-card{
+  padding:28px;
+  border-radius:18px;
+  background:#f8faf9;
+  border:1px solid rgba(0,0,0,0.06);
+  transition: all .2s ease;
+}
+
+html[lang="en"] .feature-card:hover,
+html[lang="en"] .topic-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+html[lang="en"] .feature-card h3,
+html[lang="en"] .topic-card h2{
+  margin-top:0;
+  margin-bottom:10px;
+}
+
+html[lang="en"] .feature-card p,
+html[lang="en"] .topic-card p{
+  opacity:0.85;
+  line-height:1.6;
+}
+
+/* Links inside cards */
+html[lang="en"] .feature-card a,
+html[lang="en"] .topic-card a{
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* Topic grid */
+html[lang="en"] .topic-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:28px;
+  margin-top:28px;
+}
+
+/* Better spacing between sections */
+html[lang="en"] .section{
+  padding: 56px 0;
+}
+
+/* Improve headings rhythm */
+html[lang="en"] h2{
+  font-size: 28px;
+  margin-bottom:16px;
+}
+
+html[lang="en"] h3{
+  font-size: 20px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  html[lang="en"] .hero-slim h1{
+    font-size:30px;
+  }
+
+  html[lang="en"] .section{
+    padding:40px 0;
+  }
+}
 /* EN layout readability */
 body.en-page .page { max-width: 900px; margin: 40px auto; padding: 24px 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
 body.en-page .article { max-width: 48ch; margin: 0 auto; line-height: 1.6; }
