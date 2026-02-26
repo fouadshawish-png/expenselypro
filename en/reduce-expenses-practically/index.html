@@ -20,25 +20,47 @@
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Reduce Expenses Practically (Without Extreme Cuts)", "description": "A practical framework to reduce expenses intelligently without harming your lifestyle or long-term stability.", "author": {"@type": "Person", "name": "Fouad Shawish"}, "datePublished": "2026-02-26", "dateModified": "2026-02-26", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.expenselypro.com/en/reduce-expenses-practically/"}, "publisher": {"@type": "Organization", "name": "Expensely Pro", "logo": {"@type": "ImageObject", "url": "https://www.expenselypro.com/icon.png"}}}</script>
 
+<meta property="og:image" content="https://www.expenselypro.com/assets/images/og-default.png">
+<meta name="twitter:image" content="https://www.expenselypro.com/assets/images/og-default.png">
 </head>
 <body class="en-page">
 
 <!-- SITE_HEADER_START -->
-<header class="site-header">
+<header class="site-header" id="siteHeader">
   <div class="container header-container">
-    <div class="logo">
-      <a href="/en/">
-        <img src="/icon.png" alt="Expensely Pro Logo" width="36" height="36">
-        <span>Expensely Pro</span>
-      </a>
-    </div>
+    <a class="brand" href="/en/" aria-label="Expensely Pro Home">
+      <img src="/icon.png" alt="Expensely Pro" width="36" height="36" loading="eager">
+      <span class="brand-name">Expensely Pro</span>
+    </a>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Primary">
       <a href="/en/guides/">Guides</a>
       <a href="/en/topics/">Topics</a>
       <a href="/en/about-the-expert/">About</a>
-      <a href="/en/download.html" class="btn-nav">Download</a>
+      <a class="btn-nav" href="/en/download.html">Download</a>
     </nav>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileNav" hidden>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="mobile-drawer__top">
+        <span class="mobile-title">Menu</span>
+        <button class="mobile-close" type="button" aria-label="Close menu">✕</button>
+      </div>
+
+      <div class="mobile-links">
+        <a href="/en/guides/">Guides</a>
+        <a href="/en/topics/">Topics</a>
+        <a href="/en/about-the-expert/">About</a>
+        <a class="btn-mobile" href="/en/download.html">Download</a>
+      </div>
+    </div>
+    <div class="mobile-drawer__backdrop" aria-hidden="true"></div>
   </div>
 </header>
 <!-- SITE_HEADER_END -->
@@ -98,6 +120,7 @@
     <div class="footer-copy">© 2026 Expensely Pro. All rights reserved.</div>
   </div>
 </footer>
+<script defer src="/assets/en-ui.js"></script>
 <!-- SITE_FOOTER_END -->
 
 

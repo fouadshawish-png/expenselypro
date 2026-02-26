@@ -3149,3 +3149,196 @@ body.en-page ul, body.en-page ol { margin: 12px 0 12px 22px; padding: 0; }
 body.en-page li { margin: 6px 0; }
 body.en-page a { color: #0f766e; text-decoration: none; }
 body.en-page a:hover { text-decoration: underline; }
+/* =========================
+   EN SaaS Upgrade (Header + Layout)
+========================= */
+
+/* Better baseline for EN pages */
+html[lang="en"] .page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+html[lang="en"] .section { padding: 28px 0; }
+html[lang="en"] .section.hero { padding: 48px 0 26px; }
+html[lang="en"] h1 { letter-spacing: -0.02em; line-height: 1.1; }
+html[lang="en"] h2 { letter-spacing: -0.01em; }
+html[lang="en"] p { line-height: 1.75; }
+
+/* Header (sticky + subtle blur) */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.header-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 14px;
+  padding: 12px 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+}
+.brand-name{
+  font-weight:700;
+  font-size: 1rem;
+  color: inherit;
+}
+
+.main-nav{
+  display:flex;
+  align-items:center;
+  gap: 16px;
+}
+.main-nav a{
+  text-decoration:none;
+  opacity: 0.9;
+}
+.main-nav a:hover{ opacity: 1; }
+
+.btn-nav{
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #0c6a4e; /* If you prefer keep your tokens, replace with var */
+  color: #fff !important;
+  text-decoration:none;
+}
+
+/* Hamburger */
+.nav-toggle{
+  display:none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.7);
+  padding: 10px;
+  cursor:pointer;
+}
+.nav-toggle span{
+  display:block;
+  height:2px;
+  margin: 5px 0;
+  background: rgba(0,0,0,0.75);
+  border-radius: 2px;
+}
+
+/* Mobile Drawer */
+.mobile-drawer[hidden]{ display:none; }
+.mobile-drawer{
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+}
+.mobile-drawer__backdrop{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.35);
+}
+.mobile-drawer__panel{
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.20);
+  padding: 14px;
+}
+.mobile-drawer__top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.mobile-title{ font-weight:700; }
+.mobile-close{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.7);
+  cursor:pointer;
+}
+.mobile-links{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  padding-top: 12px;
+}
+.mobile-links a{
+  text-decoration:none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.03);
+}
+.btn-mobile{
+  text-align:center;
+  background:#0c6a4e !important;
+  color:#fff !important;
+}
+
+/* Responsive: hide desktop nav, show hamburger */
+@media (max-width: 900px){
+  .main-nav{ display:none; }
+  .nav-toggle{ display:inline-block; }
+}
+
+/* Hero layout upgrade */
+.hero-saas{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 26px;
+  align-items: center;
+}
+.hero-card{
+  border-radius: 18px;
+  background: rgba(0,0,0,0.03);
+  padding: 18px;
+}
+.hero-actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.btn-secondary{
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.14);
+  text-decoration:none;
+}
+
+/* Feature cards */
+.feature-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.feature-card{
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background:#fff;
+  padding: 16px;
+}
+.feature-card h3{ margin: 0 0 6px; }
+.feature-card p{ margin: 0; opacity: 0.9; }
+
+@media (max-width: 900px){
+  .hero-saas{ grid-template-columns: 1fr; }
+  .feature-grid{ grid-template-columns: 1fr; }
+}
+
+/* Prevent body scroll when menu open */
+body.no-scroll{ overflow: hidden; }
