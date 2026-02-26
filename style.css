@@ -3457,6 +3457,13 @@ html[lang="ar"], body.ar-page{
   border-radius:12px;
   margin:30px 0;
 }
+
+.module-link{
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:8px;
+}
 /* EN layout readability */
 body.en-page .page { max-width: 900px; margin: 40px auto; padding: 24px 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
 body.en-page .article { max-width: 48ch; margin: 0 auto; line-height: 1.6; }
@@ -3661,3 +3668,373 @@ html[lang="en"] p { line-height: 1.75; }
 
 /* Prevent body scroll when menu open */
 body.no-scroll{ overflow: hidden; }
+
+/* ======================================
+   MOBILE MODULE DRAWER (System Modules)
+====================================== */
+.mobile-module-toggle{
+  display:none;
+  margin-bottom:16px;
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,0.15);
+  background:#f3f5f4;
+}
+
+.mobile-module-drawer{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  z-index:999;
+  display:flex;
+  align-items:flex-end;
+}
+
+.mobile-module-panel{
+  background:#fff;
+  width:100%;
+  max-height:80%;
+  border-radius:20px 20px 0 0;
+  padding:20px;
+  overflow:auto;
+  animation: slideUp .25s ease;
+}
+
+@keyframes slideUp{
+  from{transform:translateY(100%);}to{transform:translateY(0);}
+}
+
+.mobile-module-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:16px;
+}
+
+.mobile-module-links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.mobile-module-links a{
+  text-decoration:none;
+  font-weight:500;
+}
+
+.mobile-download-btn{
+  width:100%;
+  text-align:center;
+}
+
+@media (max-width: 980px){
+  .module-sidebar{ display:none; }
+  .mobile-module-toggle{ display:block; }
+  .module-content{ max-width:100%; }
+}
+
+@media (min-width: 981px){
+  .mobile-module-drawer{ display:none; }
+}
+
+/* ===============================
+   MOBILE FIRST CORE TYPOGRAPHY
+================================ */
+html{
+  font-size:16px;
+}
+
+body{
+  line-height:1.7;
+  padding-bottom:60px; /* reserve space for mobile sticky CTA */
+}
+
+.page-container{
+  padding:0 18px;
+}
+
+/* Improve reading width */
+.module-content,
+.page-container{
+  max-width:720px;
+  margin:0 auto;
+}
+
+/* Better spacing */
+.section{
+  padding:36px 0;
+}
+
+h1{
+  font-size:28px;
+  line-height:1.2;
+}
+
+h2{
+  font-size:22px;
+}
+
+h3{
+  font-size:18px;
+}
+
+/* Image safety: prevent CLS */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* Hero mobile optimization */
+.hero{
+  padding-top:28px;
+}
+
+.hero p{
+  font-size:16px;
+  opacity:0.9;
+}
+
+.btn-primary{
+  display:inline-block;
+  width:100%;
+  text-align:center;
+  margin-top:12px;
+}
+
+/* Mobile-first grids */
+.feature-grid,
+.topic-grid{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+@media (min-width: 980px){
+  .feature-grid,
+  .topic-grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Mobile sticky CTA */
+.mobile-sticky-cta{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#0f6b4f;
+  text-align:center;
+  padding:12px;
+  z-index:1000;
+}
+
+.mobile-sticky-cta a{
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+}
+
+@media (min-width:980px){
+  .mobile-sticky-cta{ display:none; }
+}
+
+/* Header compact on mobile */
+.site-header{
+  padding:10px 0;
+}
+
+/* Floating AR switch on EN pages */
+html[lang="en"] .floating-lang-btn{
+  position:fixed;
+  right:16px;
+  bottom:90px;
+  z-index:1200;
+  padding:12px 16px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,0.12);
+  background:#fff;
+  color:#0f6b4f;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+html[lang="en"] .floating-lang-btn:hover{
+  background:#f3f5f4;
+}
+
+@media (min-width:981px){
+  html[lang="en"] .floating-lang-btn{
+    bottom:24px;
+  }
+}
+
+/* ======================================
+   MOBILE MODULE DRAWER (System Modules)
+====================================== */
+.mobile-module-toggle{
+  display:none;
+  margin-bottom:16px;
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,0.15);
+  background:#f3f5f4;
+}
+
+.mobile-module-drawer{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  z-index:999;
+  display:flex;
+  align-items:flex-end;
+}
+
+.mobile-module-panel{
+  background:#fff;
+  width:100%;
+  max-height:80%;
+  border-radius:20px 20px 0 0;
+  padding:20px;
+  overflow:auto;
+  animation: slideUp .25s ease;
+}
+
+@keyframes slideUp{
+  from{transform:translateY(100%);}to{transform:translateY(0);}
+}
+
+.mobile-module-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:16px;
+}
+
+.mobile-module-links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.mobile-module-links a{
+  text-decoration:none;
+  font-weight:500;
+}
+
+.mobile-download-btn{
+  width:100%;
+  text-align:center;
+}
+
+@media (max-width: 980px){
+  .module-sidebar{ display:none; }
+  .mobile-module-toggle{ display:block; }
+  .module-content{ max-width:100%; }
+}
+
+@media (min-width: 981px){
+  .mobile-module-drawer{ display:none; }
+}
+
+/* ===============================
+   MOBILE FIRST CORE TYPOGRAPHY
+================================ */
+html{
+  font-size:16px;
+}
+
+body{
+  line-height:1.7;
+}
+
+.page-container{
+  padding:0 18px;
+}
+
+/* Improve reading width */
+.module-content,
+.page-container{
+  max-width:720px;
+  margin:0 auto;
+}
+
+/* Better spacing */
+.section{
+  padding:36px 0;
+}
+
+h1{
+  font-size:28px;
+  line-height:1.2;
+}
+
+h2{
+  font-size:22px;
+}
+
+h3{
+  font-size:18px;
+}
+
+/* Hero mobile optimization */
+.hero{
+  padding-top:28px;
+}
+
+.hero p{
+  font-size:16px;
+  opacity:0.9;
+}
+
+.btn-primary{
+  display:inline-block;
+  width:100%;
+  text-align:center;
+  margin-top:12px;
+}
+
+/* Mobile-first grids */
+.feature-grid,
+.topic-grid{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+@media (min-width: 980px){
+  .feature-grid,
+  .topic-grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Mobile sticky CTA */
+.mobile-sticky-cta{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#0f6b4f;
+  text-align:center;
+  padding:12px;
+  z-index:1000;
+}
+
+.mobile-sticky-cta a{
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+}
+
+@media (min-width:980px){
+  .mobile-sticky-cta{ display:none; }
+}
+
+/* Header compact on mobile */
+.site-header{
+  padding:10px 0;
+}

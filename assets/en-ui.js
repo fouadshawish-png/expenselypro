@@ -39,3 +39,35 @@
     a.addEventListener("click", () => closeMenu());
   });
 })();
+
+// Mobile system modules drawer
+document.addEventListener("DOMContentLoaded", function(){
+  const toggle = document.querySelector(".mobile-module-toggle");
+  const drawer = document.querySelector(".mobile-module-drawer");
+  const closeBtn = document.querySelector(".mobile-module-close");
+
+  if(!drawer || !toggle) return;
+
+  const openDrawer = () => {
+    drawer.hidden = false;
+    toggle.setAttribute("aria-expanded", "true");
+    document.body.classList.add("no-scroll");
+  };
+
+  const closeDrawer = () => {
+    drawer.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("no-scroll");
+  };
+
+  toggle.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    expanded ? closeDrawer() : openDrawer();
+  });
+
+  closeBtn && closeBtn.addEventListener("click", closeDrawer);
+
+  drawer.addEventListener("click", (e) => {
+    if (e.target === drawer) closeDrawer();
+  });
+});

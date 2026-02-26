@@ -30,6 +30,7 @@
 <meta name="twitter:description" content="Build a repeatable weekly control system that prevents small financial leaks from becoming monthly crises.">
 <meta name="twitter:image" content="https://www.expenselypro.com/assets/og/expense-control-system.png">
 
+<link rel="preload" href="/style.css" as="style">
 <link rel="stylesheet" href="/style.css">
 
 
@@ -83,6 +84,28 @@
 
 
 <main class="page module-layout" id="content">
+<div class="mobile-module-drawer" hidden>
+  <div class="mobile-module-panel">
+    <div class="mobile-module-top">
+      <strong>System Modules</strong>
+      <button class="mobile-module-close">✕</button>
+    </div>
+
+    <nav class="mobile-module-links">
+      <a href="/en/system/">System Overview</a>
+      <a href="/en/guides/expense-control-system/">Expense Control</a>
+      <a href="/en/guides/weekly-financial-review/">Weekly Review</a>
+      <a href="/en/guides/realistic-budget-framework/">Budget Framework</a>
+      <a href="/en/guides/debt-control-strategy/">Debt Control</a>
+      <a href="/en/guides/savings-growth-system/">Savings Growth</a>
+    </nav>
+
+    <a href="/en/download.html" class="btn-primary mobile-download-btn">
+      Download App
+    </a>
+  </div>
+</div>
+
   <div class="container page-container module-container">
 
     <aside class="module-sidebar">
@@ -101,6 +124,10 @@
         </div>
       </div>
     </aside>
+
+    <button class="mobile-module-toggle" type="button" aria-expanded="false">
+  View System Modules
+</button>
 
     <div class="module-content">
 
@@ -235,8 +262,8 @@
       <a href="/en/guides/">Guides</a>
       <a href="/en/topics/">Topics</a>
       <a href="/en/download.html">Download</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
+      <a href="/en/privacy.html">Privacy</a>
+      <a href="/en/terms.html">Terms</a>
     </div>
 
     <div class="footer-copy">© 2026 Expensely Pro. All rights reserved.</div>
@@ -246,6 +273,11 @@
 <!-- SITE_FOOTER_END -->
 
 
+<div class="mobile-sticky-cta">
+  <a href="/en/download.html">Download App</a>
+</div>
+
+<a class="floating-lang-btn" href="/">AR</a>
 </body>
 </html>
 <section class="post__section">

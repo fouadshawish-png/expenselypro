@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <title>The Expensely System | Weekly Financial Operating System</title>
 
@@ -20,6 +22,7 @@
 <meta property="og:url" content="https://www.expenselypro.com/en/system/">
 <meta property="og:image" content="https://www.expenselypro.com/assets/og/home-en.png">
 
+<link rel="preload" href="/style.css" as="style">
 <link rel="stylesheet" href="/style.css">
 
 <script type="application/ld+json">
@@ -53,8 +56,56 @@
   </div>
 </header>
 
-<main class="page">
-<div class="container page-container">
+<main class="page module-layout">
+<div class="mobile-module-drawer" hidden>
+  <div class="mobile-module-panel">
+    <div class="mobile-module-top">
+      <strong>System Modules</strong>
+      <button class="mobile-module-close">✕</button>
+    </div>
+
+    <nav class="mobile-module-links">
+      <a href="/en/system/">System Overview</a>
+      <a href="/en/guides/expense-control-system/">Expense Control</a>
+      <a href="/en/guides/weekly-financial-review/">Weekly Review</a>
+      <a href="/en/guides/realistic-budget-framework/">Budget Framework</a>
+      <a href="/en/guides/debt-control-strategy/">Debt Control</a>
+      <a href="/en/guides/savings-growth-system/">Savings Growth</a>
+    </nav>
+
+    <a href="/en/download.html" class="btn-primary mobile-download-btn">
+      Download App
+    </a>
+  </div>
+</div>
+
+<div class="container page-container module-container">
+
+    <aside class="module-sidebar">
+      <div class="module-sidebar-inner">
+        <div class="module-sidebar-title">System Modules</div>
+
+        <nav class="module-nav">
+          <a href="/en/system/" class="active">System Overview</a>
+          <a class="module-link" href="/en/guides/expense-control-system/">Explore Module →</a>
+          <a class="module-link" href="/en/guides/weekly-financial-review/">Explore Module →</a>
+          <a class="module-link" href="/en/guides/realistic-budget-framework/">Explore Module →</a>
+          <a class="module-link" href="/en/guides/debt-control-strategy/">Explore Module →</a>
+          <a class="module-link" href="/en/guides/savings-growth-system/">Explore Module →</a>
+        </nav>
+
+        <div class="module-cta">
+          <a href="/en/download.html" class="btn-primary">Download App</a>
+        </div>
+      </div>
+    </aside>
+
+    <button class="mobile-module-toggle" type="button" aria-expanded="false">
+  View System Modules
+</button>
+
+    <div class="module-content">
+
 
 <section class="section hero-slim">
   <h1>The Weekly Financial Operating System</h1>
@@ -83,31 +134,31 @@
     <div class="feature-card">
       <h3>1. Daily Log</h3>
       <p>Every transaction is captured within 24 hours.</p>
-      <a href="/en/guides/expense-control-system/">Explore Daily Logging →</a>
+      <a class="module-link" href="/en/guides/expense-control-system/">Explore Module →</a>
     </div>
 
     <div class="feature-card">
       <h3>2. Weekly Review</h3>
       <p>A structured 15-minute review that prevents deviation.</p>
-      <a href="/en/guides/weekly-financial-review/">Explore Weekly Review →</a>
+      <a class="module-link" href="/en/guides/weekly-financial-review/">Explore Module →</a>
     </div>
 
     <div class="feature-card">
       <h3>3. Budget Framework</h3>
       <p>Income allocation based on real data, not guesswork.</p>
-      <a href="/en/guides/realistic-budget-framework/">Explore Budget Framework →</a>
+      <a class="module-link" href="/en/guides/realistic-budget-framework/">Explore Module →</a>
     </div>
 
     <div class="feature-card">
       <h3>4. Debt Control</h3>
       <p>Eliminate liabilities without collapsing liquidity.</p>
-      <a href="/en/guides/debt-control-strategy/">Explore Debt Control →</a>
+      <a class="module-link" href="/en/guides/debt-control-strategy/">Explore Module →</a>
     </div>
 
     <div class="feature-card">
       <h3>5. Savings Growth</h3>
       <p>Convert surplus into structured long-term security.</p>
-      <a href="/en/guides/savings-growth-system/">Explore Savings →</a>
+      <a class="module-link" href="/en/guides/savings-growth-system/">Explore Module →</a>
     </div>
 
   </div>
@@ -129,7 +180,8 @@
   <a class="btn-primary" href="/en/download.html">Download Expensely Pro</a>
 </section>
 
-</div>
+    </div>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -142,12 +194,17 @@
       <a href="/en/">Home</a>
       <a href="/en/system/">System</a>
       <a href="/en/guides/">Guides</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
+      <a href="/en/privacy.html">Privacy</a>
+      <a href="/en/terms.html">Terms</a>
     </div>
     <div>© 2026 Expensely Pro</div>
   </div>
 </footer>
 
+<div class="mobile-sticky-cta">
+  <a href="/en/download.html">Download App</a>
+</div>
+
+<a class="floating-lang-btn" href="/">AR</a>
 </body>
 </html>
