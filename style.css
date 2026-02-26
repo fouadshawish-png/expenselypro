@@ -3353,6 +3353,12 @@ html[lang="en"] h3{
     padding:40px 0;
   }
 }
+
+/* Arabic font tuning */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+html[lang="ar"], body.ar-page{
+  font-family: 'Cairo', Tahoma, 'Arial', sans-serif;
+}
 /* EN layout readability */
 body.en-page .page { max-width: 900px; margin: 40px auto; padding: 24px 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
 body.en-page .article { max-width: 48ch; margin: 0 auto; line-height: 1.6; }
