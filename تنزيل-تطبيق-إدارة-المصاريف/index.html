@@ -583,36 +583,50 @@
     <script>
 (() => {
   const alternates = {};
-
-  document.querySelectorAll('link[rel="alternate"][hreflang]')
-    .forEach(link => {
-      const lang = link.getAttribute('hreflang').toLowerCase();
-      alternates[lang] = link.href;
-    });
+  document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(link => {
+    alternates[link.getAttribute('hreflang').toLowerCase()] = link.href;
+  });
 
   const path = window.location.pathname.replace(/\/+$/, '');
   const isEn = path === '/en' || path.startsWith('/en/');
   const currentLang = isEn ? 'en' : 'ar';
 
-  const fallback = {
-    ar: '/',
-    en: '/en/'
+  const fallback = { ar: '/', en: '/en/' };
+  const arHref = alternates.ar || alternates['x-default'] || fallback.ar;
+  const enHref = alternates.en || alternates['x-default'] || fallback.en;
+
+  const getOrCreate = (id, langLabel, rightPx) => {
+    let el = document.getElementById(id) || document.querySelector(`[data-lang="${langLabel.toLowerCase()}"]`);
+    if (!el) {
+      el = document.createElement('a');
+      el.id = id;
+      el.textContent = langLabel.toUpperCase();
+      el.style.position = 'fixed';
+      el.style.bottom = '12px';
+      el.style.right = rightPx;
+      el.style.padding = '6px 10px';
+      el.style.background = '#fff';
+      el.style.border = '1px solid #ddd';
+      el.style.borderRadius = '4px';
+      el.style.fontWeight = '600';
+      el.style.zIndex = '9999';
+      document.body.appendChild(el);
+    }
+    return el;
   };
 
-  const arHref = alternates['ar'] || alternates['x-default'] || fallback.ar;
-  const enHref = alternates['en'] || alternates['x-default'] || fallback.en;
+  const arBtn = getOrCreate('langToAr', 'ar', '70px');
+  const enBtn = getOrCreate('langToEn', 'en', '12px');
 
-  const arBtn = document.getElementById('langToAr') || document.querySelector('[data-lang="ar"]');
-  const enBtn = document.getElementById('langToEn') || document.querySelector('[data-lang="en"]');
+  arBtn.href = arHref;
+  enBtn.href = enHref;
 
-  if (arBtn) {
-    arBtn.setAttribute('href', arHref);
-    if (currentLang === 'ar') arBtn.style.display = 'none';
-  }
-
-  if (enBtn) {
-    enBtn.setAttribute('href', enHref);
-    if (currentLang === 'en') enBtn.style.display = 'none';
+  if (currentLang === 'ar' && enBtn) {
+    arBtn.style.display = 'none';
+    enBtn.style.display = '';
+  } else if (currentLang === 'en' && arBtn) {
+    enBtn.style.display = 'none';
+    arBtn.style.display = '';
   }
 })();
 </script>
