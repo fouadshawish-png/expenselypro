@@ -127,4 +127,11 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://www.expenselypro.com/en/system/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
