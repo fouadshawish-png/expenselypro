@@ -1,6 +1,8 @@
 /* Add to style.css (Option A: scoped to English pages only) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
 html[lang="en"], body.en-page {
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     background: #fafbfc;
     color: #222;
 }
@@ -3355,9 +3357,8 @@ html[lang="en"] h3{
 }
 
 /* Arabic font tuning */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 html[lang="ar"], body.ar-page{
-  font-family: 'Cairo', Tahoma, 'Arial', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', Tahoma, 'Arial', sans-serif;
 }
 
 /* System context box */
@@ -3843,6 +3844,27 @@ img{
 /* Header compact on mobile */
 .site-header{
   padding:10px 0;
+}
+
+/* Ensure green buttons stay legible */
+.btn-primary,
+.btn-primary:visited{
+  color:#fff !important;
+}
+
+.btn-primary:hover{
+  color:#fff !important;
+}
+
+/* Store badges */
+.store-badge{
+  display:inline-block;
+}
+
+.store-badge img{
+  height:60px;
+  width:auto;
+  display:block;
 }
 
 /* Floating AR switch on EN pages */
