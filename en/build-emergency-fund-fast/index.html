@@ -48,216 +48,682 @@
         <p class="page-last-updated">آخر تحديث: <time datetime="2026-02-09T00:00:00+02:00">2026-02-09</time></p>
         <article class="post">
   <style>
-    .conversion-card { margin: 18px 0; border: 1px solid rgba(0,106,78,0.2); }
-    .conversion-card p { margin: 0 0 10px; }
-    .post-quick-funnel { margin: 18px 0; }
-    .post-quick-funnel ul { margin: 0; padding-right: 18px; }
-    .post-quick-funnel li { margin: 6px 0; }
-    .floating-start-btn {
-      position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 1200;
-      display: none; text-align: center; padding: 12px 14px; border-radius: 12px;
-      background: #006a4e; color: #fff; font-weight: 700; text-decoration: none;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.24);
-    }
-    .exit-intent-overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1400;
-      display: none; align-items: center; justify-content: center; padding: 16px;
-    }
-    .exit-intent-box {
-      width: min(560px, 100%); background: #fff; color: #1f2937; border-radius: 14px;
-      padding: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.28);
-    }
-    .exit-intent-box h3 { margin-top: 0; }
-    .exit-intent-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-    .exit-intent-close { background: transparent; border: 1px solid #cbd5e1; border-radius: 10px; padding: 8px 12px; cursor: pointer; }
-    @media (max-width: 768px) { .floating-start-btn { display: block; } }
-    @media (prefers-color-scheme: dark) {
-      .exit-intent-box { background: #0f172a; color: #e2e8f0; border: 1px solid #334155; }
-      .exit-intent-close { color: #e2e8f0; border-color: #475569; }
-    }
-  </style>
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="/en/">الرئيسية</a> ›<a href="/en/blog/">المدونة</a> ›
-    <a href="/en/%D8%A7%D9%84%D9%86%D8%B8%D8%A7%D9%85-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A/">النظام المالي</a> ›
-    <span>ابنِ صندوق طوارئ يحمي الميزانية خلال 6 أشهر (دليل)</span></nav>
+        <title>Build an Emergency Fund in 6 Months (Step-by-Step Guide)</title>
+        <meta
+          name="description"
+          content="Learn how to build a realistic emergency fund in 6 months: a step-by-step plan, monthly targets, automation tips, strict usage rules, and debt balance strategy."
+        />
 
+        <!-- Canonical + hreflang (EDIT domain + Arabic URL) -->
+        <link rel="canonical" href="https://YOURDOMAIN.com/build-emergency-fund-in-6-months/" />
+        <link rel="alternate" hreflang="en" href="https://YOURDOMAIN.com/build-emergency-fund-in-6-months/" />
+        <link rel="alternate" hreflang="ar" href="https://YOURDOMAIN.com/%D8%A7%D8%A8%D9%86%D9%90-%D8%B5%D9%86%D8%AF%D9%88%D9%82-%D8%B7%D9%88%D8%A7%D8%B1%D8%A6-%D9%8A%D8%AD%D9%85%D9%8A-%D8%A7%D9%84%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%A9-%D8%AE%D9%84%D8%A7%D9%84-6-%D8%A3%D8%B4%D9%87%D8%B1/" />
+        <link rel="alternate" hreflang="x-default" href="https://YOURDOMAIN.com/" />
 
-  <p class="post-reading-time">
-    ⏱ وقت القراءة: 6 دقيقة
-  </p>
-  
-  <p class="post-reading-time post-reading-time--secondary">
-    آخر تحديث: <time datetime="2026-02-09T00:00:00+02:00">09 February 2026</time>
-  </p>
-  
+        <!-- Robots -->
+        <meta name="robots" content="index, follow" />
 
-  <h1>Build a 1–3 month emergency fund in 8–12 weeks</h1>
+        <!-- Open Graph -->
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Build an Emergency Fund in 6 Months (Step-by-Step Guide)" />
+        <meta
+          property="og:description"
+          content="A realistic 6-month emergency fund plan with automation, monthly milestones, and rules that prevent new debt."
+        />
+        <meta property="og:url" content="https://YOURDOMAIN.com/build-emergency-fund-in-6-months/" />
+        <meta property="og:image" content="https://YOURDOMAIN.com/assets/images/posts/build-emergency-fund-fast-cover.jpg" />
 
-  <p>A weekly budgeting and expense tracking rhythm that redirects cash to savings fast. Short checkpoints keep you out of debt and steadily growing your buffer.</p>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Build an Emergency Fund in 6 Months (Step-by-Step Guide)" />
+        <meta
+          name="twitter:description"
+          content="A realistic 6-month emergency fund plan with automation, milestones, and strict usage rules."
+        />
+        <meta name="twitter:image" content="https://YOURDOMAIN.com/assets/images/posts/build-emergency-fund-fast-cover.jpg" />
 
-  <section class="post-top-cta card" aria-label="تنفيذ سريع">
-    <div class="tools-actions">
-      <a class="btn-accent" href="/en/reports_root/" data-engagement="true">افتح التقارير الآن (ويب)</a>
-      <a class="btn-primary" href="/en/?route=reports" data-engagement="true">افتح التقارير الآن (داخل التطبيق)</a>
-    </div>
-  </section>
+        <!-- Styles -->
+        <link rel="stylesheet" href="/style.css" />
 
-  <section class="post-quick-funnel card" aria-label="روابط التنفيذ السريع">
-    <h2>روابط التنفيذ السريع</h2>
-    <ul>
-      <li><a href="/en/?route=budgets" data-engagement="true">ابدأ ميزانيتك الآن</a></li>
-      <li><a href="/en/?route=reports" data-engagement="true">راجع تقاريرك أولًا بأول</a></li>
-      <li><a href="/en/?route=goals" data-engagement="true">ثبّت هدفك المالي القادم</a></li>
-    </ul>
-  </section>
+        <!-- Article + FAQ Schema (EDIT dates + domain + author URLs) -->
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Build an Emergency Fund in 6 Months (Step-by-Step Guide)",
+            "description": "Learn how to build a realistic emergency fund in 6 months: monthly targets, automation tips, strict usage rules, and debt balance strategy.",
+            "image": ["https://YOURDOMAIN.com/assets/images/posts/build-emergency-fund-fast-cover.jpg"],
+            "datePublished": "2026-02-09",
+            "dateModified": "2026-02-09",
+            "author": { "@type": "Person", "name": "Fouad Shawish", "url": "https://YOURDOMAIN.com/about-author/" },
+            "publisher": { "@type": "Organization", "name": "Expensely Pro", "url": "https://YOURDOMAIN.com/" },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://YOURDOMAIN.com/build-emergency-fund-in-6-months/" }
+          }
+        </script>
 
-  
-  <img
-    class="post-image post-image--wide"
-    src="/assets/images/posts/build-emergency-fund-fast-cover.jpg"
-    alt="ابنِ صندوق طوارئ يحمي الميزانية خلال 6 أشهر (دليل)"
-    loading="lazy"
-    width="1200"
-    height="630">
-  
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a good minimum emergency fund?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Most people start with $1,000–$2,000 as a first safety buffer, then build toward 3–6 months of essential expenses." }
+              },
+              {
+                "@type": "Question",
+                "name": "Should I build an emergency fund before paying off debt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Build a small emergency buffer first, then split your monthly surplus between savings and debt repayment to avoid restarting the debt cycle after a surprise expense." }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I stay consistent for 6 months?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Use a fixed monthly amount, automate transfers, and do a simple weekly review to keep the plan stable even during weak months." }
+              }
+            ]
+          }
+        </script>
+      </head>
 
-  
-  <section class="section" aria-label="ملاحظة من التجربة">
-    <div class="card">
-      <h2>ملاحظة من التجربة</h2>
-      <p>صندوق الطوارئ لا يبنى بالقفزات الكبيرة غالبًا؛ التحويلات الصغيرة المنتظمة هي الأكثر استدامة، خصوصًا مع الدخل المتغير.</p>
-    </div>
-  </section>
-  
+      <body>
+        <main class="page" id="content">
+          <div class="container page-container">
+            <p class="page-last-updated">
+              Last updated:
+              <time datetime="2026-02-09T00:00:00+02:00">2026-02-09</time>
+            </p>
 
-  <div class="post-content" id="postContent">
-    <h1 id="كيف-تبني-صندوق-طوارئ-خلال-6-أشهر-بطريقة-واقعية">كيف تبني صندوق طوارئ خلال 6 أشهر بطريقة واقعية</h1>
+            <article class="post">
+              <style>
+                .conversion-card { margin: 18px 0; border: 1px solid rgba(0,106,78,0.2); }
+                .conversion-card p { margin: 0 0 10px; }
+                .post-quick-funnel { margin: 18px 0; }
+                .post-quick-funnel ul { margin: 0; padding-left: 18px; }
+                .post-quick-funnel li { margin: 6px 0; }
+                .floating-start-btn {
+                  position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 1200;
+                  display: none; text-align: center; padding: 12px 14px; border-radius: 12px;
+                  background: #006a4e; color: #fff; font-weight: 700; text-decoration: none;
+                  box-shadow: 0 8px 24px rgba(0,0,0,0.24);
+                }
+                .exit-intent-overlay {
+                  position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1400;
+                  display: none; align-items: center; justify-content: center; padding: 16px;
+                }
+                .exit-intent-box {
+                  width: min(560px, 100%); background: #fff; color: #1f2937; border-radius: 14px;
+                  padding: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.28);
+                }
+                .exit-intent-box h3 { margin-top: 0; }
+                .exit-intent-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+                .exit-intent-close { background: transparent; border: 1px solid #cbd5e1; border-radius: 10px; padding: 8px 12px; cursor: pointer; }
+                @media (max-width: 768px) { .floating-start-btn { display: block; } }
+                @media (prefers-color-scheme: dark) {
+                  .exit-intent-box { background: #0f172a; color: #e2e8f0; border: 1px solid #334155; }
+                  .exit-intent-close { color: #e2e8f0; border-color: #475569; }
+                }
+              </style>
 
-<p>الطوارئ ليست استثناء نادرًا كما نحب أن نعتقد. من واقع المتابعة، هي السبب الأول الذي يُعيد الناس للديون حتى بعد أشهر من الانضباط. المشكلة ليست في حدوث الطارئ، بل في غياب الاستعداد له.</p>
+              <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/en/">Home</a> ›
+                <a href="/en/blog/">Blog</a> ›
+                <a href="/en/topics/money-system/">Money System</a> ›
+                <span>Build an Emergency Fund in 6 Months (Step-by-Step Guide)</span>
+              </nav>
 
-<p>هذا الدليل يساعدك تبني صندوق طوارئ واقعي خلال 6 أشهر، بدون ضغط مبالغ فيه على ميزانيتك. سنمشي بخطة تدريجية تناسب الدخل الثابت أو المتغير، وتمنحك هامش أمان حقيقي.</p>
+              <p class="post-reading-time">⏱ Reading time: 6 minutes</p>
+              <p class="post-reading-time post-reading-time--secondary">
+                Last updated: <time datetime="2026-02-09T00:00:00+02:00">09 February 2026</time>
+              </p>
 
-<p>وإذا أردت ربط هذا الصندوق بالنظام المالي الكامل، ارجع إلى <a href="/en/ultimate-guide-personal-finance-arabic/">الدليل الشامل لإدارة المصاريف الشخصية</a>.</p>
+              <!-- ONE H1 ONLY -->
+              <h1>Build an Emergency Fund in 6 Months (Step-by-Step Guide)</h1>
 
-<h2 id="ما-هو-صندوق-الطوارئ-فعلًا">ما هو صندوق الطوارئ فعلًا؟</h2>
+              <p class="post-byline">
+                By <a href="/about-author/">Fouad Shawish</a> ·
+                <time datetime="2026-02-09T00:00:00+02:00">9 February 2026</time>
+              </p>
 
-<p>صندوق الطوارئ ليس ادخارًا عامًا لأي هدف. هو مبلغ مخصص فقط للحالات غير المتوقعة والضرورية:</p>
+              <section class="post-top-cta card" aria-label="Quick action">
+                <div class="tools-actions">
+                  <a class="btn-accent" href="/reports_root/" data-engagement="true">Open Reports (Web)</a>
+                  <a class="btn-primary" href="/?route=reports" data-engagement="true">Open Reports (In App)</a>
+                </div>
+              </section>
 
-<ul>
-  <li>عطل مهم في السيارة أو البيت.</li>
-  <li>حالة صحية عاجلة.</li>
-  <li>فجوة دخل مؤقتة.</li>
-  <li>مصروف طارئ لا يمكن تأجيله.</li>
-</ul>
+              <section class="post-quick-funnel card" aria-label="Quick links">
+                <h2>Quick Action Links</h2>
+                <ul>
+                  <li><a href="/?route=budgets" data-engagement="true">Create your budget</a></li>
+                  <li><a href="/?route=reports" data-engagement="true">Review your reports</a></li>
+                  <li><a href="/?route=goals" data-engagement="true">Set your next goal</a></li>
+                </ul>
+              </section>
 
-<p>لا يستخدم للترفيه أو المشتريات العادية.</p>
+              <img
+                class="post-image post-image--wide"
+                src="/assets/images/posts/build-emergency-fund-fast-cover.jpg"
+                alt="Build an Emergency Fund in 6 Months (Step-by-Step Guide)"
+                loading="lazy"
+                width="1200"
+                height="630"
+              />
 
-<h2 id="لماذا-يفشل-الناس-في-بناء-صندوق-الطوارئ">لماذا يفشل الناس في بناء صندوق الطوارئ؟</h2>
+              <section class="section" aria-label="Practical note">
+                <div class="card">
+                  <h2>From real experience</h2>
+                  <p>
+                    Emergency funds usually aren’t built through huge jumps. Small, consistent transfers are more sustainable—especially with variable income.
+                  </p>
+                </div>
+              </section>
 
-<h3 id="1-انتظار-المبلغ-الكبير-من-البداية">1) انتظار المبلغ الكبير من البداية</h3>
+              <div class="post-content" id="postContent">
+                <h2 id="how-to-build-an-emergency-fund-in-6-months">How to build an emergency fund in 6 months—realistically</h2>
 
-<p>عندما تضع هدفًا ضخمًا من أول يوم، تشعر أنه بعيد جدًا فتفقد الحافز.</p>
+                <p>
+                  Emergencies aren’t rare exceptions. In practice, they’re the #1 reason people fall back into debt—even after months of discipline.
+                  The problem isn’t the emergency. It’s the lack of preparation.
+                </p>
 
-<h3 id="2-ادخار-غير-منتظم">2) ادخار غير منتظم</h3>
+                <p>
+                  This guide helps you build a realistic emergency fund in 6 months without crushing your budget. The plan works for stable or variable income and gives you real financial protection.
+                </p>
 
-<p>ادخار “على حسب الفائض” غالبًا يعني ادخارًا قليلًا جدًا.</p>
+                <p>
+                  If you want to connect this to a complete money system, start here:
+                  <a href="/en/ultimate-guide-personal-finance/">Ultimate Guide to Personal Finance</a>.
+                </p>
 
-<h3 id="3-الخلط-بين-الادخار-والطوارئ">3) الخلط بين الادخار والطوارئ</h3>
+                <h2 id="what-is-an-emergency-fund">What is an emergency fund—really?</h2>
 
-<p>سحب مبلغ الطوارئ لأهداف غير طارئة ينسف الفكرة كلها.</p>
+                <p>An emergency fund isn’t general savings. It’s money reserved only for unexpected, necessary situations:</p>
 
-<h3 id="4-عدم-وجود-تحويل-تلقائي">4) عدم وجود تحويل تلقائي</h3>
+                <ul>
+                  <li>Critical car or home repairs.</li>
+                  <li>Medical emergencies.</li>
+                  <li>A temporary income gap.</li>
+                  <li>An urgent expense that cannot be delayed.</li>
+                </ul>
 
-<p>كلما تركت القرار ليومك، زادت احتمالية التأجيل.</p>
+                <p>It should not be used for entertainment or normal purchases.</p>
 
-<h2 id="نموذج-6-أشهر-من-أين-تبدأ">نموذج 6 أشهر: من أين تبدأ؟</h2>
+                <h2 id="why-people-fail">Why most people fail to build an emergency fund</h2>
 
-<h2 id="المرحلة-1-تحديد-هدف-أولي-واقعي">المرحلة 1: تحديد هدف أولي واقعي</h2>
+                <h3 id="waiting-for-a-big-number">1) They wait for a “big number” from day one</h3>
+                <p>Setting a huge target upfront makes it feel too far away—motivation collapses.</p>
 
-<p>لا تبدأ بهدف 6 أشهر مصاريف مباشرة. ابدأ بهدف مرحلي.</p>
+                <h3 id="inconsistent-saving">2) Saving inconsistently</h3>
+                <p>Saving “whatever is left” usually means saving almost nothing.</p>
 
-<p>مثال:</p>
+                <h3 id="mixing-savings">3) Mixing savings with emergencies</h3>
+                <p>Using emergency money for non-emergencies destroys the entire point.</p>
 
-<ul>
-  <li>هدف أولي خلال 6 أشهر: 3000</li>
-  <li>التحويل الشهري المطلوب: 500</li>
-</ul>
+                <h3 id="no-automation">4) No automation</h3>
+                <p>The more you leave the decision to “later,” the more likely you postpone it.</p>
 
-<p>هذا رقم واضح ويمكن متابعته.</p>
+                <h2 id="six-month-model">The 6-month model: where to start</h2>
 
-<h2 id="المرحلة-2-تأمين-المبلغ-الشهري-في-الميزانية">المرحلة 2: تأمين المبلغ الشهري في الميزانية</h2>
+                <h2 id="phase-1">Phase 1: choose a realistic starter goal</h2>
+                <p>Don’t start with “6 months of expenses.” Start with a milestone.</p>
 
-<p>عامل مبلغ الطوارئ كبند أساسي مثل الفاتورة، لا كبند اختياري.</p>
+                <p>Example:</p>
+                <ul>
+                  <li>6-month target: 3,000</li>
+                  <li>Monthly transfer: 500</li>
+                </ul>
 
-<p>للتطبيق المباشر داخل الميزانية:</p>
+                <p>Clear numbers are easy to track.</p>
 
-<p><a href="/en/?route=budgets">فتح الميزانيات</a></p>
+                <h2 id="phase-2">Phase 2: secure the monthly amount in your budget</h2>
+                <p>Treat your emergency transfer like a fixed bill—not an optional category.</p>
 
-<h2 id="المرحلة-3-تفعيل-التحويل-التلقائي">المرحلة 3: تفعيل التحويل التلقائي</h2>
+                <p>Apply it directly in your budget:</p>
+                <p><a href="/?route=budgets">Open Budgets</a></p>
 
-<p>حوّل المبلغ في أول الأسبوع أو أول الشهر قبل الإنفاق الاختياري.</p>
+                <h2 id="phase-3">Phase 3: turn on automatic transfers</h2>
+                <p>Transfer the amount at the start of the month or the first week—before discretionary spending.</p>
+                <p><strong>Golden rule:</strong> save first, then spend.</p>
 
-<p>قاعدة ذهبية: ادخر أولًا، ثم اصرف.</p>
+                <h2 id="income-table">Examples by income level</h2>
 
-<h2 id="جدول-أمثلة-حسب-مستويات-دخل-مختلفة">جدول أمثلة حسب مستويات دخل مختلفة</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th style="text-align:left">Net monthly income</th>
+                      <th style="text-align:left">Starter %</th>
+                      <th style="text-align:left">Suggested monthly</th>
+                      <th style="text-align:left">After 6 months</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align:left">4,000</td>
+                      <td style="text-align:left">7%</td>
+                      <td style="text-align:left">280</td>
+                      <td style="text-align:left">1,680</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left">6,000</td>
+                      <td style="text-align:left">8%</td>
+                      <td style="text-align:left">480</td>
+                      <td style="text-align:left">2,880</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left">8,000</td>
+                      <td style="text-align:left">10%</td>
+                      <td style="text-align:left">800</td>
+                      <td style="text-align:left">4,800</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left">10,000</td>
+                      <td style="text-align:left">10%</td>
+                      <td style="text-align:left">1,000</td>
+                      <td style="text-align:left">6,000</td>
+                    </tr>
+                  </tbody>
+                </table>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: right">صافي الدخل الشهري</th>
-      <th style="text-align: right">نسبة مبدئية للطوارئ</th>
-      <th style="text-align: right">مبلغ شهري مقترح</th>
-      <th style="text-align: right">رصيد بعد 6 أشهر</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: right">4000</td>
-      <td style="text-align: right">7%</td>
-      <td style="text-align: right">280</td>
-      <td style="text-align: right">1680</td>
-    </tr>
-    <tr>
-      <td style="text-align: right">6000</td>
-      <td style="text-align: right">8%</td>
-      <td style="text-align: right">480</td>
-      <td style="text-align: right">2880</td>
-    </tr>
-    <tr>
-      <td style="text-align: right">8000</td>
-      <td style="text-align: right">10%</td>
-      <td style="text-align: right">800</td>
-      <td style="text-align: right">4800</td>
-    </tr>
-    <tr>
-      <td style="text-align: right">10000</td>
-      <td style="text-align: right">10%</td>
-      <td style="text-align: right">1000</td>
-      <td style="text-align: right">6000</td>
-    </tr>
-  </tbody>
-</table>
+                <p>This is a simple reference. Adjust numbers to your real obligations.</p>
 
-<p>الجدول توضيحي. عدّل الأرقام حسب التزاماتك الفعلية.</p>
+                <h2 id="full-example">A complete practical example</h2>
 
-<h2 id="مثال-رقمي-عملي-كامل">مثال رقمي عملي كامل</h2>
+                <p>Assume:</p>
+                <ul>
+                  <li>Income: 6,500</li>
+                  <li>Fixed obligations: 3,600</li>
+                  <li>Essential variable costs: 1,900</li>
+                  <li>Remaining: 1,000</li>
+                </ul>
 
-<p>لنفترض:</p>
+                <p>6-month split:</p>
+                <ul>
+                  <li>550 to emergency fund</li>
+                  <li>450 for flexibility / debt / goals</li>
+                </ul>
 
-<ul>
-  <li>الدخل: 6500</li>
-  <li>الالتزامات الثابتة: 3600</li>
-  <li>المتغيرات الأساسية: 1900</li>
-  <li>المتبقي: 1000</li>
-</ul>
+                <p>After 6 months:</p>
+                <ul>
+                  <li>Emergency balance = 3,300</li>
+                </ul>
 
-<p>خطة 6 أشهر:</p>
+                <p>Result: a moderate shock won’t push you into debt.</p>
 
-<ul>
-  <li>550 للطوارئ</li>
-  <li>450 مرونة/ديون/أهداف</li>
-</ul>
+                <h2 id="rules">Strict rules for using the emergency fund</h2>
+                <ol>
+                  <li>Use it only for real emergencies.</li>
+                  <li>Any withdrawal must include a refill plan.</li>
+                  <li>Keep it separate from your daily spending account.</li>
+                  <li>Review the balance weekly or bi-weekly.</li>
+                </ol>
+
+                <h2 id="debt-relationship">Emergency fund vs paying debt</h2>
+                <p>Common question: should I build emergency savings or pay debt?</p>
+                <p><strong>Practical answer:</strong> both, in a smart order.</p>
+
+                <ul>
+                  <li>Build a small emergency buffer first.</li>
+                  <li>Then split your monthly surplus between saving and repayment.</li>
+                </ul>
+
+                <p>This prevents the worst loop: paying debt → new emergency → borrowing again.</p>
+
+                <p>Manage debt in parallel:</p>
+                <p><a href="/?route=debt_ledger">Open Debt Ledger</a></p>
+
+                <h2 id="motivation">How to stay motivated for 6 months</h2>
+                <h3 id="monthly-milestones">1) Turn the big target into monthly milestones</h3>
+                <p>Instead of “3,000 in 6 months,” focus on “500 this month.”</p>
+
+                <h3 id="visual-tracking">2) Track progress visually</h3>
+                <p>Seeing the number rise is psychologically motivating.</p>
+
+                <h3 id="dont-quit">3) Don’t quit after a weak month</h3>
+                <p>If you miss the target, adjust the next month—don’t cancel the plan.</p>
+
+                <h3 id="mental-stability">4) Tie the fund to peace of mind</h3>
+                <p>This isn’t just money. It’s reduced daily anxiety about surprises.</p>
+
+                <h2 id="next-cluster">Next: protect the plan from repeating mistakes</h2>
+                <p>After building a safety base, avoid the most common budgeting traps:</p>
+                <p><a href="/en/budgeting-mistakes/">Budgeting mistakes that repeat every month</a></p>
+
+                <h2 id="deep-link">Practical deep link</h2>
+                <p>To monitor weekly impact:</p>
+                <p><a href="/?route=reports">Open Reports</a></p>
+
+                <h2 id="progress-cta">Simple action plan</h2>
+                <ol>
+                  <li>Choose a 6-month milestone goal.</li>
+                  <li>Set a fixed monthly amount.</li>
+                  <li>Automate the transfer.</li>
+                  <li>Review weekly.</li>
+                </ol>
+
+                <p>Then apply it through:</p>
+                <ul>
+                  <li><a href="/?route=budgets">Budgets</a></li>
+                  <li><a href="/?route=reports">Reports</a></li>
+                  <li><a href="/download.html">Start your money system</a></li>
+                </ul>
+
+                <h2 id="where-to-keep">Where should you keep your emergency fund?</h2>
+                <ul>
+                  <li>Separate account: best for psychological separation.</li>
+                  <li>Main wallet/account: easiest access, higher temptation.</li>
+                  <li>Split model: liquid + semi-restricted portion.</li>
+                </ul>
+
+                <h2 id="levels">Emergency fund levels (3 stages)</h2>
+                <h3>Level 1: initial safety</h3>
+                <p>Prevents immediate debt from small shocks.</p>
+
+                <h3>Level 2: operational stability</h3>
+                <p>Covers essential expenses for weeks or one month.</p>
+
+                <h3>Level 3: strategic protection</h3>
+                <p>Covers 3–6 months based on income stability.</p>
+
+                <h2 id="decision-checklist">Decision checklist before withdrawing</h2>
+                <ol>
+                  <li>Is this truly unavoidable?</li>
+                  <li>Is there a cheaper alternative?</li>
+                  <li>Do I have a 30–60 day refill plan?</li>
+                </ol>
+
+                <h2 id="after-goal">What after you hit the first goal?</h2>
+                <ol>
+                  <li>Keep the monthly transfer to build stronger protection.</li>
+                  <li>Redirect part to another goal while keeping a baseline buffer.</li>
+                </ol>
+
+                <h2 id="faq">FAQ</h2>
+                <h3>1) What’s a good minimum emergency fund?</h3>
+                <p>Many people start with $1,000–$2,000 as a first buffer, depending on their situation.</p>
+
+                <h3>2) Should I build it before paying debt?</h3>
+                <p>Build a small buffer first, then balance saving and repayment to avoid restarting debt after emergencies.</p>
+
+                <h3>3) How do I stay consistent for 6 months?</h3>
+                <p>Fixed amount + automation + a simple weekly review to keep consistency.</p>
+
+                <hr />
+                <p>
+                  Building an emergency fund isn’t financial luxury. It’s the first protective layer that makes every other plan sustainable.
+                </p>
+              </div>
+
+              <!-- Inline CTA templates (kept, rewritten) -->
+              <template id="softCtaTemplate">
+                <section class="conversion-card card" aria-label="CTA Soft">
+                  <h3>Want to apply this in real life? Log your first transaction now.</h3>
+                  <div class="tools-actions">
+                    <a class="btn-primary" href="/?route=all_transactions" data-cta="soft" data-engagement="true">Log your first transaction</a>
+                  </div>
+                </section>
+              </template>
+
+              <template id="mediumCtaTemplate">
+                <section class="conversion-card card" aria-label="CTA Medium">
+                  <h3>Create your first budget in two minutes.</h3>
+                  <div class="tools-actions">
+                    <a class="btn-primary" href="/?route=budgets" data-cta="medium" data-engagement="true">Open Budgets</a>
+                  </div>
+                </section>
+              </template>
+
+              <template id="habitHookTemplate">
+                <section class="conversion-card card" aria-label="7-Day Rule">
+                  <h3>The 7-Day Rule</h3>
+                  <p>Try logging every transaction for 7 days. Then compare how much clearer your decisions feel.</p>
+                  <ul>
+                    <li><a href="/en/build-monthly-budget/">How to build a realistic monthly budget</a></li>
+                    <li><a href="/en/manage-debt-step-by-step/">How to manage debt step by step</a></li>
+                    <li><a href="/en/weekly-budget-review/">How to review your budget weekly</a></li>
+                  </ul>
+                  <div class="tools-actions">
+                    <a class="btn-primary" href="/?route=all_transactions" data-engagement="true">Start 7 days</a>
+                  </div>
+                </section>
+              </template>
+
+              <template id="readAlsoBurstTemplate">
+                <aside class="inline-cta inline-read-also" aria-label="Read also">
+                  <h3>Read also</h3>
+                  <ul class="topic-block__list">
+                    <li><a href="/en/how-to-save-from-salary/">Save from your salary in 30 days</a></li>
+                    <li><a href="/en/ultimate-guide-personal-finance/">Ultimate Personal Finance Guide</a></li>
+                    <li><a href="/en/how-to-pay-off-debt/">How to pay off debt strategically</a></li>
+                  </ul>
+                </aside>
+              </template>
+
+              <!-- Floating CTA -->
+              <a class="floating-start-btn" href="/download.html" data-cta="strong" data-engagement="true" aria-label="Start now">
+                Start now
+              </a>
+
+              <!-- Exit intent (Article block) -->
+              <div class="exit-intent-overlay" id="exitIntentOverlay" aria-hidden="true">
+                <div class="exit-intent-box" role="dialog" aria-modal="true" aria-labelledby="exitIntentTitle">
+                  <h3 id="exitIntentTitle">Before you leave—want to try the system in real life?</h3>
+                  <p>Start with one simple step today and you’ll see a clear difference in weeks.</p>
+                  <div class="exit-intent-actions">
+                    <a class="btn-primary" href="/download.html" data-cta="strong" data-engagement="true">Download the app</a>
+                    <button class="exit-intent-close" id="exitIntentClose" type="button">Close</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Inject CTAs into content (same logic, safe) -->
+              <script>
+                (function () {
+                  var content = document.getElementById("postContent");
+                  var habitTemplate = document.getElementById("habitHookTemplate");
+                  if (!content || !habitTemplate) return;
+
+                  var blocks = content.querySelectorAll("p, h2, h3, ul, ol, table");
+                  if (!blocks.length) return;
+
+                  var habitIndex = Math.max(2, Math.floor(blocks.length * 0.45));
+                  habitIndex = Math.min(habitIndex, blocks.length - 1);
+                  var habitNode = habitTemplate.content.firstElementChild.cloneNode(true);
+                  blocks[habitIndex].insertAdjacentElement("afterend", habitNode);
+                })();
+              </script>
+
+              <script>
+                (function () {
+                  var content = document.getElementById("postContent");
+                  var template = document.getElementById("readAlsoBurstTemplate");
+                  if (!content || !template) return;
+
+                  var block = template.content.firstElementChild ? template.content.firstElementChild.cloneNode(true) : null;
+                  if (!block) return;
+
+                  var paragraphs = content.querySelectorAll("p");
+                  if (paragraphs.length >= 3) {
+                    paragraphs[2].insertAdjacentElement("afterend", block);
+                    return;
+                  }
+
+                  var h2 = content.querySelector("h2");
+                  if (h2) {
+                    h2.insertAdjacentElement("afterend", block);
+                    return;
+                  }
+
+                  content.insertBefore(block, content.firstChild);
+                })();
+              </script>
+
+              <script>
+                (function () {
+                  var content = document.getElementById("postContent");
+                  var softTemplate = document.getElementById("softCtaTemplate");
+                  var mediumTemplate = document.getElementById("mediumCtaTemplate");
+                  if (!content || !softTemplate || !mediumTemplate) return;
+
+                  var blocks = content.querySelectorAll("p, h2, h3, ul, ol, table");
+                  if (!blocks.length) return;
+
+                  var softIndex = Math.max(1, Math.floor(blocks.length * 0.25));
+                  var mediumIndex = Math.max(2, Math.floor(blocks.length * 0.60));
+                  softIndex = Math.min(softIndex, blocks.length - 1);
+                  mediumIndex = Math.min(mediumIndex, blocks.length - 1);
+
+                  var softNode = softTemplate.content.firstElementChild.cloneNode(true);
+                  var mediumNode = mediumTemplate.content.firstElementChild.cloneNode(true);
+
+                  blocks[softIndex].insertAdjacentElement("afterend", softNode);
+                  blocks[mediumIndex].insertAdjacentElement("afterend", mediumNode);
+                })();
+              </script>
+
+              <!-- Desktop exit intent (once per session) -->
+              <script>
+                (function () {
+                  if (window.matchMedia("(max-width: 992px)").matches) return;
+                  if (sessionStorage.getItem("exit_intent_seen") === "1") return;
+
+                  var overlay = document.getElementById("exitIntentOverlay");
+                  var closeBtn = document.getElementById("exitIntentClose");
+                  if (!overlay || !closeBtn) return;
+
+                  function closePopup() {
+                    overlay.style.display = "none";
+                    overlay.setAttribute("aria-hidden", "true");
+                  }
+
+                  function openPopup() {
+                    if (sessionStorage.getItem("exit_intent_seen") === "1") return;
+                    sessionStorage.setItem("exit_intent_seen", "1");
+                    overlay.style.display = "flex";
+                    overlay.setAttribute("aria-hidden", "false");
+                  }
+
+                  document.addEventListener("mouseout", function (e) {
+                    if (!e.relatedTarget && e.clientY <= 0) openPopup();
+                  });
+
+                  closeBtn.addEventListener("click", closePopup);
+                  overlay.addEventListener("click", function (e) {
+                    if (e.target === overlay) closePopup();
+                  });
+                })();
+              </script>
+            </article>
+          </div>
+        </main>
+
+        <footer>
+          <p>© 2026 All rights reserved — Fouad Shawish</p>
+          <!-- Keep your existing footer links if you want -->
+        </footer>
+
+        <!-- Mini banner + sticky bar (kept minimal, EDIT domain + UTM if needed) -->
+        <div class="site-mini-banner" id="siteMiniBanner">
+          <span>Download the app and start in one minute</span>
+          <a href="/download.html?utm_source=authority&utm_medium=content&utm_campaign=demand_engine">Download</a>
+          <button type="button" id="siteMiniBannerClose" aria-label="Close">×</button>
+        </div>
+
+        <div class="sticky-download-bar" id="stickyDownloadBar" hidden>
+          <p class="sticky-download-bar__text">Turn this guide into a real system inside the app</p>
+          <a
+            class="sticky-download-bar__button"
+            id="stickyDownloadButton"
+            data-cta-location="top_bar"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager"
+            >Download</a
+          >
+          <button class="sticky-download-bar__close" id="stickyDownloadClose" type="button" aria-label="Close">×</button>
+        </div>
+
+        <script>
+          (function () {
+            var miniBanner = document.getElementById("siteMiniBanner");
+            var miniBannerClose = document.getElementById("siteMiniBannerClose");
+            if (miniBanner && miniBannerClose) {
+              try {
+                if (sessionStorage.getItem("siteMiniBannerClosed") === "1") {
+                  miniBanner.style.display = "none";
+                }
+              } catch (e) {}
+              miniBannerClose.addEventListener("click", function () {
+                miniBanner.style.display = "none";
+                try { sessionStorage.setItem("siteMiniBannerClosed", "1"); } catch (e) {}
+              });
+            }
+
+            var PLAYSTORE_BASE = "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager";
+            var UTM_PARAMS = "utm_source=blog&utm_medium=content&utm_campaign=demand_engine";
+
+            function withUtm(url) {
+              if (!url) return "";
+              if (url.indexOf("utm_source=") !== -1) return url;
+              return url + (url.indexOf("?") === -1 ? "?" : "&") + UTM_PARAMS;
+            }
+
+            var bar = document.getElementById("stickyDownloadBar");
+            var barButton = document.getElementById("stickyDownloadButton");
+            var barClose = document.getElementById("stickyDownloadClose");
+
+            if (barButton) barButton.href = withUtm(PLAYSTORE_BASE);
+
+            var dismissedKey = "stickyDownloadDismissedAt";
+            var dismissedMs = 48 * 60 * 60 * 1000;
+            var suppressed = false;
+
+            try {
+              var dismissedAt = parseInt(localStorage.getItem(dismissedKey) || "0", 10);
+              if (dismissedAt && Date.now() - dismissedAt < dismissedMs) suppressed = true;
+            } catch (e) {}
+
+            function depth() {
+              var doc = document.documentElement;
+              var scrollable = doc.scrollHeight - window.innerHeight;
+              if (scrollable <= 0) return 0;
+              return (window.scrollY / scrollable) * 100;
+            }
+
+            function show() {
+              if (!bar || suppressed) return;
+              if (depth() >= 35) bar.hidden = false;
+            }
+
+            if (bar && !suppressed) {
+              setTimeout(show, 5000);
+              window.addEventListener("scroll", show, { passive: true });
+              window.addEventListener("load", show);
+
+              if (barClose) {
+                barClose.addEventListener("click", function () {
+                  bar.hidden = true;
+                  suppressed = true;
+                  try { localStorage.setItem(dismissedKey, String(Date.now())); } catch (e) {}
+                });
+              }
+            }
+
+            // Auto-UTM for download links
+            document.querySelectorAll("a[href*='play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager']").forEach(function (a) {
+              a.href = withUtm(a.href);
+            });
+            document.querySelectorAll("a[href*='/download.html']").forEach(function (a) {
+              a.href = withUtm(a.href);
+            });
+          })();
+        </script>
+      </body>
+    </html>
 
 <p>بعد 6 أشهر:</p>
 
