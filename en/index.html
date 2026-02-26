@@ -399,29 +399,39 @@ if (phoneScreens.length > 1) {
       });
     </script>
   <script>
-(function() {
-  var path = window.location.pathname || "/";
-  var isEn = path.startsWith("/en/");
-  var arPath = isEn ? path.replace(/^\/en/, "") || "/" : path;
-  var enPath = isEn ? path : "/en" + (path === "/" ? "/" : path);
-  var toAr = document.getElementById("langToAr");
-  var toEn = document.getElementById("langToEn");
-  if (!toAr) {
-    toAr = document.createElement('a');
-    toAr.id = 'langToAr';
-    toAr.textContent = 'AR';
-    toAr.style.position='fixed'; toAr.style.bottom='12px'; toAr.style.right='70px'; toAr.style.padding='6px 10px'; toAr.style.background='#fff'; toAr.style.border='1px solid #ddd'; toAr.style.borderRadius='4px'; toAr.style.fontWeight='600'; toAr.style.zIndex='9999';
-    document.body.appendChild(toAr);
+(() => {
+  const alternates = {};
+
+  document.querySelectorAll('link[rel="alternate"][hreflang]')
+    .forEach(link => {
+      const lang = link.getAttribute('hreflang').toLowerCase();
+      alternates[lang] = link.href;
+    });
+
+  const path = window.location.pathname.replace(/\/+$/, '');
+  const isEn = path === '/en' || path.startsWith('/en/');
+  const currentLang = isEn ? 'en' : 'ar';
+
+  const fallback = {
+    ar: '/',
+    en: '/en/'
+  };
+
+  const arHref = alternates['ar'] || alternates['x-default'] || fallback.ar;
+  const enHref = alternates['en'] || alternates['x-default'] || fallback.en;
+
+  const arBtn = document.getElementById('langToAr') || document.querySelector('[data-lang="ar"]');
+  const enBtn = document.getElementById('langToEn') || document.querySelector('[data-lang="en"]');
+
+  if (arBtn) {
+    arBtn.setAttribute('href', arHref);
+    if (currentLang === 'ar') arBtn.style.display = 'none';
   }
-  if (!toEn) {
-    toEn = document.createElement('a');
-    toEn.id = 'langToEn';
-    toEn.textContent = 'EN';
-    toEn.style.position='fixed'; toEn.style.bottom='12px'; toEn.style.right='12px'; toEn.style.padding='6px 10px'; toEn.style.background='#fff'; toEn.style.border='1px solid #ddd'; toEn.style.borderRadius='4px'; toEn.style.fontWeight='600'; toEn.style.zIndex='9999';
-    document.body.appendChild(toEn);
+
+  if (enBtn) {
+    enBtn.setAttribute('href', enHref);
+    if (currentLang === 'en') enBtn.style.display = 'none';
   }
-  toAr.href = arPath;
-  toEn.href = enPath;
 })();
 </script>
 </body>

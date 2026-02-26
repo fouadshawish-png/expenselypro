@@ -70,255 +70,39 @@
     })();
     </script>
     <script>
-    (function() {
-      var path = window.location.pathname;
+(() => {
+  const alternates = {};
 
-      var pageType = "other";
-
-      if (path === "/" || path.includes("index")) {
-        pageType = "home";
-      } else if (path.includes("blog") || path.includes("/20")) {
-        pageType = "article";
-      } else if (path.includes("start") || path.includes("download")) {
-        pageType = "conversion_page";
-      }
-
-      gtag('event', 'page_type', {
-        page_type: pageType,
-        page_path: path
-      });
-    })();
-    </script>
-    <script>
-    (function() {
-      var params = new URLSearchParams(window.location.search);
-      var query = params.get("q") || params.get("search");
-
-      if (query) {
-        gtag('event', 'site_search', {
-          search_term: query,
-          page_path: window.location.pathname
-        });
-      }
-    })();
-    </script>
-    <script>
-    document.addEventListener("click", function(e) {
-      var link = e.target.closest("a");
-      if (!link) return;
-
-      var currentHost = window.location.hostname;
-      var linkHost = link.hostname;
-
-      if (linkHost === currentHost) {
-        gtag('event', 'internal_link_click', {
-          link_url: link.href,
-          page_path: window.location.pathname
-        });
-      }
+  document.querySelectorAll('link[rel="alternate"][hreflang]')
+    .forEach(link => {
+      const lang = link.getAttribute('hreflang').toLowerCase();
+      alternates[lang] = link.href;
     });
-    </script>
-    <script>
-    (function() {
-      var exitTracked = false;
 
-      document.addEventListener("mouseleave", function(e) {
-        if (e.clientY <= 0 && !exitTracked) {
-          exitTracked = true;
-          gtag('event', 'exit_intent', {
-            page_path: window.location.pathname
-          });
-        }
-      });
-    })();
-    </script>
-    <script>
-    (function() {
-      var activeTracked = false;
+  const path = window.location.pathname.replace(/\/+$/, '');
+  const isEn = path === '/en' || path.startsWith('/en/');
+  const currentLang = isEn ? 'en' : 'ar';
 
-      function trackActive() {
-        if (activeTracked) return;
-        activeTracked = true;
+  const fallback = {
+    ar: '/',
+    en: '/en/'
+  };
 
-        sendOncePerSession('active_reader', {
-          page_path: window.location.pathname
-        });
-      }
+  const arHref = alternates['ar'] || alternates['x-default'] || fallback.ar;
+  const enHref = alternates['en'] || alternates['x-default'] || fallback.en;
 
-      window.addEventListener('scroll', trackActive);
-      window.addEventListener('click', trackActive);
-    })();
-    </script>
-    <script>
-    (function() {
-      var fullReadTracked = false;
+  const arBtn = document.getElementById('langToAr') || document.querySelector('[data-lang="ar"]');
+  const enBtn = document.getElementById('langToEn') || document.querySelector('[data-lang="en"]');
 
-      window.addEventListener('scroll', function() {
-        if (fullReadTracked) return;
-
-        var scrollTop = window.scrollY;
-        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        if (docHeight <= 0) return;
-        var scrollPercent = Math.round((scrollTop / docHeight) * 100);
-
-        if (scrollPercent >= 95) {
-          fullReadTracked = true;
-
-          gtag('event', 'full_article_read', {
-            page_path: window.location.pathname
-          });
-        }
-      }, { passive: true });
-    })();
-    </script>
-    <script>
-    (function() {
-      var articleTitle = document.title;
-      var articlePath = window.location.pathname;
-
-      gtag('event', 'content_context', {
-        article_title: articleTitle,
-        article_path: articlePath
-      });
-
-      window.siteContext = {
-        article_title: articleTitle,
-        article_path: articlePath
-      };
-    })();
-    </script>
-    <script>
-    document.addEventListener("click", function(e) {
-      var link = e.target.closest("a");
-      if (!link) return;
-
-      var socialDomains = [
-        "facebook.com",
-        "twitter.com",
-        "x.com",
-        "linkedin.com",
-        "wa.me",
-        "whatsapp.com",
-        "t.me"
-      ];
-
-      var clickedHost = link.hostname;
-
-      if (socialDomains.some(function(domain) {
-        return clickedHost.includes(domain);
-      })) {
-        gtag('event', 'social_click', {
-          social_url: link.href,
-          page_path: window.location.pathname
-        });
-      }
-    });
-    </script>
-    <script>
-    (function() {
-      var article = document.querySelector("article");
-      if (!article) return;
-
-      var text = article.innerText || "";
-      var words = text.trim().split(/\s+/).length;
-
-      gtag('event', 'article_word_count', {
-        word_count: words,
-        page_path: window.location.pathname
-      });
-    })();
-    </script>
-    <script>
-    window.addEventListener("load", function() {
-      setTimeout(function() {
-        var perf = performance.getEntriesByType("navigation")[0];
-        if (!perf) return;
-
-        var loadTime = Math.round(perf.loadEventEnd - perf.startTime);
-
-        gtag('event', 'page_load_time', {
-          load_time_ms: loadTime,
-          page_path: window.location.pathname
-        });
-      }, 0);
-    });
-    </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-      let scroll50Sent = false;
-      let scroll90Sent = false;
-
-      window.addEventListener("scroll", function () {
-        const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
-
-        if (scrollPercent > 50 && !scroll50Sent) {
-          gtag('event', 'scroll_50', {
-            event_category: 'engagement'
-          });
-          scroll50Sent = true;
-        }
-
-        if (scrollPercent > 90 && !scroll90Sent) {
-          gtag('event', 'scroll_90', {
-            event_category: 'engagement'
-          });
-          scroll90Sent = true;
-        }
-      });
-
-    });
-    </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const startBtn = document.querySelector(".cta-start");
-
-      if (startBtn) {
-        startBtn.addEventListener("click", function () {
-          gtag('event', 'click_cta_home', {
-            event_category: 'engagement'
-          });
-        });
-      }
-    });
-    </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const playBtn = document.querySelector(".play-store-btn");
-
-      if (playBtn) {
-        playBtn.addEventListener("click", function () {
-          gtag('event', 'click_google_play', {
-            event_category: 'conversion'
-          });
-        });
-      }
-    });
-    </script>
-  <script>
-(function() {
-  var path = window.location.pathname || "/";
-  var isEn = path.startsWith("/en/");
-  var arPath = isEn ? path.replace(/^\/en/, "") || "/" : path;
-  var enPath = isEn ? path : "/en" + (path === "/" ? "/" : path);
-  var toAr = document.getElementById("langToAr");
-  var toEn = document.getElementById("langToEn");
-  if (!toAr) {
-    toAr = document.createElement('a');
-    toAr.id = 'langToAr';
-    toAr.textContent = 'AR';
-    toAr.style.position='fixed'; toAr.style.bottom='12px'; toAr.style.right='70px'; toAr.style.padding='6px 10px'; toAr.style.background='#fff'; toAr.style.border='1px solid #ddd'; toAr.style.borderRadius='4px'; toAr.style.fontWeight='600'; toAr.style.zIndex='9999';
-    document.body.appendChild(toAr);
+  if (arBtn) {
+    arBtn.setAttribute('href', arHref);
+    if (currentLang === 'ar') arBtn.style.display = 'none';
   }
-  if (!toEn) {
-    toEn = document.createElement('a');
-    toEn.id = 'langToEn';
-    toEn.textContent = 'EN';
-    toEn.style.position='fixed'; toEn.style.bottom='12px'; toEn.style.right='12px'; toEn.style.padding='6px 10px'; toEn.style.background='#fff'; toEn.style.border='1px solid #ddd'; toEn.style.borderRadius='4px'; toEn.style.fontWeight='600'; toEn.style.zIndex='9999';
-    document.body.appendChild(toEn);
+
+  if (enBtn) {
+    enBtn.setAttribute('href', enHref);
+    if (currentLang === 'en') enBtn.style.display = 'none';
   }
-  toAr.href = arPath;
-  toEn.href = enPath;
 })();
 </script>
 </body>
