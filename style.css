@@ -3459,6 +3459,11 @@ html[lang="ar"], body.ar-page{
   margin:30px 0;
 }
 
+html.dark .inline-download{
+  background:#0f3025;
+  border:1px solid rgba(123,232,192,0.25);
+}
+
 .module-link{
   font-weight:600;
   text-decoration:none;
@@ -3940,6 +3945,29 @@ html.dark a{
 
 .btn-primary:hover{
   color:#fff !important;
+}
+
+/* Button legibility */
+button,
+.btn,
+.btn.primary,
+.btn-accent{
+  color:#fff !important;
+  font-weight:700;
+}
+
+.btn.secondary,
+.btn-secondary{
+  background: transparent;
+  border:1px solid #0f6b4f;
+  color:#0f6b4f !important;
+}
+
+html.dark .btn.secondary,
+html.dark .btn-secondary{
+  border:1px solid #7BE8C0;
+  color:#7BE8C0 !important;
+  background: transparent;
 }
 
 /* Store badges */
