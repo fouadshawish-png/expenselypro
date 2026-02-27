@@ -3857,12 +3857,25 @@ html.dark .site-header{
   border-bottom: 1px solid rgba(123,232,192,0.15);
 }
 
+html.dark .main-nav a{
+  color:#E8FFF4;
+}
+
+html.dark .logo span,
+html.dark .brand-name{
+  color:#E8FFF4;
+}
+
 html.dark .page,
 html.dark main.page,
 html.dark .page-container,
 html.dark .container.page-container{
   background: transparent;
   color:#E8FFF4;
+}
+
+html.dark .container{
+  background: transparent;
 }
 
 html.dark main.page,
