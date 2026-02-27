@@ -3846,6 +3846,44 @@ img{
   padding:10px 0;
 }
 
+/* Dark theme fixes */
+html.dark body{
+  background:#0B1F17;
+  color:#E8FFF4;
+}
+
+html.dark .site-header{
+  background: rgba(11,31,23,0.9);
+  border-bottom: 1px solid rgba(123,232,192,0.15);
+}
+
+html.dark main.page,
+html.dark .page,
+html.dark .card,
+html.dark .hero-card,
+html.dark .topic-card,
+html.dark .feature-card,
+html.dark .module-content,
+html.dark .module-sidebar-inner{
+  background:#142F25;
+  color:#E8FFF4;
+  box-shadow:none;
+  border-color: rgba(123,232,192,0.18);
+}
+
+html.dark .page-container{
+  background: transparent;
+}
+
+html.dark a{
+  color:#7BE8C0;
+}
+
+html.dark .btn-primary,
+html.dark .btn-secondary,
+html.dark .btn-nav{
+  color:#fff !important;
+}
 /* Theme toggle */
 .theme-toggle-btn{
   position:fixed;
