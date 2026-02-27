@@ -3857,6 +3857,14 @@ html.dark .site-header{
   border-bottom: 1px solid rgba(123,232,192,0.15);
 }
 
+html.dark .page,
+html.dark main.page,
+html.dark .page-container,
+html.dark .container.page-container{
+  background: transparent;
+  color:#E8FFF4;
+}
+
 html.dark main.page,
 html.dark .page,
 html.dark .card,
@@ -3883,6 +3891,10 @@ html.dark .btn-primary,
 html.dark .btn-secondary,
 html.dark .btn-nav{
   color:#fff !important;
+}
+
+html.dark a{
+  color:#7BE8C0;
 }
 /* Theme toggle */
 .theme-toggle-btn{
