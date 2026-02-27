@@ -1,5 +1,5 @@
 /* Add to style.css (Option A: scoped to English pages only) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;600;700&display=swap');
 
 html[lang="en"], body.en-page {
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -91,7 +91,7 @@ main.page {
     .article h1 { font-size: 1.4rem; }
     .article h2 { font-size: 1.1rem; }
 }
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+/* Remove old Cairo import — consolidated fonts at top */
 
 /* تحسين CLS: حجز مساحة للصور والشعار */
 .logo img { width: 40px; height: 40px; min-width: 40px; min-height: 40px; display: inline-block; }
@@ -1690,7 +1690,7 @@ html.dark .post h3 {
 }
 
 h1,h2,h3,h4 {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Cairo', sans-serif;
   margin-bottom: 16px;
 }
 
@@ -1904,7 +1904,7 @@ h1,h2,h3,h4 {
 }
 
 .hero h1 {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-size: 48px;
   margin-bottom: 20px;
 }
@@ -1959,7 +1959,7 @@ h1,h2,h3,h4 {
   font-size: 24px;
   display: block;
   margin-top: 10px;
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
 
 .finance-card.income strong {
@@ -2097,7 +2097,7 @@ html.dark .finance-card {
 }
 
 .showcase-text h2 {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-size: 32px;
   margin-bottom: 20px;
 }
@@ -3358,7 +3358,7 @@ html[lang="en"] h3{
 
 /* Arabic font tuning */
 html[lang="ar"], body.ar-page{
-  font-family: 'IBM Plex Sans Arabic', Tahoma, 'Arial', sans-serif;
+  font-family: 'Cairo', Tahoma, 'Arial', sans-serif;
 }
 
 /* System context box */
