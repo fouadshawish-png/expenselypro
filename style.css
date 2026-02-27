@@ -3846,6 +3846,29 @@ img{
   padding:10px 0;
 }
 
+/* Theme toggle */
+.theme-toggle-btn{
+  position:fixed;
+  inset-inline-end:16px;
+  inset-block-end:90px;
+  z-index:1200;
+  border:1px solid rgba(0,0,0,0.12);
+  background:#fff;
+  color:#0f6b4f;
+  border-radius:50%;
+  width:44px;
+  height:44px;
+  font-size:20px;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+\n.theme-toggle-btn:hover{background:#f3f5f4;}
+
+@media (max-width:768px){
+  .theme-toggle-btn{inset-block-end:80px;}
+}
+
 /* Ensure green buttons stay legible */
 .btn-primary,
 .btn-primary:visited{
