@@ -2,4 +2,13 @@
 User-agent: *
 Allow: /
 
+Disallow: /content-engine/
+Disallow: /my-web-project/
+Disallow: /tools/
+Disallow: /recommend/
+Disallow: /share/
+Disallow: /social-push/
+Disallow: /ar/share/
+Disallow: /ar/social-push/
+
 Sitemap: https://www.expenselypro.com/sitemap.xml
