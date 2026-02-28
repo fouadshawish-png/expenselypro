@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
+<link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/">
+<link rel="alternate" hreflang="en" href="https://www.expenselypro.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/ar/">
     <meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,9 +14,6 @@
     <title>محترف المصاريف | نظام لضبط الميزانية وتتبع المصاريف</title>
     <meta name="description" content="نظام أسبوعي عملي لضبط الميزانية، تتبع المصاريف، وإدارة الديون بخطوات واضحة وواجهة عربية.">
     <link rel="canonical" href="https://www.expenselypro.com/ar/">
-    <link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/">
-    <link rel="alternate" hreflang="en" href="https://www.expenselypro.com/ar/en/">
-    <link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/ar/">
     <meta name="robots" content="index, follow">
     <meta property="og:url" content="https://www.expenselypro.com/ar/">
     <meta property="og:locale" content="ar_AR">
@@ -1246,8 +1246,6 @@ if (phoneScreens.length > 1) {
   <script>
 (() => {
   const alternates = {};
-  document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(link => {
-    alternates[link.getAttribute('hreflang').toLowerCase()] = link.href;
   });
 
   const path = window.location.pathname.replace(/\/+$/, '');
