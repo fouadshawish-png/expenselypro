@@ -3,7 +3,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://www.expenselypro.com/</loc>
+    <loc>https://www.expenselypro.com/ar/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,31 +11,31 @@
 
   <!-- Arabic Core Hubs -->
   <url>
-    <loc>https://www.expenselypro.com/إدارة-المصاريف/</loc>
+    <loc>https://www.expenselypro.com/ar/إدارة-المصاريف/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/الميزانية/</loc>
+    <loc>https://www.expenselypro.com/ar/الميزانية/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/الديون/</loc>
+    <loc>https://www.expenselypro.com/ar/الديون/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/الادخار/</loc>
+    <loc>https://www.expenselypro.com/ar/الادخار/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/تنظيم-المصاريف/</loc>
+    <loc>https://www.expenselypro.com/ar/تنظيم-المصاريف/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -43,19 +43,19 @@
 
   <!-- Arabic Pillars -->
   <url>
-    <loc>https://www.expenselypro.com/نظام-إدارة-مالية-شخصية-كامل/</loc>
+    <loc>https://www.expenselypro.com/ar/نظام-إدارة-مالية-شخصية-كامل/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/خطة-30-يوم-لضبط-المصاريف/</loc>
+    <loc>https://www.expenselypro.com/ar/خطة-30-يوم-لضبط-المصاريف/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/دليل-إدارة-المصاريف-والميزانية/</loc>
+    <loc>https://www.expenselypro.com/ar/دليل-إدارة-المصاريف-والميزانية/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -63,49 +63,49 @@
 
   <!-- Arabic Articles (حتى لو slug إنجليزي) -->
   <url>
-    <loc>https://www.expenselypro.com/why-salary-ends-before-month-end/</loc>
+    <loc>https://www.expenselypro.com/ar/why-salary-ends-before-month-end/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/why-monthly-budget-fails/</loc>
+    <loc>https://www.expenselypro.com/ar/why-monthly-budget-fails/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/how-to-create-budget-step-by-step/</loc>
+    <loc>https://www.expenselypro.com/ar/how-to-create-budget-step-by-step/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/how-to-save-from-my-salary/</loc>
+    <loc>https://www.expenselypro.com/ar/how-to-save-from-my-salary/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/how-to-pay-off-debt-strategically/</loc>
+    <loc>https://www.expenselypro.com/ar/how-to-pay-off-debt-strategically/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/reduce-expenses-without-deprivation/</loc>
+    <loc>https://www.expenselypro.com/ar/reduce-expenses-without-deprivation/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/types-of-budgets-guide/</loc>
+    <loc>https://www.expenselypro.com/ar/types-of-budgets-guide/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/where-does-my-salary-go/</loc>
+    <loc>https://www.expenselypro.com/ar/where-does-my-salary-go/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
