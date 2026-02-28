@@ -113,7 +113,27 @@ Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 
 
 </IfModule>
+# =========================================
+# Enforce language structure (/ar or /en)
+# Redirect any non-prefixed URL to /ar/
+# =========================================
 
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+# لا تعيد توجيه إذا كان الرابط يبدأ بـ /ar أو /en
+RewriteCond %{REQUEST_URI} !^/(ar|en)/
+
+# لا تعيد توجيه للمجلدات النظامية
+RewriteCond %{REQUEST_URI} !^/(assets|admin|cms|data|data-sources|uploads|tools|content-engine|media-kit|press|subscription_plans|updates|reports_root|goals_root|debt_root|latest|new|my-web-project|\.well-known)/
+
+# لا تعيد توجيه للملفات الثابتة
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|webp|svg|ico|xml|txt|webmanifest|pdf)$
+
+RewriteRule ^(.*)$ /ar/$1 [R=301,L]
+
+</IfModule>
 # منع تصفح المجلدات
 Options -Indexes
 
