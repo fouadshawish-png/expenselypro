@@ -1,5801 +1,707 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <link rel="canonical" href="https://www.expenselypro.com/ar/weekly-budget-control-system/">
-  <meta charset="utf-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نظام التحكم الأسبوعي في الميزانية | جلسة 15 دقيقة تمنع الانهيار المالي</title>
+  <meta name="description" content="نظام التحكم الأسبوعي في الميزانية خلال 10–15 دقيقة: يلتقط الانحرافات مبكرًا، يفرض قرارين فقط، ويربط التقارير بالميزانية والديون والأهداف لمنع الانهيار المالي قبل أن يبدأ." />
+  <meta name="robots" content="index, follow" />
 
-  <link rel="stylesheet" href="/style.css">
-    <script>
-      
-</script>
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://www.expenselypro.com/ar/weekly-budget-control-system/" />
+  <link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/weekly-budget-control-system/" />
+  <link rel="alternate" hreflang="en" href="https://www.expenselypro.com/en/guides/weekly-financial-review/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/" />
 
+  <!-- OG / Twitter -->
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="نظام التحكم الأسبوعي في الميزانية | جلسة 15 دقيقة تمنع الانهيار المالي" />
+  <meta property="og:description" content="10–15 دقيقة أسبوعيًا تمنع الانهيار المالي عبر كشف الانحرافات مبكرًا وتحويلها لقرارات بسيطة قابلة للتنفيذ." />
+  <meta property="og:url" content="https://www.expenselypro.com/ar/weekly-budget-control-system/" />
+  <meta property="og:site_name" content="Expensely Pro" />
+  <meta name="twitter:card" content="summary" />
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق", "description": "آخر تحديث: 2026-01-31", "author": {"@type": "Person", "name": "Fouad Shawish"}, "datePublished": "2026-01-31T00:00:00+02:00", "dateModified": "2026-01-31T00:00:00+02:00", "mainEntityOfPage": {"@type": "WebPage", "@id": ""}, "publisher": {"@type": "Organization", "name": "Expensely Pro", "logo": {"@type": "ImageObject", "url": "https://www.expenselypro.com/ar/icon.png"}}, "image": "/assets/images/posts/weekly-budget-control-system-cover.jpeg"}</script>
-  <script defer src="/assets/theme.js"></script>
+  <!-- Styles: mobile-first, simple, fast -->
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1a31;
+      --card:#101f3a;
+      --text:#eaf0ff;
+      --muted:#b9c6ea;
+      --brand:#0EA5C6;
+      --brand2:#22c55e;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max: 980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,"Segoe UI",Tahoma,Arial;
+      background: radial-gradient(1200px 700px at 70% -10%, rgba(14,165,198,.22), transparent 60%),
+                  radial-gradient(900px 520px at 20% 10%, rgba(34,197,94,.15), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.75;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:18px}
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 18px}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .logo{
+      width:36px; height:36px; border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), #3b82f6);
+      box-shadow: var(--shadow);
+    }
+    .brand b{font-size:14px; letter-spacing:.2px}
+    .nav{display:flex; gap:10px; flex-wrap:wrap}
+    .nav a{
+      text-decoration:none; font-size:13px; color:var(--muted);
+      padding:8px 10px; border:1px solid var(--line); border-radius:999px;
+      background: rgba(255,255,255,.03);
+    }
+    .hero{
+      padding:24px 0 10px;
+    }
+    .hero-grid{
+      display:grid; gap:14px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-card{padding:18px}
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; color:var(--muted);
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    h1{margin:10px 0 8px; font-size:28px; line-height:1.25}
+    .lead{color:var(--muted); margin:0 0 14px; font-size:15px}
+    .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      text-decoration:none; font-weight:700; font-size:14px;
+      padding:12px 14px; border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--brand), #3b82f6);
+      border-color: transparent;
+    }
+    .btn.good{
+      background: linear-gradient(135deg, var(--brand2), #16a34a);
+      border-color: transparent;
+    }
+    .btn small{opacity:.85; font-weight:600}
+    .hero-aside{
+      padding:18px;
+    }
+    .aside-title{margin:0 0 10px; font-size:14px; color:var(--muted)}
+    .mini{
+      display:grid; gap:10px;
+    }
+    .mini .item{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding:12px;
+      background: rgba(255,255,255,.03);
+    }
+    .item b{display:block; margin-bottom:4px}
+    .toc{padding:18px}
+    .toc h2{margin:0 0 10px; font-size:16px}
+    .toc a{
+      display:block; text-decoration:none; color:var(--muted);
+      padding:10px 10px; border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      margin-bottom:10px;
+    }
+    main{padding:10px 0 40px}
+    section{margin-top:14px}
+    .section-card{padding:18px}
+    h2{margin:0 0 10px; font-size:20px}
+    h3{margin:14px 0 8px; font-size:16px}
+    p{margin:0 0 10px}
+    ul,ol{margin:8px 0 12px; padding-inline-start:18px; color:var(--muted)}
+    li{margin:6px 0}
+    .quote{
+      border-right:4px solid var(--brand);
+      background: rgba(14,165,198,.10);
+      padding:12px 12px;
+      border-radius:14px;
+      color:var(--text);
+      margin:12px 0;
+    }
+    .grid2{display:grid; gap:12px}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line); background: rgba(255,255,255,.03);
+      color:var(--muted); font-size:12px;
+    }
+    table{
+      width:100%; border-collapse:separate; border-spacing:0;
+      overflow:hidden; border-radius:14px; border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+    }
+    th,td{
+      padding:10px; text-align:right; vertical-align:top;
+      border-bottom:1px solid var(--line);
+      color:var(--muted); font-size:14px;
+    }
+    th{color:var(--text); background: rgba(255,255,255,.04)}
+    tr:last-child td{border-bottom:none}
+    .callout{
+      border:1px solid rgba(34,197,94,.35);
+      background: rgba(34,197,94,.10);
+      padding:14px;
+      border-radius:14px;
+      margin:12px 0;
+    }
+    .faq details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: rgba(255,255,255,.02);
+      padding:12px;
+      margin:10px 0;
+    }
+    .faq summary{
+      cursor:pointer; font-weight:800; color:var(--text);
+      list-style:none;
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    footer{
+      border-top:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      padding:18px 0;
+    }
+    .foot{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      color:var(--muted); font-size:13px;
+    }
+    .foot a{color:var(--muted)}
+    .pill-links{display:flex; gap:10px; flex-wrap:wrap}
+    .pill-links a{
+      text-decoration:none; border:1px solid var(--line);
+      padding:8px 10px; border-radius:999px;
+      background: rgba(255,255,255,.02);
+    }
+
+    /* Desktop */
+    @media (min-width: 860px){
+      .hero-grid{grid-template-columns: 1.2fr .8fr}
+      .grid2{grid-template-columns: 1fr 1fr}
+      h1{font-size:34px}
+      .lead{font-size:16px}
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.expenselypro.com/ar/weekly-budget-control-system/"},
+    "headline":"نظام التحكم الأسبوعي في الميزانية: 15 دقيقة تمنع الانهيار المالي",
+    "description":"نظام أسبوعي عملي يمنع الانهيار المالي عبر كشف الانحرافات مبكرًا وتحويلها إلى قرارات بسيطة قابلة للتنفيذ وربطها بالميزانية والديون والأهداف.",
+    "author":{"@type":"Person","name":"فؤاد شاويش"},
+    "publisher":{"@type":"Organization","name":"Expensely Pro"},
+    "inLanguage":"ar"
+  }
+  </script>
+
+  <!-- Structured Data: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"كم تستغرق جلسة التحكم الأسبوعي؟",
+        "acceptedAnswer":{"@type":"Answer","text":"بين 10 و15 دقيقة إذا التزمت بقالب ثابت وقرارات محدودة."}
+      },
+      {
+        "@type":"Question",
+        "name":"ما أهم سؤال أسبوعي لرفع الالتزام؟",
+        "acceptedAnswer":{"@type":"Answer","text":"سؤال واحد ثابت: ما بند التجاوز الرئيسي هذا الأسبوع؟ لأنه يوجه القرار التالي فورًا."}
+      },
+      {
+        "@type":"Question",
+        "name":"ماذا أفعل إذا لم أستطع التعويض هذا الأسبوع؟",
+        "acceptedAnswer":{"@type":"Answer","text":"لا تلغِ الخطة. خفّض سقف بند مرن للأسبوع التالي وحدد قيدًا سلوكيًا بسيطًا لمدة 7 أيام."}
+      },
+      {
+        "@type":"Question",
+        "name":"كم قرارًا مناسبًا في كل أسبوع؟",
+        "acceptedAnswer":{"@type":"Answer","text":"قراران كافيان عادة. كثرة القرارات تعني قلة التنفيذ."}
+      },
+      {
+        "@type":"Question",
+        "name":"متى أرفع سقف بند معين؟",
+        "acceptedAnswer":{"@type":"Answer","text":"إذا تكرر تجاوز واقعي لنفس البند 3 أسابيع متتالية، ارفع الحد تدريجيًا (5%–10%) مع سبب واضح."}
+      }
+    ]
+  }
+  </script>
 </head>
-<body class="ar-page">
-<header class="site-header">
-  <div class="container header-container">
-    <div class="logo">
-      <a href="/">
-        <img src="/icon.png" alt="شعار محترف المصاريف" width="36" height="36">
-        <span>محترف المصاريف</span>
-      </a>
-    </div>
-    <nav class="main-nav">
-      <a href="/guides.html">الأدلة</a>
-      <a href="/topics">المواضيع</a>
-      <a href="/about/">حول</a>
-      <a href="/download.html" class="btn-nav">تحميل التطبيق</a>
+
+<body>
+
+<header>
+  <div class="topbar wrap">
+    <a class="brand" href="/ar/">
+      <span class="logo" aria-hidden="true"></span>
+      <b>Expensely Pro</b>
+    </a>
+    <nav class="nav" aria-label="روابط سريعة">
+      <a href="/ar/إدارة-المصاريف/">إدارة المصاريف</a>
+      <a href="/ar/الميزانية/">الميزانية</a>
+      <a href="/ar/الديون/">الديون</a>
+      <a href="/ar/نظام-إدارة-مالية-شخصية-كامل/">النظام الكامل</a>
     </nav>
   </div>
 </header>
 
-<main class="page" id="content">
-      <div class="container page-container">
-        <p class="page-last-updated">آخر تحديث: <time datetime="2026-01-31T00:00:00+02:00">2026-01-31</time></p>
-        <article class="post">
-  <style>
-    .conversion-card { margin: 18px 0; border: 1px solid rgba(0,106,78,0.2); }
-    .conversion-card p { margin: 0 0 10px; }
-    .post-quick-funnel { margin: 18px 0; }
-    .post-quick-funnel ul { margin: 0; padding-right: 18px; }
-    .post-quick-funnel li { margin: 6px 0; }
-    .floating-start-btn {
-      position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 1200;
-      display: none; text-align: center; padding: 12px 14px; border-radius: 12px;
-      background: #006a4e; color: #fff; font-weight: 700; text-decoration: none;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.24);
-    }
-    .exit-intent-overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1400;
-      display: none; align-items: center; justify-content: center; padding: 16px;
-    }
-    .exit-intent-box {
-      width: min(560px, 100%); background: #fff; color: #1f2937; border-radius: 14px;
-      padding: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.28);
-    }
-    .exit-intent-box h3 { margin-top: 0; }
-    .exit-intent-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-    .exit-intent-close { background: transparent; border: 1px solid #cbd5e1; border-radius: 10px; padding: 8px 12px; cursor: pointer; }
-    @media (max-width: 768px) { .floating-start-btn { display: block; } }
-    @media (prefers-color-scheme: dark) {
-      .exit-intent-box { background: #0f172a; color: #e2e8f0; border: 1px solid #334155; }
-      .exit-intent-close { color: #e2e8f0; border-color: #475569; }
-    }
-  </style>
+<div class="wrap hero">
+  <div class="hero-grid">
+    <div class="card hero-card">
+      <span class="kicker">📌 عمود أسبوعي رسمي • منهج “التحكم الأسبوعي”</span>
+      <h1>نظام التحكم الأسبوعي في الميزانية: 15 دقيقة تمنع الانهيار المالي</h1>
+      <p class="lead">
+        انهيار الميزانية لا يحدث فجأة؛ يبدأ بانحرافات صغيرة لا نلتقطها في الوقت المناسب.
+        هذا النظام يحوّل <b>التقارير</b> إلى <b>قرارات</b> خلال 10–15 دقيقة أسبوعيًا: قرار تخفيض + قرار تعويض… وبس.
+      </p>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="/">الرئيسية</a> ›<a href="/blog/">المدونة</a> ›
-    <a href="/%D8%A7%D9%84%D9%86%D8%B8%D8%A7%D9%85-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A/">النظام المالي</a> ›
-    <span>اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق</span></nav>
+      <div class="quote">
+        <b>السؤال الأسبوعي الذهبي:</b>
+        ما <u>بند التجاوز الرئيسي</u> هذا الأسبوع؟  
+        هذا السؤال وحده يوجّه القرار التالي ويمنعك من الغرق في التفاصيل.
+      </div>
 
+      <div class="cta-row">
+        <!-- عدّل الروابط حسب نظامك -->
+        <a class="btn primary" href="/ar/reports_root.html">افتح التقارير الآن</a>
+        <a class="btn good" href="/ar/budget/">افتح الميزانية الآن</a>
+        <a class="btn" href="/ar/download.html"><small>⬇</small> تحميل التطبيق</a>
+      </div>
 
-  <p class="post-reading-time">
-    ⏱ وقت القراءة: 6 دقيقة
-  </p>
-  
-  <p class="post-reading-time post-reading-time--secondary">
-    آخر تحديث: <time datetime="2026-01-31T00:00:00+02:00">31 January 2026</time>
-  </p>
-  
-
-  <h1>اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق</h1>
-
-  <p class="post-byline">
-    بقلم <a href="/about-author/">فؤاد شاويش</a>
-    
-    · <time datetime="2026-01-31T00:00:00+02:00">31 January 2026</time>
-    
-  </p>
-
-  <section class="post-top-cta card" aria-label="تنفيذ سريع">
-    <div class="tools-actions">
-      <a class="btn-accent" href="/reports_root/" data-engagement="true">افتح التقارير الآن (ويب)</a>
-      <a class="btn-primary" href="/?route=reports" data-engagement="true">افتح التقارير الآن (داخل التطبيق)</a>
+      <p style="margin-top:12px; color:var(--muted); font-size:13px">
+        نصيحة عملية: ثبّت يومًا واحدًا للمراجعة (مثل الجمعة) — الثبات أهم من اليوم نفسه.
+      </p>
     </div>
-  </section>
 
-  <section class="post-quick-funnel card" aria-label="روابط التنفيذ السريع">
-    <h2>روابط التنفيذ السريع</h2>
-    <ul>
-      <li><a href="/?route=budgets" data-engagement="true">ابدأ ميزانيتك الآن</a></li>
-      <li><a href="/?route=reports" data-engagement="true">راجع تقاريرك أولًا بأول</a></li>
-      <li><a href="/?route=goals" data-engagement="true">ثبّت هدفك المالي القادم</a></li>
-    </ul>
-  </section>
-
-  
-  <img
-    class="post-image post-image--wide"
-    src="/assets/images/posts/weekly-budget-control-system-cover.jpeg"
-    alt="اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق"
-    loading="lazy"
-    width="1200"
-    height="630" decoding="async">
-  
-
-  
-  <section class="section" aria-label="ملاحظة من التجربة">
-    <div class="card">
-      <h2>ملاحظة من التجربة</h2>
-      <p>أكثر نقطة حسنت الالتزام هي تحديد سؤال أسبوعي ثابت: ما بند التجاوز الرئيسي هذا الأسبوع؟ هذا السؤال وحده يوجه القرار التالي.</p>
-    </div>
-  </section>
-  
-
-  <div class="post-content" id="postContent">
-    <h1 id="مراجعة-الميزانية-الأسبوعية-النظام-الذي-يمنع-الانهيار">مراجعة الميزانية الأسبوعية: النظام الذي يمنع الانهيار</h1>
-
-<p>انهيار الميزانية غالبًا لا يحدث فجأة؛ يبدأ بانحرافات صغيرة لا نلتفت لها في الوقت المناسب. أسبوع وراء أسبوع، تتراكم التفاصيل حتى تظهر المشكلة بشكل كبير في نهاية الشهر.</p>
-
-<p>المراجعة الأسبوعية تعالج هذه النقطة بالضبط. بدل الانتظار حتى تتعقد الأمور، تلتقط المؤشرات مبكرًا وتتخذ قرارًا بسيطًا وسريعًا يعيدك للمسار.</p>
-
-<p>الفكرة هنا عملية جدًا: 10 إلى 15 دقيقة أسبوعيًا يمكن أن توفر عليك شهرًا كاملًا من التخبط.</p>
-
-<h2 id="جدول-المحتويات">جدول المحتويات</h2>
-
-<ol>
-  <li><a href="#weekly-vs-monthly">لماذا المراجعة الأسبوعية أهم من المراجعة الشهرية؟</a></li>
-  <li><a href="#fifteen-min">الهيكل العملي لمراجعة 15 دقيقة</a></li>
-  <li><a href="#weekly-metrics">مؤشرات يجب مراقبتها كل أسبوع</a></li>
-  <li><a href="#numeric-case">مثال رقمي لمراجعة أسبوعية كاملة</a></li>
-  <li><a href="#quick-corrections">كيف تصحح الانحراف بسرعة؟</a></li>
-  <li><a href="#linking">ربط المراجعة بالأهداف والديون</a></li>
-  <li><a href="#routine">روتين ثابت للاستمرارية</a></li>
-  <li><a href="#english-summary">English SEO Summary</a></li>
-  <li><a href="#faq">FAQ</a></li>
-</ol>
-
-<hr />
-<h2 id="لماذا-المراجعة-الأسبوعية-أهم-من-المراجعة-الشهرية"><a id="weekly-vs-monthly"></a>لماذا المراجعة الأسبوعية أهم من المراجعة الشهرية؟</h2>
-
-<p>المراجعة الشهرية مفيدة للتقييم النهائي، لكن الأسبوعية مهمة للتصحيح المبكر. عندما تنتظر نهاية الشهر، تكون التجاوزات قد تراكمت وصار علاجها أصعب.</p>
-
-<h3 id="الفارق-العملي">الفارق العملي</h3>
-
-<ul>
-  <li>المراجعة الشهرية: تشخيص متأخر.</li>
-  <li>المراجعة الأسبوعية: تصحيح سريع.</li>
-</ul>
-
-<p>مثال:</p>
-
-<p>إذا تجاوزت بند الطعام بـ 120 في الأسبوع الأول واكتشفته مبكرًا، تستطيع تعويضه في الأسبوع الثاني. لكن إذا انتظرت نهاية الشهر، قد يتحول التجاوز إلى 400 أو 500.</p>
-
-<h2 id="الهيكل-العملي-لمراجعة-15-دقيقة"><a id="fifteen-min"></a>الهيكل العملي لمراجعة 15 دقيقة</h2>
-
-<h3 id="الدقيقة-1-3-قراءة-الصورة-العامة">الدقيقة 1-3: قراءة الصورة العامة</h3>
-
-<ul>
-  <li>إجمالي الصرف هذا الأسبوع.</li>
-  <li>مقارنة مع الحد الأسبوعي.</li>
-</ul>
-
-<h3 id="الدقيقة-4-7-تحديد-مناطق-الانحراف">الدقيقة 4-7: تحديد مناطق الانحراف</h3>
-
-<ul>
-  <li>أعلى بندين صرفًا.</li>
-  <li>البنود المتكررة التي لم تكن ضمن الخطة.</li>
-</ul>
-
-<h3 id="الدقيقة-8-11-تفسير-السبب">الدقيقة 8-11: تفسير السبب</h3>
-
-<ul>
-  <li>ظرف مؤقت أم عادة مستمرة؟</li>
-  <li>خلل في السلوك أم في تصميم السقف؟</li>
-</ul>
-
-<h3 id="الدقيقة-12-15-قراران-فقط">الدقيقة 12-15: قراران فقط</h3>
-
-<ul>
-  <li>قرار تخفيض واضح.</li>
-  <li>قرار تعويض أو إعادة توزيع بسيط.</li>
-</ul>
-
-<p>هذا الهيكل يمنع التشتت، ويحول المراجعة إلى أداة تنفيذ.</p>
-
-<h2 id="مؤشرات-يجب-مراقبتها-كل-أسبوع"><a id="weekly-metrics"></a>مؤشرات يجب مراقبتها كل أسبوع</h2>
-
-<p>لضمان مراجعة فعالة، راقب 5 مؤشرات ثابتة:</p>
-
-<ol>
-  <li>نسبة استهلاك كل بند من حده الأسبوعي.</li>
-  <li>عدد العمليات غير المخطط لها.</li>
-  <li>متوسط الإنفاق اليومي.</li>
-  <li>الفارق بين المخطط والفعلي.</li>
-  <li>المبلغ المتاح لبقية الشهر.</li>
-</ol>
-
-<p>هذه المؤشرات متاحة بسهولة عبر <a href="/reports_root/">صفحة التقارير</a>. ثم يتم تحويلها لقرارات على <a href="/budget/">صفحة الميزانية</a>.</p>
-
-<h2 id="مثال-رقمي-لمراجعة-أسبوعية-كاملة"><a id="numeric-case"></a>مثال رقمي لمراجعة أسبوعية كاملة</h2>
-
-<p>لنفرض ميزانية شهرية = 7200</p>
-
-<p>حدود أسبوعية:</p>
-
-<ul>
-  <li>الطعام: 320</li>
-  <li>المواصلات: 180</li>
-  <li>الشخصي: 140</li>
-  <li>الطوارئ: 90</li>
-</ul>
-
-<p>نتيجة الأسبوع الأول:</p>
-
-<ul>
-  <li>الطعام: 390</li>
-  <li>المواصلات: 170</li>
-  <li>الشخصي: 190</li>
-  <li>الطوارئ: 0</li>
-</ul>
-
-<p>التحليل:</p>
-
-<ul>
-  <li>تجاوز الطعام +70</li>
-  <li>تجاوز الشخصي +50</li>
-  <li>المواصلات ضمن الحد</li>
-</ul>
-
-<p>القرار للأسبوع الثاني:</p>
-
-<ul>
-  <li>خفض سقف الشخصي إلى 120 مع تأجيل شراء غير ضروري.</li>
-  <li>تعويض 50 من بند الشخصي و20 من بند الطوارئ لبند الطعام.</li>
-</ul>
-
-<p>النتيجة المتوقعة:</p>
-
-<ul>
-  <li>استعادة التوازن خلال أسبوع واحد بدل تراكم العجز.</li>
-</ul>
-
-<h2 id="كيف-تصحح-الانحراف-بسرعة"><a id="quick-corrections"></a>كيف تصحح الانحراف بسرعة؟</h2>
-
-<h3 id="قاعدة-48-ساعة">قاعدة 48 ساعة</h3>
-
-<p>عند اكتشاف تجاوز، يجب اتخاذ قرار خلال 48 ساعة، لا نهاية الشهر.</p>
-
-<p>خطوات سريعة:</p>
-
-<ol>
-  <li>احسب التجاوز بدقة.</li>
-  <li>حدد بندًا يمكن التعويض منه.</li>
-  <li>ضع قيدًا سلوكيًا للأسبوع التالي.</li>
-</ol>
-
-<p>مثال:</p>
-
-<ul>
-  <li>تجاوز ترفيه بـ 80.</li>
-  <li>التعويض: 40 من بند شخصي + 40 من بند مرن آخر.</li>
-  <li>القيد: حد أقصى عمليتين ترفيه في الأسبوع.</li>
-</ul>
-
-<p>هذه المعالجة الصغيرة تمنع الانهيار الكلي.</p>
-
-<h2 id="ربط-المراجعة-بالأهداف-والديون"><a id="linking"></a>ربط المراجعة بالأهداف والديون</h2>
-
-<p>المراجعة الأسبوعية لا يجب أن تتوقف عند “خفض المصروف”. الأفضل أن تتحول إلى تقدم مالي:</p>
-
-<ul>
-  <li>الفرق الإيجابي يذهب إلى <a href="/goals_root/">صفحة الأهداف</a>.</li>
-  <li>جزء من التوفير يذهب إلى <a href="/debt_root/">صفحة الديون</a>.</li>
-</ul>
-
-<p>بهذه الطريقة، كل مراجعة ناجحة تدفعك خطوة إضافية نحو الاستقرار.</p>
-
-<p>وإذا لاحظت تكرار انحراف في بند معين، ارجع إلى النظام الأشمل: <a href="/organize-monthly-expenses-step-by-step/">كيف تنظم مصاريفك الشهرية خطوة بخطوة</a>.</p>
-
-<h2 id="روتين-ثابت-للاستمرارية"><a id="routine"></a>روتين ثابت للاستمرارية</h2>
-
-<p>أفضل نظام هو الذي يمكنك تكراره بسهولة. لذلك:</p>
-
-<ul>
-  <li>اختر يومًا ثابتًا للمراجعة (مثلا الجمعة).</li>
-  <li>استخدم نفس نموذج الأسئلة أسبوعيًا.</li>
-  <li>اكتب قرارين فقط.</li>
-  <li>راقب النتيجة بعد 7 أيام.</li>
-</ul>
-
-<h3 id="نموذج-قرار-أسبوعي-سريع">نموذج قرار أسبوعي سريع</h3>
-
-<ul>
-  <li>ما أول بند سأخفضه؟</li>
-  <li>ما البديل العملي؟</li>
-  <li>ما قيمة التوفير المتوقعة؟</li>
-  <li>أين سأوجه الفرق؟</li>
-</ul>
-
-<p>هذا النموذج يرفع الالتزام ويقلل التردد.</p>
-
-<p>للتطبيق المباشر:</p>
-
-<ul>
-  <li><a href="/?route=reports">فتح التقارير الآن</a></li>
-  <li><a href="/?route=budgets">تعديل الميزانية</a></li>
-  <li><a href="/?route=debt_ledger">تسجيل دفعة دين</a></li>
-</ul>
-
-<h2 id="دمج-المراجعة-الأسبوعية-مع-الخطة-الشهرية">دمج المراجعة الأسبوعية مع الخطة الشهرية</h2>
-
-<p>أكبر خطأ أن تتعامل مع كل أسبوع كأنه منفصل. الصحيح أن كل أسبوع هو جزء من دورة شهرية واحدة. لذلك استخدم هذا التقسيم:</p>
-
-<ul>
-  <li>الأسبوع 1: قياس دقة الانطلاق.</li>
-  <li>الأسبوع 2: اكتشاف البنود المتذبذبة.</li>
-  <li>الأسبوع 3: تشديد الانضباط في البنود المرنة.</li>
-  <li>الأسبوع 4: تثبيت قرارات الشهر القادم.</li>
-</ul>
-
-<p>بهذه الطريقة، تتحول المراجعة من "رد فعل" إلى "نظام قيادة".</p>
-
-<h3 id="لوحة-متابعة-مختصرة">لوحة متابعة مختصرة</h3>
-
-<p>في نهاية كل أسبوع، اكتب هذه القيم في سطر واحد:</p>
-
-<ul>
-  <li>نسبة الالتزام العامة (مثلا 82%).</li>
-  <li>أعلى بند تجاوز.</li>
-  <li>قيمة التوفير أو العجز.</li>
-  <li>القرار الأهم للأسبوع القادم.</li>
-</ul>
-
-<p>بعد 4 أسابيع، ستملك سجلًا واضحًا يمكنك من تعديل الخطة الشهرية بسرعة بدل البدء من الصفر كل مرة.</p>
-
-<h2 id="سيناريو-ضغط-مفاجئ-ماذا-تفعل">سيناريو ضغط مفاجئ: ماذا تفعل؟</h2>
-
-<p>لنفترض أن الأسبوع الثاني شهد حدثًا مفاجئًا:
-مصروف طبي أو صيانة بقيمة 450.</p>
-
-<p>بدل إلغاء الميزانية، طبّق بروتوكول الطوارئ:</p>
-
-<ol>
-  <li>خصص 200 من بند الطوارئ أو بند مرن.</li>
-  <li>وزّع 150 على أسبوعين قادمين عبر تخفيض بند اختياري.</li>
-  <li>غطِّ 100 من فائض بند آخر إن وجد.</li>
-</ol>
-
-<p>النتيجة: امتصاص الصدمة بدون كسر النظام.</p>
-
-<p>بعد ذلك، حدّث أثر هذا القرار على <a href="/budget/">صفحة الميزانية</a> وتأكد من انعكاسه في <a href="/reports_root/">صفحة التقارير</a>. وإذا تسبب الضغط في تأخير سداد التزام، راجع <a href="/debt_root/">صفحة الديون</a> لتعديل جدول الدفع مبكرًا.
-هذا الربط بين المراجعة والصفحات الرئيسية هو ما يجعل الخطة متماسكة تحت الضغط، وليس مجرد ورقة أرقام.</p>
-
-<h2 id="كيف-تعرف-أن-نظامك-الأسبوعي-ناجح">كيف تعرف أن نظامك الأسبوعي ناجح؟</h2>
-
-<p>بعد مرور شهر، استخدم 4 معايير تقييم:</p>
-
-<ol>
-  <li>انخفاض عدد التجاوزات الأسبوعية مقارنة ببداية الشهر.</li>
-  <li>تحسن دقة التوقع بين المخطط والفعلي.</li>
-  <li>زيادة المبلغ المحول للأهداف أو السداد.</li>
-  <li>انخفاض الضغط الذهني عند مراجعة الأرقام.</li>
-</ol>
-
-<p>إذا تحسنت 3 معايير على الأقل، فأنت على مسار صحيح. وإذا لم يظهر تحسن، لا تلغِ النظام؛ عدّل سؤالًا واحدًا في نموذج المراجعة أو غيّر سقف بند واحد فقط. التعديل الجزئي المتكرر أفضل بكثير من إعادة بناء الخطة كل أسبوع من الصفر.</p>
-
-<p>ومع مرور 8 أسابيع، ستلاحظ أن المراجعة صارت عادة سهلة لا تحتاج جهدًا ذهنيًا كبيرًا. هذه هي النقطة التي تتحول فيها الميزانية من عبء إلى نظام استقرار مستدام.
-وعندها تصبح قراراتك المالية أكثر ثباتًا وهدوءًا أسبوعًا بعد أسبوع.</p>
-
-<h2 id="english-seo-summary"><a id="english-summary"></a>English SEO Summary</h2>
-
-<p>A weekly budget control system prevents monthly financial breakdown by detecting deviations early, applying quick corrections, and linking savings to goals and debt reduction.</p>
-
-<h2 id="الأسئلة-الشائعة-faq"><a id="faq"></a>الأسئلة الشائعة FAQ</h2>
-
-<h3 id="1-كم-تستغرق-المراجعة-الأسبوعية">1) كم تستغرق المراجعة الأسبوعية؟</h3>
-<p>بين 10 و15 دقيقة إذا كان نموذجك واضحًا.</p>
-
-<h3 id="2-ماذا-أفعل-إذا-لم-أستطع-التعويض">2) ماذا أفعل إذا لم أستطع التعويض؟</h3>
-<p>خفّض سقف بند مرن للأسبوع التالي بدل إلغاء الميزانية.</p>
-
-<h3 id="3-هل-المراجعة-الأسبوعية-ضرورية-مع-دخل-ثابت">3) هل المراجعة الأسبوعية ضرورية مع دخل ثابت؟</h3>
-<p>نعم، لأن الانحراف يأتي غالبًا من السلوك وليس من الدخل.</p>
-
-<h3 id="4-كم-عدد-القرارات-المناسب-أسبوعيًا">4) كم عدد القرارات المناسب أسبوعيًا؟</h3>
-<p>قراران كافيان عادة، والأكثر قد يسبب تشتتًا.</p>
-
-<h3 id="5-متى-أرفع-سقف-بند-معين">5) متى أرفع سقف بند معين؟</h3>
-<p>إذا تكرر تجاوز واقعي لنفس البند 3 أسابيع متتالية.</p>
-
-<h2 id="طبّق-الآن">طبّق الآن</h2>
-
-<ul>
-  <li>ابدأ من النظام الأساسي: <a href="/organize-monthly-expenses-step-by-step/">كيف تنظم مصاريفك الشهرية خطوة بخطوة</a></li>
-  <li>راقب المؤشرات: <a href="/reports_root/">صفحة التقارير</a></li>
-  <li>ثبّت القرار الأسبوعي: <a href="/budget/">صفحة الميزانية</a></li>
-</ul>
-
-  </div>
-
-  <template id="softCtaTemplate">
-    <section class="conversion-card card" aria-label="CTA Soft">
-      <h3>هل تريد تطبيق هذه الخطوات عمليًا؟ جرّب تسجيل أول عملية الآن.</h3>
-      <div class="tools-actions">
-        <a class="btn-primary" href="/?route=all_transactions" data-cta="soft" data-engagement="true">ابدأ تسجيل أول عملية</a>
+    <aside class="card hero-aside">
+      <p class="aside-title">روابط تنفيذ سريعة</p>
+      <div class="mini">
+        <div class="item">
+          <b>1) ابدأ الآن</b>
+          <span style="color:var(--muted)">سجّل أول عملية ليصبح التقرير صادقًا.</span>
+          <div class="cta-row" style="margin-top:10px">
+            <a class="btn" href="/ar/تتبع-المصاريف-اليومية/">تتبع يومي</a>
+            <a class="btn" href="/ar/how-it-works.html">كيف يعمل</a>
+          </div>
+        </div>
+        <div class="item">
+          <b>2) اربط القرار بهدف/دين</b>
+          <span style="color:var(--muted)">الفائض يذهب للأهداف، والعجز يحرّك تعديلًا مبكرًا.</span>
+          <div class="cta-row" style="margin-top:10px">
+            <a class="btn" href="/goals_root/index.html">الأهداف</a>
+            <a class="btn" href="/debt_root/index.html">الديون</a>
+          </div>
+        </div>
+        <div class="item">
+          <b>3) اقرأ الدليل الأشمل</b>
+          <span style="color:var(--muted)">حتى لا تصبح المراجعة “قراءة أرقام” فقط.</span>
+          <div class="cta-row" style="margin-top:10px">
+            <a class="btn" href="/ar/نظام-إدارة-مالية-شخصية-كامل/">النظام الكامل</a>
+          </div>
+        </div>
       </div>
-    </section>
-  </template>
-
-  <template id="mediumCtaTemplate">
-    <section class="conversion-card card" aria-label="CTA Medium">
-      <h3>أنشئ ميزانيتك الأولى خلال دقيقتين.</h3>
-      <div class="tools-actions">
-        <a class="btn-primary" href="/?route=budgets" data-cta="medium" data-engagement="true">افتح الميزانيات الآن</a>
-      </div>
-    </section>
-  </template>
-
-  <template id="habitHookTemplate">
-    <section class="conversion-card card" aria-label="قاعدة 7 أيام">
-      <h3>قاعدة 7 أيام</h3>
-      <p>جرّب تسجيل كل عملية لمدة 7 أيام فقط. ثم قيّم الفرق في وضوح القرار.</p>
-      <ul>
-        <li><a href="/build-realistic-monthly-budget/">كيف تبني ميزانية واقعية</a></li>
-        <li><a href="/manage-personal-debt-step-by-step/">كيف تسدد ديونك بسرعة</a></li>
-        <li><a href="/weekly-budget-review/">كيف تراجع ميزانيتك أسبوعيًا</a></li>
-      </ul>
-      <div class="tools-actions">
-        <a class="btn-primary" href="/?route=all_transactions" data-engagement="true">ابدأ تسجيل 7 أيام</a>
-      </div>
-    </section>
-  </template>
-
-  <template id="readAlsoBurstTemplate">
-    <aside class="inline-cta inline-read-also" aria-label="اقرأ أيضًا">
-      <h3>اقرأ أيضًا</h3>
-      <ul class="topic-block__list">
-        
-        
-
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            
-              <li><a href="/why-budget-fails-even-with-discipline/">لماذا تفشل الميزانية رغم الالتزام؟ 5 أسباب وحلول عملية</a></li>
-              
-              
-            
-          
-        
-          
-          
-        
-          
-          
-            
-              <li><a href="/weekly-budget-review-prevents-financial-collapse/">امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق</a></li>
-              
-              
-            
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-
-        
-          
-            
-            
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-        
-
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </ul>
     </aside>
-  </template>
-
-  <section class="post-related post-related--dynamic" aria-label="مقالات ذات صلة">
-  <h2 class="section-title">مقالات ذات صلة</h2>
-  <div class="post-related-grid">
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-        
-        <article class="related-card">
-          
-          <a class="related-card__thumb" href="/why-budget-fails-even-with-discipline/" aria-label="لماذا تفشل الميزانية رغم الالتزام؟ 5 أسباب وحلول عملية">
-            <img src="/assets/images/posts/why-budget-fails-even-with-discipline-cover.jpeg" alt="لماذا تفشل الميزانية رغم أنني ألتزم بها؟" loading="lazy" width="1200" height="630" decoding="async">
-          </a>
-          
-          <div class="related-card__body">
-            <h3 class="related-card__title"><a href="/why-budget-fails-even-with-discipline/">لماذا تفشل الميزانية رغم الالتزام؟ 5 أسباب وحلول عملية</a></h3>
-            <p class="related-card__desc">لماذا تفشل الميزانية رغم الالتزام 5 أسباب وحلول عملية: هذا المحتوى يختصر عليك التجربة والخطأ. تعلّم بناء الميزانية بخطوات عملية...</p>
-          </div>
-        </article>
-        
-        
-        
-      
-    
-      
-      
-    
-      
-      
-        
-        <article class="related-card">
-          
-          <a class="related-card__thumb" href="/weekly-budget-review-prevents-financial-collapse/" aria-label="امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق">
-            <img src="/assets/images/posts/weekly-budget-review-prevents-financial-collapse-cover.jpg" alt="امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق" loading="lazy" width="1200" height="630" decoding="async">
-          </a>
-          
-          <div class="related-card__body">
-            <h3 class="related-card__title"><a href="/weekly-budget-review-prevents-financial-collapse/">امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق</a></h3>
-            <p class="related-card__desc">امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق: بدل النصائح العامة، هذه خطوات تنفيذية. تعلّم مراجعة الميزانية بخطوات عملية و...</p>
-          </div>
-        </article>
-        
-        
-        
-      
-    
-      
-      
-    
-      
-      
-        
-        <article class="related-card">
-          
-          <a class="related-card__thumb" href="/start-budget-from-zero-without-complexity/" aria-label="كيف تبدأ ميزانية من الصفر بدون تعقيد خلال 15 دقيقة؟">
-            <img src="/assets/images/posts/19.jpeg" alt="كيف تبدأ ميزانية من الصفر بدون تعقيد خلال 15 دقيقة؟" loading="lazy" width="1200" height="630" decoding="async">
-          </a>
-          
-          <div class="related-card__body">
-            <h3 class="related-card__title"><a href="/start-budget-from-zero-without-complexity/">كيف تبدأ ميزانية من الصفر بدون تعقيد خلال 15 دقيقة؟</a></h3>
-            <p class="related-card__desc">كيف تبدأ ميزانية من الصفر بدون تعقيد خلال 15 دقيقة: تبحث عن حل واضح؟ تعلّم بناء الميزانية بخطوات عملية وأمثلة واضحة، ثم طبّقها ...</p>
-          </div>
-        </article>
-        
-        
-        
-      
-    
-      
-      
-        
-        <article class="related-card">
-          
-          <a class="related-card__thumb" href="/split-salary-first-24-hours/" aria-label="قسّم الراتب بذكاء واضبط المصاريف خلال 24 ساعة">
-            <img src="/assets/images/posts/split-salary-first-24-hours-cover.jpeg" alt="قسّم الراتب بذكاء واضبط المصاريف خلال 24 ساعة" loading="lazy" width="1200" height="630" decoding="async">
-          </a>
-          
-          <div class="related-card__body">
-            <h3 class="related-card__title"><a href="/split-salary-first-24-hours/">قسّم الراتب بذكاء واضبط المصاريف خلال 24 ساعة</a></h3>
-            <p class="related-card__desc">قسّم الراتب بذكاء واضبط المصاريف خلال 24 ساعة: لو أردت نتيجة قابلة للقياس، ابدأ من هنا. تعلّم تنظيم الراتب بخطوات عملية وأمثلة ...</p>
-          </div>
-        </article>
-        
-        
-        
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-
-    
-      
-        
-        
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-        
-        
-        
-          
-        
-          
-        
-          
-        
-        
-      
-    
-
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
   </div>
-</section>
 
+  <div class="card toc" style="margin-top:14px">
+    <h2>جدول المحتويات</h2>
+    <a href="#why">لماذا التحكم الأسبوعي أقوى من المراجعة الشهرية؟</a>
+    <a href="#golden-question">السؤال الأسبوعي الذهبي</a>
+    <a href="#15min">هيكل جلسة 10–15 دقيقة (5 مراحل)</a>
+    <a href="#metrics">5 مؤشرات ثابتة تراقبها أسبوعيًا</a>
+    <a href="#diagnosis">جدول تشخيص سريع (ما القرار المناسب؟)</a>
+    <a href="#example">مثال رقمي لمراجعة أسبوعية كاملة</a>
+    <a href="#fix">كيف تصحح الانحراف بسرعة؟ (48 ساعة + 7 أيام)</a>
+    <a href="#shock">سيناريو ضغط مفاجئ: بروتوكول الطوارئ</a>
+    <a href="#goals-debt">ربط المراجعة بالأهداف والديون</a>
+    <a href="#template">قالب مراجعة أسبوعية جاهز (10 دقائق)</a>
+    <a href="#success">كيف تعرف أن نظامك ناجح بعد شهر؟</a>
+    <a href="#faq">الأسئلة الشائعة</a>
+  </div>
+</div>
 
-  <section class="section contextual-footer-links" aria-label="اقرأ أيضًا">
-    <div class="card">
-      <h2>اقرأ أيضًا:</h2>
-      <ul class="free-tools-links">
-        
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            
-              <li><a href="/why-budget-fails-even-with-discipline/">لماذا تفشل الميزانية رغم الالتزام؟ 5 أسباب وحلول عملية</a></li>
-              
-              
-            
-          
-        
-          
-          
-        
-          
-          
-            
-              <li><a href="/weekly-budget-review-prevents-financial-collapse/">امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق</a></li>
-              
-              
-            
-          
-        
-          
-          
-        
-          
-          
-            
-              <li><a href="/start-budget-from-zero-without-complexity/">كيف تبدأ ميزانية من الصفر بدون تعقيد خلال 15 دقيقة؟</a></li>
-              
-              
-            
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-        
-          
-            
-            
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-                
-                
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-            
-            
-            
-              
-            
-              
-            
-              
-            
-            
-          
-        
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-      </ul>
+<main class="wrap">
+
+  <section id="why" class="card section-card">
+    <h2>لماذا التحكم الأسبوعي أقوى من المراجعة الشهرية؟</h2>
+    <p>
+      المراجعة الشهرية مفيدة للتقييم النهائي، لكن غالبًا تأتي متأخرة.
+      التحكم الأسبوعي هو <b>تصحيح مبكر</b>: تلتقط الانحراف قبل أن يتحول إلى عجز كبير.
+    </p>
+
+    <div class="grid2">
+      <div class="card" style="padding:14px; border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.02)">
+        <span class="badge">المراجعة الشهرية</span>
+        <p style="margin-top:10px; color:var(--muted)">
+          تشخيص متأخر. تظهر المشكلة بعد تراكم الانحرافات، فيصبح الإصلاح صعبًا ومزعجًا.
+        </p>
+      </div>
+      <div class="card" style="padding:14px; border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.02)">
+        <span class="badge">التحكم الأسبوعي</span>
+        <p style="margin-top:10px; color:var(--muted)">
+          تصحيح سريع. قراران أسبوعيًا يعيدانك للمسار قبل أن تتعقد الأمور.
+        </p>
+      </div>
+    </div>
+
+    <p style="margin-top:10px; color:var(--muted)">
+      مثال: إذا تجاوزت بند الطعام بـ 120 في الأسبوع الأول، تستطيع تعويضه في الأسبوع الثاني.
+      لكن لو انتظرت نهاية الشهر قد يتحول إلى 400 أو 500 ويبدأ التوتر.
+    </p>
+  </section>
+
+  <section id="golden-question" class="card section-card">
+    <h2>السؤال الأسبوعي الذهبي</h2>
+    <p>
+      أكثر نقطة ترفع الالتزام ليست “نصيحة مالية”، بل <b>سؤال ثابت</b> يختصر الذهن ويمنع المماطلة:
+    </p>
+    <div class="quote">
+      <b>ما بند التجاوز الرئيسي هذا الأسبوع؟</b><br />
+      ما دمت تعرف “البند الأكبر”، ستعرف “القرار الأقرب” — بدون دراما.
+    </div>
+    <p style="color:var(--muted)">
+      بعدها اسأل مباشرة: هل التجاوز ظرف طارئ أم سلوك متكرر؟ وهل المشكلة في الحد أم في الالتزام؟
+    </p>
+  </section>
+
+  <section id="15min" class="card section-card">
+    <h2>هيكل جلسة 10–15 دقيقة (5 مراحل)</h2>
+
+    <h3>المرحلة 1: قراءة لوحة الأرقام الأساسية (دقيقة 1–3)</h3>
+    <ul>
+      <li>إجمالي الصرف هذا الأسبوع.</li>
+      <li>مقارنة مع الحد الأسبوعي العام.</li>
+      <li>أعلى 3 تصنيفات صرف.</li>
+      <li>الفرق بين المخطط والفعلي.</li>
+    </ul>
+
+    <h3>المرحلة 2: تحليل الانحراف (دقيقة 4–7)</h3>
+    <ul>
+      <li>صنّف كل بند: ضمن الحد / قريب / متجاوز.</li>
+      <li>حدّد: ظرف مؤقت أم عادة متكررة؟</li>
+      <li>حدّد: خلل سلوك أم خلل سقف؟</li>
+    </ul>
+
+    <h3>المرحلة 3: قرار تصحيحي واحد لكل مشكلة (دقيقة 8–11)</h3>
+    <p class="callout">
+      لا تتخذ 10 قرارات. قرار واحد سلوكي محدد لكل بند متجاوز يكفي.
+      <br /><br />
+      مثال: <b>الطعام متجاوز 90</b> → قرار: <b>وجبتان في البيت خلال 4 أيام عمل</b>.
+    </p>
+
+    <h3>المرحلة 4: تحديث الحدود للأسبوع التالي (دقيقة 12–13)</h3>
+    <ul>
+      <li>إن كان الحد غير واقعي أصلًا، عدّله بذكاء.</li>
+      <li>قاعدة عملية: تعديل <b>5%–10%</b> مقبول. أكثر من ذلك يحتاج سبب واضح.</li>
+    </ul>
+
+    <h3>المرحلة 5: إغلاق الجلسة بخطة تنفيذ (دقيقة 14–15)</h3>
+    <ul>
+      <li>3 أولويات للأسبوع القادم.</li>
+      <li>بند واحد يحتاج متابعة يومية.</li>
+      <li>موعد الجلسة القادمة (ثبّته).</li>
+    </ul>
+
+    <div class="cta-row" style="margin-top:14px">
+      <a class="btn primary" href="/ar/reports_root.html">افتح التقارير لتطبيق المراحل</a>
+      <a class="btn good" href="/ar/budget/">عدّل حدًا واحدًا فقط الآن</a>
     </div>
   </section>
 
-  <section class="section post-bottom-cta" aria-label="CTA Strong">
-    <div class="card">
-      <h2>ابدأ إدارة مصاريفك باحتراف اليوم.</h2>
-      <p>ابدأ من صفحة التحميل، ثم أكمل التنفيذ من الميزانيات والتقارير والأهداف داخل التطبيق.</p>
-      <div class="tools-actions">
-        <a class="btn-primary" href="/download.html" data-cta="strong" data-engagement="true">تحميل التطبيق</a>
-        <a class="btn-accent" href="/?route=budgets" data-engagement="true">الميزانيات</a>
-        <a class="btn-accent" href="/?route=reports" data-engagement="true">التقارير</a>
-        <a class="btn-accent" href="/?route=goals" data-engagement="true">الأهداف</a>
+  <section id="metrics" class="card section-card">
+    <h2>5 مؤشرات ثابتة تراقبها أسبوعيًا</h2>
+    <ul>
+      <li>نسبة استهلاك كل بند من حده الأسبوعي.</li>
+      <li>عدد العمليات غير المخطط لها.</li>
+      <li>متوسط الإنفاق اليومي.</li>
+      <li>الفارق بين المخطط والفعلي.</li>
+      <li>المبلغ المتاح لبقية الشهر.</li>
+    </ul>
+    <p style="color:var(--muted)">
+      الفكرة: مؤشرات قليلة ثابتة → قرارات قليلة قوية. هذا هو معنى “التحكم”.
+    </p>
+  </section>
+
+  <section id="diagnosis" class="card section-card">
+    <h2>جدول تشخيص سريع: ما القرار المناسب؟</h2>
+    <table aria-label="جدول تشخيص">
+      <thead>
+        <tr>
+          <th>الحالة</th>
+          <th>مؤشرها</th>
+          <th>السبب المحتمل</th>
+          <th>قرار مناسب</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>تجاوز متكرر في بند واحد</td>
+          <td>نفس التصنيف يتجاوز أسبوعين+</td>
+          <td>عادة يومية أو سقف غير واقعي</td>
+          <td>قرار سلوكي + تعديل 5%–10%</td>
+        </tr>
+        <tr>
+          <td>تجاوز مفاجئ في عدة بنود</td>
+          <td>ارتفاع عام أسبوع واحد</td>
+          <td>حدث طارئ أو مناسبة</td>
+          <td>صنّف الحدث استثنائيًا + خطّة أسبوع قادم</td>
+        </tr>
+        <tr>
+          <td>التزام ضعيف رغم حدود واضحة</td>
+          <td>انحراف عام متكرر</td>
+          <td>غياب متابعة يومية</td>
+          <td>مراجعة مصغرة كل 3 أيام + تبسيط</td>
+        </tr>
+        <tr>
+          <td>صعوبة في رؤية الصورة</td>
+          <td>بيانات مشتتة</td>
+          <td>تصنيفات كثيرة أو تسجيل غير منتظم</td>
+          <td>تبسيط التصنيفات + إدخال فوري</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="example" class="card section-card">
+    <h2>مثال رقمي لمراجعة أسبوعية كاملة</h2>
+    <p class="badge">مثال</p>
+    <p style="color:var(--muted)">
+      لنفرض ميزانية شهرية = 7200. حدود أسبوعية:
+    </p>
+    <ul>
+      <li>الطعام: 320</li>
+      <li>المواصلات: 180</li>
+      <li>الشخصي: 140</li>
+      <li>الطوارئ: 90</li>
+    </ul>
+
+    <p style="color:var(--muted)">نتيجة الأسبوع الأول:</p>
+    <ul>
+      <li>الطعام: 390 (تجاوز +70)</li>
+      <li>المواصلات: 170 (ضمن الحد)</li>
+      <li>الشخصي: 190 (تجاوز +50)</li>
+      <li>الطوارئ: 0</li>
+    </ul>
+
+    <h3>قرار الأسبوع الثاني (قراران فقط)</h3>
+    <ol>
+      <li>خفض سقف الشخصي إلى 120 وتأجيل شراء غير ضروري.</li>
+      <li>تعويض 50 من بند الشخصي و20 من بند الطوارئ لبند الطعام.</li>
+    </ol>
+
+    <p style="color:var(--muted)">
+      النتيجة المتوقعة: استعادة التوازن خلال أسبوع واحد بدل تراكم العجز حتى نهاية الشهر.
+    </p>
+  </section>
+
+  <section id="fix" class="card section-card">
+    <h2>كيف تصحح الانحراف بسرعة؟</h2>
+
+    <h3>قاعدة 48 ساعة</h3>
+    <p style="color:var(--muted)">
+      عند اكتشاف تجاوز، اتخذ قرارًا خلال 48 ساعة، لا نهاية الشهر.
+    </p>
+    <ul>
+      <li>احسب التجاوز بدقة.</li>
+      <li>حدد بندًا يمكن التعويض منه.</li>
+      <li>ضع قيدًا سلوكيًا للأسبوع التالي.</li>
+    </ul>
+
+    <h3>قاعدة 7 أيام</h3>
+    <p style="color:var(--muted)">
+      جرّب تسجيل كل عملية لمدة 7 أيام فقط، ثم قيّم الفرق في وضوح القرار.
+    </p>
+
+    <div class="callout">
+      مثال سريع: تجاوز ترفيه بـ 80 → تعويض 40 من بند شخصي + 40 من بند مرن،
+      وقيد: عمليتان ترفيه فقط هذا الأسبوع.
+    </div>
+  </section>
+
+  <section id="shock" class="card section-card">
+    <h2>سيناريو ضغط مفاجئ: بروتوكول الطوارئ</h2>
+    <p style="color:var(--muted)">
+      حدث طبي/صيانة بقيمة 450 في الأسبوع الثاني؟ لا تلغِ الميزانية. استخدم بروتوكول امتصاص الصدمة:
+    </p>
+    <ol>
+      <li>خصص 200 من بند الطوارئ أو بند مرن.</li>
+      <li>وزّع 150 على أسبوعين قادمين عبر تخفيض بند اختياري.</li>
+      <li>غطِّ 100 من فائض بند آخر إن وجد.</li>
+    </ol>
+    <p style="color:var(--muted)">
+      ثم حدّث أثر القرار على الميزانية وتأكد من انعكاسه في التقارير.
+    </p>
+  </section>
+
+  <section id="goals-debt" class="card section-card">
+    <h2>ربط المراجعة بالأهداف والديون</h2>
+    <p>
+      التحكم الأسبوعي لا يجب أن يتوقف عند “خفض المصروف”.
+      الأفضل أن يتحول إلى تقدم مالي:
+    </p>
+    <ul>
+      <li>الفارق الإيجابي يذهب إلى <b>الأهداف</b>.</li>
+      <li>جزء من التوفير يذهب إلى <b>الديون</b>.</li>
+    </ul>
+    <p style="color:var(--muted)">
+      وإذا تكرر انحراف في بند معين، راجع الإطار الأشمل:
+      <a href="/ar/organize-monthly-expenses-step-by-step/">كيف تنظم مصاريفك الشهرية خطوة بخطوة</a>.
+    </p>
+
+    <div class="cta-row" style="margin-top:14px">
+      <a class="btn primary" href="/goals_root/index.html">افتح الأهداف</a>
+      <a class="btn good" href="/debt_root/index.html">سجّل دفعة دين</a>
+      <a class="btn" href="/ar/reports_root.html">ارجع للتقارير</a>
+    </div>
+  </section>
+
+  <section id="template" class="card section-card">
+    <h2>قالب مراجعة أسبوعية جاهز (10 دقائق)</h2>
+
+    <h3>الدقيقة 1–2: الرقم العام</h3>
+    <ul>
+      <li>كم صرفت هذا الأسبوع؟</li>
+      <li>كم كان الحد المخطط؟</li>
+      <li>هل الفارق مقبول أم يحتاج تصحيحًا؟</li>
+    </ul>
+
+    <h3>الدقيقة 3–5: أعلى بندين مؤثرين</h3>
+    <ul>
+      <li>ما البند الأكثر استنزافًا؟</li>
+      <li>هل الزيادة ظرف واحد أم تكرار يومي؟</li>
+      <li>ما الإجراء العملي الممكن هذا الأسبوع؟</li>
+    </ul>
+
+    <h3>الدقيقة 6–8: قراران فقط</h3>
+    <ul>
+      <li>قرار تقليل: مثال “طلبات الطعام مرتين فقط”.</li>
+      <li>قرار حماية: مثال “تحويل الطوارئ قبل أي صرف اختياري”.</li>
+    </ul>
+
+    <h3>الدقيقة 9–10: تثبيت الأسبوع القادم</h3>
+    <ul>
+      <li>حدّث حدًا واحدًا فقط إذا كان غير واقعي.</li>
+      <li>ثبّت موعد المراجعة القادمة.</li>
+      <li>اكتب ملاحظة: ما الذي نجح؟ وما الذي لم ينجح؟</li>
+    </ul>
+  </section>
+
+  <section id="success" class="card section-card">
+    <h2>كيف تعرف أن نظامك الأسبوعي ناجح بعد شهر؟</h2>
+    <p style="color:var(--muted)">بعد مرور 4 أسابيع، استخدم 4 معايير:</p>
+    <ul>
+      <li>انخفاض عدد التجاوزات الأسبوعية مقارنة ببداية الشهر.</li>
+      <li>تحسن دقة التوقع بين المخطط والفعلي.</li>
+      <li>زيادة المبلغ المحول للأهداف أو السداد.</li>
+      <li>انخفاض الضغط الذهني عند مراجعة الأرقام.</li>
+    </ul>
+    <p style="color:var(--muted)">
+      إذا تحسنت 3 معايير على الأقل، أنت على مسار صحيح.
+      وإذا لم يظهر تحسن، لا تلغِ النظام — عدّل <b>سؤالًا واحدًا</b> أو <b>سقف بند واحد</b> فقط.
+    </p>
+  </section>
+
+  <section id="faq" class="card section-card faq">
+    <h2>الأسئلة الشائعة</h2>
+
+    <details>
+      <summary>كم تستغرق جلسة التحكم الأسبوعي؟</summary>
+      <p style="margin-top:10px; color:var(--muted)">بين 10 و15 دقيقة إذا كان قالبك ثابتًا وقراراتك محدودة.</p>
+    </details>
+
+    <details>
+      <summary>ما أهم مؤشر في المراجعة الأسبوعية؟</summary>
+      <p style="margin-top:10px; color:var(--muted)">معدل الانحراف عن الحد الأسبوعي لكل تصنيف، لأنه يكشف المشكلة مبكرًا.</p>
+    </details>
+
+    <details>
+      <summary>ماذا أفعل إذا تجاوزت هذا الأسبوع؟</summary>
+      <p style="margin-top:10px; color:var(--muted)">لا تلغِ الخطة. عالج التجاوز بتحويل محدود بين البنود وضع قيدًا سلوكيًا لمدة 7 أيام.</p>
+    </details>
+
+    <details>
+      <summary>كم قرارًا مناسبًا أسبوعيًا؟</summary>
+      <p style="margin-top:10px; color:var(--muted)">قراران كافيان عادة. كثرة القرارات تعني قلة التنفيذ.</p>
+    </details>
+
+    <details>
+      <summary>متى أرفع سقف بند معين؟</summary>
+      <p style="margin-top:10px; color:var(--muted)">إذا تكرر تجاوز واقعي لنفس البند 3 أسابيع متتالية، ارفع الحد تدريجيًا (5%–10%) مع سبب واضح.</p>
+    </details>
+
+    <div class="callout" style="margin-top:14px">
+      <b>ابدأ الآن بثلاثة أمور فقط هذا الأسبوع:</b>
+      <ol style="color:var(--text); margin-top:8px">
+        <li>جلسة ثابتة في نفس اليوم.</li>
+        <li>قرار واحد تصحيحي في بند واحد.</li>
+        <li>متابعة يومية مختصرة للعمليات.</li>
+      </ol>
+      <div class="cta-row" style="margin-top:10px">
+        <a class="btn primary" href="/ar/reports_root.html">افتح التقارير</a>
+        <a class="btn good" href="/ar/budget/">افتح الميزانية</a>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-label="اقرأ التالي">
-    <div class="card">
-      <h2>اقرأ التالي</h2>
-      <ul class="free-tools-links">
-        <li><a href="/weekly-budget-review/" data-engagement="true">مراجعة الميزانية الأسبوعية</a></li>
-        <li><a href="/how-to-save-from-my-salary/" data-engagement="true">ربط الميزانية بالأهداف والادخار</a></li>
-        <li><a href="/organize-monthly-expenses-step-by-step/" data-engagement="true">الدليل الأساسي لتنظيم المصاريف</a></li>
-      </ul>
+  <section class="card section-card">
+    <h2>اقرأ أيضًا</h2>
+    <div class="pill-links">
+      <a href="/ar/why-monthly-budget-fails/">لماذا تفشل الميزانية رغم الالتزام؟</a>
+      <a href="/ar/أفضل-طريقة-لتتبع-المصاريف-يوميًا/">أفضل طريقة لتتبع المصاريف يوميًا</a>
+      <a href="/ar/fast-debt-repayment-method/">طريقة عملية لتسديد الديون بسرعة</a>
+      <a href="/ar/نظام-إدارة-مالية-شخصية-كامل/">النظام المالي الكامل</a>
     </div>
   </section>
 
-  <section class="section" aria-label="تذكير أسبوعي">
-    <div class="card">
-      <h2>تذكير أسبوعي</h2>
-      <p>خصص 10 دقائق كل أسبوع لمراجعة أرقامك.</p>
-      <p>افتح التقارير الآن: <a href="/?route=reports" data-engagement="true">/?route=reports</a></p>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <b style="color:var(--text)">Expensely Pro</b><br />
+      <span>منهج مالي أسبوعي: سجل يوميًا • راجع أسبوعيًا • عدّل بذكاء</span>
     </div>
-  </section>
-
-  <section class="section" aria-label="خطة أسبوعية مجانية">
-    <div class="card">
-      <h2>احصل على خطة أسبوعية مجانية</h2>
-      <p>أدخل بريدك لنرسل لك نموذج مراجعة أسبوعية عملي (يمكن ربطه تقنيًا لاحقًا).</p>
-      <form class="footer-newsletter__form" action="/" method="get" onsubmit="return false;">
-        <input name="email" type="email" placeholder="البريد الإلكتروني" autocomplete="email">
-        <button type="submit" data-engagement="true">احصل على الخطة</button>
-      </form>
-    </div>
-  </section>
-
-  <section class="author-box" aria-label="نبذة الكاتب">
-    <img class="author-box__avatar" src="/assets/images/authors/fouad-shawish.jpg" alt="صورة الكاتب فؤاد شاويش" loading="lazy" width="96" height="96" decoding="async">
-    <div class="author-box__content">
-      <p class="author-box__label">عن الكاتب</p>
-      <h3>فؤاد شاويش</h3>
-      <p>فؤاد شاويش — مطور تطبيق محترف المصاريف ومتخصص في أنظمة إدارة المصاريف الرقمية.</p>
-      <a href="/about-author/">اقرأ المزيد عن الكاتب</a>
-    </div>
-  </section>
-</article>
-
-<a class="floating-start-btn" href="/download.html" data-cta="strong" data-engagement="true" aria-label="ابدأ الآن">
-  ابدأ الآن
-</a>
-
-<div class="exit-intent-overlay" id="exitIntentOverlay" aria-hidden="true">
-  <div class="exit-intent-box" role="dialog" aria-modal="true" aria-labelledby="exitIntentTitle">
-    <h3 id="exitIntentTitle">قبل أن تغادر — هل ترغب في تجربة النظام عمليًا؟</h3>
-    <p>ابدأ بخطوة بسيطة اليوم، وسترى فرقًا واضحًا خلال أسابيع.</p>
-    <div class="exit-intent-actions">
-      <a class="btn-primary" href="/download.html" data-cta="strong" data-engagement="true">تحميل التطبيق</a>
-      <button class="exit-intent-close" id="exitIntentClose" type="button">إغلاق</button>
+    <div class="pill-links">
+      <a href="/ar/privacy.html">الخصوصية</a>
+      <a href="/ar/terms.html">الشروط</a>
+      <a href="/ar/download.html">تحميل التطبيق</a>
+      <a href="/en/">English</a>
     </div>
   </div>
-</div>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  var habitTemplate = document.getElementById('habitHookTemplate');
-  if (!content || !habitTemplate) return;
-
-  var blocks = content.querySelectorAll('p, h2, h3, ul, ol, table');
-  if (!blocks.length) return;
-
-  var habitIndex = Math.max(2, Math.floor(blocks.length * 0.45));
-  habitIndex = Math.min(habitIndex, blocks.length - 1);
-  var habitNode = habitTemplate.content.firstElementChild.cloneNode(true);
-  blocks[habitIndex].insertAdjacentElement('afterend', habitNode);
-})();
-</script>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  var template = document.getElementById('readAlsoBurstTemplate');
-  if (!content || !template) return;
-
-  var block = template.content.firstElementChild ? template.content.firstElementChild.cloneNode(true) : null;
-  if (!block) return;
-
-  var paragraphs = content.querySelectorAll('p');
-  if (paragraphs.length >= 3) {
-    paragraphs[2].insertAdjacentElement('afterend', block);
-    return;
-  }
-
-  var h2 = content.querySelector('h2');
-  if (h2) {
-    h2.insertAdjacentElement('afterend', block);
-    return;
-  }
-
-  content.insertBefore(block, content.firstChild);
-})();
-</script>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  var softTemplate = document.getElementById('softCtaTemplate');
-  var mediumTemplate = document.getElementById('mediumCtaTemplate');
-  if (!content || !softTemplate || !mediumTemplate) return;
-
-  var blocks = content.querySelectorAll('p, h2, h3, ul, ol, table');
-  if (!blocks.length) return;
-
-  var softIndex = Math.max(1, Math.floor(blocks.length * 0.25));
-  var mediumIndex = Math.max(2, Math.floor(blocks.length * 0.60));
-  softIndex = Math.min(softIndex, blocks.length - 1);
-  mediumIndex = Math.min(mediumIndex, blocks.length - 1);
-
-  var softNode = softTemplate.content.firstElementChild.cloneNode(true);
-  var mediumNode = mediumTemplate.content.firstElementChild.cloneNode(true);
-
-  blocks[softIndex].insertAdjacentElement('afterend', softNode);
-  blocks[mediumIndex].insertAdjacentElement('afterend', mediumNode);
-})();
-</script>
-
-<div class="scroll-cta-toast" id="scrollCtaToast" hidden>
-  <button type="button" class="scroll-cta-toast__close" id="scrollCtaToastClose" aria-label="إغلاق">×</button>
-  <p>تحب تطبقها داخل التطبيق؟</p>
-  <a class="btn-accent" href="/?route=budgets">افتح الميزانيات</a>
-</div>
-
-<script>
-(function () {
-  var toast = document.getElementById('scrollCtaToast');
-  var closeBtn = document.getElementById('scrollCtaToastClose');
-  if (!toast || !closeBtn) return;
-
-  var storageKey = 'scrollCtaToastDismissedAt';
-  var hideWindowMs = 7 * 24 * 60 * 60 * 1000;
-  var dismissed = false;
-  var shown = false;
-
-  try {
-    var dismissedAt = parseInt(localStorage.getItem(storageKey) || '0', 10);
-    if (dismissedAt && (Date.now() - dismissedAt) < hideWindowMs) {
-      dismissed = true;
-    }
-  } catch (e) {}
-
-  function getDepth() {
-    var doc = document.documentElement;
-    var scrollable = doc.scrollHeight - window.innerHeight;
-    if (scrollable <= 0) return 0;
-    return (window.scrollY / scrollable) * 100;
-  }
-
-  function maybeShow() {
-    if (dismissed || shown) return;
-    if (getDepth() >= 60) {
-      shown = true;
-      toast.hidden = false;
-    }
-  }
-
-  closeBtn.addEventListener('click', function () {
-    toast.hidden = true;
-    dismissed = true;
-    try {
-      localStorage.setItem(storageKey, String(Date.now()));
-    } catch (e) {}
-  });
-
-  window.addEventListener('scroll', maybeShow, { passive: true });
-  window.addEventListener('load', maybeShow);
-})();
-</script>
-
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  if (!content) return;
-  var images = content.querySelectorAll('img');
-  for (var i = 0; i < images.length; i++) {
-    if (!images[i].getAttribute('loading')) images[i].setAttribute('loading', 'lazy');
-    if (!images[i].getAttribute('decoding')) images[i].setAttribute('decoding', 'async');
-  }
-})();
-</script>
-
-<script>
-(function () {
-  // Desktop exit intent: show once per session.
-  if (window.matchMedia('(max-width: 992px)').matches) return;
-  if (sessionStorage.getItem('exit_intent_seen') === '1') return;
-
-  var overlay = document.getElementById('exitIntentOverlay');
-  var closeBtn = document.getElementById('exitIntentClose');
-  if (!overlay || !closeBtn) return;
-
-  function closePopup() {
-    overlay.style.display = 'none';
-    overlay.setAttribute('aria-hidden', 'true');
-  }
-
-  function openPopup() {
-    if (sessionStorage.getItem('exit_intent_seen') === '1') return;
-    sessionStorage.setItem('exit_intent_seen', '1');
-    overlay.style.display = 'flex';
-    overlay.setAttribute('aria-hidden', 'false');
-  }
-
-  document.addEventListener('mouseout', function (e) {
-    if (!e.relatedTarget && e.clientY <= 0) openPopup();
-  });
-
-  closeBtn.addEventListener('click', closePopup);
-  overlay.addEventListener('click', function (e) {
-    if (e.target === overlay) closePopup();
-  });
-})();
-</script>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  if (!content) return;
-
-  var keywords = [
-    "المصاريف",
-    "الميزانية",
-    "إدارة الأموال",
-    "تتبع المصاريف"
-  ];
-
-  function boldFirst(root, keyword) {
-    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-      acceptNode: function(node) {
-        if (!node.nodeValue || node.nodeValue.indexOf(keyword) === -1) return NodeFilter.FILTER_REJECT;
-        var parent = node.parentElement;
-        if (!parent) return NodeFilter.FILTER_REJECT;
-        if (parent.closest('a,strong,script,style,code,pre,h1,h2,h3')) return NodeFilter.FILTER_REJECT;
-        return NodeFilter.FILTER_ACCEPT;
-      }
-    });
-    var target = walker.nextNode();
-    if (!target) return false;
-    var text = target.nodeValue;
-    var idx = text.indexOf(keyword);
-    if (idx < 0) return false;
-    var before = text.slice(0, idx);
-    var after = text.slice(idx + keyword.length);
-    var frag = document.createDocumentFragment();
-    if (before) frag.appendChild(document.createTextNode(before));
-    var strong = document.createElement('strong');
-    strong.textContent = keyword;
-    frag.appendChild(strong);
-    if (after) frag.appendChild(document.createTextNode(after));
-    target.parentNode.replaceChild(frag, target);
-    return true;
-  }
-
-  for (var i = 0; i < keywords.length; i++) {
-    boldFirst(content, keywords[i]);
-  }
-
-  var terms = [
-    "الميزانية","المصاريف الثابتة","المصاريف المتغيرة","التدفق النقدي","صافي الدخل",
-    "صندوق الطوارئ","الاستهلاك","التخطيط المالي","الالتزامات","القسط","الفائدة",
-    "رأس المال","العائد","التضخم","القوة الشرائية","السلوك المالي","العجز","الفائض",
-    "الادخار","الاستثمار","التنويع","المخاطر المالية","إدارة الديون","إعادة جدولة الدين",
-    "التحليل المالي الشخصي"
-  ];
-
-  function linkFirstTerm(root, term) {
-    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-      acceptNode: function(node) {
-        if (!node.nodeValue || node.nodeValue.indexOf(term) === -1) return NodeFilter.FILTER_REJECT;
-        var parent = node.parentElement;
-        if (!parent) return NodeFilter.FILTER_REJECT;
-        if (parent.closest('a,script,style,code,pre')) return NodeFilter.FILTER_REJECT;
-        return NodeFilter.FILTER_ACCEPT;
-      }
-    });
-
-    var target = walker.nextNode();
-    if (!target) return false;
-
-    var text = target.nodeValue;
-    var idx = text.indexOf(term);
-    if (idx < 0) return false;
-
-    var before = text.slice(0, idx);
-    var after = text.slice(idx + term.length);
-    var frag = document.createDocumentFragment();
-    if (before) frag.appendChild(document.createTextNode(before));
-
-    var a = document.createElement('a');
-    a.href = "/financial-terms/";
-    a.textContent = term;
-    a.setAttribute('aria-label', term + " - قاموس المصطلحات المالية");
-    frag.appendChild(a);
-
-    if (after) frag.appendChild(document.createTextNode(after));
-    target.parentNode.replaceChild(frag, target);
-    return true;
-  }
-
-  for (var i = 0; i < terms.length; i++) {
-    linkFirstTerm(content, terms[i]);
-  }
-})();
-</script>
-
-
-        
-      </div>
-
-      
-    </main>
-
-    <footer>
-  <p>© 2026 جميع الحقوق محفوظة — محترف المصاريف</p>
-
-  <div class="footer-links">
-    <a href="https://www.facebook.com/ExpenseManagerApplication" target="_blank" rel="noopener noreferrer">تابعنا على فيسبوك</a> |
-    <a href="/about-author/">عن الكاتب</a> |
-    <a href="/press/">الصحافة</a> |
-    <a href="/media-kit/">Media Kit</a> |
-    <a href="/share/">Share Pack</a> |
-    <a href="/case-studies/">دراسات الحالة</a> |
-    <a href="/resources/">المصادر</a> |
-    <a href="/updates/">تحديثات الموقع</a> |
-    <a href="/outreach/">Outreach</a> |
-    <a href="/recommend/">مقارنة التطبيقات</a> |
-    <a href="/about/">عن محترف المصاريف</a> |
-    <a href="/about-system/">فلسفة النظام</a> |
-    <a href="/%D9%85%D9%86-%D9%87%D9%88-%D9%85%D8%AD%D8%AA%D8%B1%D9%81-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81/">من هو محترف المصاريف</a> |
-    <a href="/%D9%84%D9%85%D8%A7%D8%B0%D8%A7-%D9%85%D8%AD%D8%AA%D8%B1%D9%81-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81-%D9%85%D8%AE%D8%AA%D9%84%D9%81/">لماذا مختلف</a> |
-    <a href="/%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-%D9%85%D8%AD%D8%AA%D8%B1%D9%81-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81/">تجارب الاستخدام</a> |
-    <a href="/%D8%A3%D8%B3%D8%A6%D9%84%D8%A9-%D9%82%D8%A8%D9%84-%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%85%D8%AD%D8%AA%D8%B1%D9%81-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81/">أسئلة قبل التحميل</a> |
-    <a href="/%D8%B3%D8%AC%D9%84-%D8%AA%D8%AD%D8%AF%D9%8A%D8%AB%D8%A7%D8%AA-%D9%85%D8%AD%D8%AA%D8%B1%D9%81-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81/">سجل التحديثات</a> |
-    <a href="/%D8%AE%D8%B7%D8%A9-%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D9%85%D8%AD%D8%AA%D8%B1%D9%81-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81/">خطة التطوير</a> |
-    <a href="/%D9%85%D9%86-%D9%87%D9%88-%D9%81%D8%A4%D8%A7%D8%AF-%D8%B4%D8%A7%D9%88%D9%8A%D8%B4/">من هو فؤاد شاويش</a> |
-    <a href="/%D9%85%D9%86%D9%87%D8%AC-%D9%85%D8%AD%D8%AA%D8%B1%D9%81-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81/">منهج محترف المصاريف</a> |
-    <a href="/%D9%86%D8%AA%D8%A7%D8%A6%D8%AC-%D8%AD%D9%82%D9%8A%D9%82%D9%8A%D8%A9-%D9%85%D9%86-%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81/">نتائج حقيقية</a> |
-    <a href="/%D8%AE%D8%B1%D9%8A%D8%B7%D8%A9-%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9/">خريطة المعرفة المالية</a> |
-    <a href="/%D9%84%D9%85%D8%A7%D8%B0%D8%A7-%D9%87%D8%B0%D8%A7-%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9-%D9%85%D9%88%D8%AB%D9%88%D9%82/">لماذا هذا الموقع موثوق</a> |
-    <a href="/%D8%A7%D8%A8%D8%AF%D8%A3-%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81%D9%83-%D8%A7%D9%84%D8%A2%D9%86/">ابدأ خلال 5 دقائق</a> |
-    <a href="/%D8%AA%D9%86%D8%B2%D9%8A%D9%84-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81/">تنزيل التطبيق</a> |
-    <a href="/%D9%85%D9%82%D8%A7%D8%B1%D9%86%D8%A9-%D8%A3%D9%81%D8%B6%D9%84-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA-%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/">مقارنة التطبيقات</a> |
-    <a href="/%D8%AF%D9%84%D9%8A%D9%84-%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81-%D9%88%D8%A7%D9%84%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%A9/">الدليل الأساسي</a> |
-    <a href="/%D9%85%D9%86%D9%87%D8%AC-%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81/">منهج إدارة المصاريف</a> |
-    <a href="/%D8%AD%D9%88%D9%84-%D8%A7%D9%84%D8%AE%D8%A8%D9%8A%D8%B1/">حول الخبير</a> |
-    <a href="/methodology/">منهجية العمل</a> |
-    <a href="/editorial-policy/">سياسة التحرير</a> |
-    <a href="/data-sources/">مصادر البيانات</a> |
-    <a href="/privacy.html">سياسة الخصوصية</a> |
-    <a href="/privacy-summary/">ملخص الخصوصية</a> |
-    <a href="/terms.html">شروط الاستخدام</a> |
-    <a href="/security.html">الأمان والخصوصية</a> |
-    <a href="/pricing.html">الخطط والأسعار</a> |
-    <a href="/roadmap.html">التحديثات القادمة</a> |
-    <a href="/results.html">نتائج استخدام شائعة</a> |
-    <a href="/budget/">دليل الميزانية</a> |
-    <a href="/expense-management-guide/">دليل إدارة المصاريف 2026</a> |
-    <a href="/about-expense-manager/">ما هو محترف المصاريف؟</a> |
-    <a href="/budget-app-arabic/">Budget App بالعربي</a> |
-    <a href="/start/">ابدأ من هنا</a> |
-    <a href="/tools/">أدوات تنظيم المصاريف</a> |
-    <a href="/future-plans/">الميزات القادمة</a> |
-    <a href="/topics/">مواضيع الموقع</a> |
-    <a href="/best-arabic-expense-manager-2026/">أفضل تطبيق مصاريف 2026</a> |
-    <a href="/changelog.html">سجل التحديثات</a>
-</div>
-
-  <section class="footer-power-links" aria-label="أهم الأدلة المالية">
-    <h3>أهم الأدلة المالية</h3>
-    <ul class="free-tools-links">
-      <li><a href="/organize-monthly-expenses-step-by-step/">دليل تنظيم المصاريف</a></li>
-      <li><a href="/weekly-budget-review/">مراجعة الميزانية الأسبوعية</a></li>
-      <li><a href="/why-monthly-budgets-fail/">أخطاء الميزانية الشائعة</a></li>
-    </ul>
-  </section>
-
-  <section class="footer-power-links" aria-label="تعلم أكثر">
-    <h3>تعلم أكثر</h3>
-    <ul class="free-tools-links">
-      <li><a href="/guides/%D8%A7%D9%84%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%A9/">دليل الميزانية</a></li>
-      <li><a href="/guides/%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%B1%D9%8A%D9%81/">دليل تنظيم المصاريف</a></li>
-      <li><a href="/guides/%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%A3%D9%85%D9%88%D8%A7%D9%84/">إدارة الأموال خطوة بخطوة</a></li>
-    </ul>
-  </section>
-
-  <section class="footer-power-links" aria-label="روابط النمو">
-    <h3>روابط النمو</h3>
-    <ul class="free-tools-links">
-      <li><a href="/start/">ابدأ من هنا</a></li>
-      <li><a href="/budget/">الدليل الشامل للميزانية</a></li>
-      <li><a href="/reduce-monthly-expenses-smartly/">أفضل طرق تقليل المصاريف</a></li>
-      <li><a href="/weekly-budget-review/">مراجعة أسبوعية</a></li>
-    </ul>
-  </section>
-
-  <div class="footer-trust-strip" aria-label="Trust Highlights">
-    <span>Developed by Fouad Shawish</span>
-    <span>Finance-focused system</span>
-    <span>Arabic-first design</span>
-    <span>Built for long-term consistency</span>
-  </div>
-
-  <section class="footer-newsletter" aria-label="الاشتراك في تحديثات محترف المصاريف">
-    <h3>انضم لقائمة تطوير محترف المصاريف</h3>
-    <p>نرسل تحديثات عملية فقط — بدون إزعاج</p>
-    <form class="footer-newsletter__form" action="/" method="get" onsubmit="return false;" data-newsletter-form>
-      <label class="sr-only" for="newsletterEmail">البريد الإلكتروني</label>
-      <input id="newsletterEmail" name="email" type="email" placeholder="أدخل بريدك الإلكتروني" autocomplete="email">
-      <button type="submit">اشترك</button>
-    </form>
-  </section>
-
-  <p class="footer-entity">
-    محترف المصاريف هو تطبيق عربي لإدارة المصاريف والميزانية وتتبع الدخل والديون، مصمم لمساعدة المستخدم على تنظيم الأموال واتخاذ قرارات مالية أوضح بشكل يومي.
-  </p>
-  <p class="footer-entity">
-    هذا الموقع لا يبيع البيانات ولا يحتوي على محتوى مولد تلقائيًا بدون مراجعة بشرية.
-  </p>
 </footer>
 
-
-    
-    <div class="site-mini-banner" id="siteMiniBanner">
-      <span>حمّل التطبيق وابدأ خلال دقيقة</span>
-      <a href="/download.html?utm_source=authority&utm_medium=content&utm_campaign=demand_engine">تحميل التطبيق</a>
-      <button type="button" id="siteMiniBannerClose" aria-label="إغلاق">×</button>
-    </div>
-
-    <div class="sticky-download-bar" id="stickyDownloadBar" hidden>
-      <p class="sticky-download-bar__text">حوّل هذا الدليل إلى نظام عملي داخل التطبيق</p>
-      <a class="sticky-download-bar__button" id="stickyDownloadButton" data-cta-location="top_bar" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager">تحميل التطبيق</a>
-      <button class="sticky-download-bar__close" id="stickyDownloadClose" type="button" aria-label="إغلاق">×</button>
-    </div>
-
-    <div class="exit-intent-overlay" id="exitIntentOverlay" hidden>
-      <div class="exit-intent-modal card" role="dialog" aria-modal="true" aria-labelledby="exitIntentTitle">
-        <button class="exit-intent-modal__close" id="exitIntentClose" type="button" aria-label="إغلاق">×</button>
-        <h3 id="exitIntentTitle">قبل أن تغادر… هل تعرف أين يذهب راتبك فعلاً؟</h3>
-        <a class="btn-primary exit-intent-modal__action" id="exitIntentButton" data-cta-location="exit_popup" href="/%D8%A7%D8%AE%D8%AA%D8%A8%D8%B1-%D9%88%D8%B6%D8%B9%D9%83-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A/">ابدأ الاختبار المجاني</a>
-      </div>
-    </div>
-    <script>
-      (function() {
-        var toggle = document.getElementById("themeToggle");
-        if (!toggle) return;
-
-        function applyToggleState() {
-          var isDark = document.documentElement.classList.contains("dark");
-          toggle.textContent = isDark ? "☀️" : "🌙";
-          toggle.setAttribute("aria-pressed", String(isDark));
-        }
-
-        applyToggleState();
-
-        toggle.addEventListener("click", function() {
-          document.documentElement.classList.toggle("dark");
-          try {
-            localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
-          } catch (e) {}
-          applyToggleState();
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        var milestones = [25, 50, 75, 100];
-        var triggered = [];
-
-        function sendScrollEvent(percent) {
-          if (!triggered.includes(percent)) {
-            triggered.push(percent);
-            if (typeof window.gtag === "function") {
-              gtag("event", "scroll_depth", {
-                percent_scrolled: percent,
-                page_path: window.location.pathname
-              });
-            }
-          }
-        }
-
-        window.addEventListener("scroll", function() {
-          var scrollTop = window.scrollY;
-          var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-          if (docHeight <= 0) return;
-          var scrollPercent = Math.round((scrollTop / docHeight) * 100);
-
-          milestones.forEach(function(m) {
-            if (scrollPercent >= m) {
-              sendScrollEvent(m);
-            }
-          });
-        }, { passive: true });
-      })();
-    </script>
-    <script>
-      (function() {
-        var startTime = Date.now();
-        var sent = false;
-
-        function sendEngagement() {
-          if (sent) return;
-          sent = true;
-
-          var seconds = Math.floor((Date.now() - startTime) / 1000);
-
-          var bucket = "0-10s";
-          if (seconds > 10 && seconds <= 30) bucket = "10-30s";
-          if (seconds > 30 && seconds <= 60) bucket = "30-60s";
-          if (seconds > 60) bucket = "60s+";
-
-          gtag("event", "article_engagement", {
-            engagement_time_bucket: bucket,
-            page_path: window.location.pathname
-          });
-        }
-
-        window.addEventListener("beforeunload", sendEngagement);
-      })();
-    </script>
-    <script>
-      (function() {
-        var miniBanner = document.getElementById("siteMiniBanner");
-        var miniBannerClose = document.getElementById("siteMiniBannerClose");
-        if (miniBanner && miniBannerClose) {
-          try {
-            if (sessionStorage.getItem("siteMiniBannerClosed") === "1") {
-              miniBanner.style.display = "none";
-            }
-          } catch (e) {}
-          miniBannerClose.addEventListener("click", function() {
-            miniBanner.style.display = "none";
-            try { sessionStorage.setItem("siteMiniBannerClosed", "1"); } catch (e) {}
-          });
-        }
-
-        var PLAYSTORE_BASE = "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager";
-        var UTM_PARAMS = "utm_source=blog&utm_medium=content&utm_campaign=demand_engine";
-
-        function withUtm(url) {
-          if (!url) return "";
-          if (url.indexOf("utm_source=") !== -1) return url;
-          return url + (url.indexOf("?") === -1 ? "?" : "&") + UTM_PARAMS;
-        }
-
-        window.trackCtaClick = function(location) {
-          if (!location) return;
-          if (typeof window.gtag === "function") {
-            window.gtag("event", "cta_click", { location: location });
-            return;
-          }
-          if (Array.isArray(window.dataLayer)) {
-            window.dataLayer.push({ event: "cta_click", location: location });
-          }
-        };
-
-        document.addEventListener("click", function(event) {
-          var cta = event.target.closest("a[data-cta-location]");
-          if (!cta) return;
-          var location = cta.getAttribute("data-cta-location");
-          window.trackCtaClick(location);
-        });
-
-        var allLinks = document.querySelectorAll("a[href*='play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager']");
-        allLinks.forEach(function(link) {
-          link.href = withUtm(link.href);
-        });
-        var downloadLinks = document.querySelectorAll("a[href*='/download.html']");
-        downloadLinks.forEach(function(link) {
-          link.href = withUtm(link.href);
-        });
-
-        var bar = document.getElementById("stickyDownloadBar");
-        var barButton = document.getElementById("stickyDownloadButton");
-        var barClose = document.getElementById("stickyDownloadClose");
-        var appBanner = document.getElementById("appBanner");
-        var exitOverlay = document.getElementById("exitIntentOverlay");
-        var exitClose = document.getElementById("exitIntentClose");
-        var exitButton = document.getElementById("exitIntentButton");
-        var dismissStorageKey = "stickyDownloadDismissedAt";
-        var dismissDurationMs = 48 * 60 * 60 * 1000;
-
-        if (barButton) barButton.href = withUtm(PLAYSTORE_BASE);
-
-        var stickySuppressed = false;
-        try {
-          var dismissedAt = parseInt(localStorage.getItem(dismissStorageKey) || "0", 10);
-          if (dismissedAt && Date.now() - dismissedAt < dismissDurationMs) {
-            stickySuppressed = true;
-          }
-        } catch (e) {}
-
-        var timeReady = false;
-        var scrollReady = false;
-        var ctaBlockInView = false;
-        var popupOpen = false;
-
-        function getScrollDepth() {
-          var doc = document.documentElement;
-          var scrollable = doc.scrollHeight - window.innerHeight;
-          if (scrollable <= 0) return 0;
-          return (window.scrollY / scrollable) * 100;
-        }
-
-        function hideStickyBar() {
-          if (!bar) return;
-          bar.hidden = true;
-        }
-
-        function showStickyBar() {
-          if (!bar || stickySuppressed || popupOpen || ctaBlockInView) return;
-          if (!timeReady || !scrollReady) return;
-          bar.hidden = false;
-          if (appBanner) appBanner.style.display = "none";
-        }
-
-        function onScrollCheck() {
-          if (getScrollDepth() >= 35) {
-            scrollReady = true;
-            showStickyBar();
-          }
-        }
-
-        if (bar && !stickySuppressed) {
-          setTimeout(function() {
-            timeReady = true;
-            showStickyBar();
-          }, 5000);
-
-          window.addEventListener("scroll", onScrollCheck, { passive: true });
-          window.addEventListener("load", onScrollCheck);
-
-          if (barClose) {
-            barClose.addEventListener("click", function() {
-              hideStickyBar();
-              stickySuppressed = true;
-              try {
-                localStorage.setItem(dismissStorageKey, String(Date.now()));
-              } catch (e) {}
-            });
-          }
-        }
-
-        if ("IntersectionObserver" in window) {
-          var visibleCtaBlocks = new Set();
-          var inlineObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-              if (entry.isIntersecting) {
-                visibleCtaBlocks.add(entry.target);
-              } else {
-                visibleCtaBlocks.delete(entry.target);
-              }
-            });
-            ctaBlockInView = visibleCtaBlocks.size > 0;
-            if (ctaBlockInView) {
-              hideStickyBar();
-            } else {
-              showStickyBar();
-            }
-          }, { threshold: 0.4 });
-
-          document.querySelectorAll(".inline-cta--single, .article-cta, .app-apply-box").forEach(function(node) {
-            inlineObserver.observe(node);
-          });
-        }
-
-        var desktopIntent = window.matchMedia("(min-width: 1024px) and (hover: hover) and (pointer: fine)").matches;
-        if (!desktopIntent || !exitOverlay || !exitButton || !exitClose) return;
-
-        var alreadyShown = false;
-        try {
-          alreadyShown = sessionStorage.getItem("exitIntentShown") === "1";
-        } catch (e) {}
-        if (alreadyShown) return;
-
-        function openExitIntent() {
-          popupOpen = true;
-          hideStickyBar();
-          exitOverlay.hidden = false;
-          try {
-            sessionStorage.setItem("exitIntentShown", "1");
-          } catch (e) {}
-        }
-
-        function closeExitIntent() {
-          popupOpen = false;
-          exitOverlay.hidden = true;
-          showStickyBar();
-        }
-
-        document.addEventListener("mouseout", function(event) {
-          if (popupOpen) return;
-          var leavingTop = event.clientY <= 0;
-          if (!leavingTop) return;
-          if (event.relatedTarget || event.toElement) return;
-          openExitIntent();
-        });
-
-        exitClose.addEventListener("click", closeExitIntent);
-        exitOverlay.addEventListener("click", function(event) {
-          if (event.target === exitOverlay) closeExitIntent();
-        });
-      })();
-    </script>
-    
-    <script>
-    (function() {
-      window.dataLayer = window.dataLayer || [];
-      if (typeof window.gtag !== "function") {
-        window.gtag = function(){ window.dataLayer.push(arguments); };
-      }
-    })();
-    </script>
-    <script>
-    (function() {
-      function sendOncePerSession(eventName, data) {
-        try {
-          if (sessionStorage.getItem(eventName)) return;
-          sessionStorage.setItem(eventName, "true");
-        } catch (e) {}
-
-        gtag('event', eventName, data || {});
-      }
-
-      window.sendOncePerSession = sendOncePerSession;
-    })();
-    </script>
-    <script>
-    document.addEventListener("click", function(e) {
-      var link = e.target.closest("a");
-      if (!link) return;
-
-      if (link.href.includes("play.google.com")) {
-        gtag('event', 'download_click', {
-          event_category: 'conversion',
-          event_label: link.href
-        });
-      }
-    });
-    </script>
-    <script>
-    document.addEventListener("click", function(e) {
-      var el = e.target.closest("[data-cta]");
-      if (!el) return;
-
-      var ctaName = el.getAttribute("data-cta");
-
-      gtag('event', 'cta_click', {
-        cta_name: ctaName,
-        page_path: window.location.pathname
-      });
-    });
-    </script>
-    <script>
-    (function() {
-      function getParam(name) {
-        var url = new URL(window.location.href);
-        return url.searchParams.get(name);
-      }
-
-      var utmSource = getParam("utm_source");
-      var utmMedium = getParam("utm_medium");
-      var utmCampaign = getParam("utm_campaign");
-
-      if (utmSource) {
-        localStorage.setItem("first_utm_source", utmSource);
-        localStorage.setItem("first_utm_medium", utmMedium || "");
-        localStorage.setItem("first_utm_campaign", utmCampaign || "");
-      }
-
-      var storedSource = localStorage.getItem("first_utm_source");
-
-      if (storedSource) {
-        gtag('event', 'traffic_source', {
-          first_source: storedSource,
-          first_medium: localStorage.getItem("first_utm_medium"),
-          first_campaign: localStorage.getItem("first_utm_campaign")
-        });
-      }
-    })();
-    </script>
-    <script>
-(() => {
-  const alternates = {};
-  document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(link => {
-    alternates[link.getAttribute('hreflang').toLowerCase()] = link.href;
-  });
-
-  const path = window.location.pathname.replace(/\/+$/, '');
-  const isEn = path === '/en' || path.startsWith('/en/');
-  const currentLang = isEn ? 'en' : 'ar';
-
-  const fallback = { ar: '/', en: '/en/' };
-  const arHref = alternates.ar || alternates['x-default'] || fallback.ar;
-  const enHref = alternates.en || alternates['x-default'] || fallback.en;
-
-  const getOrCreate = (id, langLabel, rightPx) => {
-    let el = document.getElementById(id) || document.querySelector(`[data-lang="${langLabel.toLowerCase()}"]`);
-    if (!el) {
-      el = document.createElement('a');
-      el.id = id;
-      el.textContent = langLabel.toUpperCase();
-      el.style.position = 'fixed';
-      el.style.bottom = '12px';
-      el.style.right = rightPx;
-      el.style.padding = '6px 10px';
-      el.style.background = '#fff';
-      el.style.border = '1px solid #ddd';
-      el.style.borderRadius = '4px';
-      el.style.fontWeight = '600';
-      el.style.zIndex = '9999';
-      document.body.appendChild(el);
-    }
-    return el;
-  };
-
-  const arBtn = getOrCreate('langToAr', 'ar', '70px');
-  const enBtn = getOrCreate('langToEn', 'en', '12px');
-
-  arBtn.href = arHref;
-  enBtn.href = enHref;
-
-  if (currentLang === 'ar' && enBtn) {
-    arBtn.style.display = 'none';
-    enBtn.style.display = '';
-  } else if (currentLang === 'en' && arBtn) {
-    enBtn.style.display = 'none';
-    arBtn.style.display = '';
-  }
-})();
-</script>
 </body>
 </html>
