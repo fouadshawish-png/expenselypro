@@ -5,6 +5,7 @@
 
 /* Typography */
 :root {
+  color-scheme: light;
   --font-ar: "Cairo", sans-serif;
   --font-en: "Inter", sans-serif;
 
@@ -100,6 +101,7 @@ h3 {
 
 /* Links */
 a {
+  color: inherit;
   color: var(--color-primary);
   text-decoration: none;
 }
@@ -150,3 +152,6 @@ section {
   margin: 0 auto;
   padding: 20px;
 }
+
+.dark { color-scheme: dark; }
+.dark body { background:#0f1115; color:#eef1f5; }
