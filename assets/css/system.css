@@ -50,6 +50,36 @@ html[lang="en"] body {
   padding: 20px;
 }
 
+/* Legacy wrappers to force mobile-first width */
+main, .page, .page-container, .header-container, .footer-container, .header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Prevent horizontal overflow */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Legacy wrappers to force mobile-first width */
+main, .page, .page-container, .header-container, .footer-container, .header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Prevent horizontal overflow */
+body, html {
+  overflow-x: hidden;
+}
+
 /* Headings */
  h1 {
   font-size: 28px;
