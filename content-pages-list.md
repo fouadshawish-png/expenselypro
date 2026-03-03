@@ -15,7 +15,7 @@
 - /press/index.html
 - /subscription_plans/index.html
 - /ar/weekly-budget-template/index.html
-- /ar/build-monthly-budget-from-zero-15-min/index.html
+- index.html
 - /ar/daily-life-expenses-control/index.html
 - /ar/family-budget-system-guide/index.html
 - /ar/typical-monthly-expenses-model/index.html
@@ -31,7 +31,7 @@
 - /ar/تنظيم-الميزانية-في-المغرب/index.html
 - /ar/how-to-create-budget-step-by-step/index.html
 - /ar/guides/الميزانية/index.html
-- /ar/why-monthly-budget-fails/index.html
+- /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /ar/guides/index.html
 - /ar/difference-between-budget-and-expense-organization/index.html
 - /ar/تطبيق-مصاريف-ام-دفتر/index.html
@@ -55,11 +55,10 @@
 - /ar/الديون/index.html
 - /ar/تتبع-المصاريف-اليومية/index.html
 - /ar/أخطاء-تنظيم-المصاريف/index.html
-- /ar/build-realistic-monthly-budget/index.html
 - /ar/budget-in-egypt/index.html
 - /ar/أسئلة-الناس-عن-المصاريف/index.html
 - /ar/أرشيف-المقالات/index.html
-- /ar/personal-budget-system-guide/index.html
+- /ar/system/budget-framework/articles/build-realistic-monthly-budget/index.html
 - /ar/blog.html
 - /ar/خطة-30-يوم-لضبط-المصاريف/index.html
 - /ar/expense-management-guide/index.html
@@ -85,7 +84,7 @@
 - /ar/ابدأ-تنظيم-مصاريفك-الآن/index.html
 - /ar/methodology/index.html
 - /ar/start/index.html
-- /ar/salary-split-50-30-20-detailed/index.html
+- /ar/system/budget-framework/articles/salary-split-50-30-20-detailed/index.html
 - /ar/track-expenses-daily-without-complexity-action/index.html
 - /ar/fast-debt-repayment-method-intent/index.html
 - /ar/build-sustainable-personal-financial-system/index.html
@@ -121,7 +120,7 @@
 - /ar/budget-app-arabic/index.html
 - /ar/all_transactions/index.html
 - /ar/الميزانية/index.html
-- /ar/7-budget-mistakes-break-monthly-plan/index.html
+- /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /ar/تقليل-المصاريف-الشهرية/index.html
 - /ar/about/index.html
 - /ar/fixed-vs-variable-expenses/index.html
@@ -155,7 +154,7 @@
 - /ar/reduce-monthly-expenses-smartly/index.html
 - /2026/01/30/why-salary-disappears-early.html
 - /ar/بدائل-إكسل-لإدارة-المصاريف/index.html
-- /ar/budgeting-mistakes-people-make/index.html
+- /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /ar/expense-guides/how-to-control-impulse-spending/index.html
 - /ar/pricing.html
 - /2026/02/01/expenses-vs-deprivation.html
@@ -180,12 +179,12 @@
 - /ar/support.html
 - /ar/من-هو-محترف-المصاريف/index.html
 - /ar/أسئلة-قبل-تحميل-محترف-المصاريف/index.html
-- /ar/budget-mistakes-make-you-fail/index.html
+- /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /ar/why-monthly-budgets-fail/index.html
 - /ar/حساب-المصاريف-الشهرية/index.html
 - /ar/إدارة-المصاريف/index.html
 - /ar/خريطة-المعرفة-المالية/index.html
-- /ar/start-budget-from-zero-without-complexity/index.html
+- index.html
 - /ar/salary-not-enough-end-of-month/index.html
 - /ar/about-system/index.html
 - /ar/split-salary-first-24-hours/index.html
@@ -201,7 +200,7 @@
 - /ar/case-studies/index.html
 - /ar/expense-tracking-vs-money-management/index.html
 - /ar/system/weekly-review/articles/weekly-budget-review/index.html
-- /ar/why-budget-fails-even-with-discipline/index.html
+- /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /ar/لماذا-هذا-الموقع-موثوق/index.html
 - /ar/تنظيم-المصاريف/index.html
 - /ar/هل-أحتاج-تطبيق-لإدارة-المصاريف/index.html
@@ -241,7 +240,7 @@
 - /en/guides/weekly-financial-review/index.html
 - /en/guides/index.html
 - /en/reduce-expenses-practically/index.html
-- /en/7-budget-mistakes-break-monthly-plan/index.html
+- /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /en/guides/expense-control-system/index.html
 - /updates/index.html
 - /en/guides/savings-growth-system/index.html
@@ -253,7 +252,7 @@
 - /category/تتبع-المصاريف/index.html
 - /category/الادخار/index.html
 - /category/الميزانية/index.html
-- /en/why-budget-fails-even-with-discipline/index.html
+- /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /category/تنظيم-المصاريف/index.html
 - /reports_root/index.html
 - /category/العادات-المالية/index.html

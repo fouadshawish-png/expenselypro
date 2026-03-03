@@ -6,6 +6,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://www.expenselypro.com/ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 <url>
     <loc>https://www.expenselypro.com/ar/24-hour-rule-stop-impulse-spending/</loc>
     <lastmod>2026-02-28</lastmod>
@@ -14,12 +21,6 @@
   </url>
 <url>
     <loc>https://www.expenselypro.com/ar/50-30-20-rule-explained/</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
-    <loc>https://www.expenselypro.com/ar/7-budget-mistakes-break-monthly-plan/</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -145,12 +146,6 @@
     <priority>0.7</priority>
   </url>
 <url>
-    <loc>https://www.expenselypro.com/ar/budget-mistakes-make-you-fail/</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
     <loc>https://www.expenselypro.com/ar/budget-planning-practical-method/</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -163,25 +158,13 @@
     <priority>0.7</priority>
   </url>
 <url>
-    <loc>https://www.expenselypro.com/ar/budgeting-mistakes-people-make/</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
     <loc>https://www.expenselypro.com/ar/build-emergency-fund-fast/</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 <url>
-    <loc>https://www.expenselypro.com/ar/build-monthly-budget-from-zero-15-min/</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
-    <loc>https://www.expenselypro.com/ar/build-realistic-monthly-budget/</loc>
+    <loc></loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -553,8 +536,8 @@
     <priority>0.7</priority>
   </url>
 <url>
-    <loc>https://www.expenselypro.com/ar/personal-budget-system-guide/</loc>
-    <lastmod>2026-02-28</lastmod>
+    <loc>https://www.expenselypro.com/ar/system/budget-framework/articles/build-realistic-monthly-budget/</loc>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -649,8 +632,8 @@
     <priority>0.7</priority>
   </url>
 <url>
-    <loc>https://www.expenselypro.com/ar/salary-split-50-30-20-detailed/</loc>
-    <lastmod>2026-02-28</lastmod>
+    <loc>https://www.expenselypro.com/ar/system/budget-framework/articles/salary-split-50-30-20-detailed/</loc>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -673,7 +656,7 @@
     <priority>0.7</priority>
   </url>
 <url>
-    <loc>https://www.expenselypro.com/ar/start-budget-from-zero-without-complexity/</loc>
+    <loc></loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -830,18 +813,6 @@
   </url>
 <url>
     <loc>https://www.expenselypro.com/ar/where-does-my-salary-go/</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
-    <loc>https://www.expenselypro.com/ar/why-budget-fails-even-with-discipline/</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
-    <loc>https://www.expenselypro.com/ar/why-monthly-budget-fails/</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1224,5 +1195,4 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
-</urlset>
+  </urlset>

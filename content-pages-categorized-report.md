@@ -106,7 +106,7 @@
 
 ## 4. Core Articles (مقالات أساسية)
 - /ar/weekly-budget-template/index.html
-- /ar/build-monthly-budget-from-zero-15-min/index.html
+- index.html
 - /ar/daily-life-expenses-control/index.html
 - /ar/family-budget-system-guide/index.html
 - /ar/typical-monthly-expenses-model/index.html
@@ -135,11 +135,10 @@
 - /ar/الديون/index.html
 - /ar/تتبع-المصاريف-اليومية/index.html
 - /ar/أخطاء-تنظيم-المصاريف/index.html
-- /ar/build-realistic-monthly-budget/index.html
 - /ar/budget-in-egypt/index.html
 - /ar/أسئلة-الناس-عن-المصاريف/index.html
 - /ar/أرشيف-المقالات/index.html
-- /ar/personal-budget-system-guide/index.html
+- /ar/system/budget-framework/articles/build-realistic-monthly-budget/index.html
 - /ar/blog.html
 - /ar/خطة-30-يوم-لضبط-المصاريف/index.html
 - /ar/expense-management-guide/index.html
@@ -161,7 +160,7 @@
 - /ar/system/daily-expense-tracking/articles/how-to-track-expenses-daily-effectively/index.html
 - /ar/types-of-expenses-ar/index.html
 - /ar/ابدأ-تنظيم-مصاريفك-الآن/index.html
-- /ar/salary-split-50-30-20-detailed/index.html
+- /ar/system/budget-framework/articles/salary-split-50-30-20-detailed/index.html
 - /ar/track-expenses-daily-without-complexity-action/index.html
 - /ar/fast-debt-repayment-method-intent/index.html
 - /ar/build-sustainable-personal-financial-system/index.html
@@ -187,7 +186,7 @@
 - /ar/اختبر-وضعك-المالي/index.html
 - /ar/how-to-pay-off-debt-strategically/index.html
 - /ar/manage-personal-debt-step-by-step/index.html
-- /ar/7-budget-mistakes-break-monthly-plan/index.html
+- /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /ar/تقليل-المصاريف-الشهرية/index.html
 - /ar/fixed-vs-variable-expenses/index.html
 - /ar/adjust-budget-with-changing-income/index.html
@@ -199,7 +198,7 @@
 - /ar/fixed-vs-variable-expenses-ar/index.html
 - /ar/best-way-track-expenses-2026/index.html
 - /ar/لماذا-تفشل-تطبيقات-تتبع-المصاريف/index.html
-- /ar/start-budget-from-zero-without-complexity/index.html
+- index.html
 - /ar/salary-not-enough-end-of-month/index.html
 - /ar/manual-vs-app-expense-tracking-comparison/index.html
 - /ar/organizing-expenses/index.html
@@ -212,7 +211,7 @@
 - /ar/fast-debt-repayment-method/index.html
 - /ar/expense-tracking-vs-money-management/index.html
 - /ar/system/weekly-review/articles/weekly-budget-review/index.html
-- /ar/why-budget-fails-even-with-discipline/index.html
+- /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /ar/لماذا-هذا-الموقع-موثوق/index.html
 - /ar/تنظيم-المصاريف/index.html
 - /ar/هل-أحتاج-تطبيق-لإدارة-المصاريف/index.html
@@ -223,7 +222,7 @@
 - /ar/budget-from-3000-salary/index.html
 - /ar/reduce-expenses-practically/index.html
 - /ar/بدائل-إكسل-لإدارة-المصاريف/index.html
-- /ar/budgeting-mistakes-people-make/index.html
+- /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /ar/expense-guides/how-to-control-impulse-spending/index.html
 - /ar/habit-stacking-for-financial-discipline/index.html
 - /ar/monthly-expense-table-guide/index.html
