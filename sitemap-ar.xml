@@ -217,12 +217,6 @@
     <priority>0.7</priority>
   </url>
 <url>
-    <loc>https://www.expenselypro.com/ar/control-daily-expenses/</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
     <loc>https://www.expenselypro.com/ar/cost-of-living-expenses-guide/</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1224,4 +1218,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.expenselypro.com/ar/system/budget-framework/articles/control-daily-expenses/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

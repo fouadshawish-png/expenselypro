@@ -9,6 +9,7 @@ Redirect 301 /ar/how-to-track-expenses-daily-effectively/ https://www.expenselyp
 Redirect 301 /ar/daily-expense-tracking-habit-14-days/ https://www.expenselypro.com/ar/system/daily-expense-tracking/articles/daily-expense-tracking-habit-14-days/
 Redirect 301 /ar/expense-ledger-practical-guide/ https://www.expenselypro.com/ar/system/daily-expense-tracking/articles/expense-ledger-practical-guide/
 Redirect 301 /ar/accurate-expense-calculation-method/ https://www.expenselypro.com/ar/system/daily-expense-tracking/articles/accurate-expense-calculation-method/
+Redirect 301 /ar/system/budget-framework/articles/control-daily-expenses/ https://www.expenselypro.com/ar/system/budget-framework/articles/control-daily-expenses/
 # تعطيل ETag لتحسين الكاش
 FileETag None
 

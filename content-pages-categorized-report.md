@@ -217,7 +217,7 @@
 - /ar/تنظيم-المصاريف/index.html
 - /ar/هل-أحتاج-تطبيق-لإدارة-المصاريف/index.html
 - /ar/social-push/index.html
-- /ar/control-daily-expenses/index.html
+- /ar/system/budget-framework/articles/control-daily-expenses/index.html
 - /ar/how-to-save-from-my-salary/index.html
 - /ar/money-philosophy/index.html
 - /ar/budget-from-3000-salary/index.html
