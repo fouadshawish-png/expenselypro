@@ -47,7 +47,7 @@
 - /ar/خطة-تطوير-محترف-المصاريف/index.html
 - /ar/منهج-محترف-المصاريف/index.html
 - /ar/المصاريف/index.html
-- /ar/daily-expense-tracking-habit-14-days/index.html
+- /ar/system/daily-expense-tracking/articles/daily-expense-tracking-habit-14-days/index.html
 - /ar/budget-50-30-20-arabic-guide/index.html
 - /ar/نتائج-حقيقية-من-تنظيم-المصاريف/index.html
 - /ar/expense-organization-app-guide/index.html
@@ -79,7 +79,7 @@
 - /ar/share/index.html
 - /ar/تحميل-تطبيق-تنظيم-المصاريف/index.html
 - /ar/مصاريف-في-مصر/index.html
-- /ar/how-to-track-expenses-daily-effectively/index.html
+- /ar/system/daily-expense-tracking/articles/how-to-track-expenses-daily-effectively/index.html
 - /ar/types-of-expenses-ar/index.html
 - /ar/سجل-تحديثات-محترف-المصاريف/index.html
 - /ar/ابدأ-تنظيم-مصاريفك-الآن/index.html
@@ -131,7 +131,7 @@
 - /ar/expense-manager-arabic/index.html
 - /ar/security.html
 - /ar/difference-between-expense-management-and-wealth-management/index.html
-- /ar/expense-ledger-practical-guide/index.html
+- /ar/system/daily-expense-tracking/articles/expense-ledger-practical-guide/index.html
 - /ar/الميزانية-في-المغرب/index.html
 - /ar/reduce-expenses-without-deprivation-intent/index.html
 - /ar/fixed-vs-variable-expenses-ar/index.html
@@ -196,7 +196,7 @@
 - /ar/لماذا-محترف-المصاريف-مختلف/index.html
 - /ar/cost-of-living-expenses-guide/index.html
 - /ar/best-arabic-expense-app/index.html
-- /ar/accurate-expense-calculation-method/index.html
+- /ar/system/daily-expense-tracking/articles/accurate-expense-calculation-method/index.html
 - /ar/fast-debt-repayment-method/index.html
 - /ar/case-studies/index.html
 - /ar/expense-tracking-vs-money-management/index.html

@@ -5,6 +5,10 @@ Redirect 301 /ar/weekly-budget-review/ https://www.expenselypro.com/ar/system/we
 Redirect 301 /ar/weekly-budget-review-prevents-financial-collapse/ https://www.expenselypro.com/ar/system/weekly-review/articles/weekly-budget-review-prevents-financial-collapse/
 Redirect 301 /ar/weekly-financial-review-habit/ https://www.expenselypro.com/ar/system/weekly-review/articles/weekly-financial-review-habit/
 Redirect 301 /ar/weekly-monthly-budget-review-guide/ https://www.expenselypro.com/ar/system/weekly-review/articles/weekly-monthly-budget-review-guide/
+Redirect 301 /ar/how-to-track-expenses-daily-effectively/ https://www.expenselypro.com/ar/system/daily-expense-tracking/articles/how-to-track-expenses-daily-effectively/
+Redirect 301 /ar/daily-expense-tracking-habit-14-days/ https://www.expenselypro.com/ar/system/daily-expense-tracking/articles/daily-expense-tracking-habit-14-days/
+Redirect 301 /ar/expense-ledger-practical-guide/ https://www.expenselypro.com/ar/system/daily-expense-tracking/articles/expense-ledger-practical-guide/
+Redirect 301 /ar/accurate-expense-calculation-method/ https://www.expenselypro.com/ar/system/daily-expense-tracking/articles/accurate-expense-calculation-method/
 # تعطيل ETag لتحسين الكاش
 FileETag None
 
