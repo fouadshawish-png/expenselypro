@@ -97,7 +97,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/ar/system/debt/</loc>
+    <loc>https://www.expenselypro.com/ar/system/debt-control/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -109,13 +109,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/ar/system/saving/</loc>
+    <loc>https://www.expenselypro.com/ar/system/savings-growth/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/ar/system/tracking/</loc>
+    <loc>https://www.expenselypro.com/ar/system/daily-expense-tracking/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

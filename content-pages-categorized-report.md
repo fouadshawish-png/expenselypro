@@ -6,17 +6,17 @@
 
 ## 1. Strong Guides (أدلة شاملة)
 - /ar/guides.html
-- /ar/guides/index.html
-- /ar/guides/إدارة-الأموال/index.html
+- /ar/ar/system/index.html
+- /ar/ar/system/إدارة-الأموال/index.html
 - /ar/financial-guide/index.html
 - /ar/ultimate-guide-personal-finance-arabic/index.html
-- /en/guides/index.html
-- /en/guides/weekly-financial-review/index.html
-- /en/guides/expense-control-system/index.html
-- /en/guides/savings-growth-system/index.html
-- /en/guides/realistic-budget-framework/index.html
-- /en/guides/debt-control-strategy/index.html
-- /en/guides/financial-habit-system/index.html
+- /en/system/index.html
+- /en/system/weekly-financial-review/index.html
+- /en/system/expense-control-system/index.html
+- /en/system/savings-growth-system/index.html
+- /en/system/realistic-budget-framework/index.html
+- /en/system/debt-control-strategy/index.html
+- /en/system/financial-habit-system/index.html
 
 ---
 
@@ -49,10 +49,8 @@
 - /ar/about/roadmap/
 - /ar/about/editorial-policy/index.html
 - /ar/about/case-studies/index.html
-- /ar/topics/index.html
-- /ar/topics/reports/index.html
-- /ar/topics/saving/index.html
-- /ar/topics/debt/index.html
+- /ar/ar/system/index.html
+- /ar/ar/system/reports/index.html
 - /category/أخطاء-مالية-شائعة/index.html
 - /category/الديون/index.html
 - /category/تتبع-المصاريف/index.html

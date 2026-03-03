@@ -55,9 +55,6 @@ Redirect 301 /en/المصاريف/ https://www.expenselypro.com/en/expenses-over
 Redirect 301 /en/اختبر-وضعك-المالي/ https://www.expenselypro.com/en/financial-health-check/
 Redirect 301 /en/خريطة-المعرفة-المالية/ https://www.expenselypro.com/en/financial-knowledge-map/
 Redirect 301 /en/النظام-المالي/ https://www.expenselypro.com/en/financial-system/
-Redirect 301 /en/guides/الميزانية/ https://www.expenselypro.com/en/guides/budgeting/
-Redirect 301 /en/guides/المصاريف/ https://www.expenselypro.com/en/guides/expenses/
-Redirect 301 /en/guides/إدارة-الأموال/ https://www.expenselypro.com/en/guides/money-management/
 Redirect 301 /en/مصطلحات-إدارة-الأموال/ https://www.expenselypro.com/en/money-management-terms/
 Redirect 301 /en/الميزانية-الشهرية-خطوة-بخطوة/ https://www.expenselypro.com/en/monthly-budget-step-by-step/
 Redirect 301 /en/مصروفات-شهرية-في-مصر/ https://www.expenselypro.com/en/monthly-expenses-in-egypt/
