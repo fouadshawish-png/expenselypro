@@ -4174,3 +4174,25 @@ h3{
 .site-header{
   padding:10px 0;
 }
+
+/* Mega Menu for Arabic system nav */
+.main-nav {position: relative; display:flex; gap:16px; align-items:center; flex-wrap:wrap;}
+.nav-item.mega {position:relative;}
+.nav-item.mega .mega-toggle {display:none;}
+.nav-item.mega .mega-toggle-btn {display:none; cursor:pointer; width:14px; height:14px;}
+.nav-item.mega .mega-panel {position:absolute; right:0; top:100%; background:#fff; border:1px solid #e5e7eb; box-shadow:0 8px 24px rgba(0,0,0,0.08); padding:16px; display:none; min-width:540px; max-width:760px; z-index:20; border-radius:10px;}
+.nav-item.mega:hover .mega-panel {display:grid;}
+.nav-item.mega .mega-panel {grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px;}
+.mega-card {display:block; padding:10px 12px; border:1px solid #eef1f4; border-radius:10px; text-decoration:none; color:inherit; transition:all .15s ease; background:#fafbfc;}
+.mega-card:hover {border-color:#0EA5C6; box-shadow:0 4px 12px rgba(0,0,0,0.06);}
+.mega-title {display:block; font-weight:700; margin-bottom:4px;}
+.mega-desc {display:block; font-size:14px; color:#4b5563;}
+
+@media (max-width: 768px) {
+  .main-nav {flex-direction:column; align-items:flex-start; gap:10px;}
+  .nav-item.mega {width:100%;}
+  .nav-item.mega .mega-toggle-btn {display:inline-block; margin-right:8px;}
+  .nav-item.mega .mega-panel {position:static; display:none; width:100%; box-shadow:none; border-radius:8px;}
+  .nav-item.mega .mega-toggle:checked + .nav-link + .mega-toggle-btn + .mega-panel {display:grid;}
+  .nav-item.mega:hover .mega-panel {display:none;}
+}
