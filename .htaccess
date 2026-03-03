@@ -135,8 +135,8 @@ Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 
 RewriteEngine On
 
-# لا تعيد توجيه إذا كان الرابط يبدأ بـ /ar أو /en
-RewriteCond %{REQUEST_URI} !^/(ar|en)/
+# لا تعيد توجيه إذا كان الرابط يبدأ بـ /ar أو /en مع أو بدون /
+RewriteCond %{REQUEST_URI} !^/(ar|en)(/|$)
 
 # لا تعيد توجيه للمجلدات النظامية
 RewriteCond %{REQUEST_URI} !^/(assets|admin|cms|data|data-sources|uploads|tools|content-engine|media-kit|press|subscription_plans|updates|reports_root|goals_root|debt_root|latest|new|my-web-project|\.well-known)/
