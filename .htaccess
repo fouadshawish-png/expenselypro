@@ -1,5 +1,10 @@
 # تعطيل ETag لتحسين الكاش
-Redirect 301 /ar/weekly-budget-review-system/ https://www.expenselypro.com/ar/weekly-budget-control-system/
+Redirect 301 /ar/weekly-budget-review-system/ https://www.expenselypro.com/ar/system/weekly-review/articles/weekly-budget-review-system/
+Redirect 301 /ar/weekly-budget-control-system/ https://www.expenselypro.com/ar/system/weekly-review/articles/weekly-budget-control-system/
+Redirect 301 /ar/weekly-budget-review/ https://www.expenselypro.com/ar/system/weekly-review/articles/weekly-budget-review/
+Redirect 301 /ar/weekly-budget-review-prevents-financial-collapse/ https://www.expenselypro.com/ar/system/weekly-review/articles/weekly-budget-review-prevents-financial-collapse/
+Redirect 301 /ar/weekly-financial-review-habit/ https://www.expenselypro.com/ar/system/weekly-review/articles/weekly-financial-review-habit/
+Redirect 301 /ar/weekly-monthly-budget-review-guide/ https://www.expenselypro.com/ar/system/weekly-review/articles/weekly-monthly-budget-review-guide/
 # تعطيل ETag لتحسين الكاش
 FileETag None
 

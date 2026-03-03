@@ -14,7 +14,7 @@
 - /ar/expense-guides/how-to-build-monthly-budget/index.html
 - /ar/expense-guides/how-to-track-daily-expenses/index.html
 - /ar/expense-guides/emergency-fund-plan/index.html
-- /ar/expense-guides/weekly-budget-review-system/index.html
+- /ar/ar/system/weekly-review/articles/weekly-budget-review-system/index.html
 - /ar/expense-guides/debt-control-strategy/index.html
 - /ar/financial-guide/index.html
 - /ar/financial-system-framework/index.html
@@ -113,7 +113,7 @@
 - /ar/review-expenses-weekly/index.html
 - /ar/الميزانية-الشهرية-خطوة-بخطوة/index.html
 - /ar/تنظيم-المصاريف-في-السعودية/index.html
-- /ar/weekly-budget-review-prevents-financial-collapse/index.html
+- /ar/system/weekly-review/articles/weekly-budget-review-prevents-financial-collapse/index.html
 - /ar/build-emergency-fund-fast/index.html
 - /ar/common-budget-mistakes-guide/index.html
 - /ar/future-plans/index.html
@@ -150,7 +150,7 @@
 - /ar/best-arabic-expense-manager-2026/index.html
 - /ar/ابدأ-من-الصفر/index.html
 - /ar/where-does-my-salary-go-practical-analysis/index.html
-- /ar/weekly-monthly-budget-review-guide/index.html
+- /ar/system/weekly-review/articles/weekly-monthly-budget-review-guide/index.html
 - /ar/تنظيم-المصاريف-في-مصر-والمغرب/index.html
 - /ar/expense-tracking-morocco/index.html
 - /ar/مصروفات-شهرية-في-مصر/index.html
@@ -180,7 +180,7 @@
 - /ar/خريطة-إدارة-المصاريف/index.html
 - /ar/50-30-20-rule-explained/index.html
 - /ar/تنظيم-المصاريف-بدون-تطبيق/index.html
-- /ar/weekly-budget-review-system/index.html
+- /ar/system/weekly-review/articles/weekly-budget-review-system/index.html
 - /ar/أفضل-طريقة-لتتبع-المصاريف-يوميًا/index.html
 - /ar/organize-monthly-expenses-step-by-step/index.html
 - /ar/أفضل-طريقة-لتنظيم-المصاريف/index.html
@@ -211,7 +211,7 @@
 - /ar/accurate-expense-calculation-method/index.html
 - /ar/fast-debt-repayment-method/index.html
 - /ar/expense-tracking-vs-money-management/index.html
-- /ar/weekly-budget-review/index.html
+- /ar/system/weekly-review/articles/weekly-budget-review/index.html
 - /ar/why-budget-fails-even-with-discipline/index.html
 - /ar/لماذا-هذا-الموقع-موثوق/index.html
 - /ar/تنظيم-المصاريف/index.html
@@ -236,8 +236,8 @@
 - /ar/blog/index.html
 - /ar/results.html
 - /ar/features-advanced.html
-- /ar/weekly-budget-control-system/index.html
-- /ar/weekly-financial-review-habit/index.html
+- /ar/system/weekly-review/articles/weekly-budget-control-system/index.html
+- /ar/system/weekly-review/articles/weekly-financial-review-habit/index.html
 
 ---
 
