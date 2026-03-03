@@ -58,7 +58,7 @@
 - /ar/how-to-control-my-spending/index.html
 - /ar/about/case-studies/
 - /ar/about/roadmap/
-- /ar/system/weekly-review/articles/weekly-budget-control-system/index.html
+- index.html
 - /ar/system/weekly-review/articles/weekly-financial-review-habit/index.html
 - /ar/money-management-guide/index.html
 - /ar/how-it-works.html

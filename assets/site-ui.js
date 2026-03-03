@@ -18,8 +18,22 @@
     en: "https://www.expenselypro.com/en/",
   };
 
-  const arHref = alternates["ar"] || alternates["x-default"] || fallback.ar;
-  const enHref = alternates["en"] || alternates["x-default"] || fallback.en;
+  const swapLangPath = (from, to) => {
+    if (!path.startsWith(`/${from}`)) return null;
+    return `${location.origin}${path.replace(`/${from}`, `/${to}`)}`;
+  };
+
+  const arHref =
+    alternates["ar"] ||
+    alternates["x-default"] ||
+    swapLangPath("en", "ar") ||
+    fallback.ar;
+
+  const enHref =
+    alternates["en"] ||
+    alternates["x-default"] ||
+    swapLangPath("ar", "en") ||
+    fallback.en;
 
   // ---------- floating panel ----------
   const root = document.documentElement;
@@ -167,6 +181,28 @@
 
   // ---------- boot ----------
   initTheme();
+
+  // reading progress
+  const progress = document.createElement('div');
+  progress.style.position = 'fixed';
+  progress.style.top = '0';
+  progress.style.left = '0';
+  progress.style.height = '3px';
+  progress.style.background = '#0EA5C6';
+  progress.style.zIndex = '99999';
+  progress.style.width = '0%';
+  document.body.appendChild(progress);
+
+  const updateProgress = () => {
+    const total = document.body.scrollHeight - window.innerHeight;
+    const percent = total > 0 ? (window.scrollY / total) * 100 : 0;
+    progress.style.width = percent + '%';
+  };
+
+  window.addEventListener('scroll', updateProgress);
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", mountFab);
   } else {
