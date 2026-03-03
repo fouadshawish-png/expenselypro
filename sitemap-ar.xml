@@ -25,12 +25,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/ar/about-expense-manager/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.expenselypro.com/ar/about-system/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -85,12 +79,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/ar/budget-app-arabic/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.expenselypro.com/ar/budget-calculator/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -139,30 +127,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/ar/cost-of-living-expenses-guide/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/daily-life-expenses-control/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/difference-between-budget-and-expense-organization/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/difference-between-expense-management-and-wealth-management/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.expenselypro.com/ar/download.html</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -182,54 +146,6 @@
   </url>
   <url>
     <loc>https://www.expenselypro.com/ar/expense-app-vs-excel/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/expense-guides/debt-control-strategy/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/expense-guides/emergency-fund-plan/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/expense-guides/how-to-build-monthly-budget/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/expense-guides/how-to-control-impulse-spending/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/expense-guides/how-to-track-daily-expenses/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/expense-guides/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/expense-guides/weekly-budget-review-system/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/expense-management-guide/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -260,12 +176,6 @@
   </url>
   <url>
     <loc>https://www.expenselypro.com/ar/family-budget-system-guide/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/family-expenses-management-ar/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -313,12 +223,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/ar/guides/المصاريف/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.expenselypro.com/ar/guides/الميزانية/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -361,6 +265,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.expenselypro.com/ar/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.expenselypro.com/ar/manual-vs-app-expense-tracking/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -391,24 +301,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/ar/organize-expenses-variable-income/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/organize-monthly-expenses-step-by-step/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/organizing-expenses/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.expenselypro.com/ar/privacy.html</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -421,37 +313,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/ar/reduce-expenses-practically/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/reduce-expenses-without-deprivation/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/reduce-expenses-without-deprivation-intent/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/reduce-monthly-expenses-smartly/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.expenselypro.com/ar/results.html</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/review-expenses-weekly/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -574,7 +436,7 @@
     <loc>https://www.expenselypro.com/ar/system/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.expenselypro.com/ar/system/saving/</loc>
@@ -649,12 +511,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.expenselypro.com/ar/topics/expense-tracking/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.expenselypro.com/ar/topics/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -674,12 +530,6 @@
   </url>
   <url>
     <loc>https://www.expenselypro.com/ar/topics/spending-psychology/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/track-expenses-daily-without-complexity-action/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -734,18 +584,6 @@
   </url>
   <url>
     <loc>https://www.expenselypro.com/ar/why-salary-ends-before-month-end/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/أفضل-طريقة-لتتبع-المصاريف-يوميًا/</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.expenselypro.com/ar/أفضل-طريقة-لتنظيم-المصاريف/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
