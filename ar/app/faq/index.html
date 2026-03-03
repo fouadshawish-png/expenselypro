@@ -1,0 +1,110 @@
+<!-- نسخة انتقالية – سيتم تحسينها بعد إنهاء الأعمدة -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>الأسئلة الشائعة عن التطبيق | محترف المصاريف</title>
+  <meta name="description" content="إجابات سريعة عن استخدام التطبيق: التتبع، الميزانيات، المزامنة، النسخ الاحتياطي، والخصوصية.">
+  <link rel="canonical" href="https://www.expenselypro.com/ar/app/faq/">
+  <link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/app/faq/">
+  <link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/ar/app/faq/">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="ar-page">
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo">
+        <img src="/icon.png" alt="شعار محترف المصاريف" width="36" height="36">
+        <span>محترف المصاريف</span>
+    </div>
+    <nav class="main-nav">
+      <a href="/ar/system/">النظام</a>
+      <a href="/ar/app/">التطبيق</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع</a>
+      <a href="/ar/system/budget-framework/">الميزانية</a>
+      <a href="/ar/system/weekly-review/">المراجعة</a>
+      <a href="/ar/start/" class="btn-nav">ابدأ الآن</a>
+    </nav>
+  </div>
+</header>
+<main class="page" id="content">
+  <div class="container page-container">
+    <h1>الأسئلة الشائعة عن التطبيق</h1>
+
+    <section>
+      <h2>ما الفرق بين التتبع هنا والتسجيل في ورقة إكسل؟</h2>
+      <p>التتبع داخل التطبيق يبني إشارات زمنية دقيقة (وقت العملية، الحساب، الفئة) ويحدث الرصيد والميزانية فورًا. ورقة إكسل غالبًا تبقى يدوية، بلا تحذيرات أو ارتباط مباشر بالميزانية، وتحتاج إعادة إدخال متكرر. التطبيق يستخدم TransactionCard مختصرة لتقليل الوقت إلى أقل من دقيقة لكل عملية.</p>
+    </section>
+
+    <section>
+      <h2>هل أحتاج اتصالًا دائمًا بالإنترنت؟</h2>
+      <p>لا. كل عملية تُخزن محليًا أولًا. إذا انقطع الاتصال، تُرسل العمليات المؤجلة عند عودة الشبكة عبر PendingActionsQueue مع الحفاظ على الترتيب. يمكنك إكمال أسبوع كامل أوفلاين ثم المزامنة مرة واحدة.</p>
+    </section>
+
+    <section>
+      <h2>كيف أتأكد أن الرصيد صحيح بعد فترة طويلة؟</h2>
+      <p>التطبيق يحسب الرصيد من مصدر واحد موحد (getAccountRealBalance) ويمنع أي عملية مالية إذا كان الرصيد غير كافٍ. عند اختلاف الأرقام، استخدم مزامنة الحسابات ثم افتح التقارير؛ كلاهما يعتمد نفس المصدر، فلا ينبغي أن يظهر فرق.</p>
+    </section>
+
+    <section>
+      <h2>هل يمكنني استخدام التطبيق بدون إنشاء حساب؟</h2>
+      <p>يمكن البدء بتسجيل دخول مجهول. ستتمكن من التتبع والميزانيات والديون والشيكات. عند الرغبة في نقل البيانات إلى جهاز آخر، اربط حساب Google لتحفظ النسخة السحابية.</p>
+    </section>
+
+    <section>
+      <h2>كيف أتعامل مع التواريخ المتكررة للشيكات أو الديون؟</h2>
+      <p>لأن الشيكات والديون مبنية على WorkManager وDebtsRepository، يمكنك تحديد تذكير متكرر أو مراجعة أسبوعية. كل تحديث حالة يغير الرصيد فورًا ويتزامن عند توفر الشبكة.</p>
+    </section>
+
+    <section>
+      <h2>ماذا يحدث للبيانات عند حذف التطبيق؟</h2>
+      <p>إذا كنت مسجلاً بحساب Google، تبقى بياناتك في Firestore ويمكن استعادتها بعد إعادة تثبيت التطبيق وتسجيل الدخول. في حالة الحساب المجهول، تُحذف البيانات عند حذف التطبيق ما لم تحتفظ بنسخة احتياطية مشفرة عبر BackupManager.</p>
+    </section>
+
+    <section>
+      <h2>هل يوجد حد لعدد المعاملات أو الحسابات؟</h2>
+      <p>لا يوجد حد عملي في التطبيق الحالي. الأداء تم ضبطه عبر NavAnalyticsTracker وFlows لتظل الشاشة سريعة مع قوائم طويلة. ننصح بإغلاق الحسابات غير المستخدمة فقط لتقليل الضجيج في التقارير.</p>
+    </section>
+
+    <section>
+      <h2>هل يمكن مشاركة البيانات مع شريك مالي؟</h2>
+      <p>يمكن استخدام المزامنة مع فرق صغيرة عبر مجموعة teams في Firestore. المشاركة تمنح حق الوصول للبيانات الأساسية دون أذونات تعديل لا داعي لها. احرص على اتفاق واضح قبل تفعيل المشاركة.</p>
+    </section>
+
+    <section>
+      <h2>كيف يعمل النسخ الاحتياطي؟</h2>
+      <p>من شاشة النسخ الاحتياطي يمكنك تصدير ملف مشفر ثم استيراده في أي وقت. لا يعمل تلقائيًا، ولن يرفع بياناتك دون موافقة صريحة. بعد الاستيراد يُعاد بناء الحسابات والميزانيات والديون والشيكات وفق السجل نفسه.</p>
+    </section>
+
+    <section>
+      <h2>هل التطبيق يجمع بيانات تسويقية إضافية؟</h2>
+      <p>لا. التحليلات تقتصر على استخدام الشاشات والأحداث الأساسية لتحسين الأداء. DeepLinkAttributionManager يسجل مصدر التثبيت والفتح لأغراض قياس الحملات فقط، ولا تُباع البيانات ولا تُشارك مع أطراف تسويق خارجي.</p>
+    </section>
+
+    <p><a class="btn" href="/ar/download.html">ابدأ باستخدام التطبيق</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-col">
+      <h3>النظام</h3>
+      <a href="/ar/app/">التطبيق الرسمي</a>
+      <a href="/ar/system/">الإطار الكامل</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع اليومي</a>
+      <a href="/ar/system/budget-framework/">ميزانية واقعية</a>
+      <a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a>
+    </div>
+    <div class="footer-col">
+      <h3>البدء</h3>
+      <a href="/ar/start/">ابدأ</a>
+      <a href="/ar/download.html">حمّل التطبيق</a>
+    </div>
+    <div class="footer-col">
+      <h3>قانوني</h3>
+      <a href="/ar/privacy.html">الخصوصية</a>
+      <a href="/ar/terms.html">الشروط</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

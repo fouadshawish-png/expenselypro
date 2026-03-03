@@ -1,0 +1,111 @@
+<!-- نسخة انتقالية – سيتم تحسينها بعد إنهاء الأعمدة -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>الشيكات داخل التطبيق | محترف المصاريف</title>
+  <meta name="description" content="متابعة الشيكات في التطبيق: تواريخ الاستحقاق، حالات التحصيل، تنبيهات تلقائية، وتحديث الرصيد فور الصرف.">
+  <link rel="canonical" href="https://www.expenselypro.com/ar/app/checks/">
+  <link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/app/checks/">
+  <link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/ar/app/checks/">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="ar-page">
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo">
+        <img src="/icon.png" alt="شعار محترف المصاريف" width="36" height="36">
+        <span>محترف المصاريف</span>
+    </div>
+    <nav class="main-nav">
+      <a href="/ar/system/">النظام</a>
+      <a href="/ar/app/">التطبيق</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع</a>
+      <a href="/ar/system/budget-framework/">الميزانية</a>
+      <a href="/ar/system/weekly-review/">المراجعة</a>
+      <a href="/ar/start/" class="btn-nav">ابدأ الآن</a>
+    </nav>
+  </div>
+</header>
+<main class="page" id="content">
+  <div class="container page-container">
+    <h1>الشيكات داخل التطبيق</h1>
+
+    <p>قسم الشيكات مصمم لإدارة المستحقات المؤجلة دون فقدان الرؤية على الرصيد الحالي. كل شيك يحمل قيمة، تاريخ استحقاق، حساب صرف، وحالة (مجدول، مصروف، مرتجع). يعتمد على CheckReminderWorker للتنبيه قبل الاستحقاق، وعلى MoneyMovementUiEvent لضمان تحديث الرصيد فور التحصيل أو الصرف.</p>
+
+    <section>
+      <h2>تعريف عملي</h2>
+      <p>الشيك هنا ليس مجرد تاريخ، بل قيد كامل يمر بدورة حياة واضحة: تسجيل، انتظار، صرف أو تحصيل، ثم أرشفة. عند تحديث الحالة إلى «مصروف»، يسجل التطبيق معاملة فعلية ويعدل الرصيد للحساب المرتبط. إذا تغير التاريخ، تُحدَّث التذكيرات تلقائيًا.</p>
+      <p>كل شيك يحمل معرّفًا واضحًا ومسارًا في التحليلات، ما يتيح قياس نسبة الالتزام بسجلات الشيكات مقارنة بالمواعيد المخطط لها. هذا يساعدك على معرفة إن كانت المشكلة في التخطيط (تواريخ غير مناسبة) أم في السيولة (عدم توفر رصيد عند الصرف).</p>
+    </section>
+
+    <section>
+      <h2>كيفية الاستخدام اليومي</h2>
+      <ol>
+        <li>أضف الشيك مع التاريخ والقيمة والحساب المصدر.</li>
+        <li>اختر تذكيرًا قبل الاستحقاق بعدة أيام لالتقاط السيولة مبكرًا.</li>
+        <li>في يوم الصرف، غيّر الحالة إلى «مصروف» ليتم خصم الرصيد وتسجيل العملية.</li>
+        <li>إذا ارتجع الشيك، بدّل الحالة إلى «مرتجع» مع ملاحظة السبب، وسيُعاد المبلغ للحساب.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>أمثلة استخدام قصيرة</h2>
+      <ul>
+        <li>إيجار شهري: سجل سلسلة شيكات متتالية وحدد تذكير قبل كل استحقاق بخمسة أيام.</li>
+        <li>شيك وارد من عميل: اجعله في حالة «مجدول تحصيل» حتى يؤكد البنك، ثم حوله إلى «محصل» ليظهر كإيراد.</li>
+        <li>شيك ضمان: احتفظ به في حالة مستقلة مع تعليق يوضح الغرض، دون تأثير على الرصيد حتى الصرف.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>المزامنة والاستقرار</h2>
+      <p>كل تغيير حالة يُكتب محليًا ثم يُرسل إلى FirestoreSyncApi. إذا كنت أوفلاين، يحتفظ PendingActionsQueue بالقيد ويعيد إرساله بالترتيب مع منع الازدواجية. الحسابات والميزانيات المتصلة تُحدَّث فور انتقال الشيك من «مجدول» إلى «مصروف»، ما يبقي التقارير متطابقة مع الواقع.</p>
+    </section>
+
+    <section>
+      <h2>تقليل المخاطر</h2>
+      <ul>
+        <li>لا يتم تفعيل إشعار الصرف إلا إذا كان الرصيد الفعلي يكفي، لتجنب الرفض البنكي المتكرر.</li>
+        <li>إشعار إضافي عند وجود شيكين في نفس اليوم حتى تُعيد ترتيب الأولويات أو تضيف تحويلًا مسبقًا.</li>
+        <li>إمكانية تثبيت شيك كـ «مؤجل» ليبقى خارج الحسابات والتقارير حتى يعود إلى جدول واضح.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>ما الذي يسهّل المتابعة؟</h2>
+      <ul>
+        <li>شريط زمني بسيط يوضح الشيكات القادمة هذا الأسبوع.</li>
+        <li>وسوم حالة واضحة لتعرف الفرق بين المجدول والمصروف والمرتجع.</li>
+        <li>ملاحظات قصيرة لكل شيك لكتابة رقم البنك أو الغرض.</li>
+        <li>تنبيهات هادئة تعمل عبر WorkManager دون الاعتماد على اتصال دائم.</li>
+      </ul>
+    </section>
+
+    <p><a class="btn" href="/ar/download.html">نظّم الشيكات بسهولة</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-col">
+      <h3>النظام</h3>
+      <a href="/ar/app/">التطبيق الرسمي</a>
+      <a href="/ar/system/">الإطار الكامل</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع اليومي</a>
+      <a href="/ar/system/budget-framework/">ميزانية واقعية</a>
+      <a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a>
+    </div>
+    <div class="footer-col">
+      <h3>البدء</h3>
+      <a href="/ar/start/">ابدأ</a>
+      <a href="/ar/download.html">حمّل التطبيق</a>
+    </div>
+    <div class="footer-col">
+      <h3>قانوني</h3>
+      <a href="/ar/privacy.html">الخصوصية</a>
+      <a href="/ar/terms.html">الشروط</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

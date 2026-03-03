@@ -1,0 +1,98 @@
+<!-- نسخة انتقالية – سيتم تحسينها بعد إنهاء الأعمدة -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>المعاملات داخل التطبيق | محترف المصاريف</title>
+  <meta name="description" content="كيف تدير المعاملات في التطبيق: إدخال فوري، تفاصيل المعاملة، منع الازدواجية، ومزامنة تحافظ على الرصيد الحقيقي.">
+  <link rel="canonical" href="https://www.expenselypro.com/ar/app/transactions/">
+  <link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/app/transactions/">
+  <link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/ar/app/transactions/">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="ar-page">
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo">
+        <img src="/icon.png" alt="شعار محترف المصاريف" width="36" height="36">
+        <span>محترف المصاريف</span>
+    </div>
+    <nav class="main-nav">
+      <a href="/ar/system/">النظام</a>
+      <a href="/ar/app/">التطبيق</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع</a>
+      <a href="/ar/system/budget-framework/">الميزانية</a>
+      <a href="/ar/system/weekly-review/">المراجعة</a>
+      <a href="/ar/start/" class="btn-nav">ابدأ الآن</a>
+    </nav>
+  </div>
+</header>
+<main class="page" id="content">
+  <div class="container page-container">
+    <h1>المعاملات داخل التطبيق</h1>
+
+    <p>هذه الشاشة هي أسرع طريق لإدخال واقعي. النموذج يعتمد على TransactionCard جديدة بواجهة مختصرة تمنع الإدخال المكرر وتتحقق من الرصيد قبل الحفظ. المعاملات تُخزن محليًا فورًا مع حالة Pending في حال انقطاع الشبكة، ثم تُرسل عبر FirestoreSyncApi بمجرد عودة الاتصال.</p>
+
+    <section>
+      <h2>تعريف عملي</h2>
+      <p>المعاملة هي عملية مالية تحمل حسابًا مصدرًا أو مستلمًا، فئة مصروف أو دخل، وملاحظات قصيرة. التطبيق يربطها بحساب الرصيد الحقيقي ويحدّث الحسابات والميزانيات المرتبطة في لحظة واحدة، ما يمنع التباين بين شاشة وأخرى.</p>
+      <p>يتم إنشاء المعاملة عبر MoneyMovementUiEvent ذاته المستخدم في التحويلات والديون، لذلك لا يمكن تسجيل عملية إذا كان الرصيد غير كافٍ. نظام منع الازدواجية يطابق المبلغ والفئة والوقت القصير ليحجب الضغط المتكرر على زر الحفظ. كل معاملة تحمل معرفًا موحدًا يُستخدم في التقارير، تفاصيل المعاملة، والنسخ الاحتياطي.</p>
+    </section>
+
+    <section>
+      <h2>خطوات الاستخدام اليومية</h2>
+      <ol>
+        <li>انقر إضافة → اكتب المبلغ → اختر الفئة → أضف السبب في سطر واحد.</li>
+        <li>إذا كانت معاملة بطاقة، اختر الحساب المرتبط لتحفظ أثر السحب على الرصيد الفعلي.</li>
+        <li>للمعاملات المتكررة، استخدم النسخ السريع لتكرار آخر عملية وتعديل المبلغ فقط.</li>
+        <li>للمراجعة، افتح AllTransactionsScreen واستخدم الفلاتر حسب التاريخ أو الفئة.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>التفاصيل والتصحيح</h2>
+      <p>TransactionDetailsScreen مبنية من الصفر بنموذج MVI. يمكنك تعديل أو حذف المعاملة مع ضمان تحديث الرصيد وكل الشاشات التي تعتمد عليها. أي حذف يطلق UiEffect ينعكس على قائمة المعاملات والتقارير فورًا، مع تسجيل في Analytics لقياس أثر التصحيحات.</p>
+      <p>عند التحرير أو الحذف أو الاستعادة، تُكتب العملية أولًا في قاعدة البيانات المحلية ثم تُدفع إلى Firestore عبر FirestoreSyncApi. إذا انقطع الاتصال، يحتفظ PendingActionsQueue بالتغيير ويعيد إرساله مع الحفاظ على الترتيب، ما يمنع ظهور الرصيد غير المتسق بين الأجهزة.</p>
+    </section>
+
+    <section>
+      <h2>أمثلة استخدام قصيرة</h2>
+      <ul>
+        <li>بعد شراء سريع: سجل العملية في أقل من دقيقة، ستظهر في التقارير وتؤثر على الحد اليومي مباشرة.</li>
+        <li>عند خطأ في الفئة: افتح التفاصيل، غيّر الفئة، وسيتم تعديل الميزانية المرتبطة دون إنشاء عملية جديدة.</li>
+        <li>عند الدفع من حسابين: استخدم عملية تحويل داخلية لتجنب تضخيم المصروفات.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>ارتباط التتبع اليومي</h2>
+      <p>المعاملات هي التنفيذ العملي لعمود <a href="/ar/system/daily-expense-tracking/">التتبع اليومي</a>. الهدف ليس الأرشفة، بل التقاط الإشارة بسرعة ثم استخدامها في الميزانية والتقارير. لذلك تُبنى كل الحقول لتكون مختصرة، وتُرحَّل أي تحليلات أعمق إلى المراجعة الأسبوعية.</p>
+    </section>
+
+    <p><a class="btn" href="/ar/download.html">ابدأ بإدخال أول معاملة</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-col">
+      <h3>النظام</h3>
+      <a href="/ar/app/">التطبيق الرسمي</a>
+      <a href="/ar/system/">الإطار الكامل</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع اليومي</a>
+      <a href="/ar/system/budget-framework/">ميزانية واقعية</a>
+      <a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a>
+    </div>
+    <div class="footer-col">
+      <h3>البدء</h3>
+      <a href="/ar/start/">ابدأ</a>
+      <a href="/ar/download.html">حمّل التطبيق</a>
+    </div>
+    <div class="footer-col">
+      <h3>قانوني</h3>
+      <a href="/ar/privacy.html">الخصوصية</a>
+      <a href="/ar/terms.html">الشروط</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

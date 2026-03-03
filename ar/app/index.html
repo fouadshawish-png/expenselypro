@@ -1,0 +1,114 @@
+<!-- نسخة انتقالية – سيتم تحسينها بعد إنهاء الأعمدة -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>محترف المصاريف – التطبيق الرسمي</title>
+  <meta name="description" content="التطبيق الرسمي لتنفيذ نظام محترف المصاريف: تتبع فوري، ميزانيات قابلة للضبط، تقارير أسبوعية، وإدارة للديون والشيكات مع مزامنة سحابية وحماية للبيانات.">
+  <link rel="canonical" href="https://www.expenselypro.com/ar/app/">
+  <link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/app/">
+  <link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/ar/app/">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="ar-page">
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo">
+        <img src="/icon.png" alt="شعار محترف المصاريف" width="36" height="36">
+        <span>محترف المصاريف</span>
+    </div>
+    <nav class="main-nav">
+      <a href="/ar/system/">النظام</a>
+      <a href="/ar/app/">التطبيق</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع</a>
+      <a href="/ar/system/budget-framework/">الميزانية</a>
+      <a href="/ar/system/weekly-review/">المراجعة</a>
+      <a href="/ar/start/" class="btn-nav">ابدأ الآن</a>
+    </nav>
+  </div>
+</header>
+<main class="page" id="content">
+  <div class="container page-container">
+    <h1>محترف المصاريف – التطبيق الرسمي</h1>
+
+    <p><a class="btn" href="/ar/download.html">حمّل التطبيق الآن</a></p>
+
+    <p>التطبيق هنا ليحول أعمدة النظام إلى خطوات يومية لا تحتاج أكثر من دقائق. هو طبقة التنفيذ التي تجمع بين التتبع الفوري، ميزانيات قابلة للضبط، تقارير أسبوعية واضحة، وإدارة منظمة للديون والشيكات. يعتمد على قاعدة بيانات محلية (Room) مع مزامنة سحابية عبر Firestore، وطابور أفعال معلّقة يحافظ على سجل العمليات حتى لو انقطعت الشبكة.</p>
+
+    <p>يعطيك التطبيق مسارًا واحدًا: تسجيل سريع ثم قرار أسبوعي. كل شاشة مبنية على نموذج MVI لضمان استجابة ثابتة، مع WorkManager للمهام الخلفية مثل التذكيرات والمزامنة. حساب الرصيد يتم من مصدر واحد موحد فلا توجد فروق بين الشاشات. الخصوصية مدعومة عبر تسجيل دخول آمن (مجهول أو Google) وتشفير النسخ الاحتياطية قبل رفعها إلى التخزين السحابي. نظام تتبع الروابط العميقة يحفظ مصدر التثبيت الأول والأخير لتبقى بيانات التحليلات دقيقة دون التأثير على تجربة الاستخدام.</p>
+
+    <p>الواجهة مبنية لتقليل الاحتكاك: إدخال سريع، بطاقات مختصرة، وتنبيهات هادئة بدل رسائل مزعجة. كل عنصر موجود لأنه يخدم قرارًا ماليًا واحدًا: هل تواصل بنفس السقف أم تعدل بندًا محددًا؟</p>
+
+    <section aria-label="مقدمة حول التنفيذ">
+      <h2>كيف يطبق التطبيق الأعمدة؟</h2>
+      <p>التتبع اليومي يصبح أبسط عبر بطاقة إدخال موحدة ومعالجة فورية للرصيد. الميزانية تُفعّل كسقوف واقعية لكل بند مع تنبيهات مبكرة. التقارير تجمع البيانات إلى مؤشرات أسبوعية، وتعرض الفروق بين الأسبوع الحالي والسابقة خلال ثوانٍ. الشيكات والديون تحصل على سجل منفصل مع تواريخ استحقاق وتذكيرات عملية، بينما المعاملات الكاملة يمكن مراجعتها أو تعديلها دون فقدان السجل.</p>
+      <p>إذا انقطعت الشبكة، يحتفظ PendingActionsQueue بالعمليات لحين المزامنة. SyncManager يعيد المحاولة تلقائيًا ويمنع التكرار. كل ذلك مصمم لتخفيض الاحتكاك وجعل تنفيذ النظام هو الوضع الافتراضي، وليس مهمة إضافية.</p>
+    </section>
+
+    <section aria-label="شبكة الأقسام">
+      <h2>أقسام التطبيق</h2>
+      <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+        <a class="card" href="/ar/app/reports/">التقارير</a>
+        <a class="card" href="/ar/app/budgets/">الميزانيات</a>
+        <a class="card" href="/ar/app/transactions/">المعاملات</a>
+        <a class="card" href="/ar/app/debts/">الديون</a>
+        <a class="card" href="/ar/app/checks/">الشيكات</a>
+        <a class="card" href="/ar/app/security/">الأمان والخصوصية</a>
+        <a class="card" href="/ar/app/faq/">الأسئلة الشائعة</a>
+      </div>
+    </section>
+
+    <section aria-label="تفاصيل التنفيذ">
+      <h2>ما الذي يميّز النسخة الحالية؟</h2>
+      <ul>
+        <li><strong>دقة الرصيد:</strong> الحساب يتم عبر getAccountRealBalance() الموحد، فلا تتغير الأرقام بين شاشة وأخرى.</li>
+        <li><strong>تنظيم حركة الأموال:</strong> كل عمليات النقل، السداد، التسوية، والشيكات تمر عبر MoneyMovementUiEvent لضمان تحقق الرصيد قبل التنفيذ.</li>
+        <li><strong>مزامنة واعية:</strong> SyncManager + WorkManager يحافظان على البيانات حتى مع ضعف الاتصال، مع طابور للعمليات المعلقة.</li>
+        <li><strong>تحليلات واضحة:</strong> NavAnalyticsTracker يسجل الشاشات بدقة، مع قنوات حصرية للتقارير والاشتراكات.</li>
+        <li><strong>نسخ احتياطي واستعادة:</strong> BackupManager يتيح تصديرًا واستيرادًا آمنًا للملفات بدون الاعتماد على Firestore فقط.</li>
+      </ul>
+    </section>
+
+    <section aria-label="الاستخدام اليومي">
+      <h2>روتين العمل اليومي والأسبوعي</h2>
+      <ol>
+        <li>سجّل المعاملة فورًا من شاشة المعاملات أو الاختصار العائم.</li>
+        <li>راجع الحد اليومي والبند الأعلى صرفًا داخل التقارير كل مساء.</li>
+        <li>طبّق تعديلًا أسبوعيًا واحدًا داخل الميزانية بعد مراجعة التقارير.</li>
+        <li>حدّث التزامات الديون أو الشيكات فور الدفع أو التحصيل.</li>
+        <li>شغّل المزامنة أو النسخ الاحتياطي قبل نهاية الأسبوع لضمان سجل نظيف.</li>
+      </ol>
+    </section>
+
+    <section aria-label="ارتباط بالنظام">
+      <h2>من التطبيق إلى النظام</h2>
+      <p>التطبيق هو واجهة التنفيذ الميدانية للنظام. الأعمدة الأصلية موجودة في <a href="/ar/system/">صفحة النظام</a>، وهنا تحصل على الأدوات العملية لتنفيذها: إدخال فوري، سقوف قابلة للتعديل، تقارير زمنية قصيرة، وأمان يحافظ على البيانات أثناء انتقالها بين الأجهزة.</p>
+    </section>
+
+    <p><a class="btn" href="/ar/download.html">حمّل التطبيق الآن</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-col">
+      <h3>النظام</h3>
+      <a href="/ar/app/">التطبيق الرسمي</a>
+      <a href="/ar/system/">الإطار الكامل</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع اليومي</a>
+      <a href="/ar/system/budget-framework/">ميزانية واقعية</a>
+      <a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a>
+    </div>
+    <div class="footer-col">
+      <h3>البدء</h3>
+      <a href="/ar/start/">ابدأ</a>
+      <a href="/ar/download.html">حمّل التطبيق</a>
+    </div>
+    <div class="footer-col">
+      <h3>قانوني</h3>
+      <a href="/ar/privacy.html">الخصوصية</a>
+      <a href="/ar/terms.html">الشروط</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

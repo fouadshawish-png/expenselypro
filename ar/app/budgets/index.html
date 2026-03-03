@@ -1,0 +1,98 @@
+<!-- نسخة انتقالية – سيتم تحسينها بعد إنهاء الأعمدة -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>الميزانيات داخل التطبيق | محترف المصاريف</title>
+  <meta name="description" content="كيفية تشغيل الميزانيات في التطبيق: سقوف أسبوعية وشهرية، ضبط فوري، تنبيهات تجاوز، وأمثلة استخدام عملية.">
+  <link rel="canonical" href="https://www.expenselypro.com/ar/app/budgets/">
+  <link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/app/budgets/">
+  <link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/ar/app/budgets/">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="ar-page">
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo">
+        <img src="/icon.png" alt="شعار محترف المصاريف" width="36" height="36">
+        <span>محترف المصاريف</span>
+    </div>
+    <nav class="main-nav">
+      <a href="/ar/system/">النظام</a>
+      <a href="/ar/app/">التطبيق</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع</a>
+      <a href="/ar/system/budget-framework/">الميزانية</a>
+      <a href="/ar/system/weekly-review/">المراجعة</a>
+      <a href="/ar/start/" class="btn-nav">ابدأ الآن</a>
+    </nav>
+  </div>
+</header>
+<main class="page" id="content">
+  <div class="container page-container">
+    <h1>الميزانيات داخل التطبيق</h1>
+
+    <p>هذه الشاشة هي المكان الذي يتحول فيه التتبع إلى قرار. الميزانيات مبنية كسقوف أسبوعية وشهرية لكل بند مع إمكان تعديل سريع دون إعادة إدخال البيانات. كل تغيير يُرسل فورًا إلى قاعدة البيانات المحلية ثم إلى السحابة عبر SyncManager، ما يحفظ الاستمرارية حتى لو كنت أوفلاين لعدة ساعات.</p>
+
+    <section>
+      <h2>تعريف عملي</h2>
+      <p>الميزانية هنا ليست جدولًا ثابتًا، بل قيد عمل: حد لكل بند، حد يومي مقترح، ورسالة إشارة إن كان الانحراف قابلًا للتصحيح أو يحتاج نقل من بند آخر. يتم حساب المساحة المتبقية بناءً على الرصيد الحقيقي للحسابات المرتبطة، مما يمنع قرارًا لا تغطيه السيولة.</p>
+      <p>عند كل تعديل، يرسل التطبيق الأمر إلى قاعدة البيانات المحلية ثم إلى Firestore عبر WorkManager. إذا انقطع الاتصال، تُحفظ التغييرات في PendingActionsQueue وتُطبق فور عودة الشبكة، مع منع التكرار أو ازدواجية التعديل. بهذا لا تحتاج إلى إعادة إدخال السقوف أو التحقق يدويًا من نجاح المزامنة.</p>
+    </section>
+
+    <section>
+      <h2>كيف تضبط الميزانية بسرعة؟</h2>
+      <ol>
+        <li>اختر البند واضبط السقف بالأرقام فقط؛ لا حاجة لصيغ معقدة.</li>
+        <li>فعّل التنبيه اليومي للبند الأعلى صرفًا ليظهر في التقارير والتنبيهات.</li>
+        <li>إذا تغيّر الدخل، استخدم توزيع النسبي: يضبط التطبيق الحدود تلقائيًا مع الحفاظ على أولوياتك.</li>
+        <li>استفد من ملاحظات الارتداد: بعد ثلاثة أيام من الالتزام، سترى الحد اليومي المحدث بناءً على سلوكك.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>أمثلة استخدام قصيرة</h2>
+      <ul>
+        <li>قبل نهاية الشهر بخمسة أيام: خفّض بند الترفيه 10٪ وارفع بند الطعام بنسبة مماثلة لتجنب كسر السقف.</li>
+        <li>بعد استلام دخل إضافي: أضفه للحساب، وسيُقترح توزيع جديد مع تحديث الحد اليومي تلقائيًا.</li>
+        <li>عند تجاوز بند واحد: انقل المبلغ من بند فائض بضغطة، وسجّل ملاحظة حتى تظهر في مراجعة الأسبوع.</li>
+        <li>في موسم مرتفع المصاريف: أنشئ نسخة ثانية من الميزانية بنفس البنية، وبدّل بينها عند الحاجة دون فقدان السجل الأصلي.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>الربط بالإطار الكامل</h2>
+      <p>تطبيق الميزانية مرتبط مباشرة بـ <a href="/ar/system/budget-framework/">عمود الميزانية</a> في النظام. الفلسفة واحدة: قرار مسبق، تتبع يدعم القرار، ومراجعة أسبوعية لتعديل سقف واحد في كل دورة. التطبيق يوفر الأزرار والأرقام لحظيًا، بينما العمود يحدد المعايير والخطوات.</p>
+    </section>
+
+    <section>
+      <h2>ضوابط الأمان والاستقرار</h2>
+      <p>حساب الرصيد يتم من مصدر واحد موثوق لتجنب اختلاف الأرقام بين شاشة الميزانية وشاشة الحسابات. عمليات التعديل تمر عبر MoneyMovementUiEvent بحيث تُمنع أي زيادة لا يغطّيها الرصيد. كل تعديل يُسجل في Analytics ليظهر أثره على الالتزام الأسبوعي.</p>
+    </section>
+
+    <p><a class="btn" href="/ar/download.html">شغّل الميزانية في التطبيق</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-col">
+      <h3>النظام</h3>
+      <a href="/ar/app/">التطبيق الرسمي</a>
+      <a href="/ar/system/">الإطار الكامل</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع اليومي</a>
+      <a href="/ar/system/budget-framework/">ميزانية واقعية</a>
+      <a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a>
+    </div>
+    <div class="footer-col">
+      <h3>البدء</h3>
+      <a href="/ar/start/">ابدأ</a>
+      <a href="/ar/download.html">حمّل التطبيق</a>
+    </div>
+    <div class="footer-col">
+      <h3>قانوني</h3>
+      <a href="/ar/privacy.html">الخصوصية</a>
+      <a href="/ar/terms.html">الشروط</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
