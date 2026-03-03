@@ -263,17 +263,20 @@
 
 <body>
 
-<header>
-  <div class="topbar wrap">
-    <a class="brand" href="/ar/">
-      <span class="logo" aria-hidden="true"></span>
-      <b>Expensely Pro</b>
-    </a>
-    <nav class="nav" aria-label="روابط سريعة">
-      <a href="/ar/إدارة-المصاريف/">إدارة المصاريف</a>
-      <a href="/ar/الميزانية/">الميزانية</a>
-      <a href="/ar/الديون/">الديون</a>
-      <a href="/ar/نظام-إدارة-مالية-شخصية-كامل/">النظام الكامل</a>
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo">
+      <a href="/">
+        <img src="/icon.png" alt="شعار محترف المصاريف" width="36" height="36">
+        <span>محترف المصاريف</span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <a href="/ar/system/">النظام</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع</a>
+      <a href="/ar/system/budget-framework/">الميزانية</a>
+      <a href="/ar/system/weekly-review/">المراجعة</a>
+      <a href="/ar/start/" class="btn-nav">ابدأ الآن</a>
     </nav>
   </div>
 </header>
@@ -693,18 +696,37 @@
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <div>
-      <b style="color:var(--text)">Expensely Pro</b><br />
-      <span>منهج مالي أسبوعي: سجل يوميًا • راجع أسبوعيًا • عدّل بذكاء</span>
-    </div>
-    <div class="pill-links">
-      <a href="/ar/privacy.html">الخصوصية</a>
-      <a href="/ar/terms.html">الشروط</a>
-      <a href="/ar/download.html">تحميل التطبيق</a>
-      <a href="/en/">English</a>
-    </div>
+  <div class="footer-links">
+    <a href="/ar/system/">النظام</a> |
+    <a href="/ar/start/">ابدأ</a> |
+    <a href="/ar/download/">تحميل التطبيق</a>
   </div>
+
+  <section class="footer-power-links" aria-label="النظام">
+    <h3>النظام</h3>
+    <ul class="free-tools-links">
+      <li><a href="/ar/system/">إطار النظام</a></li>
+      <li><a href="/ar/system/daily-expense-tracking/">تتبع المصاريف اليومي</a></li>
+      <li><a href="/ar/system/budget-framework/">إطار الميزانية</a></li>
+      <li><a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a></li>
+    </ul>
+  </section>
+
+  <section class="footer-power-links" aria-label="البدء">
+    <h3>البدء</h3>
+    <ul class="free-tools-links">
+      <li><a href="/ar/start/">ابدأ من هنا</a></li>
+      <li><a href="/ar/download/">حمّل التطبيق</a></li>
+    </ul>
+  </section>
+
+  <section class="footer-power-links" aria-label="قانوني">
+    <h3>قانوني</h3>
+    <ul class="free-tools-links">
+      <li><a href="/ar/privacy.html">الخصوصية</a></li>
+      <li><a href="/ar/terms.html">الشروط</a></li>
+    </ul>
+  </section>
 </footer>
 
 </body>

@@ -25,7 +25,23 @@
   </script>
 </head>
 <body>
-  <header>...existing code...</header>
+  <header class="site-header">
+  <div class="container header-container">
+    <div class="logo">
+      <a href="/">
+        <img src="/icon.png" alt="شعار محترف المصاريف" width="36" height="36">
+        <span>محترف المصاريف</span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <a href="/ar/system/">النظام</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع</a>
+      <a href="/ar/system/budget-framework/">الميزانية</a>
+      <a href="/ar/system/weekly-review/">المراجعة</a>
+      <a href="/ar/start/" class="btn-nav">ابدأ الآن</a>
+    </nav>
+  </div>
+</header>
   <main class="page" id="content">
     <div class="container page-container">
       <article class="post">
@@ -98,6 +114,38 @@
       </article>
     </div>
   </main>
-  <footer>...existing code...</footer>
+  <footer>
+  <div class="footer-links">
+    <a href="/ar/system/">النظام</a> |
+    <a href="/ar/start/">ابدأ</a> |
+    <a href="/ar/download/">تحميل التطبيق</a>
+  </div>
+
+  <section class="footer-power-links" aria-label="النظام">
+    <h3>النظام</h3>
+    <ul class="free-tools-links">
+      <li><a href="/ar/system/">إطار النظام</a></li>
+      <li><a href="/ar/system/daily-expense-tracking/">تتبع المصاريف اليومي</a></li>
+      <li><a href="/ar/system/budget-framework/">إطار الميزانية</a></li>
+      <li><a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a></li>
+    </ul>
+  </section>
+
+  <section class="footer-power-links" aria-label="البدء">
+    <h3>البدء</h3>
+    <ul class="free-tools-links">
+      <li><a href="/ar/start/">ابدأ من هنا</a></li>
+      <li><a href="/ar/download/">حمّل التطبيق</a></li>
+    </ul>
+  </section>
+
+  <section class="footer-power-links" aria-label="قانوني">
+    <h3>قانوني</h3>
+    <ul class="free-tools-links">
+      <li><a href="/ar/privacy.html">الخصوصية</a></li>
+      <li><a href="/ar/terms.html">الشروط</a></li>
+    </ul>
+  </section>
+</footer>
 </body>
 </html>
