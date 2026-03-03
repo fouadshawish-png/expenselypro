@@ -44,11 +44,11 @@
 ---
 
 ## 3. System Pages (صفحات النظام)
-- /ar/roadmap.html
+- /ar/about/roadmap/
 - /reports_root/index.html
-- /ar/content-roadmap-60-days.html
-- /ar/editorial-policy/index.html
-- /ar/case-studies/index.html
+- /ar/about/roadmap/
+- /ar/about/editorial-policy/index.html
+- /ar/about/case-studies/index.html
 - /ar/topics/index.html
 - /ar/topics/reports/index.html
 - /ar/topics/saving/index.html
@@ -101,12 +101,12 @@
 - /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /ar/social-push/index.html
 - /ar/system/budget-framework/articles/control-daily-expenses/index.html
-- /ar/money-philosophy/index.html
+- /ar/about/money-philosophy/index.html
 - /ar/system/budget-framework/articles/budget-mistakes-that-cause-failure/index.html
 - /ar/monthly-expense-table-guide/index.html
 - /ar/how-to-control-my-spending/index.html
 - /ar/money-management-guide/index.html
-- /ar/results.html
+- /ar/about/case-studies/
 - /ar/system/weekly-review/articles/weekly-budget-control-system/index.html
 - /ar/system/weekly-review/articles/weekly-financial-review-habit/index.html
 
