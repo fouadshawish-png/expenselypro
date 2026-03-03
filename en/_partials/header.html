@@ -1,39 +1,26 @@
 <!-- SITE_HEADER_START -->
-<header class="site-header" id="siteHeader">
-  <div class="container header-container">
+<header class="site-header">
+  <div class="container header-inner">
+
     <a class="brand" href="/en/" aria-label="Expensely Pro Home">
-      <img src="/icon.png" alt="Expensely Pro" width="36" height="36" loading="eager">
-      <span class="brand-name">Expensely Pro</span>
+      <img src="/icon.png" alt="Expensely Pro" width="32" height="32">
+      <span>Expensely Pro</span>
     </a>
 
-    <nav class="main-nav" aria-label="Primary">
-      <a href="/en/system/">Guides</a>
-      <a href="/en/system/">Topics</a>
+    <nav class="nav-desktop">
+      <a href="/en/system/">System</a>
+      <a href="/en/system/daily-expense-tracking/">Tracking</a>
+      <a href="/en/system/budget-framework/">Budget</a>
+      <a href="/en/system/weekly-review/">Review</a>
+      <a href="/en/system/debt-control/">Debt</a>
+      <a href="/en/system/savings-growth/">Savings</a>
+      <a href="/en/app/">App</a>
       <a href="/en/about/">About</a>
-      <a class="btn-nav" href="/en/download.html">Download</a>
+      <a class="btn-primary" href="/en/download.html">Start</a>
     </nav>
 
-    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+    <button class="nav-toggle" aria-label="Menu"></button>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-drawer" id="mobileNav" hidden>
-    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
-      <div class="mobile-drawer__top">
-        <span class="mobile-title">Menu</span>
-        <button class="mobile-close" type="button" aria-label="Close menu">✕</button>
-      </div>
-
-      <div class="mobile-links">
-        <a href="/en/system/">Guides</a>
-        <a href="/en/system/">Topics</a>
-        <a href="/en/about/">About</a>
-        <a class="btn-mobile" href="/en/download.html">Download</a>
-      </div>
-    </div>
-    <div class="mobile-drawer__backdrop" aria-hidden="true"></div>
   </div>
 </header>
 <!-- SITE_HEADER_END -->
