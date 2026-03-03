@@ -18,18 +18,27 @@
 </head>
 <body class="ar-page">
 <header class="site-header">
-  <div class="container header-container">
-    <div class="logo">
-      <a href="/">
-        <img src="/icon.png" alt="شعار محترف المصاريف" width="36" height="36">
-        <span>محترف المصاريف</span>
-      </a>
-    </div>
-        <nav class="main-nav">
+  <div class="container header-inner">
+
+    <a class="brand" href="/ar/" aria-label="الصفحة الرئيسية - محترف المصاريف">
+      <img src="/icon.png" alt="محترف المصاريف" width="32" height="32">
+      <span>محترف المصاريف</span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="التنقل الرئيسي">
+      <a href="/ar/system/">النظام</a>
+      <a href="/ar/system/daily-expense-tracking/">التتبع</a>
+      <a href="/ar/system/budget-framework/">الميزانية</a>
+      <a href="/ar/system/weekly-review/">المراجعة</a>
+      <a href="/ar/system/debt-control/">الديون</a>
+      <a href="/ar/system/savings-growth/">الادخار</a>
       <a href="/ar/app/">التطبيق</a>
       <a href="/ar/about/">حول</a>
-      <a href="/ar/start/" class="btn-nav">ابدأ الآن</a>
+      <a class="btn-primary" href="/ar/download.html">ابدأ</a>
     </nav>
+
+    <button class="nav-toggle" aria-label="القائمة"></button>
+
   </div>
 </header>
 <main class="page" id="content">
@@ -63,26 +72,27 @@
     </article>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="container footer-container">
-    <div class="footer-col">
-      <h3>النظام</h3>
-      <a href="/ar/app/">التطبيق الرسمي</a>
-      <a href="/ar/system/">الإطار الكامل</a>
-      <a href="/ar/system/daily-expense-tracking/">التتبع اليومي</a>
-      <a href="/ar/system/budget-framework/">ميزانية واقعية</a>
-      <a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a>
+<footer class="footer">
+  <div class="container">
+
+    <div style="margin-bottom:24px;">
+      <strong>محترف المصاريف</strong>
+      <p style="margin:6px 0 0;">نظام مالي أسبوعي. خمس ركائز. حلقة واحدة.</p>
     </div>
-    <div class="footer-col">
-      <h3>البدء</h3>
-      <a href="/ar/start/">ابدأ</a>
-      <a href="/ar/download/">حمّل التطبيق</a>
-    </div>
-    <div class="footer-col">
-      <h3>قانوني</h3>
+
+    <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:24px;">
+      <a href="/ar/system/">النظام</a>
+      <a href="/ar/app/">التطبيق</a>
+      <a href="/ar/about/">حول</a>
+      <a href="/ar/download.html">تحميل</a>
       <a href="/ar/privacy.html">الخصوصية</a>
       <a href="/ar/terms.html">الشروط</a>
     </div>
+
+    <div style="font-size:13px; color:#777;">
+      © 2026 محترف المصاريف. جميع الحقوق محفوظة.
+    </div>
+
   </div>
 </footer>
 </body>
