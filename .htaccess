@@ -14,6 +14,9 @@ Redirect 301 /ar/salary-split-50-30-20-detailed/ https://www.expenselypro.com/ar
 # تعطيل ETag لتحسين الكاش
 FileETag None
 
+# Custom 404
+ErrorDocument 404 /ar/404.html
+
 # /en/ Arabic-to-English slug redirects (301)
 Redirect 301 /en/خطة-30-يوم-لضبط-المصاريف/ https://www.expenselypro.com/en/30-day-expense-control-plan/
 Redirect 301 /en/حول-الخبير/ https://www.expenselypro.com/en/about-the-expert/
