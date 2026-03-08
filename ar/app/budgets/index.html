@@ -1,1 +1,198 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/site.css"><link rel="stylesheet" href="/assets/css/system.css"><meta name="viewport" content="width=device-width,initial-scale=1"><meta charset="utf-8"><title>الميزانيات داخل التطبيق | محترف المصاريف</title><meta name="description" content="كيفية تشغيل الميزانيات في التطبيق: سقوف أسبوعية وشهرية، ضبط فوري، تنبيهات تجاوز، وأمثلة استخدام عملية."><link rel="canonical" href="https://www.expenselypro.com/ar/app/budgets/"><link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/app/budgets/"><link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/ar/app/budgets/"><link rel="stylesheet" href="/style.css"></head><body class="ar-page"><header class="site-header"><div class="container header-inner"><a class="brand" href="/ar/" aria-label="الصفحة الرئيسية - محترف المصاريف"><img src="/icon.png" alt="محترف المصاريف" width="32" height="32"> <span>محترف المصاريف</span></a><nav class="nav-desktop" aria-label="التنقل الرئيسي"><div class="nav-dropdown"><a href="/ar/system/" class="nav-parent">النظام</a><div class="dropdown-menu"><a href="/ar/system/daily-expense-tracking/">تتبع المصاريف</a><a href="/ar/system/budget-framework/">الميزانية</a><a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a><a href="/ar/system/debt-control/">إدارة الديون</a><a href="/ar/system/savings-growth/">الادخار والنمو</a></div></div> <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a> <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">ابدأ</a></nav><button class="nav-toggle" aria-label="القائمة"></button></div></header><main class="page" id="content"><div class="container page-container"><h1>الميزانيات داخل التطبيق</h1><p>هذه الشاشة هي المكان الذي يتحول فيه التتبع إلى قرار. الميزانيات مبنية كسقوف أسبوعية وشهرية لكل بند مع إمكان تعديل سريع دون إعادة إدخال البيانات. كل تغيير يُرسل فورًا إلى قاعدة البيانات المحلية ثم إلى السحابة عبر SyncManager، ما يحفظ الاستمرارية حتى لو كنت أوفلاين لعدة ساعات.</p><section><h2>تعريف عملي</h2><p>الميزانية هنا ليست جدولًا ثابتًا، بل قيد عمل: حد لكل بند، حد يومي مقترح، ورسالة إشارة إن كان الانحراف قابلًا للتصحيح أو يحتاج نقل من بند آخر. يتم حساب المساحة المتبقية بناءً على الرصيد الحقيقي للحسابات المرتبطة، مما يمنع قرارًا لا تغطيه السيولة.</p><p>عند كل تعديل، يرسل التطبيق الأمر إلى قاعدة البيانات المحلية ثم إلى Firestore عبر WorkManager. إذا انقطع الاتصال، تُحفظ التغييرات في PendingActionsQueue وتُطبق فور عودة الشبكة، مع منع التكرار أو ازدواجية التعديل. بهذا لا تحتاج إلى إعادة إدخال السقوف أو التحقق يدويًا من نجاح المزامنة.</p></section><section><h2>كيف تضبط الميزانية بسرعة؟</h2><ol><li>اختر البند واضبط السقف بالأرقام فقط؛ لا حاجة لصيغ معقدة.</li><li>فعّل التنبيه اليومي للبند الأعلى صرفًا ليظهر في التقارير والتنبيهات.</li><li>إذا تغيّر الدخل، استخدم توزيع النسبي: يضبط التطبيق الحدود تلقائيًا مع الحفاظ على أولوياتك.</li><li>استفد من ملاحظات الارتداد: بعد ثلاثة أيام من الالتزام، سترى الحد اليومي المحدث بناءً على سلوكك.</li></ol></section><section><h2>أمثلة استخدام قصيرة</h2><ul><li>قبل نهاية الشهر بخمسة أيام: خفّض بند الترفيه 10٪ وارفع بند الطعام بنسبة مماثلة لتجنب كسر السقف.</li><li>بعد استلام دخل إضافي: أضفه للحساب، وسيُقترح توزيع جديد مع تحديث الحد اليومي تلقائيًا.</li><li>عند تجاوز بند واحد: انقل المبلغ من بند فائض بضغطة، وسجّل ملاحظة حتى تظهر في مراجعة الأسبوع.</li><li>في موسم مرتفع المصاريف: أنشئ نسخة ثانية من الميزانية بنفس البنية، وبدّل بينها عند الحاجة دون فقدان السجل الأصلي.</li></ul></section><section><h2>الربط بالإطار الكامل</h2><p>تطبيق الميزانية مرتبط مباشرة بـ <a href="/ar/system/budget-framework/">الميزانية</a> في النظام. الفلسفة واحدة: قرار مسبق، تتبع يدعم القرار، ومراجعة أسبوعية لتعديل سقف واحد في كل دورة. التطبيق يوفر الأزرار والأرقام لحظيًا، بينما ال يحدد المعايير والخطوات.</p></section><section><h2>ضوابط الأمان والاستقرار</h2><p>حساب الرصيد يتم من مصدر واحد موثوق لتجنب اختلاف الأرقام بين شاشة الميزانية وشاشة الحسابات. عمليات التعديل تمر عبر MoneyMovementUiEvent بحيث تُمنع أي زيادة لا يغطّيها الرصيد. كل تعديل يُسجل في Analytics ليظهر أثره على الالتزام الأسبوعي.</p></section><p><a class="btn" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">شغّل الميزانية في التطبيق</a></p></div></main><footer class="footer"><div class="container"><div style="margin-bottom:24px"><strong>محترف المصاريف</strong><p style="margin:6px 0 0">نظام مالي أسبوعي. خمس ركائز. حلقة واحدة.</p></div><div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px"><a href="/ar/system/">النظام</a> <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a> <a href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">تحميل</a> <a href="/ar/privacy.html">الخصوصية</a> <a href="/ar/terms.html">الشروط</a></div><div style="font-size:13px;color:#777">© 2026 محترف المصاريف. جميع الحقوق محفوظة.</div></div></footer><script defer="defer" src="/assets/js/site-ui.js"></script></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    /></noscript>
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>الميزانيات داخل التطبيق | محترف المصاريف</title>
+    <meta
+      name="description"
+      content="كيفية تشغيل الميزانيات في التطبيق: سقوف أسبوعية وشهرية، ضبط فوري، تنبيهات تجاوز، وأمثلة استخدام عملية."
+    />
+    <link rel="canonical" href="https://www.expenselypro.com/ar/app/budgets/" />
+    <link
+      rel="alternate"
+      hreflang="ar"
+      href="https://www.expenselypro.com/ar/app/budgets/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.expenselypro.com/ar/app/budgets/"
+    />
+  </head>
+  <body class="ar-page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="/ar/"
+          aria-label="الصفحة الرئيسية - محترف المصاريف"
+          ><img src="/icon.png" alt="محترف المصاريف" width="32" height="32" />
+          <span>محترف المصاريف</span></a
+        >
+        <nav class="nav-desktop" aria-label="التنقل الرئيسي">
+          <div class="nav-dropdown">
+            <a href="/ar/system/" class="nav-parent">النظام</a>
+            <div class="dropdown-menu">
+              <a href="/ar/system/daily-expense-tracking/">تسجيل المصاريف</a
+              ><a href="/ar/system/budget-framework/">بناء الميزانية</a
+              ><a href="/ar/system/weekly-review/">مراجعة المال أسبوعيًا</a
+              ><a href="/ar/system/debt-control/">خطة سداد الديون</a
+              ><a href="/ar/system/savings-growth/">الادخار وبناء الاحتياطي</a>
+            </div>
+          </div>
+          <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a>
+          <a
+            class="btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >ابدأ</a
+          >
+        </nav>
+        <button class="nav-toggle" aria-label="القائمة"></button>
+      </div>
+    </header>
+    <main class="page" id="content">
+      <div class="container page-container">
+        <h1>الميزانيات داخل التطبيق</h1>
+        <p>
+          هذه الشاشة هي المكان الذي يتحول فيه التتبع إلى قرار. الميزانيات مبنية
+          كسقوف أسبوعية وشهرية لكل بند مع إمكان تعديل سريع دون إعادة إدخال
+          البيانات. كل تغيير يُرسل فورًا إلى قاعدة البيانات المحلية ثم إلى
+          السحابة عبر SyncManager، ما يحفظ الاستمرارية حتى لو كنت أوفلاين لعدة
+          ساعات.
+        </p>
+        <section>
+          <h2>تعريف عملي</h2>
+          <p>
+            الميزانية هنا ليست جدولًا ثابتًا، بل قيد عمل: حد لكل بند، حد يومي
+            مقترح، ورسالة إشارة إن كان الانحراف قابلًا للتصحيح أو يحتاج نقل من
+            بند آخر. يتم حساب المساحة المتبقية بناءً على الرصيد الحقيقي للحسابات
+            المرتبطة، مما يمنع قرارًا لا تغطيه السيولة.
+          </p>
+          <p>
+            عند كل تعديل، يرسل التطبيق الأمر إلى قاعدة البيانات المحلية ثم إلى
+            Firestore عبر WorkManager. إذا انقطع الاتصال، تُحفظ التغييرات في
+            PendingActionsQueue وتُطبق فور عودة الشبكة، مع منع التكرار أو
+            ازدواجية التعديل. بهذا لا تحتاج إلى إعادة إدخال السقوف أو التحقق
+            يدويًا من نجاح المزامنة.
+          </p>
+        </section>
+        <section>
+          <h2>كيف تضبط الميزانية بسرعة؟</h2>
+          <ol>
+            <li>اختر البند واضبط السقف بالأرقام فقط؛ لا حاجة لصيغ معقدة.</li>
+            <li>
+              فعّل التنبيه اليومي للبند الأعلى صرفًا ليظهر في التقارير
+              والتنبيهات.
+            </li>
+            <li>
+              إذا تغيّر الدخل، استخدم توزيع النسبي: يضبط التطبيق الحدود تلقائيًا
+              مع الحفاظ على أولوياتك.
+            </li>
+            <li>
+              استفد من ملاحظات الارتداد: بعد ثلاثة أيام من الالتزام، سترى الحد
+              اليومي المحدث بناءً على سلوكك.
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h2>أمثلة استخدام قصيرة</h2>
+          <ul>
+            <li>
+              قبل نهاية الشهر بخمسة أيام: خفّض بند الترفيه 10٪ وارفع بند الطعام
+              بنسبة مماثلة لتجنب كسر السقف.
+            </li>
+            <li>
+              بعد استلام دخل إضافي: أضفه للحساب، وسيُقترح توزيع جديد مع تحديث
+              الحد اليومي تلقائيًا.
+            </li>
+            <li>
+              عند تجاوز بند واحد: انقل المبلغ من بند فائض بضغطة، وسجّل ملاحظة
+              حتى تظهر في مراجعة الأسبوع.
+            </li>
+            <li>
+              في موسم مرتفع المصاريف: أنشئ نسخة ثانية من الميزانية بنفس البنية،
+              وبدّل بينها عند الحاجة دون فقدان السجل الأصلي.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>الربط بالإطار الكامل</h2>
+          <p>
+            تطبيق الميزانية مرتبط مباشرة بـ
+            <a href="/ar/system/budget-framework/">بناء الميزانية</a> في النظام.
+            الفلسفة واحدة: قرار مسبق، تتبع يدعم القرار، ومراجعة أسبوعية لتعديل
+            سقف واحد في كل دورة. التطبيق يوفر الأزرار والأرقام لحظيًا، بينما ال
+            يحدد المعايير والخطوات.
+          </p>
+        </section>
+        <section>
+          <h2>ضوابط الأمان والاستقرار</h2>
+          <p>
+            حساب الرصيد يتم من مصدر واحد موثوق لتجنب اختلاف الأرقام بين شاشة
+            الميزانية وشاشة الحسابات. عمليات التعديل تمر عبر
+            MoneyMovementUiEvent بحيث تُمنع أي زيادة لا يغطّيها الرصيد. كل تعديل
+            يُسجل في Analytics ليظهر أثره على الالتزام الأسبوعي.
+          </p>
+        </section>
+        <p>
+          <a
+            class="btn"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >شغّل الميزانية في التطبيق</a
+          >
+        </p>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div style="margin-bottom: 24px">
+          <strong>محترف المصاريف</strong>
+          <p style="margin: 6px 0 0">
+            نظام مالي أسبوعي. خمس ركائز. حلقة واحدة.
+          </p>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+          "
+        >
+          <a href="/ar/system/">النظام</a> <a href="/ar/app/">التطبيق</a>
+          <a href="/ar/about/">حول</a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >تحميل</a
+          >
+          <a href="/ar/privacy.html">الخصوصية</a>
+          <a href="/ar/terms.html">الشروط</a>
+        </div>
+        <div style="font-size: 13px; color: #777">
+          © 2026 محترف المصاريف. جميع الحقوق محفوظة.
+        </div>
+      </div>
+    </footer>
+    <script defer="defer" src="/assets/site-ui.js"></script>
+  </body>
+</html>

@@ -1,38 +1,416 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0EA5C6"><title>حاسبة تقسيم الراتب | محترف المصاريف</title><meta name="description" content="حاسبة تقسيم الراتب تساعدك على توزيع الدخل الشهري بين الادخار والمصاريف الأساسية والمصاريف المرنة خلال ثوانٍ، ضمن منهج النظام المالي الأسبوعي من محترف المصاريف."><link rel="canonical" href="https://www.expenselypro.com/ar/tools/salary-split-calculator/"><link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/tools/salary-split-calculator/"><link rel="alternate" hreflang="en" href="https://www.expenselypro.com/en/tools/salary-split-calculator/"><link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/en/tools/salary-split-calculator/"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/site.css"><link rel="stylesheet" href="/assets/css/system.css"><link rel="stylesheet" href="/style.css"><style>.tool-page .page-container{max-width:980px}.tool-hero h1{margin:0 0 10px}.tool-hero p{color:#334155;line-height:1.9}.tool-card{background:#fff;border:1px solid #dbe2ea;border-radius:14px;padding:18px;margin:14px 0}.tool-grid{display:grid;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr))}.tool-field label{display:block;margin-bottom:6px;font-weight:700}.tool-field input,.tool-field select{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:11px 12px;font:inherit;background:#fff}.tool-output{display:grid;gap:10px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:14px}.output-item{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px}.output-item strong{display:block;font-size:14px;color:#475569;margin-bottom:6px}.output-item span{font-weight:700;font-size:20px;color:#0f172a}.note{margin-top:10px;color:#b91c1c;font-size:14px}.quick-links a{margin-inline-end:8px}.faq details{border:1px solid #dbe2ea;border-radius:10px;padding:10px 12px;margin-bottom:8px;background:#fff}.faq summary{cursor:pointer;font-weight:700}.cta-box{text-align:center;background:linear-gradient(145deg,#ecfeff,#f0fdf4)}.cta-box .btn-primary{display:inline-block;margin-top:10px}@media (max-width:860px){.tool-grid,.tool-output{grid-template-columns:1fr}}</style><script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "حاسبة تقسيم الراتب - محترف المصاريف",
-    "url": "https://www.expenselypro.com/ar/tools/salary-split-calculator/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Any",
-    "description": "أداة تفاعلية لحساب توزيع الراتب بين الادخار والمصاريف الأساسية والمصاريف المرنة."
-  }</script><script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "ما أفضل نسبة ادخار كبداية؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "لبداية عملية، يمكن اعتماد 10% إلى 20% حسب استقرار الدخل والالتزامات الأساسية."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "ماذا أفعل إذا تجاوزت النسب 100%؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "خفّض نسبة الادخار أو المصاريف الأساسية حتى يبقى جزء للمصاريف المرنة وتتجنب عجزًا شهريًا."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "هل تكفي هذه الحاسبة لبناء ميزانية كاملة؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "هي نقطة بداية ممتازة، ثم تحتاج تحويل النتائج إلى خطة أسبوعية ومراجعة مالية منتظمة."
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    /></noscript>
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0EA5C6" />
+    <title>حاسبة تقسيم الراتب | محترف المصاريف</title>
+    <meta
+      name="description"
+      content="حاسبة تقسيم الراتب تساعدك على توزيع الدخل الشهري بين الادخار والمصاريف الأساسية والمصاريف المرنة خلال ثوانٍ، ضمن منهج النظام المالي الأسبوعي من محترف المصاريف."
+    />
+    <link
+      rel="canonical"
+      href="https://www.expenselypro.com/ar/tools/salary-split-calculator/"
+    />
+    <link
+      rel="alternate"
+      hreflang="ar"
+      href="https://www.expenselypro.com/ar/tools/salary-split-calculator/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.expenselypro.com/en/tools/salary-split-calculator/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.expenselypro.com/en/tools/salary-split-calculator/"
+    />
+    <style>
+      .tool-page .page-container {
+        max-width: 980px;
+      }
+      .tool-hero h1 {
+        margin: 0 0 10px;
+      }
+      .tool-hero p {
+        color: #334155;
+        line-height: 1.9;
+      }
+      .tool-card {
+        background: #fff;
+        border: 1px solid #dbe2ea;
+        border-radius: 14px;
+        padding: 18px;
+        margin: 14px 0;
+      }
+      .tool-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .tool-field label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 700;
+      }
+      .tool-field input,
+      .tool-field select {
+        width: 100%;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        padding: 11px 12px;
+        font: inherit;
+        background: #fff;
+      }
+      .tool-output {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 14px;
+      }
+      .output-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 12px;
+      }
+      .output-item strong {
+        display: block;
+        font-size: 14px;
+        color: #475569;
+        margin-bottom: 6px;
+      }
+      .output-item span {
+        font-weight: 700;
+        font-size: 20px;
+        color: #0f172a;
+      }
+      .note {
+        margin-top: 10px;
+        color: #b91c1c;
+        font-size: 14px;
+      }
+      .quick-links a {
+        margin-inline-end: 8px;
+      }
+      .faq details {
+        border: 1px solid #dbe2ea;
+        border-radius: 10px;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        background: #fff;
+      }
+      .faq summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+      .cta-box {
+        text-align: center;
+        background: linear-gradient(145deg, #ecfeff, #f0fdf4);
+      }
+      .cta-box .btn-primary {
+        display: inline-block;
+        margin-top: 10px;
+      }
+      @media (max-width: 860px) {
+        .tool-grid,
+        .tool-output {
+          grid-template-columns: 1fr;
         }
       }
-    ]
-  }</script></head><body class="ar-page"><header class="site-header"><div class="container header-inner"><a class="brand" href="/ar/" aria-label="الصفحة الرئيسية - محترف المصاريف"><img src="/icon.png" alt="محترف المصاريف" width="32" height="32"> <span>محترف المصاريف</span></a><nav class="nav-desktop" aria-label="التنقل الرئيسي"><div class="nav-dropdown"><a href="/ar/system/" class="nav-parent">النظام</a><div class="dropdown-menu"><a href="/ar/system/daily-expense-tracking/">تتبع المصاريف</a><a href="/ar/system/budget-framework/">الميزانية</a><a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a><a href="/ar/system/debt-control/">إدارة الديون</a><a href="/ar/system/savings-growth/">الادخار والنمو</a></div></div> <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a> <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">ابدأ</a></nav><button class="nav-toggle" aria-label="القائمة"></button></div></header><main class="page tool-page" id="content"><div class="container page-container"><section class="tool-hero tool-card"><h1>حاسبة تقسيم الراتب</h1><p>هذه الأداة تساعدك على تحويل الراتب الشهري إلى خطة واضحة خلال دقيقة واحدة. بدل أن يبقى توزيع المال عشوائيًا، تدخل قيمة الدخل ونسبة الادخار ونسبة المصاريف الأساسية، ثم تحصل فورًا على تقسيم عملي يشمل الادخار والمصاريف الأساسية والمصاريف المرنة. الفكرة ليست الالتزام بنسبة جامدة، بل بناء توزيع قابل للاستمرار أسبوعًا بعد أسبوع. عند استخدام الحاسبة مع متابعة قصيرة كل أسبوع، ستلاحظ أن قرارات الإنفاق تصبح أكثر هدوءًا ودقة، وأن المفاجآت في نهاية الشهر تقل تدريجيًا. استخدم النتائج كبداية، ثم عدّل النسب حسب واقعك الحقيقي والتزاماتك المتغيرة. ولتحقيق أفضل فائدة، قارن الناتج مع مصاريفك الفعلية خلال آخر 30 يومًا، ثم ثبّت رقمًا أسبوعيًا لكل بند حتى تكتشف أي انحراف مبكرًا.</p><p class="quick-links">ضمن النظام المالي الأسبوعي: <a href="/ar/system/">إطار النظام</a> · <a href="/ar/system/budget-framework/">إطار الميزانية</a> · <a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a></p></section><section class="tool-card" aria-label="واجهة الحاسبة"><h2>احسب تقسيم راتبك الآن</h2><div class="tool-grid"><div class="tool-field"><label for="salary">الراتب الشهري</label> <input id="salary" type="number" min="0" step="0.01" value="8000" inputmode="decimal"></div><div class="tool-field"><label for="savings">نسبة الادخار (%)</label> <input id="savings" type="number" min="0" max="100" step="0.1" value="20" inputmode="decimal"></div><div class="tool-field"><label for="essentials">نسبة المصاريف الأساسية (%)</label> <input id="essentials" type="number" min="0" max="100" step="0.1" value="50" inputmode="decimal"></div></div><div class="tool-output" aria-live="polite"><div class="output-item"><strong>الادخار</strong> <span id="outSavings">0</span></div><div class="output-item"><strong>المصاريف الأساسية</strong> <span id="outEssentials">0</span></div><div class="output-item"><strong>المصاريف المرنة</strong> <span id="outFlexible">0</span></div></div><p class="note" id="calcNote"></p></section><section class="tool-card"><h2>مثال عملي سريع</h2><p>إذا كان الراتب 8000، ونسبة الادخار 20%، والمصاريف الأساسية 50%: الادخار = 1600، والمصاريف الأساسية = 4000، ويبقى 2400 للمصاريف المرنة. بهذا التقسيم تحصل على توازن عملي بين الأمان المالي والالتزامات اليومية والمرونة.</p></section><section class="tool-card faq" aria-label="الأسئلة الشائعة"><h2>الأسئلة الشائعة</h2><details><summary>هل ألتزم بنسبة ثابتة كل شهر؟</summary><p>ليس بالضرورة. الهدف هو إطار واضح، ثم تعديل النسب حسب الدخل الموسمي والالتزامات الفعلية.</p></details><details><summary>ما الحد الأدنى المناسب للادخار؟</summary><p>كقاعدة عملية، ابدأ من 10% حتى لو كانت بسيطة، ثم ارفعها تدريجيًا عند تحسن التدفق النقدي.</p></details><details><summary>ماذا لو كانت المصاريف الأساسية مرتفعة جدًا؟</summary><p>استخدم الناتج لتحديد الفجوة بوضوح، ثم خفّض البنود المرنة أو أعد هيكلة الالتزامات تدريجيًا.</p></details><details><summary>كيف أتابع الالتزام بعد الحساب؟</summary><p>حوّل الأرقام الأسبوعية إلى مراجعة مختصرة كل 7 أيام حتى تبقى الخطة واقعية وليست نظرية.</p></details></section><section class="tool-card cta-box"><h2>حوّل الأرقام إلى تطبيق يومي</h2><p>نزّل التطبيق وطبّق هذا التقسيم داخل نظام متابعة أسبوعي واضح.</p><a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">تحميل التطبيق</a></section></div></main><footer class="footer"><div class="container"><div style="margin-bottom:24px"><strong>محترف المصاريف</strong><p style="margin:6px 0 0">نظام مالي أسبوعي. خمس ركائز. حلقة واحدة.</p></div><div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px"><a href="/ar/system/">النظام</a> <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a> <a href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">تحميل</a> <a href="/ar/privacy.html">الخصوصية</a> <a href="/ar/terms.html">الشروط</a></div><div style="font-size:13px;color:#777">© 2026 محترف المصاريف. جميع الحقوق محفوظة.</div></div></footer><script>!function(){var t=document.getElementById("salary"),e=document.getElementById("savings"),n=document.getElementById("essentials"),u=document.getElementById("outSavings"),m=document.getElementById("outEssentials"),o=document.getElementById("outFlexible"),a=document.getElementById("calcNote");function l(t){return Number(t).toLocaleString("ar-EG",{maximumFractionDigits:2})}function c(){var c=Number(t.value)||0,d=Number(e.value)||0,i=Number(n.value)||0,r=d+i,s=c*(d/100),g=c*(i/100),E=c-s-g;u.textContent=l(Math.max(0,s)),m.textContent=l(Math.max(0,g)),o.textContent=l(E),a.textContent=r>100?"مجموع النسب يتجاوز 100%. عدّل النسب حتى لا يصبح بند المصاريف المرنة سالبًا.":E<0?"المصاريف المرنة أصبحت أقل من صفر. خفّض النسب الحالية.":""}[t,e,n].forEach(function(t){t.addEventListener("input",c)}),c()}()</script><script defer="defer" src="/assets/js/site-ui.js"></script></body></html>
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "حاسبة تقسيم الراتب - محترف المصاريف",
+        "url": "https://www.expenselypro.com/ar/tools/salary-split-calculator/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "description": "أداة تفاعلية لحساب توزيع الراتب بين الادخار والمصاريف الأساسية والمصاريف المرنة."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "ما أفضل نسبة ادخار كبداية؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "لبداية عملية، يمكن اعتماد 10% إلى 20% حسب استقرار الدخل والالتزامات الأساسية."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ماذا أفعل إذا تجاوزت النسب 100%؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "خفّض نسبة الادخار أو المصاريف الأساسية حتى يبقى جزء للمصاريف المرنة وتتجنب عجزًا شهريًا."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل تكفي هذه الحاسبة لبناء ميزانية كاملة؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "هي نقطة بداية ممتازة، ثم تحتاج تحويل النتائج إلى خطة أسبوعية ومراجعة مالية منتظمة."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="ar-page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="/ar/"
+          aria-label="الصفحة الرئيسية - محترف المصاريف"
+          ><img src="/icon.png" alt="محترف المصاريف" width="32" height="32" />
+          <span>محترف المصاريف</span></a
+        >
+        <nav class="nav-desktop" aria-label="التنقل الرئيسي">
+          <div class="nav-dropdown">
+            <a href="/ar/system/" class="nav-parent">النظام</a>
+            <div class="dropdown-menu">
+              <a href="/ar/system/daily-expense-tracking/">تسجيل المصاريف</a
+              ><a href="/ar/system/budget-framework/">بناء الميزانية</a
+              ><a href="/ar/system/weekly-review/">مراجعة المال أسبوعيًا</a
+              ><a href="/ar/system/debt-control/">خطة سداد الديون</a
+              ><a href="/ar/system/savings-growth/">الادخار وبناء الاحتياطي</a>
+            </div>
+          </div>
+          <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a>
+          <a
+            class="btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >ابدأ</a
+          >
+        </nav>
+        <button class="nav-toggle" aria-label="القائمة"></button>
+      </div>
+    </header>
+    <main class="page tool-page" id="content">
+      <div class="container page-container">
+        <section class="tool-hero tool-card">
+          <h1>حاسبة تقسيم الراتب</h1>
+          <p>
+            هذه الأداة تساعدك على تحويل الراتب الشهري إلى خطة واضحة خلال دقيقة
+            واحدة. بدل أن يبقى توزيع المال عشوائيًا، تدخل قيمة الدخل ونسبة
+            الادخار ونسبة المصاريف الأساسية، ثم تحصل فورًا على تقسيم عملي يشمل
+            الادخار والمصاريف الأساسية والمصاريف المرنة. الفكرة ليست الالتزام
+            بنسبة جامدة، بل بناء توزيع قابل للاستمرار أسبوعًا بعد أسبوع. عند
+            استخدام الحاسبة مع متابعة قصيرة كل أسبوع، ستلاحظ أن قرارات الإنفاق
+            تصبح أكثر هدوءًا ودقة، وأن المفاجآت في نهاية الشهر تقل تدريجيًا.
+            استخدم النتائج كبداية، ثم عدّل النسب حسب واقعك الحقيقي والتزاماتك
+            المتغيرة. ولتحقيق أفضل فائدة، قارن الناتج مع مصاريفك الفعلية خلال
+            آخر 30 يومًا، ثم ثبّت رقمًا أسبوعيًا لكل بند حتى تكتشف أي انحراف
+            مبكرًا.
+          </p>
+          <p class="quick-links">
+            ضمن النظام المالي الأسبوعي: <a href="/ar/system/">إطار النظام</a> ·
+            <a href="/ar/system/budget-framework/">بناء الميزانية</a> ·
+            <a href="/ar/system/weekly-review/">مراجعة المال أسبوعيًا</a>
+          </p>
+        </section>
+        <section class="tool-card" aria-label="واجهة الحاسبة">
+          <h2>احسب تقسيم راتبك الآن</h2>
+          <div class="tool-grid">
+            <div class="tool-field">
+              <label for="salary">الراتب الشهري</label>
+              <input
+                id="salary"
+                type="number"
+                min="0"
+                step="0.01"
+                value="8000"
+                inputmode="decimal"
+              />
+            </div>
+            <div class="tool-field">
+              <label for="savings">نسبة الادخار (%)</label>
+              <input
+                id="savings"
+                type="number"
+                min="0"
+                max="100"
+                step="0.1"
+                value="20"
+                inputmode="decimal"
+              />
+            </div>
+            <div class="tool-field">
+              <label for="essentials">نسبة المصاريف الأساسية (%)</label>
+              <input
+                id="essentials"
+                type="number"
+                min="0"
+                max="100"
+                step="0.1"
+                value="50"
+                inputmode="decimal"
+              />
+            </div>
+          </div>
+          <div class="tool-output" aria-live="polite">
+            <div class="output-item">
+              <strong>الادخار</strong> <span id="outSavings">0</span>
+            </div>
+            <div class="output-item">
+              <strong>المصاريف الأساسية</strong>
+              <span id="outEssentials">0</span>
+            </div>
+            <div class="output-item">
+              <strong>المصاريف المرنة</strong> <span id="outFlexible">0</span>
+            </div>
+          </div>
+          <p class="note" id="calcNote"></p>
+        </section>
+        <section class="tool-card">
+          <h2>مثال عملي سريع</h2>
+          <p>
+            إذا كان الراتب 8000، ونسبة الادخار 20%، والمصاريف الأساسية 50%:
+            الادخار = 1600، والمصاريف الأساسية = 4000، ويبقى 2400 للمصاريف
+            المرنة. بهذا التقسيم تحصل على توازن عملي بين الأمان المالي
+            والالتزامات اليومية والمرونة.
+          </p>
+        </section>
+        <section class="tool-card faq" aria-label="الأسئلة الشائعة">
+          <h2>الأسئلة الشائعة</h2>
+          <details>
+            <summary>هل ألتزم بنسبة ثابتة كل شهر؟</summary>
+            <p>
+              ليس بالضرورة. الهدف هو إطار واضح، ثم تعديل النسب حسب الدخل الموسمي
+              والالتزامات الفعلية.
+            </p>
+          </details>
+          <details>
+            <summary>ما الحد الأدنى المناسب للادخار؟</summary>
+            <p>
+              كقاعدة عملية، ابدأ من 10% حتى لو كانت بسيطة، ثم ارفعها تدريجيًا
+              عند تحسن التدفق النقدي.
+            </p>
+          </details>
+          <details>
+            <summary>ماذا لو كانت المصاريف الأساسية مرتفعة جدًا؟</summary>
+            <p>
+              استخدم الناتج لتحديد الفجوة بوضوح، ثم خفّض البنود المرنة أو أعد
+              هيكلة الالتزامات تدريجيًا.
+            </p>
+          </details>
+          <details>
+            <summary>كيف أتابع الالتزام بعد الحساب؟</summary>
+            <p>
+              حوّل الأرقام الأسبوعية إلى مراجعة مختصرة كل 7 أيام حتى تبقى الخطة
+              واقعية وليست نظرية.
+            </p>
+          </details>
+        </section>
+        <section class="tool-card cta-box">
+          <h2>حوّل الأرقام إلى تطبيق يومي</h2>
+          <p>نزّل التطبيق وطبّق هذا التقسيم داخل نظام متابعة أسبوعي واضح.</p>
+          <a
+            class="btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >تحميل التطبيق</a
+          >
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div style="margin-bottom: 24px">
+          <strong>محترف المصاريف</strong>
+          <p style="margin: 6px 0 0">
+            نظام مالي أسبوعي. خمس ركائز. حلقة واحدة.
+          </p>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+          "
+        >
+          <a href="/ar/system/">النظام</a> <a href="/ar/app/">التطبيق</a>
+          <a href="/ar/about/">حول</a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >تحميل</a
+          >
+          <a href="/ar/privacy.html">الخصوصية</a>
+          <a href="/ar/terms.html">الشروط</a>
+        </div>
+        <div style="font-size: 13px; color: #777">
+          © 2026 محترف المصاريف. جميع الحقوق محفوظة.
+        </div>
+      </div>
+    </footer>
+    <script>
+      !(function () {
+        var t = document.getElementById("salary"),
+          e = document.getElementById("savings"),
+          n = document.getElementById("essentials"),
+          u = document.getElementById("outSavings"),
+          m = document.getElementById("outEssentials"),
+          o = document.getElementById("outFlexible"),
+          a = document.getElementById("calcNote");
+        function l(t) {
+          return Number(t).toLocaleString("ar-EG", {
+            maximumFractionDigits: 2,
+          });
+        }
+        function c() {
+          var c = Number(t.value) || 0,
+            d = Number(e.value) || 0,
+            i = Number(n.value) || 0,
+            r = d + i,
+            s = c * (d / 100),
+            g = c * (i / 100),
+            E = c - s - g;
+          ((u.textContent = l(Math.max(0, s))),
+            (m.textContent = l(Math.max(0, g))),
+            (o.textContent = l(E)),
+            (a.textContent =
+              r > 100
+                ? "مجموع النسب يتجاوز 100%. عدّل النسب حتى لا يصبح بند المصاريف المرنة سالبًا."
+                : E < 0
+                  ? "المصاريف المرنة أصبحت أقل من صفر. خفّض النسب الحالية."
+                  : ""));
+        }
+        ([t, e, n].forEach(function (t) {
+          t.addEventListener("input", c);
+        }),
+          c());
+      })();
+    </script>
+    <script defer="defer" src="/assets/site-ui.js"></script>
+  </body>
+</html>

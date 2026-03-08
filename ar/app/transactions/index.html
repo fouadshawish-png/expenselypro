@@ -1,1 +1,204 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/site.css"><link rel="stylesheet" href="/assets/css/system.css"><meta name="viewport" content="width=device-width,initial-scale=1"><meta charset="utf-8"><title>المعاملات داخل التطبيق | محترف المصاريف</title><meta name="description" content="كيف تدير المعاملات في التطبيق: إدخال فوري، تفاصيل المعاملة، منع الازدواجية، ومزامنة تحافظ على الرصيد الحقيقي."><link rel="canonical" href="https://www.expenselypro.com/ar/app/transactions/"><link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/app/transactions/"><link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/ar/app/transactions/"><link rel="stylesheet" href="/style.css"></head><body class="ar-page"><header class="site-header"><div class="container header-inner"><a class="brand" href="/ar/" aria-label="الصفحة الرئيسية - محترف المصاريف"><img src="/icon.png" alt="محترف المصاريف" width="32" height="32"> <span>محترف المصاريف</span></a><nav class="nav-desktop" aria-label="التنقل الرئيسي"><div class="nav-dropdown"><a href="/ar/system/" class="nav-parent">النظام</a><div class="dropdown-menu"><a href="/ar/system/daily-expense-tracking/">تتبع المصاريف</a><a href="/ar/system/budget-framework/">الميزانية</a><a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a><a href="/ar/system/debt-control/">إدارة الديون</a><a href="/ar/system/savings-growth/">الادخار والنمو</a></div></div> <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a> <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">ابدأ</a></nav><button class="nav-toggle" aria-label="القائمة"></button></div></header><main class="page" id="content"><div class="container page-container"><h1>المعاملات داخل التطبيق</h1><p>هذه الشاشة هي أسرع طريق لإدخال واقعي. النموذج يعتمد على TransactionCard جديدة بواجهة مختصرة تمنع الإدخال المكرر وتتحقق من الرصيد قبل الحفظ. المعاملات تُخزن محليًا فورًا مع حالة Pending في حال انقطاع الشبكة، ثم تُرسل عبر FirestoreSyncApi بمجرد عودة الاتصال.</p><section><h2>تعريف عملي</h2><p>المعاملة هي عملية مالية تحمل حسابًا مصدرًا أو مستلمًا، فئة مصروف أو دخل، وملاحظات قصيرة. التطبيق يربطها بحساب الرصيد الحقيقي ويحدّث الحسابات والميزانيات المرتبطة في لحظة واحدة، ما يمنع التباين بين شاشة وأخرى.</p><p>يتم إنشاء المعاملة عبر MoneyMovementUiEvent ذاته المستخدم في التحويلات والديون، لذلك لا يمكن تسجيل عملية إذا كان الرصيد غير كافٍ. نظام منع الازدواجية يطابق المبلغ والفئة والوقت القصير ليحجب الضغط المتكرر على زر الحفظ. كل معاملة تحمل معرفًا موحدًا يُستخدم في التقارير، تفاصيل المعاملة، والنسخ الاحتياطي.</p></section><section><h2>خطوات الاستخدام اليومية</h2><ol><li>انقر إضافة → اكتب المبلغ → اختر الفئة → أضف السبب في سطر واحد.</li><li>إذا كانت معاملة بطاقة، اختر الحساب المرتبط لتحفظ أثر السحب على الرصيد الفعلي.</li><li>للمعاملات المتكررة، استخدم النسخ السريع لتكرار آخر عملية وتعديل المبلغ فقط.</li><li>للمراجعة، افتح AllTransactionsScreen واستخدم الفلاتر حسب التاريخ أو الفئة.</li></ol></section><section><h2>التفاصيل والتصحيح</h2><p>TransactionDetailsScreen مبنية من الصفر بنموذج MVI. يمكنك تعديل أو حذف المعاملة مع ضمان تحديث الرصيد وكل الشاشات التي تعتمد عليها. أي حذف يطلق UiEffect ينعكس على قائمة المعاملات والتقارير فورًا، مع تسجيل في Analytics لقياس أثر التصحيحات.</p><p>عند التحرير أو الحذف أو الاستعادة، تُكتب العملية أولًا في قاعدة البيانات المحلية ثم تُدفع إلى Firestore عبر FirestoreSyncApi. إذا انقطع الاتصال، يحتفظ PendingActionsQueue بالتغيير ويعيد إرساله مع الحفاظ على الترتيب، ما يمنع ظهور الرصيد غير المتسق بين الأجهزة.</p></section><section><h2>أمثلة استخدام قصيرة</h2><ul><li>بعد شراء سريع: سجل العملية في أقل من دقيقة، ستظهر في التقارير وتؤثر على الحد اليومي مباشرة.</li><li>عند خطأ في الفئة: افتح التفاصيل، غيّر الفئة، وسيتم تعديل الميزانية المرتبطة دون إنشاء عملية جديدة.</li><li>عند الدفع من حسابين: استخدم عملية تحويل داخلية لتجنب تضخيم المصروفات.</li></ul></section><section><h2>ارتباط التتبع اليومي</h2><p>المعاملات هي التنفيذ العملي ل <a href="/ar/system/daily-expense-tracking/">التتبع اليومي</a>. الهدف ليس الأرشفة، بل التقاط الإشارة بسرعة ثم استخدامها في الميزانية والتقارير. لذلك تُبنى كل الحقول لتكون مختصرة، وتُرحَّل أي تحليلات أعمق إلى المراجعة الأسبوعية.</p></section><p><a class="btn" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">ابدأ بإدخال أول معاملة</a></p></div></main><footer class="footer"><div class="container"><div style="margin-bottom:24px"><strong>محترف المصاريف</strong><p style="margin:6px 0 0">نظام مالي أسبوعي. خمس ركائز. حلقة واحدة.</p></div><div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px"><a href="/ar/system/">النظام</a> <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a> <a href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">تحميل</a> <a href="/ar/privacy.html">الخصوصية</a> <a href="/ar/terms.html">الشروط</a></div><div style="font-size:13px;color:#777">© 2026 محترف المصاريف. جميع الحقوق محفوظة.</div></div></footer><script defer="defer" src="/assets/js/site-ui.js"></script></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    /></noscript>
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>المعاملات داخل التطبيق | محترف المصاريف</title>
+    <meta
+      name="description"
+      content="كيف تدير المعاملات في التطبيق: إدخال فوري، تفاصيل المعاملة، منع الازدواجية، ومزامنة تحافظ على الرصيد الحقيقي."
+    />
+    <link
+      rel="canonical"
+      href="https://www.expenselypro.com/ar/app/transactions/"
+    />
+    <link
+      rel="alternate"
+      hreflang="ar"
+      href="https://www.expenselypro.com/ar/app/transactions/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.expenselypro.com/ar/app/transactions/"
+    />
+  </head>
+  <body class="ar-page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="/ar/"
+          aria-label="الصفحة الرئيسية - محترف المصاريف"
+          ><img src="/icon.png" alt="محترف المصاريف" width="32" height="32" />
+          <span>محترف المصاريف</span></a
+        >
+        <nav class="nav-desktop" aria-label="التنقل الرئيسي">
+          <div class="nav-dropdown">
+            <a href="/ar/system/" class="nav-parent">النظام</a>
+            <div class="dropdown-menu">
+              <a href="/ar/system/daily-expense-tracking/">تسجيل المصاريف</a
+              ><a href="/ar/system/budget-framework/">بناء الميزانية</a
+              ><a href="/ar/system/weekly-review/">مراجعة المال أسبوعيًا</a
+              ><a href="/ar/system/debt-control/">خطة سداد الديون</a
+              ><a href="/ar/system/savings-growth/">الادخار وبناء الاحتياطي</a>
+            </div>
+          </div>
+          <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a>
+          <a
+            class="btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >ابدأ</a
+          >
+        </nav>
+        <button class="nav-toggle" aria-label="القائمة"></button>
+      </div>
+    </header>
+    <main class="page" id="content">
+      <div class="container page-container">
+        <h1>المعاملات داخل التطبيق</h1>
+        <p>
+          هذه الشاشة هي أسرع طريق لإدخال واقعي. النموذج يعتمد على
+          TransactionCard جديدة بواجهة مختصرة تمنع الإدخال المكرر وتتحقق من
+          الرصيد قبل الحفظ. المعاملات تُخزن محليًا فورًا مع حالة Pending في حال
+          انقطاع الشبكة، ثم تُرسل عبر FirestoreSyncApi بمجرد عودة الاتصال.
+        </p>
+        <section>
+          <h2>تعريف عملي</h2>
+          <p>
+            المعاملة هي عملية مالية تحمل حسابًا مصدرًا أو مستلمًا، فئة مصروف أو
+            دخل، وملاحظات قصيرة. التطبيق يربطها بحساب الرصيد الحقيقي ويحدّث
+            الحسابات والميزانيات المرتبطة في لحظة واحدة، ما يمنع التباين بين
+            شاشة وأخرى.
+          </p>
+          <p>
+            يتم إنشاء المعاملة عبر MoneyMovementUiEvent ذاته المستخدم في
+            التحويلات والديون، لذلك لا يمكن تسجيل عملية إذا كان الرصيد غير كافٍ.
+            نظام منع الازدواجية يطابق المبلغ والفئة والوقت القصير ليحجب الضغط
+            المتكرر على زر الحفظ. كل معاملة تحمل معرفًا موحدًا يُستخدم في
+            التقارير، تفاصيل المعاملة، والنسخ الاحتياطي.
+          </p>
+        </section>
+        <section>
+          <h2>خطوات الاستخدام اليومية</h2>
+          <ol>
+            <li>
+              انقر إضافة → اكتب المبلغ → اختر الفئة → أضف السبب في سطر واحد.
+            </li>
+            <li>
+              إذا كانت معاملة بطاقة، اختر الحساب المرتبط لتحفظ أثر السحب على
+              الرصيد الفعلي.
+            </li>
+            <li>
+              للمعاملات المتكررة، استخدم النسخ السريع لتكرار آخر عملية وتعديل
+              المبلغ فقط.
+            </li>
+            <li>
+              للمراجعة، افتح AllTransactionsScreen واستخدم الفلاتر حسب التاريخ
+              أو الفئة.
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h2>التفاصيل والتصحيح</h2>
+          <p>
+            TransactionDetailsScreen مبنية من الصفر بنموذج MVI. يمكنك تعديل أو
+            حذف المعاملة مع ضمان تحديث الرصيد وكل الشاشات التي تعتمد عليها. أي
+            حذف يطلق UiEffect ينعكس على قائمة المعاملات والتقارير فورًا، مع
+            تسجيل في Analytics لقياس أثر التصحيحات.
+          </p>
+          <p>
+            عند التحرير أو الحذف أو الاستعادة، تُكتب العملية أولًا في قاعدة
+            البيانات المحلية ثم تُدفع إلى Firestore عبر FirestoreSyncApi. إذا
+            انقطع الاتصال، يحتفظ PendingActionsQueue بالتغيير ويعيد إرساله مع
+            الحفاظ على الترتيب، ما يمنع ظهور الرصيد غير المتسق بين الأجهزة.
+          </p>
+        </section>
+        <section>
+          <h2>أمثلة استخدام قصيرة</h2>
+          <ul>
+            <li>
+              بعد شراء سريع: سجل العملية في أقل من دقيقة، ستظهر في التقارير
+              وتؤثر على الحد اليومي مباشرة.
+            </li>
+            <li>
+              عند خطأ في الفئة: افتح التفاصيل، غيّر الفئة، وسيتم تعديل الميزانية
+              المرتبطة دون إنشاء عملية جديدة.
+            </li>
+            <li>
+              عند الدفع من حسابين: استخدم عملية تحويل داخلية لتجنب تضخيم
+              المصروفات.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>ارتباط التتبع اليومي</h2>
+          <p>
+            المعاملات هي التنفيذ العملي ل
+            <a href="/ar/system/daily-expense-tracking/">تسجيل المصاريف</a>.
+            الهدف ليس الأرشفة، بل التقاط الإشارة بسرعة ثم استخدامها في الميزانية
+            والتقارير. لذلك تُبنى كل الحقول لتكون مختصرة، وتُرحَّل أي تحليلات
+            أعمق إلى المراجعة الأسبوعية.
+          </p>
+        </section>
+        <p>
+          <a
+            class="btn"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >ابدأ بإدخال أول معاملة</a
+          >
+        </p>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div style="margin-bottom: 24px">
+          <strong>محترف المصاريف</strong>
+          <p style="margin: 6px 0 0">
+            نظام مالي أسبوعي. خمس ركائز. حلقة واحدة.
+          </p>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+          "
+        >
+          <a href="/ar/system/">النظام</a> <a href="/ar/app/">التطبيق</a>
+          <a href="/ar/about/">حول</a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >تحميل</a
+          >
+          <a href="/ar/privacy.html">الخصوصية</a>
+          <a href="/ar/terms.html">الشروط</a>
+        </div>
+        <div style="font-size: 13px; color: #777">
+          © 2026 محترف المصاريف. جميع الحقوق محفوظة.
+        </div>
+      </div>
+    </footer>
+    <script defer="defer" src="/assets/site-ui.js"></script>
+  </body>
+</html>

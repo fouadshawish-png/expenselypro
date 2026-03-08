@@ -1,38 +1,350 @@
-<!DOCTYPE html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0EA5C6"><title>Emergency Fund Calculator | Expensely Pro</title><meta name="description" content="Calculate your emergency fund target instantly based on monthly expenses and safety months (3, 6, or 9)."><link rel="canonical" href="https://www.expenselypro.com/en/tools/emergency-fund-calculator/"><link rel="alternate" hreflang="en" href="https://www.expenselypro.com/en/tools/emergency-fund-calculator/"><link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/tools/emergency-fund-calculator/"><link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/en/tools/emergency-fund-calculator/"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/site.css"><link rel="stylesheet" href="/assets/css/system.css"><link rel="stylesheet" href="/style.css"><style>.tool-page .page-container{max-width:980px}.tool-card{background:#fff;border:1px solid #dbe2ea;border-radius:14px;padding:18px;margin:14px 0}.tool-hero h1{margin:0 0 10px}.tool-hero p{color:#334155;line-height:1.8}.tool-grid{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}.tool-field label{display:block;margin-bottom:6px;font-weight:700}.tool-field input,.tool-field select{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:11px 12px;font:inherit}.result-box{margin-top:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px}.result-box strong{color:#475569;display:block;margin-bottom:6px}.result-box span{font-size:26px;font-weight:700;color:#0f172a}.quick-links a{margin-right:8px}.faq details{border:1px solid #dbe2ea;border-radius:10px;padding:10px 12px;margin-bottom:8px;background:#fff}.faq summary{cursor:pointer;font-weight:700}.cta-box{text-align:center;background:linear-gradient(145deg,#ecfeff,#f0fdf4)}.cta-box .btn-primary{display:inline-block;margin-top:10px}@media (max-width:860px){.tool-grid{grid-template-columns:1fr}}</style><script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Emergency Fund Calculator - Expensely Pro",
-    "url": "https://www.expenselypro.com/en/tools/emergency-fund-calculator/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Any",
-    "description": "A simple calculator to estimate the emergency fund size based on expenses and safety months."
-  }</script><script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How many months should my emergency fund cover?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A minimum of 3 months is common. 6 months is safer for variable income or unstable conditions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should I include non-essential spending?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Usually no. Focus on essentials such as housing, food, transport, and critical bills."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where should I keep this fund?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In a separate, liquid, low-risk account that is easy to access during real emergencies."
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    /></noscript>
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0EA5C6" />
+    <title>Emergency Fund Calculator | Expensely Pro</title>
+    <meta
+      name="description"
+      content="Calculate your emergency fund target instantly based on monthly expenses and safety months (3, 6, or 9)."
+    />
+    <link
+      rel="canonical"
+      href="https://www.expenselypro.com/en/tools/emergency-fund-calculator/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.expenselypro.com/en/tools/emergency-fund-calculator/"
+    />
+    <link
+      rel="alternate"
+      hreflang="ar"
+      href="https://www.expenselypro.com/ar/tools/emergency-fund-calculator/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.expenselypro.com/en/tools/emergency-fund-calculator/"
+    />
+    <style>
+      .tool-page .page-container {
+        max-width: 980px;
+      }
+      .tool-card {
+        background: #fff;
+        border: 1px solid #dbe2ea;
+        border-radius: 14px;
+        padding: 18px;
+        margin: 14px 0;
+      }
+      .tool-hero h1 {
+        margin: 0 0 10px;
+      }
+      .tool-hero p {
+        color: #334155;
+        line-height: 1.8;
+      }
+      .tool-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .tool-field label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 700;
+      }
+      .tool-field input,
+      .tool-field select {
+        width: 100%;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        padding: 11px 12px;
+        font: inherit;
+      }
+      .result-box {
+        margin-top: 14px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 14px;
+      }
+      .result-box strong {
+        color: #475569;
+        display: block;
+        margin-bottom: 6px;
+      }
+      .result-box span {
+        font-size: 26px;
+        font-weight: 700;
+        color: #0f172a;
+      }
+      .quick-links a {
+        margin-right: 8px;
+      }
+      .faq details {
+        border: 1px solid #dbe2ea;
+        border-radius: 10px;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        background: #fff;
+      }
+      .faq summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+      .cta-box {
+        text-align: center;
+        background: linear-gradient(145deg, #ecfeff, #f0fdf4);
+      }
+      .cta-box .btn-primary {
+        display: inline-block;
+        margin-top: 10px;
+      }
+      @media (max-width: 860px) {
+        .tool-grid {
+          grid-template-columns: 1fr;
         }
       }
-    ]
-  }</script></head><body class="en-page"><header class="site-header"><div class="container header-inner"><a class="brand" href="/en/" aria-label="Expensely Pro Home"><img src="/icon.png" alt="Expensely Pro" width="32" height="32"> <span>Expensely Pro</span></a><nav class="nav-desktop"><div class="nav-dropdown"><a href="/en/system/" class="nav-parent">System</a><div class="dropdown-menu"><a href="/en/system/daily-expense-tracking/">Daily Expense Tracking</a><a href="/en/system/budget-framework/">Budget Framework</a><a href="/en/system/weekly-review/">Weekly Review</a><a href="/en/system/debt-control/">Debt Control</a><a href="/en/system/savings-growth/">Savings Growth</a></div></div> <a href="/en/app/">App</a> <a href="/en/about/">About</a> <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">Start</a></nav><button class="nav-toggle" aria-label="Menu"></button></div></header><main class="page tool-page" id="content"><div class="container page-container"><section class="tool-hero tool-card"><h1>Emergency Fund Calculator</h1><p>An emergency fund is the stability layer that protects your budget from shocks like job disruption, medical costs, or sudden repairs. This calculator gives you a clear target in seconds: enter your core monthly expenses and choose a safety window of 3, 6, or 9 months. Instead of saving randomly, you get a concrete number you can split into monthly milestones. That makes progress measurable and sustainable. If your income is variable, this tool helps you define a realistic protection range before you accelerate debt payoff or long-term goals. Use the result as your baseline, then update it whenever your essential expenses change.</p><p class="quick-links">Related system pages: <a href="/en/system/">System Overview</a> · <a href="/en/system/budget-framework/">Budget Framework</a> · <a href="/en/system/weekly-review/">Weekly Review</a></p></section><section class="tool-card" aria-label="Calculator Interface"><h2>Calculate your target fund</h2><div class="tool-grid"><div class="tool-field"><label for="monthlyExpenses">Monthly Essential Expenses</label> <input id="monthlyExpenses" type="number" min="0" step="0.01" value="2500" inputmode="decimal"></div><div class="tool-field"><label for="safetyMonths">Safety Months</label> <select id="safetyMonths"><option value="3">3 months</option><option value="6" selected="selected">6 months</option><option value="9">9 months</option></select></div></div><div class="result-box" aria-live="polite"><strong>Required Emergency Fund</strong> <span id="fundResult">0</span></div></section><section class="tool-card"><h2>Practical Example</h2><p>If your essential expenses are 2,500 per month and you choose 6 safety months, your target fund is 15,000. You can then divide it into milestones, such as 1,250 per month for 12 months.</p></section><section class="tool-card faq" aria-label="FAQ"><h2>FAQ</h2><details><summary>Should I build this before paying all debt?</summary><p>Usually yes. A starter emergency fund reduces the chance of new debt during unexpected events.</p></details><details><summary>How do I define essential expenses accurately?</summary><p>Include housing, utilities, food basics, transportation, and mandatory payments only.</p></details><details><summary>Do I always need 9 months?</summary><p>Not always. Your income stability, dependents, and job risk determine the right coverage.</p></details><details><summary>When is the fund considered complete?</summary><p>When you reach your target and keep it reserved for true emergencies.</p></details></section><section class="tool-card cta-box"><h2>Track your fund progress weekly</h2><p>Download the app and turn this target into a real savings plan.</p><a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">Download the App</a></section></div></main><footer class="footer"><div class="container"><div style="margin-bottom:24px"><strong>Expensely Pro</strong><p style="margin:6px 0 0">Weekly money system. Five pillars. One loop.</p></div><div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px"><a href="/en/system/">System</a> <a href="/en/app/">App</a> <a href="/en/about/">About</a> <a href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">Download</a> <a href="/en/privacy.html">Privacy</a> <a href="/en/terms.html">Terms</a></div><div style="font-size:13px;color:#777">© 2026 Expensely Pro. All rights reserved.</div></div></footer><script>!function(){var e=document.getElementById("monthlyExpenses"),t=document.getElementById("safetyMonths"),n=document.getElementById("fundResult");function u(){var u=(Number(e.value)||0)*(Number(t.value)||0);n.textContent=u.toLocaleString("en-US",{maximumFractionDigits:2})}e.addEventListener("input",u),t.addEventListener("change",u),u()}()</script><script defer="defer" src="/assets/js/site-ui.js"></script></body></html>
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Emergency Fund Calculator - Expensely Pro",
+        "url": "https://www.expenselypro.com/en/tools/emergency-fund-calculator/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "description": "A simple calculator to estimate the emergency fund size based on expenses and safety months."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many months should my emergency fund cover?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A minimum of 3 months is common. 6 months is safer for variable income or unstable conditions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I include non-essential spending?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually no. Focus on essentials such as housing, food, transport, and critical bills."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where should I keep this fund?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In a separate, liquid, low-risk account that is easy to access during real emergencies."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="en-page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/en/" aria-label="Expensely Pro Home"
+          ><img src="/icon.png" alt="Expensely Pro" width="32" height="32" />
+          <span>Expensely Pro</span></a
+        >
+        <nav class="nav-desktop">
+          <div class="nav-dropdown">
+            <a href="/en/system/" class="nav-parent">System</a>
+            <div class="dropdown-menu">
+              <a href="/en/system/daily-expense-tracking/"
+                >Daily Expense Tracking</a
+              ><a href="/en/system/budget-framework/">Budget Framework</a
+              ><a href="/en/system/weekly-review/">Weekly Review</a
+              ><a href="/en/system/debt-control/">Debt Control</a
+              ><a href="/en/system/savings-growth/">Savings Growth</a>
+            </div>
+          </div>
+          <a href="/en/app/">App</a> <a href="/en/about/">About</a>
+          <a
+            class="btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >Start</a
+          >
+        </nav>
+        <button class="nav-toggle" aria-label="Menu"></button>
+      </div>
+    </header>
+    <main class="page tool-page" id="content">
+      <div class="container page-container">
+        <section class="tool-hero tool-card">
+          <h1>Emergency Fund Calculator</h1>
+          <p>
+            An emergency fund is the stability layer that protects your budget
+            from shocks like job disruption, medical costs, or sudden repairs.
+            This calculator gives you a clear target in seconds: enter your core
+            monthly expenses and choose a safety window of 3, 6, or 9 months.
+            Instead of saving randomly, you get a concrete number you can split
+            into monthly milestones. That makes progress measurable and
+            sustainable. If your income is variable, this tool helps you define
+            a realistic protection range before you accelerate debt payoff or
+            long-term goals. Use the result as your baseline, then update it
+            whenever your essential expenses change.
+          </p>
+          <p class="quick-links">
+            Related system pages: <a href="/en/system/">System Overview</a> ·
+            <a href="/en/system/budget-framework/">Budget Framework</a> ·
+            <a href="/en/system/weekly-review/">Weekly Review</a>
+          </p>
+        </section>
+        <section class="tool-card" aria-label="Calculator Interface">
+          <h2>Calculate your target fund</h2>
+          <div class="tool-grid">
+            <div class="tool-field">
+              <label for="monthlyExpenses">Monthly Essential Expenses</label>
+              <input
+                id="monthlyExpenses"
+                type="number"
+                min="0"
+                step="0.01"
+                value="2500"
+                inputmode="decimal"
+              />
+            </div>
+            <div class="tool-field">
+              <label for="safetyMonths">Safety Months</label>
+              <select id="safetyMonths">
+                <option value="3">3 months</option>
+                <option value="6" selected="selected">6 months</option>
+                <option value="9">9 months</option>
+              </select>
+            </div>
+          </div>
+          <div class="result-box" aria-live="polite">
+            <strong>Required Emergency Fund</strong>
+            <span id="fundResult">0</span>
+          </div>
+        </section>
+        <section class="tool-card">
+          <h2>Practical Example</h2>
+          <p>
+            If your essential expenses are 2,500 per month and you choose 6
+            safety months, your target fund is 15,000. You can then divide it
+            into milestones, such as 1,250 per month for 12 months.
+          </p>
+        </section>
+        <section class="tool-card faq" aria-label="FAQ">
+          <h2>FAQ</h2>
+          <details>
+            <summary>Should I build this before paying all debt?</summary>
+            <p>
+              Usually yes. A starter emergency fund reduces the chance of new
+              debt during unexpected events.
+            </p>
+          </details>
+          <details>
+            <summary>How do I define essential expenses accurately?</summary>
+            <p>
+              Include housing, utilities, food basics, transportation, and
+              mandatory payments only.
+            </p>
+          </details>
+          <details>
+            <summary>Do I always need 9 months?</summary>
+            <p>
+              Not always. Your income stability, dependents, and job risk
+              determine the right coverage.
+            </p>
+          </details>
+          <details>
+            <summary>When is the fund considered complete?</summary>
+            <p>
+              When you reach your target and keep it reserved for true
+              emergencies.
+            </p>
+          </details>
+        </section>
+        <section class="tool-card cta-box">
+          <h2>Track your fund progress weekly</h2>
+          <p>Download the app and turn this target into a real savings plan.</p>
+          <a
+            class="btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >Download the App</a
+          >
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div style="margin-bottom: 24px">
+          <strong>Expensely Pro</strong>
+          <p style="margin: 6px 0 0">
+            Weekly money system. Five pillars. One loop.
+          </p>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+          "
+        >
+          <a href="/en/system/">System</a> <a href="/en/app/">App</a>
+          <a href="/en/about/">About</a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >Download</a
+          >
+          <a href="/en/privacy.html">Privacy</a>
+          <a href="/en/terms.html">Terms</a>
+        </div>
+        <div style="font-size: 13px; color: #777">
+          © 2026 Expensely Pro. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script>
+      !(function () {
+        var e = document.getElementById("monthlyExpenses"),
+          t = document.getElementById("safetyMonths"),
+          n = document.getElementById("fundResult");
+        function u() {
+          var u = (Number(e.value) || 0) * (Number(t.value) || 0);
+          n.textContent = u.toLocaleString("en-US", {
+            maximumFractionDigits: 2,
+          });
+        }
+        (e.addEventListener("input", u), t.addEventListener("change", u), u());
+      })();
+    </script>
+    <script defer="defer" src="/assets/site-ui.js"></script>
+  </body>
+</html>

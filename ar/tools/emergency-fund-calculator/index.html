@@ -1,38 +1,352 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0EA5C6"><title>حاسبة صندوق الطوارئ | محترف المصاريف</title><meta name="description" content="احسب حجم صندوق الطوارئ المناسب خلال ثوانٍ بناءً على مصاريفك الشهرية وعدد أشهر الأمان، وابدأ بخطة ادخار واقعية ضمن النظام المالي الأسبوعي."><link rel="canonical" href="https://www.expenselypro.com/ar/tools/emergency-fund-calculator/"><link rel="alternate" hreflang="ar" href="https://www.expenselypro.com/ar/tools/emergency-fund-calculator/"><link rel="alternate" hreflang="en" href="https://www.expenselypro.com/en/tools/emergency-fund-calculator/"><link rel="alternate" hreflang="x-default" href="https://www.expenselypro.com/en/tools/emergency-fund-calculator/"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/site.css"><link rel="stylesheet" href="/assets/css/system.css"><link rel="stylesheet" href="/style.css"><style>.tool-page .page-container{max-width:980px}.tool-card{background:#fff;border:1px solid #dbe2ea;border-radius:14px;padding:18px;margin:14px 0}.tool-hero h1{margin:0 0 10px}.tool-hero p{color:#334155;line-height:1.9}.tool-grid{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}.tool-field label{display:block;margin-bottom:6px;font-weight:700}.tool-field input,.tool-field select{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:11px 12px;font:inherit}.result-box{margin-top:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px}.result-box strong{color:#475569;display:block;margin-bottom:6px}.result-box span{font-size:26px;font-weight:700;color:#0f172a}.quick-links a{margin-inline-end:8px}.faq details{border:1px solid #dbe2ea;border-radius:10px;padding:10px 12px;margin-bottom:8px;background:#fff}.faq summary{cursor:pointer;font-weight:700}.cta-box{text-align:center;background:linear-gradient(145deg,#ecfeff,#f0fdf4)}.cta-box .btn-primary{display:inline-block;margin-top:10px}@media (max-width:860px){.tool-grid{grid-template-columns:1fr}}</style><script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "حاسبة صندوق الطوارئ - محترف المصاريف",
-    "url": "https://www.expenselypro.com/ar/tools/emergency-fund-calculator/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Any",
-    "description": "أداة تفاعلية لحساب حجم صندوق الطوارئ اعتمادًا على المصاريف الشهرية وفترة الأمان."
-  }</script><script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "كم شهر أحتاج في صندوق الطوارئ؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "الحد الأدنى الشائع هو 3 أشهر، بينما 6 أشهر أكثر أمانًا إذا كان الدخل متذبذبًا."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "هل يشمل الصندوق المصاريف الكمالية؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "يفضل أن يشمل المصاريف الأساسية فقط مثل السكن والطعام والمواصلات والفواتير الضرورية."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "أين أحتفظ بصندوق الطوارئ؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "في حساب سهل الوصول ومنفصل عن المصاريف اليومية، مع أمان جيد وسيولة عالية."
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+    /></noscript>
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0EA5C6" />
+    <title>حاسبة صندوق الطوارئ | محترف المصاريف</title>
+    <meta
+      name="description"
+      content="احسب حجم صندوق الطوارئ المناسب خلال ثوانٍ بناءً على مصاريفك الشهرية وعدد أشهر الأمان، وابدأ بخطة ادخار واقعية ضمن النظام المالي الأسبوعي."
+    />
+    <link
+      rel="canonical"
+      href="https://www.expenselypro.com/ar/tools/emergency-fund-calculator/"
+    />
+    <link
+      rel="alternate"
+      hreflang="ar"
+      href="https://www.expenselypro.com/ar/tools/emergency-fund-calculator/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.expenselypro.com/en/tools/emergency-fund-calculator/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.expenselypro.com/en/tools/emergency-fund-calculator/"
+    />
+    <style>
+      .tool-page .page-container {
+        max-width: 980px;
+      }
+      .tool-card {
+        background: #fff;
+        border: 1px solid #dbe2ea;
+        border-radius: 14px;
+        padding: 18px;
+        margin: 14px 0;
+      }
+      .tool-hero h1 {
+        margin: 0 0 10px;
+      }
+      .tool-hero p {
+        color: #334155;
+        line-height: 1.9;
+      }
+      .tool-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .tool-field label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 700;
+      }
+      .tool-field input,
+      .tool-field select {
+        width: 100%;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        padding: 11px 12px;
+        font: inherit;
+      }
+      .result-box {
+        margin-top: 14px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 14px;
+      }
+      .result-box strong {
+        color: #475569;
+        display: block;
+        margin-bottom: 6px;
+      }
+      .result-box span {
+        font-size: 26px;
+        font-weight: 700;
+        color: #0f172a;
+      }
+      .quick-links a {
+        margin-inline-end: 8px;
+      }
+      .faq details {
+        border: 1px solid #dbe2ea;
+        border-radius: 10px;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        background: #fff;
+      }
+      .faq summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+      .cta-box {
+        text-align: center;
+        background: linear-gradient(145deg, #ecfeff, #f0fdf4);
+      }
+      .cta-box .btn-primary {
+        display: inline-block;
+        margin-top: 10px;
+      }
+      @media (max-width: 860px) {
+        .tool-grid {
+          grid-template-columns: 1fr;
         }
       }
-    ]
-  }</script></head><body class="ar-page"><header class="site-header"><div class="container header-inner"><a class="brand" href="/ar/" aria-label="الصفحة الرئيسية - محترف المصاريف"><img src="/icon.png" alt="محترف المصاريف" width="32" height="32"> <span>محترف المصاريف</span></a><nav class="nav-desktop" aria-label="التنقل الرئيسي"><div class="nav-dropdown"><a href="/ar/system/" class="nav-parent">النظام</a><div class="dropdown-menu"><a href="/ar/system/daily-expense-tracking/">تتبع المصاريف</a><a href="/ar/system/budget-framework/">الميزانية</a><a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a><a href="/ar/system/debt-control/">إدارة الديون</a><a href="/ar/system/savings-growth/">الادخار والنمو</a></div></div> <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a> <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">ابدأ</a></nav><button class="nav-toggle" aria-label="القائمة"></button></div></header><main class="page tool-page" id="content"><div class="container page-container"><section class="tool-hero tool-card"><h1>حاسبة صندوق الطوارئ</h1><p>صندوق الطوارئ هو خط الدفاع الأول عندما يحدث انقطاع دخل أو مصروف مفاجئ. هذه الحاسبة تعطيك رقمًا واضحًا بدل التخمين: أدخل مصاريفك الشهرية الأساسية، ثم اختر عدد أشهر الأمان الذي يناسب وضعك (3 أو 6 أو 9 أشهر). خلال ثوانٍ ستحصل على قيمة الصندوق المستهدف. هذا الرقم يساعدك على اتخاذ قرارات ادخار واقعية، لأنك تعرف الهدف بدل الادخار العشوائي. عند تقسيم الهدف إلى مساهمة شهرية ثابتة ومراجعته أسبوعيًا، يصبح الوصول إليه أسهل وأقل ضغطًا. استخدم هذه النتيجة كنقطة انطلاق، ثم عدّل هدفك كلما تغيرت مصاريفك أو استقرار دخلك. وإذا كان دخلك متذبذبًا، فالأفضل اعتماد هدف 6 أو 9 أشهر، ثم بناء الصندوق على مراحل صغيرة حتى لا يتعطل باقي النظام المالي.</p><p class="quick-links">مرتبط بالنظام: <a href="/ar/system/">إطار النظام</a> · <a href="/ar/system/budget-framework/">إطار الميزانية</a> · <a href="/ar/system/weekly-review/">المراجعة الأسبوعية</a></p></section><section class="tool-card" aria-label="واجهة الحاسبة"><h2>احسب هدف صندوق الطوارئ</h2><div class="tool-grid"><div class="tool-field"><label for="monthlyExpenses">المصاريف الشهرية الأساسية</label> <input id="monthlyExpenses" type="number" min="0" step="0.01" value="5000" inputmode="decimal"></div><div class="tool-field"><label for="safetyMonths">عدد أشهر الأمان</label> <select id="safetyMonths"><option value="3">3 أشهر</option><option value="6" selected="selected">6 أشهر</option><option value="9">9 أشهر</option></select></div></div><div class="result-box" aria-live="polite"><strong>حجم صندوق الطوارئ المطلوب</strong> <span id="fundResult">0</span></div></section><section class="tool-card"><h2>مثال عملي سريع</h2><p>إذا كانت المصاريف الأساسية 5000 شهريًا واخترت أمان 6 أشهر، فإن الهدف = 30000. يمكنك تقسيمه إلى خطة ادخار شهرية؛ مثل 2500 شهريًا للوصول خلال 12 شهرًا بشكل منظم.</p></section><section class="tool-card faq" aria-label="الأسئلة الشائعة"><h2>الأسئلة الشائعة</h2><details><summary>هل أبدأ بصندوق الطوارئ قبل سداد كل الديون؟</summary><p>غالبًا نعم. وجود احتياطي أساسي يقلل الحاجة للاقتراض عند أي ظرف مفاجئ.</p></details><details><summary>كيف أحدد المصاريف الأساسية بدقة؟</summary><p>اجمع السكن، الفواتير، الطعام الأساسي، النقل، والالتزامات الضرورية فقط دون الكماليات.</p></details><details><summary>هل أحتاج 9 أشهر دائمًا؟</summary><p>ليس دائمًا. يعتمد ذلك على استقرار وظيفتك، عدد المعالين، ونسبة المرونة في المصاريف.</p></details><details><summary>متى أعتبر الصندوق مكتملًا؟</summary><p>عندما تصل إلى هدف الأشهر المختار وتلتزم بعدم استخدامه إلا للطوارئ الحقيقية.</p></details></section><section class="tool-card cta-box"><h2>ابدأ تنفيذ خطة الطوارئ داخل التطبيق</h2><p>نزّل التطبيق وراقب تقدمك أسبوعيًا حتى تصل لهدفك بثبات.</p><a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">تحميل التطبيق</a></section></div></main><footer class="footer"><div class="container"><div style="margin-bottom:24px"><strong>محترف المصاريف</strong><p style="margin:6px 0 0">نظام مالي أسبوعي. خمس ركائز. حلقة واحدة.</p></div><div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px"><a href="/ar/system/">النظام</a> <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a> <a href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar">تحميل</a> <a href="/ar/privacy.html">الخصوصية</a> <a href="/ar/terms.html">الشروط</a></div><div style="font-size:13px;color:#777">© 2026 محترف المصاريف. جميع الحقوق محفوظة.</div></div></footer><script>!function(){var e=document.getElementById("monthlyExpenses"),t=document.getElementById("safetyMonths"),n=document.getElementById("fundResult");function u(){var u=(Number(e.value)||0)*(Number(t.value)||0);n.textContent=u.toLocaleString("ar-EG",{maximumFractionDigits:2})}e.addEventListener("input",u),t.addEventListener("change",u),u()}()</script><script defer="defer" src="/assets/js/site-ui.js"></script></body></html>
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "حاسبة صندوق الطوارئ - محترف المصاريف",
+        "url": "https://www.expenselypro.com/ar/tools/emergency-fund-calculator/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "description": "أداة تفاعلية لحساب حجم صندوق الطوارئ اعتمادًا على المصاريف الشهرية وفترة الأمان."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "كم شهر أحتاج في صندوق الطوارئ؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "الحد الأدنى الشائع هو 3 أشهر، بينما 6 أشهر أكثر أمانًا إذا كان الدخل متذبذبًا."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل يشمل الصندوق المصاريف الكمالية؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يفضل أن يشمل المصاريف الأساسية فقط مثل السكن والطعام والمواصلات والفواتير الضرورية."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "أين أحتفظ بصندوق الطوارئ؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "في حساب سهل الوصول ومنفصل عن المصاريف اليومية، مع أمان جيد وسيولة عالية."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="ar-page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="/ar/"
+          aria-label="الصفحة الرئيسية - محترف المصاريف"
+          ><img src="/icon.png" alt="محترف المصاريف" width="32" height="32" />
+          <span>محترف المصاريف</span></a
+        >
+        <nav class="nav-desktop" aria-label="التنقل الرئيسي">
+          <div class="nav-dropdown">
+            <a href="/ar/system/" class="nav-parent">النظام</a>
+            <div class="dropdown-menu">
+              <a href="/ar/system/daily-expense-tracking/">تسجيل المصاريف</a
+              ><a href="/ar/system/budget-framework/">بناء الميزانية</a
+              ><a href="/ar/system/weekly-review/">مراجعة المال أسبوعيًا</a
+              ><a href="/ar/system/debt-control/">خطة سداد الديون</a
+              ><a href="/ar/system/savings-growth/">الادخار وبناء الاحتياطي</a>
+            </div>
+          </div>
+          <a href="/ar/app/">التطبيق</a> <a href="/ar/about/">حول</a>
+          <a
+            class="btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >ابدأ</a
+          >
+        </nav>
+        <button class="nav-toggle" aria-label="القائمة"></button>
+      </div>
+    </header>
+    <main class="page tool-page" id="content">
+      <div class="container page-container">
+        <section class="tool-hero tool-card">
+          <h1>حاسبة صندوق الطوارئ</h1>
+          <p>
+            صندوق الطوارئ هو خط الدفاع الأول عندما يحدث انقطاع دخل أو مصروف
+            مفاجئ. هذه الحاسبة تعطيك رقمًا واضحًا بدل التخمين: أدخل مصاريفك
+            الشهرية الأساسية، ثم اختر عدد أشهر الأمان الذي يناسب وضعك (3 أو 6 أو
+            9 أشهر). خلال ثوانٍ ستحصل على قيمة الصندوق المستهدف. هذا الرقم
+            يساعدك على اتخاذ قرارات ادخار واقعية، لأنك تعرف الهدف بدل الادخار
+            العشوائي. عند تقسيم الهدف إلى مساهمة شهرية ثابتة ومراجعته أسبوعيًا،
+            يصبح الوصول إليه أسهل وأقل ضغطًا. استخدم هذه النتيجة كنقطة انطلاق،
+            ثم عدّل هدفك كلما تغيرت مصاريفك أو استقرار دخلك. وإذا كان دخلك
+            متذبذبًا، فالأفضل اعتماد هدف 6 أو 9 أشهر، ثم بناء الصندوق على مراحل
+            صغيرة حتى لا يتعطل باقي النظام المالي.
+          </p>
+          <p class="quick-links">
+            مرتبط بالنظام: <a href="/ar/system/">إطار النظام</a> ·
+            <a href="/ar/system/budget-framework/">بناء الميزانية</a> ·
+            <a href="/ar/system/weekly-review/">مراجعة المال أسبوعيًا</a>
+          </p>
+        </section>
+        <section class="tool-card" aria-label="واجهة الحاسبة">
+          <h2>احسب هدف صندوق الطوارئ</h2>
+          <div class="tool-grid">
+            <div class="tool-field">
+              <label for="monthlyExpenses">المصاريف الشهرية الأساسية</label>
+              <input
+                id="monthlyExpenses"
+                type="number"
+                min="0"
+                step="0.01"
+                value="5000"
+                inputmode="decimal"
+              />
+            </div>
+            <div class="tool-field">
+              <label for="safetyMonths">عدد أشهر الأمان</label>
+              <select id="safetyMonths">
+                <option value="3">3 أشهر</option>
+                <option value="6" selected="selected">6 أشهر</option>
+                <option value="9">9 أشهر</option>
+              </select>
+            </div>
+          </div>
+          <div class="result-box" aria-live="polite">
+            <strong>حجم صندوق الطوارئ المطلوب</strong>
+            <span id="fundResult">0</span>
+          </div>
+        </section>
+        <section class="tool-card">
+          <h2>مثال عملي سريع</h2>
+          <p>
+            إذا كانت المصاريف الأساسية 5000 شهريًا واخترت أمان 6 أشهر، فإن الهدف
+            = 30000. يمكنك تقسيمه إلى خطة ادخار شهرية؛ مثل 2500 شهريًا للوصول
+            خلال 12 شهرًا بشكل منظم.
+          </p>
+        </section>
+        <section class="tool-card faq" aria-label="الأسئلة الشائعة">
+          <h2>الأسئلة الشائعة</h2>
+          <details>
+            <summary>هل أبدأ بصندوق الطوارئ قبل سداد كل الديون؟</summary>
+            <p>
+              غالبًا نعم. وجود احتياطي أساسي يقلل الحاجة للاقتراض عند أي ظرف
+              مفاجئ.
+            </p>
+          </details>
+          <details>
+            <summary>كيف أحدد المصاريف الأساسية بدقة؟</summary>
+            <p>
+              اجمع السكن، الفواتير، الطعام الأساسي، النقل، والالتزامات الضرورية
+              فقط دون الكماليات.
+            </p>
+          </details>
+          <details>
+            <summary>هل أحتاج 9 أشهر دائمًا؟</summary>
+            <p>
+              ليس دائمًا. يعتمد ذلك على استقرار وظيفتك، عدد المعالين، ونسبة
+              المرونة في المصاريف.
+            </p>
+          </details>
+          <details>
+            <summary>متى أعتبر الصندوق مكتملًا؟</summary>
+            <p>
+              عندما تصل إلى هدف الأشهر المختار وتلتزم بعدم استخدامه إلا للطوارئ
+              الحقيقية.
+            </p>
+          </details>
+        </section>
+        <section class="tool-card cta-box">
+          <h2>ابدأ تنفيذ خطة الطوارئ داخل التطبيق</h2>
+          <p>نزّل التطبيق وراقب تقدمك أسبوعيًا حتى تصل لهدفك بثبات.</p>
+          <a
+            class="btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >تحميل التطبيق</a
+          >
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div style="margin-bottom: 24px">
+          <strong>محترف المصاريف</strong>
+          <p style="margin: 6px 0 0">
+            نظام مالي أسبوعي. خمس ركائز. حلقة واحدة.
+          </p>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+          "
+        >
+          <a href="/ar/system/">النظام</a> <a href="/ar/app/">التطبيق</a>
+          <a href="/ar/about/">حول</a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager&hl=ar"
+            >تحميل</a
+          >
+          <a href="/ar/privacy.html">الخصوصية</a>
+          <a href="/ar/terms.html">الشروط</a>
+        </div>
+        <div style="font-size: 13px; color: #777">
+          © 2026 محترف المصاريف. جميع الحقوق محفوظة.
+        </div>
+      </div>
+    </footer>
+    <script>
+      !(function () {
+        var e = document.getElementById("monthlyExpenses"),
+          t = document.getElementById("safetyMonths"),
+          n = document.getElementById("fundResult");
+        function u() {
+          var u = (Number(e.value) || 0) * (Number(t.value) || 0);
+          n.textContent = u.toLocaleString("ar-EG", {
+            maximumFractionDigits: 2,
+          });
+        }
+        (e.addEventListener("input", u), t.addEventListener("change", u), u());
+      })();
+    </script>
+    <script defer="defer" src="/assets/site-ui.js"></script>
+  </body>
+</html>
