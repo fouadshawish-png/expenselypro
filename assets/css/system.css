@@ -53,6 +53,35 @@
   padding: clamp(26px, 4.6vw, 56px);
 }
 
+.hero {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-card {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+html[dir="rtl"] .hero-card {
+  text-align: right;
+}
+
+.page-home-ar {
+  max-width: none;
+  padding-inline: 0;
+}
+
+.hero-home-ar .hero-saas {
+  margin-bottom: 0;
+}
+
 .hero-eyebrow {
   display: inline-block;
   margin: 0 0 12px;
@@ -139,6 +168,10 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 56px 0;
+  }
+
   .hero-saas {
     border-radius: 20px;
     padding: 22px;
