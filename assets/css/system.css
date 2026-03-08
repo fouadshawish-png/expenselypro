@@ -55,7 +55,8 @@
 
 .hero {
   width: 100%;
-  padding: 80px 0;
+  padding: 100px 0;
+  background: #0b6b53;
 }
 
 .hero .container {
@@ -64,13 +65,9 @@
   padding: 0 24px;
 }
 
-.hero-card {
-  max-width: 900px;
-  margin-inline: auto;
-}
-
-html[dir="rtl"] .hero-card {
-  text-align: right;
+.hero-content {
+  max-width: 1100px;
+  margin: auto;
 }
 
 .page-home-ar {
@@ -78,8 +75,10 @@ html[dir="rtl"] .hero-card {
   padding-inline: 0;
 }
 
-.hero-home-ar .hero-saas {
-  margin-bottom: 0;
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.2;
+  margin-bottom: 24px;
 }
 
 .hero-eyebrow {
@@ -93,6 +92,54 @@ html[dir="rtl"] .hero-card {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.hero-home-ar .hero-content {
+  color: #ffffff;
+}
+
+.hero-home-ar .hero-eyebrow {
+  background: rgba(255, 255, 255, 0.16);
+  color: #e8fff7;
+}
+
+.hero-home-ar h1,
+.hero-home-ar p {
+  color: #ffffff;
+}
+
+.hero-home-ar p {
+  max-width: 62ch;
+  margin: 0;
+}
+
+.hero-home-ar .btn-primary {
+  background: #ffffff;
+  color: #0b6b53;
+  box-shadow: none;
+}
+
+.hero-home-ar .btn {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.55);
+  background: transparent;
+}
+
+.hero-home-ar .btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+html[dir="rtl"] .hero-home-ar .hero-content {
+  text-align: right;
 }
 
 .hero-saas h1 {
@@ -169,7 +216,12 @@ html[dir="rtl"] .hero-card {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 56px 0;
+    padding: 64px 0;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    margin-bottom: 18px;
   }
 
   .hero-saas {
