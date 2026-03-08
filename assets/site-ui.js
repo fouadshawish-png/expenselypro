@@ -185,6 +185,41 @@
     siteHeader.classList.toggle("scrolled", window.scrollY > 10);
   };
 
+  const syncSystemStage = () => {
+    const stageEls = document.querySelectorAll(".system-stage");
+    if (!stageEls.length || !path.includes("/system")) return;
+
+    const stageBySlug = {
+      "daily-expense-tracking": 1,
+      "budget-framework": 2,
+      "weekly-review": 3,
+      "debt-control": 4,
+      "savings-growth": 5,
+    };
+
+    const slugMatch = path.match(/\/system\/([^/]+)(?:\/|$)/);
+    const slug = slugMatch ? slugMatch[1] : "";
+    const stageNum = stageBySlug[slug];
+
+    let label = "";
+    if (typeof stageNum === "number") {
+      label = isAr ? `المرحلة ${stageNum} من 5` : `Stage ${stageNum} of 5`;
+    } else if (path === "/ar/system" || path === "/ar/system/") {
+      label = "النظام الكامل: 5 مراحل";
+    } else if (path === "/en/system" || path === "/en/system/") {
+      label = "Full System: 5 Stages";
+    } else if (path === "/ar/system/journey" || path === "/ar/system/journey/") {
+      label = "خريطة المسار: 5 مراحل";
+    } else if (path === "/en/system/journey" || path === "/en/system/journey/") {
+      label = "Journey Map: 5 Stages";
+    }
+
+    if (!label) return;
+    stageEls.forEach((el) => {
+      el.textContent = label;
+    });
+  };
+
   // ---------- boot ----------
   initTheme();
 
@@ -210,6 +245,7 @@
   window.addEventListener("scroll", syncHeaderState, { passive: true });
   updateProgress();
   syncHeaderState();
+  syncSystemStage();
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", mountFab);
