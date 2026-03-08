@@ -4196,3 +4196,13 @@ h3{
   .nav-item.mega .mega-toggle:checked + .nav-link + .mega-toggle-btn + .mega-panel {display:grid;}
   .nav-item.mega:hover .mega-panel {display:none;}
 }
+
+
+.card-cover {
+  width: 100%;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: block;
+}
