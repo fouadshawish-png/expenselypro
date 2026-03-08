@@ -5168,7 +5168,7 @@ A simple 30-day system can reduce invisible spending and improve financial clari
     </div>
     <script>
       (function() {
-        var toggle = document.getElementById("");
+        var toggle = document.getElementById("themeToggle");
         if (!toggle) return;
 
         function applyToggleState() {
@@ -5265,7 +5265,8 @@ A simple 30-day system can reduce invisible spending and improve financial clari
         function withUtm(url) {
           if (!url) return "";
           if (url.indexOf("utm_source=") !== -1) return url;
-          return url + (url.indexOf("?") === -1 ? "?" : "&") + UTM_PARAMS;
+          var utmParams = (typeof UTM_PARAMS !== "undefined" && UTM_PARAMS) ? UTM_PARAMS : "utm_source=expenselypro&utm_medium=site&utm_campaign=download";
+          return url + (url.indexOf("?") === -1 ? "?" : "&") + utmParams;
         }
 
         window.trackCtaClick = function(location) {
@@ -5539,8 +5540,8 @@ A simple 30-day system can reduce invisible spending and improve financial clari
     return el;
   };
 
-  const arBtn = getOrCreate('', 'ar', '70px');
-  const enBtn = getOrCreate('', 'en', '12px');
+  const arBtn = getOrCreate('langSwitchAr', 'ar', '70px');
+  const enBtn = getOrCreate('langSwitchEn', 'en', '12px');
 
   arBtn.href = arHref;
   enBtn.href = enHref;
