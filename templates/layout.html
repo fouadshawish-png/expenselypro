@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{meta_description}}">
+  <link rel="canonical" href="{{canonical}}">
+  {{hreflang_tags}}
+  {{seo_tags}}
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/system.css">
+  {{head_extra}}
+</head>
+<body class="{{body_class}}">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{home_url}}" aria-label="{{brand_aria_label}}">
+        <img src="/icon.png" alt="{{brand_name}}" width="32" height="32">
+        <span>{{brand_name}}</span>
+      </a>
+      <nav class="nav-desktop" aria-label="{{nav_aria_label}}">
+        {{navigation}}
+        <a class="btn-primary" href="{{start_url}}">{{start_label}}</a>
+      </nav>
+      <button class="nav-toggle" aria-label="{{menu_label}}"></button>
+    </div>
+  </header>
+
+  <main class="page {{page_class}}" id="content">
+    {{hero}}
+    <div class="container page-container">
+      {{content}}
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      {{footer}}
+    </div>
+  </footer>
+
+  <script defer src="/assets/js/site-ui.js"></script>
+  {{scripts}}
+</body>
+</html>

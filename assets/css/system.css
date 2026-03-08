@@ -56,7 +56,7 @@
 .hero {
   width: 100%;
   padding: 100px 0;
-  background: #0b6b53;
+  background: #ffffff;
 }
 
 .hero .container {
@@ -70,7 +70,16 @@
   margin: auto;
 }
 
-.page-home-ar {
+[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+[dir="ltr"] .hero-content {
+  text-align: left;
+}
+
+.page-home-ar,
+.page-home-en {
   max-width: none;
   padding-inline: 0;
 }
@@ -101,45 +110,56 @@
   flex-wrap: wrap;
 }
 
-.hero-home-ar .hero-content {
-  color: #ffffff;
+.hero-home-ar .hero-content,
+.hero-home-en .hero-content {
+  color: #111827;
+  text-align: center;
 }
 
-.hero-home-ar .hero-eyebrow {
-  background: rgba(255, 255, 255, 0.16);
-  color: #e8fff7;
+.hero-home-ar .hero-eyebrow,
+.hero-home-ar .hero-badge,
+.hero-home-en .hero-eyebrow,
+.hero-home-en .hero-badge {
+  background: #ecfdf5;
+  color: #065f46;
 }
 
 .hero-home-ar h1,
-.hero-home-ar p {
-  color: #ffffff;
+.hero-home-ar p,
+.hero-home-en h1,
+.hero-home-en p {
+  color: #111827;
 }
 
-.hero-home-ar p {
+.hero-home-ar p,
+.hero-home-en p {
   max-width: 62ch;
   margin: 0;
+  color: #4b5563;
 }
 
-.hero-home-ar .btn-primary {
+.hero-home-ar .btn-primary,
+.hero-home-en .btn-primary {
+  background: #0b6b53;
+  color: #ffffff;
+}
+
+.hero-home-ar .btn,
+.hero-home-en .btn {
+  color: #111827;
+  border-color: #d1d5db;
   background: #ffffff;
-  color: #0b6b53;
-  box-shadow: none;
 }
 
-.hero-home-ar .btn {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.55);
-  background: transparent;
+.hero-home-ar .btn:hover,
+.hero-home-en .btn:hover {
+  color: #111827;
+  background: #f9fafb;
 }
 
-.hero-home-ar .btn:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: none;
-}
-
-html[dir="rtl"] .hero-home-ar .hero-content {
-  text-align: right;
+.hero-home-ar .hero-buttons,
+.hero-home-en .hero-buttons {
+  justify-content: center;
 }
 
 .hero-saas h1 {
