@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.expenselypro.com/sitemap.xml
+Sitemap: https://www.expenselypro.com/sitemap-ar.xml
+Sitemap: https://www.expenselypro.com/sitemap-en.xml
+Sitemap: https://www.expenselypro.com/sitemap-system.xml
