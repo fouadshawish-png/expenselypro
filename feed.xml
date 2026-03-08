@@ -3,7 +3,7 @@
   <generator>Expensely Pro Static Feed Builder</generator>
   <link href="https://www.expenselypro.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.expenselypro.com/" rel="alternate" type="text/html" />
-  <updated>2026-03-08T00:00:00+02:00</updated>
+  <updated>2026-03-09T00:00:00+02:00</updated>
   <id>https://www.expenselypro.com/feed.xml</id>
   <title type="text">Expensely Pro</title>
   <subtitle type="text">Weekly Money System articles in Arabic and English.</subtitle>
@@ -11,6 +11,40 @@
     <name>Expensely Pro</name>
     <email>support@expenselypro.com</email>
   </author>
+  <entry>
+    <title type="text">How to Control Expenses: A Simple Budget System That Works | Expensely Pro</title>
+    <link href="https://www.expenselypro.com/en/system/budget-framework/articles/control-expenses-effectively/" rel="alternate" type="text/html" title="How to Control Expenses: A Simple Budget System That Works | Expensely Pro" />
+    <published>2026-03-09T00:00:00+02:00</published>
+    <updated>2026-03-09T00:00:00+02:00</updated>
+    <id>https://www.expenselypro.com/en/system/budget-framework/articles/control-expenses-effectively/</id>
+    <content type="html"><![CDATA[<p>A practical guide to controlling expenses with a simple budget system built on daily tracking, realistic budgeting, and weekly reviews instead of willpower alone.</p><p><a href="https://www.expenselypro.com/en/system/budget-framework/articles/control-expenses-effectively/">Read article</a></p>]]></content>
+    <author>
+      <name>Expensely Pro</name>
+      <email>support@expenselypro.com</email>
+    </author>
+    <category term="Budget Framework" />
+    <category term="English" />
+    <summary type="text">A practical guide to controlling expenses with a simple budget system built on daily tracking, realistic budgeting, and weekly reviews instead of willpower alone.</summary>
+    <media:thumbnail url="https://www.expenselypro.com/assets/images/posts/en-budget-framework-control-expenses-effectively-cover.jpeg" />
+    <media:content medium="image" url="https://www.expenselypro.com/assets/images/posts/en-budget-framework-control-expenses-effectively-cover.jpeg" />
+  </entry>
+  <entry>
+    <title type="text">كيف تتحكم بالمصاريف: نظام ميزانية بسيط يعمل فعلاً | محترف المصاريف</title>
+    <link href="https://www.expenselypro.com/ar/system/budget-framework/articles/control-expenses-effectively/" rel="alternate" type="text/html" title="كيف تتحكم بالمصاريف: نظام ميزانية بسيط يعمل فعلاً | محترف المصاريف" />
+    <published>2026-03-09T00:00:00+02:00</published>
+    <updated>2026-03-09T00:00:00+02:00</updated>
+    <id>https://www.expenselypro.com/ar/system/budget-framework/articles/control-expenses-effectively/</id>
+    <content type="html"><![CDATA[<p>دليل عملي للتحكم بالمصاريف عبر نظام بسيط يجمع بين التتبع اليومي، الميزانية الواقعية، والمراجعة الأسبوعية حتى لا تعتمد على الإرادة فقط.</p><p><a href="https://www.expenselypro.com/ar/system/budget-framework/articles/control-expenses-effectively/">اقرأ المقال</a></p>]]></content>
+    <author>
+      <name>Expensely Pro</name>
+      <email>support@expenselypro.com</email>
+    </author>
+    <category term="إطار الميزانية" />
+    <category term="Arabic" />
+    <summary type="text">دليل عملي للتحكم بالمصاريف عبر نظام بسيط يجمع بين التتبع اليومي، الميزانية الواقعية، والمراجعة الأسبوعية حتى لا تعتمد على الإرادة فقط.</summary>
+    <media:thumbnail url="https://www.expenselypro.com/assets/images/posts/ar-budget-framework-control-expenses-effectively-cover.jpeg" />
+    <media:content medium="image" url="https://www.expenselypro.com/assets/images/posts/ar-budget-framework-control-expenses-effectively-cover.jpeg" />
+  </entry>
   <entry>
     <title type="text">Weekly Budget Review in 10 Minutes: Monthly Execution Guide | Expensely Pro</title>
     <link href="https://www.expenselypro.com/en/system/weekly-review/articles/weekly-monthly-budget-review-guide/" rel="alternate" type="text/html" title="Weekly Budget Review in 10 Minutes: Monthly Execution Guide | Expensely Pro" />
@@ -335,19 +369,19 @@
     <media:content medium="image" url="https://www.expenselypro.com/assets/images/posts/en-budget-framework-from-chaos-to-first-budget-7-days-cover.jpg" />
   </entry>
   <entry>
-    <title type="text">How to Control Daily Expenses Effectively | Expensely Pro</title>
-    <link href="https://www.expenselypro.com/en/system/budget-framework/articles/control-daily-expenses/" rel="alternate" type="text/html" title="How to Control Daily Expenses Effectively | Expensely Pro" />
+    <title type="text">How to Control Daily Expenses (7 Practical Habits That Work) | Expensely Pro</title>
+    <link href="https://www.expenselypro.com/en/system/budget-framework/articles/control-daily-expenses/" rel="alternate" type="text/html" title="How to Control Daily Expenses (7 Practical Habits That Work) | Expensely Pro" />
     <published>2026-03-08T00:00:00+02:00</published>
     <updated>2026-03-08T00:00:00+02:00</updated>
     <id>https://www.expenselypro.com/en/system/budget-framework/articles/control-daily-expenses/</id>
-    <content type="html"><![CDATA[<p>Actionable daily controls that keep spending aligned with budget limits and prevent repeated overages.</p><p><a href="https://www.expenselypro.com/en/system/budget-framework/articles/control-daily-expenses/">Read article</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Use 7 practical habits to control coffee, food, and small daily purchases before they quietly damage your monthly budget.</p><p><a href="https://www.expenselypro.com/en/system/budget-framework/articles/control-daily-expenses/">Read article</a></p>]]></content>
     <author>
       <name>Expensely Pro</name>
       <email>support@expenselypro.com</email>
     </author>
     <category term="Budget Framework" />
     <category term="English" />
-    <summary type="text">Actionable daily controls that keep spending aligned with budget limits and prevent repeated overages.</summary>
+    <summary type="text">Use 7 practical habits to control coffee, food, and small daily purchases before they quietly damage your monthly budget.</summary>
     <media:thumbnail url="https://www.expenselypro.com/assets/images/posts/en-budget-framework-control-daily-expenses-cover.jpg" />
     <media:content medium="image" url="https://www.expenselypro.com/assets/images/posts/en-budget-framework-control-daily-expenses-cover.jpg" />
   </entry>
@@ -590,19 +624,19 @@
     <media:content medium="image" url="https://www.expenselypro.com/assets/images/posts/ar-budget-framework-salary-split-50-30-20-detailed-cover.jpeg" />
   </entry>
   <entry>
-    <title type="text">كيف أتحكم بالمصاريف اليومية؟</title>
-    <link href="https://www.expenselypro.com/ar/system/budget-framework/articles/control-daily-expenses/" rel="alternate" type="text/html" title="كيف أتحكم بالمصاريف اليومية؟" />
+    <title type="text">كيف تتحكم بالمصاريف اليومية؟ 7 عادات عملية تنجح فعلًا</title>
+    <link href="https://www.expenselypro.com/ar/system/budget-framework/articles/control-daily-expenses/" rel="alternate" type="text/html" title="كيف تتحكم بالمصاريف اليومية؟ 7 عادات عملية تنجح فعلًا" />
     <published>2026-02-13T00:00:00+02:00</published>
     <updated>2026-02-13T00:00:00+02:00</updated>
     <id>https://www.expenselypro.com/ar/system/budget-framework/articles/control-daily-expenses/</id>
-    <content type="html"><![CDATA[<p>كيف أتحكم بالمصاريف اليومية؟</p><p><a href="https://www.expenselypro.com/ar/system/budget-framework/articles/control-daily-expenses/">اقرأ المقال</a></p>]]></content>
+    <content type="html"><![CDATA[<p>7 عادات عملية تساعدك على ضبط القهوة والأكل والمشتريات الصغيرة حتى لا تستهلك ميزانيتك اليومية دون أن تشعر.</p><p><a href="https://www.expenselypro.com/ar/system/budget-framework/articles/control-daily-expenses/">اقرأ المقال</a></p>]]></content>
     <author>
       <name>Expensely Pro</name>
       <email>support@expenselypro.com</email>
     </author>
     <category term="إطار الميزانية" />
     <category term="Arabic" />
-    <summary type="text">كيف أتحكم بالمصاريف اليومية؟</summary>
+    <summary type="text">7 عادات عملية تساعدك على ضبط القهوة والأكل والمشتريات الصغيرة حتى لا تستهلك ميزانيتك اليومية دون أن تشعر.</summary>
     <media:thumbnail url="https://www.expenselypro.com/assets/images/posts/ar-budget-framework-control-daily-expenses-cover.jpeg" />
     <media:content medium="image" url="https://www.expenselypro.com/assets/images/posts/ar-budget-framework-control-daily-expenses-cover.jpeg" />
   </entry>
