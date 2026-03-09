@@ -239,6 +239,38 @@
             >
           </div>
         </section>
+        <section class="section text-center">
+          <h2>Inside the app</h2>
+          <div class="download-phone-demo">
+            <div class="phone-mockup">
+              <div class="phone-screen-stack">
+                <img
+                  id="downloadAppScreenshot"
+                  class="phone-screen is-active"
+                  src="/assets/images/screens/screen-01.webp"
+                  alt="App screenshot from Expensely Pro"
+                  loading="lazy"
+                  width="420"
+                  height="840"
+                  data-screens='[
+      "/assets/images/screens/screen-01.webp",
+      "/assets/images/screens/screen-02.webp",
+      "/assets/images/screens/screen-03.webp",
+      "/assets/images/screens/screen-04.webp",
+      "/assets/images/screens/screen-05.webp",
+      "/assets/images/screens/screen-06.webp",
+      "/assets/images/screens/screen-07.webp",
+      "/assets/images/screens/screen-08.webp",
+      "/assets/images/screens/screen-09.webp",
+      "/assets/images/screens/screen-10.webp",
+      "/assets/images/screens/screen-11.webp"
+    ]'
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="section">
           <h2>FAQ</h2>
           <h3>Is it free?</h3>
@@ -289,6 +321,48 @@
         </div>
       </div>
     </footer>
+    <script>
+      !(function () {
+        var e = document.getElementById("downloadAppScreenshot");
+        if (e) {
+          var t = [];
+          try {
+            t = JSON.parse(e.getAttribute("data-screens") || "[]");
+          } catch (e) {
+            t = [];
+          }
+          if (!(t.length < 2)) {
+            var n = 0,
+              r = null;
+            if (
+              ((e.style.transition = "opacity 220ms ease"),
+              "IntersectionObserver" in window)
+            )
+              new IntersectionObserver(
+                function (e) {
+                  e.forEach(function (e) {
+                    e.isIntersecting
+                      ? s()
+                      : r && (clearInterval(r), (r = null));
+                  });
+                },
+                { threshold: 0.25 },
+              ).observe(e);
+            else s();
+          }
+        }
+        function i() {
+          ((n = (n + 1) % t.length),
+            (e.style.opacity = "0.15"),
+            setTimeout(function () {
+              ((e.src = t[n]), (e.style.opacity = "1"));
+            }, 220));
+        }
+        function s() {
+          r || (r = setInterval(i, 3e3));
+        }
+      })();
+    </script>
     <script defer="defer" src="/assets/site-ui.js"></script>
   </body>
 </html>
