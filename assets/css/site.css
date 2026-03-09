@@ -1,3 +1,13 @@
+/* تخصيص زر Download the App في الصفحة الرئيسية الإنجليزية */
+.hero-home-en .hero-buttons .btn[href="/en/download.html"] {
+  color: #fff;
+  background: #16a34a; /* أخضر زاهي Tailwind green-600 */
+  border-color: #16a34a;
+}
+.hero-home-en .hero-buttons .btn[href="/en/download.html"]:hover {
+  background: #15803d; /* أخضر أغمق عند التحويم */
+  color: #fff;
+}
 :root {
   color-scheme: light;
 
@@ -5679,17 +5689,91 @@ h3 {
   border-radius: 24px;
   background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
   border: 1px solid rgba(15, 23, 42, 0.06);
-  padding: 18px;
+  padding: 20px;
   min-height: 430px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.page-home-en .hero-preview-image {
-  width: min(270px, 100%);
-  height: auto;
-  filter: drop-shadow(0 22px 26px rgba(15, 23, 42, 0.16));
+.page-home-en .hero-preview-flow {
+  display: grid;
+  gap: 16px;
+}
+
+.page-home-en .hero-preview-panel {
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.06);
+}
+
+.page-home-en .hero-preview-label {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: #0b6b53;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.page-home-en .hero-preview-panel strong {
+  display: block;
+  color: #0f172a;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.page-home-en .hero-preview-panel p {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.page-home-en .hero-preview-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.page-home-en .hero-preview-item {
+  padding: 18px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.page-home-en .hero-preview-item span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.page-home-en .hero-preview-item strong {
+  color: #0f172a;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.page-home-en .hero-preview-steps {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.page-home-en .hero-preview-steps span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .page-home-en .hero-preview-grid {
@@ -5791,7 +5875,8 @@ h3 {
 
   .page-home-en .hero-kpis,
   .page-home-en .hero-summary-grid,
-  .page-home-en .hero-preview-grid {
+  .page-home-en .hero-preview-grid,
+  .page-home-en .hero-preview-list {
     grid-template-columns: 1fr;
   }
 }
