@@ -5625,10 +5625,60 @@ h3 {
   border-color: rgba(15, 23, 42, 0.12);
 }
 
+.page-home-en .hero-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-home-en .hero-download-btn__icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-home-en .hero-download-btn__icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.page-home-en .hero-saas__note {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: #6b7c8a;
+}
+
+.page-home-en .hero-library-link {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1f5b40;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.page-home-en .hero-library-link strong {
+  font-weight: 800;
+}
+
+.page-home-en .hero-library-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .page-home-en .hero-points {
   list-style: none;
   padding: 0;
-  margin: 28px 0 0;
+  margin: 22px 0 0;
   display: grid;
   gap: 12px;
 }
