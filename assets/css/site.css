@@ -5750,3 +5750,60 @@ h3 {
     border-radius: 22px;
   }
 }
+
+/* Final unified sticky header treatment */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55) inset;
+  transition:
+    background-color 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom-color: rgba(15, 23, 42, 0.08);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.72) inset,
+    0 18px 38px rgba(15, 23, 42, 0.08);
+}
+
+.site-header .header-inner,
+.site-header .header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  min-height: 80px;
+  align-items: center;
+}
+
+html.dark .site-header {
+  background: rgba(11, 31, 23, 0.74);
+  border-bottom-color: rgba(123, 232, 192, 0.12);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+html.dark .site-header.scrolled {
+  background: rgba(11, 31, 23, 0.88);
+  border-bottom-color: rgba(123, 232, 192, 0.16);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 18px 38px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 768px) {
+  .site-header .header-inner,
+  .site-header .header-container {
+    padding: 12px 16px;
+    min-height: 74px;
+  }
+}
