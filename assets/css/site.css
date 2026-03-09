@@ -2830,6 +2830,15 @@ html.dark .finance-card {
   margin: 0 auto;
 }
 
+.download-phone-demo .phone-screen-stack {
+  background: #f8fafc;
+}
+
+.download-phone-demo .phone-screen {
+  object-fit: contain;
+  background: #f8fafc;
+}
+
 .showcase-text {
   max-width: 450px;
 }
