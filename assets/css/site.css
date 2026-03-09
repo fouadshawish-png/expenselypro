@@ -5545,8 +5545,9 @@ h3 {
 .page-home-en .hero-copy {
   max-width: 760px;
   justify-self: start;
-  padding-top: 24px;
   grid-column: 1;
+  grid-row: 1;
+  align-self: start;
 }
 
 .page-home-en .hero-eyebrow {
@@ -5657,6 +5658,8 @@ h3 {
   max-width: 420px;
   margin-top: 12px;
   grid-column: 2;
+  grid-row: 1;
+  align-self: start;
 }
 
 .page-home-en .hero-proof-card {
@@ -5749,6 +5752,7 @@ h3 {
   .page-home-en .hero-proof {
     justify-self: stretch;
     max-width: none;
+    grid-row: auto;
   }
 
   .page-home-en .hero-copy,
