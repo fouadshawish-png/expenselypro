@@ -5536,14 +5536,15 @@ h3 {
 
 .page-home-en .hero-home-layout-en {
   display: grid;
-  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
-  gap: 32px;
+  grid-template-columns: minmax(360px, 0.92fr) minmax(0, 1.08fr);
+  gap: 40px;
   align-items: center;
   text-align: left;
 }
 
 .page-home-en .hero-copy {
-  max-width: 700px;
+  max-width: 720px;
+  justify-self: end;
 }
 
 .page-home-en .hero-eyebrow {
@@ -5639,6 +5640,9 @@ h3 {
 
 .page-home-en .hero-proof {
   display: block;
+  justify-self: start;
+  width: 100%;
+  max-width: 420px;
 }
 
 .page-home-en .hero-proof-card {
@@ -5667,8 +5671,8 @@ h3 {
 
 .page-home-en .hero-proof-step {
   display: grid;
-  grid-template-columns: 1fr 44px;
-  gap: 14px;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 16px;
   align-items: start;
   padding: 16px;
   border-radius: 18px;
@@ -5686,19 +5690,22 @@ h3 {
   background: #edf7f2;
   color: #0b6b53;
   font-size: 18px;
+  grid-column: 1;
 }
 
 .page-home-en .hero-proof-step h2 {
   margin: 0 0 6px;
   font-size: 18px;
   color: #0f172a;
+  line-height: 1.2;
 }
 
 .page-home-en .hero-proof-step p {
   margin: 0;
   color: #64748b;
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.65;
+  overflow-wrap: break-word;
 }
 
 .page-home-en .hero-proof-link {
@@ -5722,6 +5729,12 @@ h3 {
   .page-home-en .hero-home-layout-en {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .page-home-en .hero-copy,
+  .page-home-en .hero-proof {
+    justify-self: stretch;
+    max-width: none;
   }
 
   .page-home-en .hero-home-en h1 {
