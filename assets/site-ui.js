@@ -239,6 +239,98 @@
     });
   };
 
+  const initDownloadShowcase = () => {
+    const isArDownload = path === "/ar/download.html";
+    const isEnDownload = path === "/en/download.html";
+    if (!isArDownload && !isEnDownload) return;
+
+    const defaultScreens = [
+      "/assets/images/screens/screen-01.webp",
+      "/assets/images/screens/screen-02.webp",
+      "/assets/images/screens/screen-03.webp",
+      "/assets/images/screens/screen-06.webp",
+      "/assets/images/screens/screen-07.webp",
+      "/assets/images/screens/screen-08.webp",
+      "/assets/images/screens/screen-09.webp",
+    ];
+
+    let screenshot = document.getElementById("downloadAppScreenshot");
+
+    if (!screenshot && isEnDownload) {
+      const sections = Array.from(document.querySelectorAll("main section"));
+      const faqSection = sections.find((section) => {
+        const heading = section.querySelector("h2");
+        return heading && heading.textContent.trim() === "FAQ";
+      });
+
+      if (faqSection) {
+        const section = document.createElement("section");
+        section.className = "section text-center";
+        section.innerHTML = `
+          <h2>Inside the app</h2>
+          <img
+            id="downloadAppScreenshot"
+            class="download-screenshot"
+            src="${defaultScreens[0]}"
+            alt="App screenshot from Expensely Pro"
+            loading="lazy"
+            width="420"
+            height="840"
+            decoding="async"
+          />
+        `;
+        faqSection.before(section);
+        screenshot = section.querySelector("#downloadAppScreenshot");
+      }
+    }
+
+    if (!screenshot) return;
+
+    screenshot.classList.add("download-screenshot");
+    screenshot.setAttribute("data-screens", JSON.stringify(defaultScreens));
+
+    if (screenshot.dataset.sliderReady === "true") return;
+    screenshot.dataset.sliderReady = "true";
+
+    let current = 0;
+    let timer = null;
+    screenshot.style.transition = "opacity 220ms ease";
+
+    const nextImage = () => {
+      current = (current + 1) % defaultScreens.length;
+      screenshot.style.opacity = "0.15";
+      setTimeout(() => {
+        screenshot.src = defaultScreens[current];
+        screenshot.style.opacity = "1";
+      }, 220);
+    };
+
+    const start = () => {
+      if (timer) return;
+      timer = setInterval(nextImage, 3000);
+    };
+
+    const stop = () => {
+      if (!timer) return;
+      clearInterval(timer);
+      timer = null;
+    };
+
+    start();
+
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) start();
+            else stop();
+          });
+        },
+        { threshold: 0.25 },
+      ).observe(screenshot);
+    }
+  };
+
   // ---------- boot ----------
   initTheme();
 
@@ -265,6 +357,7 @@
   updateProgress();
   syncHeaderState();
   syncSystemStage();
+  initDownloadShowcase();
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", mountFab);
