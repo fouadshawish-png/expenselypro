@@ -9,32 +9,39 @@
 
   // If you have <link rel="alternate" hreflang=".."> use them. Otherwise fallback.
   const alternates = {};
-  document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((link) => {
-    const lang = (link.getAttribute("hreflang") || "").toLowerCase();
-    alternates[lang] = link.getAttribute("href");
-  });
+  document
+    .querySelectorAll('link[rel="alternate"][hreflang]')
+    .forEach((link) => {
+      const lang = (link.getAttribute("hreflang") || "").toLowerCase();
+      alternates[lang] = link.getAttribute("href");
+    });
 
-  const fallback = {
-    ar: "https://www.expenselypro.com/ar/",
-    en: "https://www.expenselypro.com/en/",
-  };
+  const sectionFallback = (targetLang) => {
+    if (targetLang === "ar") {
+      if (path.startsWith("/en/system/"))
+        return `${location.origin}/ar/system/`;
+      if (path.startsWith("/en/app/")) return `${location.origin}/ar/app/`;
+      if (path.startsWith("/en/about/")) return `${location.origin}/ar/about/`;
+      if (path.startsWith("/en/tools/")) return `${location.origin}/ar/tools/`;
+      if (path.startsWith("/en/library/"))
+        return `${location.origin}/ar/library/`;
+      return `${location.origin}/ar/`;
+    }
 
-  const swapLangPath = (from, to) => {
-    if (!path.startsWith(`/${from}`)) return null;
-    return `${location.origin}${path.replace(`/${from}`, `/${to}`)}`;
+    if (path.startsWith("/ar/system/")) return `${location.origin}/en/system/`;
+    if (path.startsWith("/ar/app/")) return `${location.origin}/en/app/`;
+    if (path.startsWith("/ar/about/")) return `${location.origin}/en/about/`;
+    if (path.startsWith("/ar/tools/")) return `${location.origin}/en/tools/`;
+    if (path.startsWith("/ar/library/"))
+      return `${location.origin}/en/library/`;
+    return `${location.origin}/en/`;
   };
 
   const arHref =
-    alternates["ar"] ||
-    alternates["x-default"] ||
-    swapLangPath("en", "ar") ||
-    fallback.ar;
+    alternates["ar"] || alternates["x-default"] || sectionFallback("ar");
 
   const enHref =
-    alternates["en"] ||
-    alternates["x-default"] ||
-    swapLangPath("ar", "en") ||
-    fallback.en;
+    alternates["en"] || alternates["x-default"] || sectionFallback("en");
 
   // ---------- floating panel ----------
   const root = document.documentElement;
@@ -97,7 +104,9 @@
   const applyTheme = (mode) => {
     const m = mode === "dark" ? "dark" : "light";
     root.classList.toggle("dark", m === "dark");
-    try { localStorage.setItem("theme", m); } catch (e) {}
+    try {
+      localStorage.setItem("theme", m);
+    } catch (e) {}
   };
 
   const getSavedTheme = () => {
@@ -109,7 +118,8 @@
   };
 
   const getSystemTheme = () =>
-    window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
       : "light";
 
@@ -147,7 +157,10 @@
       const isDark = root.classList.contains("dark");
       themeBtn.textContent = isDark ? "☀️" : "🌙";
       themeBtn.setAttribute("aria-pressed", String(isDark));
-      themeBtn.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+      themeBtn.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light mode" : "Switch to dark mode",
+      );
     };
 
     themeBtn.addEventListener("click", () => {
@@ -208,9 +221,15 @@
       label = "النظام الكامل: 5 مراحل";
     } else if (path === "/en/system" || path === "/en/system/") {
       label = "Full System: 5 Stages";
-    } else if (path === "/ar/system/journey" || path === "/ar/system/journey/") {
+    } else if (
+      path === "/ar/system/journey" ||
+      path === "/ar/system/journey/"
+    ) {
       label = "خريطة المسار: 5 مراحل";
-    } else if (path === "/en/system/journey" || path === "/en/system/journey/") {
+    } else if (
+      path === "/en/system/journey" ||
+      path === "/en/system/journey/"
+    ) {
       label = "Journey Map: 5 Stages";
     }
 
@@ -224,24 +243,24 @@
   initTheme();
 
   // reading progress
-  const progress = document.createElement('div');
-  progress.style.position = 'fixed';
-  progress.style.top = '0';
-  progress.style.left = '0';
-  progress.style.height = '3px';
-  progress.style.background = '#0EA5C6';
-  progress.style.zIndex = '99999';
-  progress.style.width = '0%';
+  const progress = document.createElement("div");
+  progress.style.position = "fixed";
+  progress.style.top = "0";
+  progress.style.left = "0";
+  progress.style.height = "3px";
+  progress.style.background = "#0EA5C6";
+  progress.style.zIndex = "99999";
+  progress.style.width = "0%";
   document.body.appendChild(progress);
 
   const updateProgress = () => {
     const total = document.body.scrollHeight - window.innerHeight;
     const percent = total > 0 ? (window.scrollY / total) * 100 : 0;
-    progress.style.width = percent + '%';
+    progress.style.width = percent + "%";
   };
 
-  window.addEventListener('scroll', updateProgress);
-  window.addEventListener('resize', updateProgress);
+  window.addEventListener("scroll", updateProgress);
+  window.addEventListener("resize", updateProgress);
   window.addEventListener("scroll", syncHeaderState, { passive: true });
   updateProgress();
   syncHeaderState();

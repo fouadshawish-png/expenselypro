@@ -541,6 +541,18 @@ section {
   background: #ffffff;
 }
 
+/* تخصيص زر استكشف النظام في الصفحة الرئيسية العربية */
+.hero-home-ar .hero-buttons .btn[href="/ar/system/"] {
+  color: #fff;
+  background: #16a34a; /* أخضر زاهي Tailwind green-600 */
+  border-color: #16a34a;
+}
+.hero-home-ar .hero-buttons .btn[href="/ar/system/"]:hover {
+  background: #15803d; /* أخضر أغمق عند التحويم */
+  color: #fff;
+}
+}
+
 .hero-home-ar .btn:hover,
 .hero-home-en .btn:hover {
   color: #111827;
@@ -2806,6 +2818,16 @@ html.dark .finance-card {
 
 .phone-mockup:hover {
   transform: rotateY(6deg) rotateX(4deg);
+}
+
+.download-phone-demo {
+  width: min(360px, 92vw);
+  margin: 24px auto 0;
+}
+
+.download-phone-demo .phone-mockup {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .showcase-text {
