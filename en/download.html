@@ -241,35 +241,25 @@
         </section>
         <section class="section text-center">
           <h2>Inside the app</h2>
-          <div class="download-phone-demo">
-            <div class="phone-mockup">
-              <div class="phone-screen-stack">
-                <img
-                  id="downloadAppScreenshot"
-                  class="phone-screen is-active"
-                  src="/assets/images/screens/screen-01.webp"
-                  alt="App screenshot from Expensely Pro"
-                  loading="lazy"
-                  width="420"
-                  height="840"
-                  data-screens='[
+          <img
+            id="downloadAppScreenshot"
+            class="download-screenshot"
+            src="/assets/images/screens/screen-01.webp"
+            alt="App screenshot from Expensely Pro"
+            loading="lazy"
+            width="420"
+            height="840"
+            data-screens='[
       "/assets/images/screens/screen-01.webp",
       "/assets/images/screens/screen-02.webp",
       "/assets/images/screens/screen-03.webp",
-      "/assets/images/screens/screen-04.webp",
-      "/assets/images/screens/screen-05.webp",
       "/assets/images/screens/screen-06.webp",
       "/assets/images/screens/screen-07.webp",
       "/assets/images/screens/screen-08.webp",
-      "/assets/images/screens/screen-09.webp",
-      "/assets/images/screens/screen-10.webp",
-      "/assets/images/screens/screen-11.webp"
+      "/assets/images/screens/screen-09.webp"
     ]'
-                  decoding="async"
-                />
-              </div>
-            </div>
-          </div>
+            decoding="async"
+          />
         </section>
         <section class="section">
           <h2>FAQ</h2>
@@ -334,6 +324,7 @@
           if (!(t.length < 2)) {
             var n = 0,
               r = null;
+            s();
             if (
               ((e.style.transition = "opacity 220ms ease"),
               "IntersectionObserver" in window)
@@ -348,7 +339,6 @@
                 },
                 { threshold: 0.25 },
               ).observe(e);
-            else s();
           }
         }
         function i() {
